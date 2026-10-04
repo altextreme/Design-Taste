@@ -1,0 +1,12 @@
+# Design Taste: Imagery & Photography
+
+> Layer tags: `L1` foundation (always), `L2` tonal preset (only for that tone), `L3` brand-negotiable. `Rnnn` = the comparison round that produced the rule (see ../evidence.md). Non-negotiables in SKILL.md survive any brand override.
+
+- **The medium follows the concept.** If the subject is photography, use the photography itself, meaning the actual work being promoted. Illustration is right when the piece communicates an experience or an idea rather than showcasing photographs. Stylized treatments sit between the two. `L1` · R065
+- **Image quality must match the subject's caliber.** An amateur-looking photograph, with snapshot framing, phone-camera rendering or flat light, undermines a piece about professional work, however good the layout. Source imagery is judged as rigorously as the type. `L1` · R065
+- **Prefer shallow depth of field, captured in camera, never faked.** Shallow focus draws the eye into the photograph, the way human vision blurs the periphery around what it's looking at. Favor it when choosing or directing imagery. It must come from the source photograph. Simulating blur in post is not acceptable, in line with the no-simulated-effects rule. `L1` · R067
+- **Frame the subject by the composition rules (inferred).** Within a photograph, keep the concept's cause and effect in frame (R020), and favor golden-section placement of the focal subject over dead center (R006–R007). The image's share of the page stays under half (R005). `L1` · R005, R006, R007, R020 (inferred, not separately tested)
+- **Respect the photographer's work: correct it, don't restyle it.** When the image is the subject, someone's professional photography, present it as shot. Apply only corrective retouching: proper exposure, and saturation that is neither pushed nor drained. No dramatic grades, crushed contrast or desaturation, unless brand guidelines prescribe a look. `L1` · R066
+- **Type color comes from the photograph.** Sample the accent directly from tones in the image. Choose the primary hue to complement the photograph, rather than imposing a fixed house color that fights it. Fixed brand colors are the exception. `L1` · `L3` brand overrides · R057, R066
+- **Stylization can rescue weak imagery.** When the available image is below the bar, a treatment such as a duotone in the palette's colors improves how it sits in the piece and unifies it with the system. Use it as a deliberate fix, not as a default look. `L1` · R065
+

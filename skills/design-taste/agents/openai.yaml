@@ -1,0 +1,5 @@
+interface:
+  display_name: "Design Taste"
+  short_description: "Anthony Tackett's design prescription for UI, layout, type, color, motion and image prompts"
+policy:
+  allow_implicit_invocation: true
