@@ -2,7 +2,7 @@
 
 Anthony Tackett's design prescription, packaged as one universal agent skill. It teaches an AI agent how he designs and critiques: composition, typography, color, motion, tone, imagery, interface, data and his dealbreakers, written as relationships rather than fixed values so it works at any size, format or brand.
 
-Works in **Claude Code and Claude apps, OpenAI Codex CLI, Gemini CLI, OpenCode, Hermes Agent and Paperclip**, and in any other agent through a paste-in prompt. It follows the open Agent Skills layout (a folder with `SKILL.md` plus `references/`) and contains no agent-specific syntax.
+Works in **Claude Code and Claude apps, OpenAI Codex CLI, Gemini CLI, OpenCode, Cursor, VS Code / GitHub Copilot, Windsurf, Roo Code, JetBrains Junie, Kiro, Hermes Agent and Paperclip**, as always-on instructions in **Cline, Zed and Aider**, and in any other agent through a paste-in prompt. It follows the open Agent Skills layout (a folder with `SKILL.md` plus `references/`) and contains no agent-specific syntax.
 
 ## Install
 
