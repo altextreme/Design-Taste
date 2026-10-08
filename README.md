@@ -7,6 +7,8 @@ Works in **Claude Code and Claude apps, OpenAI Codex CLI, Gemini CLI, OpenCode, 
 ## Install
 
 ```bash
+git clone https://github.com/altextreme/Design-Taste.git
+cd Design-Taste
 ./install.sh --dry-run   # preview
 ./install.sh             # detect installed harnesses and install
 ```
@@ -36,6 +38,10 @@ adapters/                          always-on core block, paste-in prompt, single
 ## Two tiers of rules
 
 **Validated** rules come from his side-by-side comparison rounds and always win. **Imported** rules (tagged `OD`) come from an analysis of the open-source [Open Design](https://github.com/nexu-io/open-design) project, filtered so nothing violates his dealbreakers. They fill surfaces the rounds never reached, and each one is queued for a validation round in `open-design-crosswalk.md`. See [NOTICE.md](NOTICE.md) for credits.
+
+## License
+
+MIT. See [LICENSE](LICENSE) and [NOTICE.md](NOTICE.md).
 
 ## Maintaining it (in the source project)
 

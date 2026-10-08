@@ -1,7 +1,7 @@
 ---
 name: design-taste
 description: "Anthony Tackett's design prescription. Apply it whenever you generate, art-direct, build or critique anything visual: posters, social posts, banners, web pages, app and product UI, dashboards, slide decks, email, documents, editorial layouts, data graphics, motion graphics and MP4, and prompts for image or video models. Use it even when the user only says 'design', 'make it look good', 'lay this out', 'animate this' or 'review this', or asks for feedback on a visual. It encodes his taste as portable principles (relationships and reasoning, not fixed values) across composition, typography, color, hierarchy, motion, tone, material, imagery, grid, brand, data, interaction, density and his dealbreakers, plus UI states and accessibility, scored critique, deliverable formats, RTL and CJK handling, and brand-file ingestion."
-license: Proprietary. Personal prescription; see NOTICE.md for third-party credits.
+license: MIT. See LICENSE; third-party credits in NOTICE.md.
 metadata:
   author: Anthony Tackett
   version: "2.0"

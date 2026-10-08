@@ -1,0 +1,7 @@
+{
+  "name": "design-taste",
+  "owner": { "name": "Anthony Tackett" },
+  "plugins": [
+    { "name": "design-taste", "source": "./", "description": "Design taste skill: tenets, dealbreakers, critique mode, UI craft, formats." }
+  ]
+}
