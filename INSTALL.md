@@ -60,7 +60,7 @@ Verified against each tool's current docs on 2026-10-07. Most of these now read 
 - **Cannot read files / no skill support:** paste `adapters/paste-in-prompt.md` into the system prompt (≈20 KB). Attach `adapters/design-taste.full.md` (≈250 KB) if the model has a large context or you use retrieval.
 
 ## Claude Code plugin route (optional)
-This repo also carries `.claude-plugin/plugin.json` and `marketplace.json`, so `/plugin marketplace add altextreme/Design-Taste` followed by `/plugin install design-taste@design-taste` should work. Plugin manifest details were not re-verified against live docs; the plain folder copy above is the dependable route. A `gemini-extension.json` at the repo root lets `gemini extensions install https://github.com/altextreme/Design-Taste` pick up the same `skills/` folder.
+This repo also carries `.claude-plugin/plugin.json` and `marketplace.json`, so `/plugin marketplace add altextreme/Design-Taste` followed by `/plugin install design-taste@design-taste` works. Tested on 2026-10-07 with Claude Code 2.1.285: the marketplace added, the plugin installed (v2.0.0, user scope, enabled) and the skill landed in the plugin cache. The CLI equivalents are `claude plugin marketplace add altextreme/Design-Taste` and `claude plugin install design-taste@design-taste`. The plain folder copy above also works. A `gemini-extension.json` at the repo root lets `gemini extensions install https://github.com/altextreme/Design-Taste` pick up the same `skills/` folder.
 
 ## Troubleshooting
 - **Skill not picked up:** restart the CLI (Codex, Gemini and Hermes read skills at session start). Confirm `SKILL.md` sits directly inside a folder named `design-taste`.
