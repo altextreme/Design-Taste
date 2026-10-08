@@ -38,8 +38,22 @@ Verified against each harness's published docs on 2026-10-04. Paths and commands
 ### Make it always-on (optional)
 Skills load when a task matches their description. In harnesses where that triggering is weaker, add the short core block (tenets, non-negotiables, dealbreakers, about 4 KB) to the global instruction file. `./install.sh --agents-md` does this idempotently between `<!-- design-taste:start -->` and `<!-- design-taste:end -->` markers in `~/.codex/AGENTS.md`, `~/.config/opencode/AGENTS.md` and `~/.gemini/GEMINI.md`. Hermes loads only one project context file (`.hermes.md` > `AGENTS.md` > `CLAUDE.md`), so append the block there by hand if you want it.
 
-### Cursor, Copilot, Windsurf, Cline, Zed, Aider and other AGENTS.md readers
-Most of these read a project instruction file (`AGENTS.md`, `.cursor/rules/`, `.github/copilot-instructions.md`, `.windsurfrules`, `CONVENTIONS.md`). Paste `adapters/agents-md-snippet.md` into whichever file your tool reads for the always-on core, and keep `skills/design-taste/` in the repo so the agent can open the reference files when a task needs them. File names for these tools were not re-verified against live docs.
+### Cursor, Copilot, Windsurf, Cline, Zed, Aider, Kiro and other tools
+Verified against each tool's current docs on 2026-10-07. Most of these now read the open Agent Skills layout themselves, so the skill folder is the right thing to install. The canonical `~/.agents/skills/design-taste` that `install.sh` creates is read natively by **Cursor, VS Code / GitHub Copilot, JetBrains Junie, Roo Code, Codex, Gemini CLI and OpenCode** (project scope: `.agents/skills/`). Goose reads `.agents/skills/` per project.
+
+| Tool | Skill folder | Always-on instructions |
+|---|---|---|
+| **Cursor** | `.agents/skills/` or `.cursor/skills/` (also `~/`) | `AGENTS.md`, or `.cursor/rules/*.mdc` with `alwaysApply: true` |
+| **VS Code / GitHub Copilot** | `.github/skills/`, `.agents/skills/` or `.claude/skills/` (user: `~/.copilot/skills/`, `~/.agents/skills/`); no setting needed | `AGENTS.md` or `.github/copilot-instructions.md` |
+| **Windsurf** | `.windsurf/skills/` (user: `~/.codeium/windsurf/skills/`); `install.sh` handles it | `AGENTS.md` (root, always on), or `.devin/rules/` / `.windsurf/rules/` with `trigger: always_on`. Limits: 12,000 characters per rule file, 6,000 for the global file |
+| **Cline** | not documented | `AGENTS.md`, or `.clinerules/` / `.cline/rules/` |
+| **Roo Code** | `.roo/skills/` or `.agents/skills/` (also `~/`) | `.roo/rules/` or `AGENTS.md` |
+| **JetBrains Junie** | `.junie/skills/` or `.agents/skills/` (also `~/`) | `AGENTS.md` |
+| **Kiro** | `.kiro/skills/` (user: `~/.kiro/skills/`); `install.sh` handles it | `.kiro/steering/` |
+| **Zed** | not documented | `.rules` first, then `AGENTS.md` (Zed loads only the first match, so put the block in `.rules` if one exists) |
+| **Aider** | no skill support | `CONVENTIONS.md`, loaded with `aider --read CONVENTIONS.md` or `read: CONVENTIONS.md` in `.aider.conf.yml` |
+
+`./install.sh --project --agents-md` writes the always-on core block into `AGENTS.md`, plus `CONVENTIONS.md` if the project uses Aider and `.rules` if it uses Zed. Not confirmed in the 2026-10-07 check, so treat as likely but unverified and not automated: Goose's user-level folder, Amp's folders, Roo's `.roo/rules/`, Junie reading `AGENTS.md`, and Kiro's `.kiro/steering/`.
 
 ### Any other agent or model
 - **Can read files:** point it at `skills/design-taste/SKILL.md` and say "read references/index.md and the matching reference file before you design."

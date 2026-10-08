@@ -6,8 +6,9 @@
 #   --user         install for your user account (default)
 #   --project DIR  install into DIR (default: current directory) instead of your home
 #   --copy         copy files instead of symlinking (use on Windows/WSL mounts or if a harness ignores symlinks)
-#   --only LIST    comma list of: claude,codex,gemini,opencode,hermes  (default: all detected)
-#   --agents-md    also append the short always-on core block to each detected harness's global instruction file
+#   --only LIST    comma list of: claude,codex,gemini,opencode,hermes,kiro,windsurf  (default: all detected)
+#   --agents-md    also add the short always-on core block: to each detected harness's global instruction file, or with --project
+#                  to AGENTS.md (read by Cursor, Copilot, Windsurf, Cline, Zed, Amp...), plus CONVENTIONS.md (Aider) and .rules (Zed) if present
 #   --dry-run      print what would happen, change nothing
 #   --uninstall    remove what this script installed
 #   --yes          do not prompt
@@ -26,7 +27,7 @@ while [ $# -gt 0 ]; do
     --project) MODE=project; if [ "${2:-}" ] && [ "${2#--}" = "$2" ]; then PROJECT_DIR="$2"; shift; fi;;
     --copy) COPY=1;; --only) ONLY="$2"; shift;; --agents-md) AGENTS_MD=1;;
     --dry-run) DRY=1;; --uninstall) UNINSTALL=1;; --yes|-y) YES=1;;
-    -h|--help) sed -n '2,13p' "$0"; exit 0;;
+    -h|--help) sed -n '2,15p' "$0"; exit 0;;
     *) echo "Unknown option: $1" >&2; exit 2;;
   esac; shift
 done
@@ -35,9 +36,11 @@ done
 if [ "$MODE" = project ]; then
   CANON="$PROJECT_DIR/.agents/skills/$NAME"; CLAUDE_T="$PROJECT_DIR/.claude/skills/$NAME"
   HERMES_T="$PROJECT_DIR/.hermes/skills/$NAME"; OPENCODE_T="$PROJECT_DIR/.opencode/skills/$NAME"
+  KIRO_T="$PROJECT_DIR/.kiro/skills/$NAME"; WINDSURF_T="$PROJECT_DIR/.windsurf/skills/$NAME"
 else
   CANON="${AGENTS_SKILLS_DIR:-$HOME/.agents/skills}/$NAME"; CLAUDE_T="$HOME/.claude/skills/$NAME"
   HERMES_T="$HOME/.hermes/skills/$NAME"; OPENCODE_T="$HOME/.config/opencode/skills/$NAME"
+  KIRO_T="$HOME/.kiro/skills/$NAME"; WINDSURF_T="$HOME/.codeium/windsurf/skills/$NAME"
 fi
 
 declare -a REPORT=()
@@ -86,8 +89,9 @@ agents_unblock(){ local f="$1"; [ -f "$f" ] && grep -qF "$START" "$f" || return 
 
 if [ "$UNINSTALL" = 1 ]; then
   say "Uninstalling $NAME ($MODE)…"
-  for t in "$CANON" "$CLAUDE_T" "$HERMES_T" "$OPENCODE_T"; do say "  $t: $(remove "$t")"; done
+  for t in "$CANON" "$CLAUDE_T" "$HERMES_T" "$OPENCODE_T" "$KIRO_T" "$WINDSURF_T"; do say "  $t: $(remove "$t")"; done
   for f in "$HOME/.codex/AGENTS.md" "$HOME/.config/opencode/AGENTS.md" "$HOME/.gemini/GEMINI.md"; do agents_unblock "$f" || true; done
+  if [ "$MODE" = project ]; then for f in "$PROJECT_DIR/AGENTS.md" "$PROJECT_DIR/CONVENTIONS.md" "$PROJECT_DIR/.rules"; do agents_unblock "$f" || true; done; fi
   exit 0
 fi
 
@@ -113,12 +117,28 @@ if want hermes && { [ "$MODE" = project ] || have hermes "$HOME/.hermes"; }; the
   add "hermes" "yes" "$HERMES_T ($(place_copy "$HERMES_T"))"
 else add "hermes" "no" "not detected"; fi
 
+# Kiro and Windsurf keep skills in their own folders; the rest below read .agents/skills (verified against their docs 2026-10-07).
+if want kiro && { { [ "$MODE" = project ] && [ -d "$PROJECT_DIR/.kiro" ]; } || { [ "$MODE" = user ] && have kiro "$HOME/.kiro"; }; }; then
+  add "kiro" "yes" "$KIRO_T ($(place_link "$KIRO_T"))"
+else add "kiro" "no" "not detected"; fi
+if want windsurf && { { [ "$MODE" = project ] && [ -d "$PROJECT_DIR/.windsurf" ]; } || { [ "$MODE" = user ] && have windsurf "$HOME/.codeium"; }; }; then
+  add "windsurf" "yes" "$WINDSURF_T ($(place_link "$WINDSURF_T"))"
+else add "windsurf" "no" "not detected"; fi
+for pair in "cursor:$HOME/.cursor" "copilot:$HOME/.copilot" "junie:$HOME/.junie" "roo:$HOME/.roo"; do
+  h="${pair%%:*}"; d="${pair#*:}"
+  if [ -d "$d" ]; then add "$h" "yes" "reads $(dirname "$CANON") natively; restart it"; fi
+done
+
 if [ "$AGENTS_MD" = 1 ] && [ "$MODE" = user ]; then
   have codex "$HOME/.codex" && want codex && add "codex" "always-on" "$(agents_block "$HOME/.codex/AGENTS.md")"
   have opencode "$HOME/.config/opencode" && want opencode && add "opencode" "always-on" "$(agents_block "$HOME/.config/opencode/AGENTS.md")"
   have gemini "$HOME/.gemini" && want gemini && add "gemini" "always-on" "$(agents_block "$HOME/.gemini/GEMINI.md")"
 elif [ "$AGENTS_MD" = 1 ]; then
   add "agents-md" "project" "$(agents_block "$PROJECT_DIR/AGENTS.md")"
+  if [ -e "$PROJECT_DIR/.aider.conf.yml" ] || [ -e "$PROJECT_DIR/CONVENTIONS.md" ]; then
+    add "aider" "always-on" "$(agents_block "$PROJECT_DIR/CONVENTIONS.md"); add 'read: CONVENTIONS.md' to .aider.conf.yml"
+  fi
+  [ -e "$PROJECT_DIR/.rules" ] && add "zed" "always-on" "$(agents_block "$PROJECT_DIR/.rules") (.rules outranks AGENTS.md in Zed)"
 fi
 
 say ""; printf '%-10s %-9s %s\n' HARNESS INSTALLED DETAIL; for l in "${REPORT[@]}"; do say "$l"; done
