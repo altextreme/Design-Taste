@@ -1,19 +1,53 @@
 # design-taste
 
-Anthony Tackett's design prescription, packaged as one universal agent skill. It teaches an AI agent how he designs and critiques: composition, typography, color, motion, tone, imagery, interface, data and his dealbreakers, written as relationships rather than fixed values so it works at any size, format or brand.
+An AI agent skill that makes your agent design and critique the way Anthony Tackett does. It covers composition, typography, color, hierarchy, motion, tone, imagery, interface, data and his dealbreakers, written as relationships and reasoning (not fixed pixel or hex values) so it holds at any size, format or brand.
 
-Works in **Claude Code and Claude apps, OpenAI Codex CLI, Gemini CLI, OpenCode, Cursor, VS Code / GitHub Copilot, Windsurf, Roo Code, JetBrains Junie, Kiro, Hermes Agent and Paperclip**, as always-on instructions in **Cline, Zed and Aider**, and in any other agent through a paste-in prompt. It follows the open Agent Skills layout (a folder with `SKILL.md` plus `references/`) and contains no agent-specific syntax.
+Install it once and your agent applies it whenever it builds or reviews something visual: web pages, app UI, slide decks, posters, social posts, dashboards, email, motion graphics, and prompts for image or video models. It also does scored design critique.
+
+It follows the open [Agent Skills](https://agentskills.io) layout: a folder with `SKILL.md` plus `references/`.
 
 ## Install
+
+Pick the route for your tool.
+
+| You use | Do this |
+|---|---|
+| **Claude Code** | `claude plugin marketplace add altextreme/Design-Taste` then `claude plugin install design-taste@design-taste` |
+| **Claude apps** (claude.ai, desktop) | Download `design-taste-skill.zip` from [Releases](https://github.com/altextreme/Design-Taste/releases/latest), then Settings → Capabilities → Skills → upload |
+| **Codex, Gemini CLI, OpenCode, Cursor, VS Code / Copilot, Windsurf, Roo Code, Junie, Kiro, Hermes** | Run the installer (below) |
+| **Cline, Zed, Aider** | Run the installer with `--project --agents-md` for always-on instructions (below) |
+| **Anything else** | Paste `adapters/paste-in-prompt.md` into the system prompt, or point the agent at `skills/design-taste/SKILL.md` |
+
+**Installer (macOS, Linux, WSL):**
 
 ```bash
 git clone https://github.com/altextreme/Design-Taste.git
 cd Design-Taste
-./install.sh --dry-run   # preview
-./install.sh             # detect installed harnesses and install
+./install.sh --dry-run    # preview what it will do
+./install.sh              # install for your user, for every tool it detects
 ```
 
-Windows: `install.ps1`. Per-harness steps, Paperclip import, plugin routes and troubleshooting are in [INSTALL.md](INSTALL.md).
+It puts one copy in `~/.agents/skills/design-taste` (read natively by Codex, Gemini CLI, OpenCode, Cursor, VS Code / Copilot, Roo Code and Junie), links it for Claude Code, and installs into Kiro, Windsurf and Hermes if you use them. Existing copies are backed up, never overwritten.
+
+| Flag | Effect |
+|---|---|
+| `--project [DIR]` | Install into a project instead of your home folder |
+| `--agents-md` | Also add the short always-on core (about 4 KB) to your global instructions, or with `--project` to `AGENTS.md` (plus `CONVENTIONS.md` for Aider and `.rules` for Zed if the project has them) |
+| `--copy` | Copy instead of symlink |
+| `--only LIST` | Limit to `claude,codex,gemini,opencode,hermes,kiro,windsurf` |
+| `--uninstall` | Remove everything the installer placed |
+
+**Windows:** `powershell -ExecutionPolicy Bypass -File install.ps1`. It copies the skill to `.agents\skills` and `.claude\skills` (and Hermes if present). It is untested and does not cover Kiro, Windsurf or the always-on files; for those, copy the folder by hand using [INSTALL.md](INSTALL.md).
+
+Per-tool folder paths, always-on options, Paperclip import and troubleshooting are in [INSTALL.md](INSTALL.md).
+
+## Check that it works
+
+Restart your agent, then ask: "what design skills do you have?" or give it a design task such as "design a landing page hero". It should read `SKILL.md` and the matching reference file before it starts. Skills load when a task matches their description; if your tool triggers them weakly, add the always-on core with `--agents-md`.
+
+## What's tested
+
+The Claude Code plugin install and the macOS/Linux installer (install, rerun, uninstall) were run end to end. Folder paths for the other tools were checked against their published docs on 2026-10-07 but not run inside each tool. If one fails for you, check that tool's skills page and open an issue.
 
 ## What's inside
 
@@ -37,12 +71,8 @@ adapters/                          always-on core block, paste-in prompt, single
 
 ## Two tiers of rules
 
-**Validated** rules come from his side-by-side comparison rounds and always win. **Imported** rules (tagged `OD`) come from an analysis of the open-source [Open Design](https://github.com/nexu-io/open-design) project, filtered so nothing violates his dealbreakers. They fill surfaces the rounds never reached, and each one is queued for a validation round in `open-design-crosswalk.md`. See [NOTICE.md](NOTICE.md) for credits.
+**Validated** rules come from Anthony's side-by-side comparison rounds (the log is in `references/evidence.md`) and always win. **Imported** rules (tagged `OD`) come from an analysis of the open-source [Open Design](https://github.com/nexu-io/open-design) project, filtered so nothing violates his dealbreakers. They fill surfaces the rounds never reached, and each one is queued for a validation round in `open-design-crosswalk.md`. See [NOTICE.md](NOTICE.md) for credits.
 
 ## License
 
 MIT. See [LICENSE](LICENSE) and [NOTICE.md](NOTICE.md).
-
-## Maintaining it (in the source project)
-
-`DESIGN_TASTE.md` is the source of truth for validated rules. After any refinement round run `scripts/sync-skill.sh`: it regenerates `principles/*.md` and `evidence.md`, validates the skill (name equals folder, description length, line limits, link integrity), builds the adapters, and writes `dist/design-taste-skill.zip` (Claude apps) and `dist/design-taste-universal.zip` (everything).

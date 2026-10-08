@@ -17,7 +17,7 @@ One skill folder (`skills/design-taste/`) works in every harness below, because 
 ./install.sh --agents-md   # optional: also add a short always-on core block to each harness's global instructions
 ```
 
-On Windows: `powershell -ExecutionPolicy Bypass -File install.ps1`.
+On Windows: `powershell -ExecutionPolicy Bypass -File install.ps1`. It is untested and only copies to `.agents\skills` and `.claude\skills` (and Hermes if present); for Kiro, Windsurf or the always-on files, copy the folder by hand using the table below.
 
 The installer puts one canonical copy in `~/.agents/skills/design-taste` (read natively by Codex, Gemini CLI and OpenCode), links it into `~/.claude/skills/` for Claude Code, and copies it into `~/.hermes/skills/` for Hermes. Existing copies are backed up, never overwritten. `--project [DIR]` installs into a repo instead of your home folder; `--copy` avoids symlinks; `--uninstall` removes everything it placed.
 
