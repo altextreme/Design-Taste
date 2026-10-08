@@ -1,25 +1,31 @@
-# Design Taste (paste into a system prompt, custom instructions, or a project instruction file)
-<!-- Generated from SKILL.md by scripts/sync-skill.sh. Replace <SKILL_DIR> with the folder holding the references, or attach those files. -->
+---
+name: design-taste
+description: "Anthony Tackett's design prescription. Apply it whenever you generate, art-direct, build or critique anything visual: posters, social posts and carousels, banners, web pages, landing pages, app and product UI, dashboards, slide decks, email, documents and resumes, packaging and print, brand marks, editorial layouts, data graphics, motion graphics and MP4, and prompts for image or video models. Use it even when the user only says 'design', 'make it look good', 'lay this out', 'animate this' or 'review this', or asks for feedback on a visual. It encodes his taste as portable principles (relationships and reasoning, not fixed values) across composition, typography, color, hierarchy, motion, tone, material, imagery, grid, brand, data, interaction, density and his dealbreakers, plus channel rules (product UI, web, email, decks, mobile, social, video, documents, identity, print), UI states and accessibility, scored critique, deliverable formats, RTL and CJK handling, and brand-file ingestion."
+license: MIT. See LICENSE; third-party credits in NOTICE.md.
+metadata:
+  author: Anthony Tackett
+  version: "2.2"
+---
 
 # Design Taste — Anthony's Prescription
 
-This skill is a ruleset distilled from 87 rounds of side-by-side comparisons covering 108 design dimensions, extended in v2 with defaults for surfaces those rounds never reached (interactive UI, decks, critique, localization, brand files), drawn from an analysis of the open-source Open Design project and filtered through his rules. It tells you how Anthony would design something himself. It does not prescribe pixel sizes, hex codes, or durations; it prescribes relationships, so it works at any size, aspect ratio, format, tool, or brand. It names no agent product and works the same in any harness.
+This skill is a ruleset distilled from 140 rounds of side-by-side comparisons covering 147 design dimensions, extended in v2 with defaults for surfaces those rounds never reached (interactive UI, decks, critique, localization, brand files), kept separate from the validated rules and marked `default`, and in v2.2 with channel and format rounds (product UI, web, email, decks, documents, mobile, social, video, identity, print) that turned many of those defaults into validated rules. It tells you how Anthony would design something himself. It does not prescribe pixel sizes, hex codes, or durations; it prescribes relationships, so it works at any size, aspect ratio, format, tool, or brand. It names no agent product and works the same in any harness.
 
 ## How the files fit
 
-Read this file fully, then open `<SKILL_DIR>/references/index.md` and load only what the task touches. Everything is one level deep.
+Read this file fully, then open `references/index.md` and load only what the task touches. Everything is one level deep.
 
-- `<SKILL_DIR>/references/principles/<category>.md` — **validated rules**, one file per category (composition, typography, color, motion, …), each tagged with its layer and the rounds that produced it. Read the categories relevant to the task before designing.
-- `<SKILL_DIR>/references/evidence.md` — the coverage tracker and round log (his picks and reasoning). For resolving ambiguity and quoting him.
-- Imported references (rules tagged `OD`; defaults where no validated rule exists): `process-and-critique.md`, `ui-craft.md`, `formats.md`, `media-prompts.md`, `scripts-and-direction.md`, `brand-and-registers.md`, `open-design-crosswalk.md`. `index.md` says when to read each.
+- `references/principles/<category>.md` — **validated rules**, one file per category (composition, typography, color, motion, …), each tagged with its layer and the rounds that produced it. Read the categories relevant to the task before designing.
+- `references/evidence.md` — the coverage tracker and round log (his picks and reasoning). For resolving ambiguity and quoting him.
+- Default references (rules tagged `default`; defaults where no validated rule exists): `process-and-critique.md`, `ui-craft.md`, `formats.md`, `media-prompts.md`, `scripts-and-direction.md`, `brand-and-registers.md`, `validation-queue.md`. `index.md` says when to read each.
 
-**Two tiers.** Validated rules (this file + `principles/`) always win. Imported `OD` rules fill gaps, never override a validated rule, dealbreaker or non-negotiable, and cannot by themselves justify a BLOCK in a critique.
+**Two tiers.** Validated rules (this file + `principles/`) always win. Unvalidated `default` rules fill gaps, never override a validated rule, dealbreaker or non-negotiable, and cannot by themselves justify a BLOCK in a critique.
 
 ## Layers (how rules combine)
 
 - **L1 — Foundation.** True in every piece. Never trade these away for style.
 - **L2 — Tonal presets.** Dials that move with the concept (quiet/premium, playful, energetic, luxury, warm/inviting, plus the product, broadsheet, paper, showcase and instrument registers below).
-- **L3 — Brand constraints.** A client's guidelines override L1 and L2 *preferences*. They never override the **non-negotiables** below; when a brand rule breaks one, change the minimum needed and flag the conflict to the user. Procedure for brand files: `<SKILL_DIR>/references/brand-and-registers.md`.
+- **L3 — Brand constraints.** A client's guidelines override L1 and L2 *preferences*. They never override the **non-negotiables** below; when a brand rule breaks one, change the minimum needed and flag the conflict to the user. Procedure for brand files: `references/brand-and-registers.md`.
 
 ## Core tenets (read first, always)
 
@@ -74,7 +80,7 @@ Read this file fully, then open `<SKILL_DIR>/references/index.md` and load only 
 - Pull exact hues from the imagery; never near-duplicates. A hierarchy color must clearly read as a color, not near-black.
 - Temperature follows the concept: neutral/institutional → cool lead + warm accent; warm/inviting subjects → one warm family.
 - Never pure black on pure white. Contrast is a floor, then a mood dial (secondary text may dim toward the floor).
-- Dark versions use a deep colored field from the primary hue (not gray), white headline, the warm accent kept. Gradients only subtle and tonal by default.
+- Dark versions use a deep colored field drawn from the brand's darker colors, or from the primary hue when there is no brand (not a default gray or navy); white headline, the warm accent kept. Neutral gray dark is for a product-UI light/dark mode pair with no brand color to draw on. Gradients only subtle and tonal by default.
 
 ## Motion defaults (L1 unless noted)
 
@@ -95,13 +101,13 @@ Read this file fully, then open `<SKILL_DIR>/references/index.md` and load only 
 | Energetic | Strong sans | Deep cool field, white type, bright warm accent | Faster, bigger travel, crisp wipe/mask reveals, no bounce | Discipline kept |
 | Luxury | High-contrast Didone at full display scale | Deep jewel-toned field from the imagery, gold accent | Calm | Restraint in ornament, never in hierarchy |
 | Warm / inviting | Editorial serif | One warm family from the imagery | Calm | Food, gathering, hospitality |
-| Product / utility *(OD)* | Neutral sans, sentence-case headings | Neutral surfaces; one accent reserved for the primary action and links; closed set of status colors | State changes only, short, eased-out | Calm product UI, dashboards, settings, docs. Whitespace separates first, hairline second, card last |
-| Broadsheet *(OD)* | Strong serif headlines with decisive scale jumps; serif for running text | Near-neutral ink and paper; one link color, applied at rest | Almost none | Dense editorial and news. Hairlines and whitespace instead of boxes |
-| Paper / document *(OD)* | Serif sized for hierarchy | Warm off-white, one ink accent, shared warm neutrals | None or one calm fade-and-rise | Resumes, one-pagers, white papers, print-first decks |
-| Showcase *(OD)* | Large, calm; steps back from the photograph | Interface nearly invisible; photograph carries color; accent on the primary action only | Slow push-in; mask or fade reveals | Product-photo-first, cinematic. Chrome near zero |
-| Instrument *(OD)* | Neutral sans labels; tabular face for numbers | Deep tinted (not gray) dark field; every hue carries a fixed meaning | Signals and alerts only | Consoles, telemetry, trading. No glow or translucency |
+| Product / utility *(default)* | Neutral sans, sentence-case headings | Neutral surfaces; one accent reserved for the primary action and links; a stable hue per status (as many as there are statuses, never grouped), each shown as the word in a tinted small-radius badge (R089, R128) | State changes only, short, eased-out | Calm product UI, dashboards, settings, docs. Hairline separates rows of records; whitespace separates groups; no per-row cards (R088) |
+| Broadsheet *(default)* | Strong serif headlines with decisive scale jumps; serif for running text | Near-neutral ink and paper; one link color, applied at rest | Almost none | Dense editorial and news. Hairlines and whitespace instead of boxes |
+| Paper / document *(default)* | Serif sized for hierarchy | Warm off-white, one ink accent, shared warm neutrals | None or one calm fade-and-rise | Resumes, one-pagers, white papers, print-first decks |
+| Showcase *(default)* | Large, calm; steps back from the photograph | Interface nearly invisible; photograph carries color; accent on the primary action only | Slow push-in; mask or fade reveals | Product-photo-first, cinematic. Chrome near zero |
+| Instrument *(default)* | Neutral sans labels; tabular face for numbers | Deep tinted (not gray) dark field; every hue carries a fixed meaning | Signals and alerts only | Consoles, telemetry, trading. No glow or translucency |
 
-Full detail for the five `OD` registers is in `<SKILL_DIR>/references/brand-and-registers.md`. Sensibility (timeless, trend-forward, nostalgic) is a concept choice — execute any of them convincingly. Imperfection (hand-made, glitch) only when the concept asks; precise and digital otherwise.
+Full detail for the five `default` registers is in `references/brand-and-registers.md`. Sensibility (timeless, trend-forward, nostalgic) is a concept choice — execute any of them convincingly. Imperfection (hand-made, glitch) only when the concept asks; precise and digital otherwise.
 
 ## Imagery, material, icons, data, UI (L1)
 
@@ -112,9 +118,9 @@ Full detail for the five `OD` registers is in `<SKILL_DIR>/references/brand-and-
 - Data: conventional clear charts (axis, light grid, labels); decorate one storytelling point only; big number + supporting line for fast reads; avoid dense pictograms. A label beside a big number is vertically centered on the figure's optical height (cap/figure top to baseline), never baseline-aligned. Density follows the channel: glance media minimal, posters moderate, reference media dense.
 - UI states transition (never instant swaps); purposeful motion such as a fill sweep or arrow nudge.
 
-## Interface floor (imported defaults; apply to any UI)
+## Interface floor (default rules; apply to any UI)
 
-Full rules and reasoning in `<SKILL_DIR>/references/ui-craft.md`. Before showing an interface, check:
+Full rules and reasoning in `references/ui-craft.md`. Before showing an interface, check:
 
 - **Five states** exist, not just the populated one: loading, empty, error, populated, edge (longest text, zero and thousands of items, missing data).
 - **Keyboard focus** is visible on every interactive element and distinct from hover; state is never carried by hue alone; non-text controls meet a 3:1 contrast floor against their ground.
@@ -125,7 +131,7 @@ Full rules and reasoning in `<SKILL_DIR>/references/ui-craft.md`. Before showing
 
 ## Dealbreakers (never, unless the user explicitly asks)
 
-Faux bold/italic · stretched type · straight quotes and hyphens for dashes · widows/orphans · justified text and rivers · letterspaced lowercase · too many typefaces · long centered paragraphs · all-caps body · cramped body leading · small text on busy images without support · glyph collisions · italic emphasis in display serifs · quirky novelty display faces · robotic serifs · hairline Didones outside luxury · faked outline strokes (outline styles only from a real font) · emoji where an icon belongs · floating 3D shapes · pill buttons everywhere · generic stock 3D illustration · over-rounded everything · decorative motifs and background patterns · bevel/emboss/drop-shadow effects · simulated paper texture · faked depth of field · amateur imagery for professional subjects · decorated charts (gradient bars, icon/value on every bar) · vibrating complements · muddy low-contrast palettes · pure black on pure white · blush pink + sage · near-duplicate hues · elastic drop-ins · spin-ins · zooms with lens flares/light leaks · attention shakes · word-by-word pops · dipping to black between every transition · instant color-only hover states · near-tangents.
+Faux bold/italic · stretched type · straight quotes and hyphens for dashes · widows/orphans · justified text and rivers · letterspaced lowercase · too many typefaces · long centered paragraphs · all-caps body · cramped body leading · small text on busy images without support · glyph collisions · italic emphasis in display serifs · quirky novelty display faces · robotic serifs · hairline Didones outside luxury · faked outline strokes (outline styles only from a real font) · emoji where an icon belongs · floating 3D shapes · pill buttons everywhere · generic stock 3D illustration · over-rounded everything · decorative motifs and background patterns · bevel/emboss/drop-shadow effects · simulated paper texture · faked depth of field · amateur imagery for professional subjects · decorated charts (gradient bars, icon/value on every bar) · text block centered over the middle of a full-bleed photo · tabs across the top as primary mobile navigation · solid caption panel on video · two-letter monogram as a logo mark · an email with no brand header · extreme wide-crop banner images in content blocks · full-grid table borders · a video end card with only a logo · separating the logo mark from the wordmark · a "More" menu in primary navigation · vibrating complements · muddy low-contrast palettes · pure black on pure white · blush pink + sage · near-duplicate hues · elastic drop-ins · spin-ins · zooms with lens flares/light leaks · attention shakes · word-by-word pops · dipping to black between every transition · instant color-only hover states · near-tangents.
 
 **Explicit request only:** holiday red/green (tasteful), rainbow gradients, teal-and-orange (as a footage grade only), typewriter and scramble text effects, centered layouts, bento grids, icon-in-circle feature rows, gradient-blob heroes, glassmorphism, sparkle/hype copy, gradient headline text. **Sparingly:** tech purple-to-pink gradients.
 
@@ -148,4 +154,4 @@ A brand file may *mandate* a style-level trait from these lists (for example a c
 - [ ] Non-Latin or multilingual content: direction, script type behavior and text expansion handled (`scripts-and-direction.md`).
 - [ ] Nothing invented: every number, name, quote and image is real, supplied, or labelled placeholder.
 
-When a situation isn't covered, reason from the core tenets, then check `<SKILL_DIR>/references/index.md` for the nearest category, and cite the rounds in `<SKILL_DIR>/references/evidence.md` if you need his exact words.
+When a situation isn't covered, reason from the core tenets, then check `references/index.md` for the nearest category, and cite the rounds in `references/evidence.md` if you need his exact words.

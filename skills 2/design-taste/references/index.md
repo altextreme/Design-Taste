@@ -6,8 +6,8 @@ Load only what the task needs. Every file is one level below `SKILL.md`; none re
 
 | Tier | Where | Authority |
 |---|---|---|
-| **Validated** | `principles/*.md`, SKILL.md | Distilled from 87 side-by-side rounds of Anthony's own picks. Each rule cites its rounds (`R001`…). These win every conflict. |
-| **Imported (`OD`)** | the files in "Imported references" below | Derived from an analysis of the open-source Open Design project, filtered through the validated rules. Tags: `OD` (adopted), `OD (adapted)` (changed to fit his rules), `OD gap` (standard practice, unverified). Default behavior for surfaces the rounds never covered; never overrides a validated rule, dealbreaker or non-negotiable, and cannot by itself justify a BLOCK in a critique. |
+| **Validated** | `principles/*.md`, SKILL.md | Distilled from 140 side-by-side rounds of Anthony's own picks. Each rule cites its rounds (`R001`…). These win every conflict. |
+| **Default (`default`)** | the files in "Default references" below | Unvalidated defaults for surfaces the rounds never covered, filtered through the validated rules. Tag: `default`. Never overrides a validated rule, dealbreaker or non-negotiable, and cannot by itself justify a BLOCK in a critique. |
 
 ## Validated principles (read the categories the task touches)
 
@@ -35,11 +35,21 @@ Load only what the task needs. Every file is one level below `SKILL.md`; none re
 | `principles/cultural-reference-sensibility.md` | Cultural / Reference Sensibility |
 | `principles/imperfection-and-authenticity.md` | Imperfection & Authenticity |
 | `principles/negative-constraints.md` | Negative Constraints |
+| `principles/product-ui-and-dashboards.md` | Product UI & Dashboards |
+| `principles/web-and-landing.md` | Web & Landing |
+| `principles/social-and-glance-media.md` | Social & Glance Media |
+| `principles/decks-and-presentations.md` | Decks & Presentations |
+| `principles/email.md` | Email |
+| `principles/mobile-app.md` | Mobile App |
+| `principles/documents-and-long-reading.md` | Documents & Long Reading |
+| `principles/imagery-and-media-production.md` | Imagery & Media Production |
+| `principles/identity-and-marks.md` | Identity & Marks |
+| `principles/print-and-physical.md` | Print & Physical |
 <!-- principles:end -->
 
 `evidence.md` holds the coverage tracker and round log (his picks and reasoning, in his words). Read it only to resolve ambiguity or to quote him.
 
-## Imported references (read when the trigger matches)
+## Default references (read when the trigger matches)
 
 | File | Read when |
 |---|---|
@@ -49,7 +59,7 @@ Load only what the task needs. Every file is one level below `SKILL.md`; none re
 | `media-prompts.md` | Writing prompts for image or video models; building timeline-based motion graphics; exporting MP4; negative-prompt lists; QA of generated media |
 | `scripts-and-direction.md` | Any non-Latin script, right-to-left layout, CJK, mixed-language or translated content, locale formats; before writing "left" or "right" in a spec |
 | `brand-and-registers.md` | A brand guide, `DESIGN.md` or "in the style of X" is supplied; no brand exists but the work is for a business; the brief is product UI, news, document, showcase or console (extra tonal registers) |
-| `open-design-crosswalk.md` | You are tempted to import advice from another design guideline; you are planning the next quiz round (confirmations, rejected advice, validation queue) |
+| `validation-queue.md` | You are planning the next quiz round, or want to promote a `default` rule to validated |
 
 ## Precedence in one line
-Explicit user instruction > brand locks (L3) > validated rules for the chosen register (L2) > validated foundation (L1) > imported `OD` defaults. The non-negotiables in SKILL.md sit above all of it, except that a brand conflict is resolved by changing the minimum and flagging it.
+Explicit user instruction > brand locks (L3) > validated rules for the chosen register (L2) > validated foundation (L1) > unvalidated `default` rules. The non-negotiables in SKILL.md sit above all of it, except that a brand conflict is resolved by changing the minimum and flagging it.

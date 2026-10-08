@@ -4,7 +4,7 @@
 
 # Design Taste — Anthony's Prescription
 
-This skill is a ruleset distilled from 87 rounds of side-by-side comparisons covering 108 design dimensions, extended in v2 with defaults for surfaces those rounds never reached (interactive UI, decks, critique, localization, brand files), drawn from an analysis of the open-source Open Design project and filtered through his rules. It tells you how Anthony would design something himself. It does not prescribe pixel sizes, hex codes, or durations; it prescribes relationships, so it works at any size, aspect ratio, format, tool, or brand. It names no agent product and works the same in any harness.
+This skill is a ruleset distilled from 140 rounds of side-by-side comparisons covering 147 design dimensions, extended in v2 with defaults for surfaces those rounds never reached (interactive UI, decks, critique, localization, brand files), kept separate from the validated rules and marked `default`, and in v2.2 with channel and format rounds (product UI, web, email, decks, documents, mobile, social, video, identity, print) that turned many of those defaults into validated rules. It tells you how Anthony would design something himself. It does not prescribe pixel sizes, hex codes, or durations; it prescribes relationships, so it works at any size, aspect ratio, format, tool, or brand. It names no agent product and works the same in any harness.
 
 ## How the files fit
 
@@ -12,9 +12,9 @@ Read this file fully, then open `references/index.md` and load only what the tas
 
 - `references/principles/<category>.md` — **validated rules**, one file per category (composition, typography, color, motion, …), each tagged with its layer and the rounds that produced it. Read the categories relevant to the task before designing.
 - `references/evidence.md` — the coverage tracker and round log (his picks and reasoning). For resolving ambiguity and quoting him.
-- Imported references (rules tagged `OD`; defaults where no validated rule exists): `process-and-critique.md`, `ui-craft.md`, `formats.md`, `media-prompts.md`, `scripts-and-direction.md`, `brand-and-registers.md`, `open-design-crosswalk.md`. `index.md` says when to read each.
+- Default references (rules tagged `default`; defaults where no validated rule exists): `process-and-critique.md`, `ui-craft.md`, `formats.md`, `media-prompts.md`, `scripts-and-direction.md`, `brand-and-registers.md`, `validation-queue.md`. `index.md` says when to read each.
 
-**Two tiers.** Validated rules (this file + `principles/`) always win. Imported `OD` rules fill gaps, never override a validated rule, dealbreaker or non-negotiable, and cannot by themselves justify a BLOCK in a critique.
+**Two tiers.** Validated rules (this file + `principles/`) always win. Unvalidated `default` rules fill gaps, never override a validated rule, dealbreaker or non-negotiable, and cannot by themselves justify a BLOCK in a critique.
 
 ## Layers (how rules combine)
 
@@ -75,7 +75,7 @@ Read this file fully, then open `references/index.md` and load only what the tas
 - Pull exact hues from the imagery; never near-duplicates. A hierarchy color must clearly read as a color, not near-black.
 - Temperature follows the concept: neutral/institutional → cool lead + warm accent; warm/inviting subjects → one warm family.
 - Never pure black on pure white. Contrast is a floor, then a mood dial (secondary text may dim toward the floor).
-- Dark versions use a deep colored field from the primary hue (not gray), white headline, the warm accent kept. Gradients only subtle and tonal by default.
+- Dark versions use a deep colored field drawn from the brand's darker colors, or from the primary hue when there is no brand (not a default gray or navy); white headline, the warm accent kept. Neutral gray dark is for a product-UI light/dark mode pair with no brand color to draw on. Gradients only subtle and tonal by default.
 
 ## Motion defaults (L1 unless noted)
 
@@ -96,13 +96,13 @@ Read this file fully, then open `references/index.md` and load only what the tas
 | Energetic | Strong sans | Deep cool field, white type, bright warm accent | Faster, bigger travel, crisp wipe/mask reveals, no bounce | Discipline kept |
 | Luxury | High-contrast Didone at full display scale | Deep jewel-toned field from the imagery, gold accent | Calm | Restraint in ornament, never in hierarchy |
 | Warm / inviting | Editorial serif | One warm family from the imagery | Calm | Food, gathering, hospitality |
-| Product / utility *(OD)* | Neutral sans, sentence-case headings | Neutral surfaces; one accent reserved for the primary action and links; closed set of status colors | State changes only, short, eased-out | Calm product UI, dashboards, settings, docs. Whitespace separates first, hairline second, card last |
-| Broadsheet *(OD)* | Strong serif headlines with decisive scale jumps; serif for running text | Near-neutral ink and paper; one link color, applied at rest | Almost none | Dense editorial and news. Hairlines and whitespace instead of boxes |
-| Paper / document *(OD)* | Serif sized for hierarchy | Warm off-white, one ink accent, shared warm neutrals | None or one calm fade-and-rise | Resumes, one-pagers, white papers, print-first decks |
-| Showcase *(OD)* | Large, calm; steps back from the photograph | Interface nearly invisible; photograph carries color; accent on the primary action only | Slow push-in; mask or fade reveals | Product-photo-first, cinematic. Chrome near zero |
-| Instrument *(OD)* | Neutral sans labels; tabular face for numbers | Deep tinted (not gray) dark field; every hue carries a fixed meaning | Signals and alerts only | Consoles, telemetry, trading. No glow or translucency |
+| Product / utility *(default)* | Neutral sans, sentence-case headings | Neutral surfaces; one accent reserved for the primary action and links; a stable hue per status (as many as there are statuses, never grouped), each shown as the word in a tinted small-radius badge (R089, R128) | State changes only, short, eased-out | Calm product UI, dashboards, settings, docs. Hairline separates rows of records; whitespace separates groups; no per-row cards (R088) |
+| Broadsheet *(default)* | Strong serif headlines with decisive scale jumps; serif for running text | Near-neutral ink and paper; one link color, applied at rest | Almost none | Dense editorial and news. Hairlines and whitespace instead of boxes |
+| Paper / document *(default)* | Serif sized for hierarchy | Warm off-white, one ink accent, shared warm neutrals | None or one calm fade-and-rise | Resumes, one-pagers, white papers, print-first decks |
+| Showcase *(default)* | Large, calm; steps back from the photograph | Interface nearly invisible; photograph carries color; accent on the primary action only | Slow push-in; mask or fade reveals | Product-photo-first, cinematic. Chrome near zero |
+| Instrument *(default)* | Neutral sans labels; tabular face for numbers | Deep tinted (not gray) dark field; every hue carries a fixed meaning | Signals and alerts only | Consoles, telemetry, trading. No glow or translucency |
 
-Full detail for the five `OD` registers is in `references/brand-and-registers.md`. Sensibility (timeless, trend-forward, nostalgic) is a concept choice — execute any of them convincingly. Imperfection (hand-made, glitch) only when the concept asks; precise and digital otherwise.
+Full detail for the five `default` registers is in `references/brand-and-registers.md`. Sensibility (timeless, trend-forward, nostalgic) is a concept choice — execute any of them convincingly. Imperfection (hand-made, glitch) only when the concept asks; precise and digital otherwise.
 
 ## Imagery, material, icons, data, UI (L1)
 
@@ -113,7 +113,7 @@ Full detail for the five `OD` registers is in `references/brand-and-registers.md
 - Data: conventional clear charts (axis, light grid, labels); decorate one storytelling point only; big number + supporting line for fast reads; avoid dense pictograms. A label beside a big number is vertically centered on the figure's optical height (cap/figure top to baseline), never baseline-aligned. Density follows the channel: glance media minimal, posters moderate, reference media dense.
 - UI states transition (never instant swaps); purposeful motion such as a fill sweep or arrow nudge.
 
-## Interface floor (imported defaults; apply to any UI)
+## Interface floor (default rules; apply to any UI)
 
 Full rules and reasoning in `references/ui-craft.md`. Before showing an interface, check:
 
@@ -126,7 +126,7 @@ Full rules and reasoning in `references/ui-craft.md`. Before showing an interfac
 
 ## Dealbreakers (never, unless the user explicitly asks)
 
-Faux bold/italic · stretched type · straight quotes and hyphens for dashes · widows/orphans · justified text and rivers · letterspaced lowercase · too many typefaces · long centered paragraphs · all-caps body · cramped body leading · small text on busy images without support · glyph collisions · italic emphasis in display serifs · quirky novelty display faces · robotic serifs · hairline Didones outside luxury · faked outline strokes (outline styles only from a real font) · emoji where an icon belongs · floating 3D shapes · pill buttons everywhere · generic stock 3D illustration · over-rounded everything · decorative motifs and background patterns · bevel/emboss/drop-shadow effects · simulated paper texture · faked depth of field · amateur imagery for professional subjects · decorated charts (gradient bars, icon/value on every bar) · vibrating complements · muddy low-contrast palettes · pure black on pure white · blush pink + sage · near-duplicate hues · elastic drop-ins · spin-ins · zooms with lens flares/light leaks · attention shakes · word-by-word pops · dipping to black between every transition · instant color-only hover states · near-tangents.
+Faux bold/italic · stretched type · straight quotes and hyphens for dashes · widows/orphans · justified text and rivers · letterspaced lowercase · too many typefaces · long centered paragraphs · all-caps body · cramped body leading · small text on busy images without support · glyph collisions · italic emphasis in display serifs · quirky novelty display faces · robotic serifs · hairline Didones outside luxury · faked outline strokes (outline styles only from a real font) · emoji where an icon belongs · floating 3D shapes · pill buttons everywhere · generic stock 3D illustration · over-rounded everything · decorative motifs and background patterns · bevel/emboss/drop-shadow effects · simulated paper texture · faked depth of field · amateur imagery for professional subjects · decorated charts (gradient bars, icon/value on every bar) · text block centered over the middle of a full-bleed photo · tabs across the top as primary mobile navigation · solid caption panel on video · two-letter monogram as a logo mark · an email with no brand header · extreme wide-crop banner images in content blocks · full-grid table borders · a video end card with only a logo · separating the logo mark from the wordmark · a "More" menu in primary navigation · vibrating complements · muddy low-contrast palettes · pure black on pure white · blush pink + sage · near-duplicate hues · elastic drop-ins · spin-ins · zooms with lens flares/light leaks · attention shakes · word-by-word pops · dipping to black between every transition · instant color-only hover states · near-tangents.
 
 **Explicit request only:** holiday red/green (tasteful), rainbow gradients, teal-and-orange (as a footage grade only), typewriter and scramble text effects, centered layouts, bento grids, icon-in-circle feature rows, gradient-blob heroes, glassmorphism, sparkle/hype copy, gradient headline text. **Sparingly:** tech purple-to-pink gradients.
 
@@ -163,8 +163,8 @@ Load only what the task needs. Every file is one level below `SKILL.md`; none re
 
 | Tier | Where | Authority |
 |---|---|---|
-| **Validated** | `principles/*.md`, SKILL.md | Distilled from 87 side-by-side rounds of Anthony's own picks. Each rule cites its rounds (`R001`…). These win every conflict. |
-| **Imported (`OD`)** | the files in "Imported references" below | Derived from an analysis of the open-source Open Design project, filtered through the validated rules. Tags: `OD` (adopted), `OD (adapted)` (changed to fit his rules), `OD gap` (standard practice, unverified). Default behavior for surfaces the rounds never covered; never overrides a validated rule, dealbreaker or non-negotiable, and cannot by itself justify a BLOCK in a critique. |
+| **Validated** | `principles/*.md`, SKILL.md | Distilled from 140 side-by-side rounds of Anthony's own picks. Each rule cites its rounds (`R001`…). These win every conflict. |
+| **Default (`default`)** | the files in "Default references" below | Unvalidated defaults for surfaces the rounds never covered, filtered through the validated rules. Tag: `default`. Never overrides a validated rule, dealbreaker or non-negotiable, and cannot by itself justify a BLOCK in a critique. |
 
 ## Validated principles (read the categories the task touches)
 
@@ -192,11 +192,21 @@ Load only what the task needs. Every file is one level below `SKILL.md`; none re
 | `principles/cultural-reference-sensibility.md` | Cultural / Reference Sensibility |
 | `principles/imperfection-and-authenticity.md` | Imperfection & Authenticity |
 | `principles/negative-constraints.md` | Negative Constraints |
+| `principles/product-ui-and-dashboards.md` | Product UI & Dashboards |
+| `principles/web-and-landing.md` | Web & Landing |
+| `principles/social-and-glance-media.md` | Social & Glance Media |
+| `principles/decks-and-presentations.md` | Decks & Presentations |
+| `principles/email.md` | Email |
+| `principles/mobile-app.md` | Mobile App |
+| `principles/documents-and-long-reading.md` | Documents & Long Reading |
+| `principles/imagery-and-media-production.md` | Imagery & Media Production |
+| `principles/identity-and-marks.md` | Identity & Marks |
+| `principles/print-and-physical.md` | Print & Physical |
 <!-- principles:end -->
 
 `evidence.md` holds the coverage tracker and round log (his picks and reasoning, in his words). Read it only to resolve ambiguity or to quote him.
 
-## Imported references (read when the trigger matches)
+## Default references (read when the trigger matches)
 
 | File | Read when |
 |---|---|
@@ -206,10 +216,10 @@ Load only what the task needs. Every file is one level below `SKILL.md`; none re
 | `media-prompts.md` | Writing prompts for image or video models; building timeline-based motion graphics; exporting MP4; negative-prompt lists; QA of generated media |
 | `scripts-and-direction.md` | Any non-Latin script, right-to-left layout, CJK, mixed-language or translated content, locale formats; before writing "left" or "right" in a spec |
 | `brand-and-registers.md` | A brand guide, `DESIGN.md` or "in the style of X" is supplied; no brand exists but the work is for a business; the brief is product UI, news, document, showcase or console (extra tonal registers) |
-| `open-design-crosswalk.md` | You are tempted to import advice from another design guideline; you are planning the next quiz round (confirmations, rejected advice, validation queue) |
+| `validation-queue.md` | You are planning the next quiz round, or want to promote a `default` rule to validated |
 
 ## Precedence in one line
-Explicit user instruction > brand locks (L3) > validated rules for the chosen register (L2) > validated foundation (L1) > imported `OD` defaults. The non-negotiables in SKILL.md sit above all of it, except that a brand conflict is resolved by changing the minimum and flagging it.
+Explicit user instruction > brand locks (L3) > validated rules for the chosen register (L2) > validated foundation (L1) > unvalidated `default` rules. The non-negotiables in SKILL.md sit above all of it, except that a brand conflict is resolved by changing the minimum and flagging it.
 
 
 ---
@@ -384,6 +394,19 @@ These recur across many rounds and override stylistic defaults:
 
 ---
 
+<!-- file: references/principles/decks-and-presentations.md -->
+# Design Taste: Decks & Presentations
+
+> Layer tags: `L1` foundation (always), `L2` tonal preset (only for that tone), `L3` brand-negotiable. `Rnnn` = the comparison round that produced the rule (see ../evidence.md). Non-negotiables in SKILL.md survive any brand override.
+
+- **Match the slide's copy structure to its job.** A single large statement works for divider and section slides; headline plus supporting points works for content slides, which carry more content. All three tested structures are acceptable in their place. `L2 (deck)` · R099
+- **For supporting points, use short columns with sub-headings, each with a conceptually connected line icon.** The columns read easily and the icons add visual storytelling. Columns without icons are okay but visually boring; avoid them as the default. `L2 (deck)` · R099, R132
+- **A bullet list is acceptable beside an image that helps communicate the message.** A plain bullet list on its own is too generic. Every template should include content layouts with an image on the right and an image on the left. `L2 (deck)` · R099, R132
+
+
+
+---
+
 <!-- file: references/principles/density-and-information-load.md -->
 # Design Taste: Density & Information Load
 
@@ -396,6 +419,32 @@ These recur across many rounds and override stylistic defaults:
 
   There's a place for each. Pick by the channel and application. `L1` · R075, R077
 - **Busy is often just one element too many.** Richness tips into busyness when the count of competing items passes what the hierarchy can organize. In a lead-plus-support grid, a lead and two supporting items reads as rich. Adding a fourth item of similar weight reads as busy. When a set feels crowded, cut an item before shrinking everything. `L1` · R021 (partial)
+
+
+
+---
+
+<!-- file: references/principles/documents-and-long-reading.md -->
+# Design Taste: Documents & Long Reading
+
+> Layer tags: `L1` foundation (always), `L2` tonal preset (only for that tone), `L3` brand-negotiable. `Rnnn` = the comparison round that produced the rule (see ../evidence.md). Non-negotiables in SKILL.md survive any brand override.
+
+- **A resume pulls its quick-hitting items into a side rail, set on the right.** Contact, skills and education sit in a narrow right-hand column; they stay quickly accessible without leading. The most important information goes on the left: the name, the role and the experience. `L2 (document)` · R108, R135
+- **Information hierarchy is what makes a document communicate.** Separate the scan-first facts from the narrative so each has its own place and weight. `L1` · R108
+
+
+
+---
+
+<!-- file: references/principles/email.md -->
+# Design Taste: Email
+
+> Layer tags: `L1` foundation (always), `L2` tonal preset (only for that tone), `L3` brand-negotiable. `Rnnn` = the comparison round that produced the rule (see ../evidence.md). Non-negotiables in SKILL.md survive any brand override.
+
+- **Establish a clear action hierarchy in email; it is critical.** Three levels: primary, secondary, tertiary. Each level has its own treatment. `L2 (email)` · R100
+- **One primary call to action per email, as a full-width filled button.** `L2 (email)` · R100
+- **Secondary actions are compact buttons; with two or more of equal weight, use ghost (outlined) buttons.** Filled secondaries under a filled primary make it hard to see what matters most, add visual clutter and raise cognitive load. A single secondary can still be filled (R100). `L2 (email)` · R100, R131 (a filled secondary stays acceptable alone; the channel, not the button, was the separator from the product-UI tonal fill, R090)
+- **Tertiary messages and information use a text link.** Colored and underlined, at the lowest level of the hierarchy. `L2 (email)` · R100
 
 
 
@@ -424,6 +473,39 @@ These recur across many rounds and override stylistic defaults:
 - **Icons are welcome on practical information.** Small icons beside the date, location and entry details help scanning and add polish. `L1` · R068
 - **Ornament and pattern must serve a purpose. By default, use none.** Decorative marks, motifs and background patterns add clutter even when they're drawn from the concept. A window-pane motif echoing the photo still reads as busy. Background patterns are distracting. The one acceptable structural ornament is a plain hairline rule, used occasionally to separate content groups, with no mark or flourish on it. `L1` · R069
 - **Beside type, use thin line icons whose stroke matches the type weight.** Icons set alongside typography are drawn as thin lines, with stroke weight matched to the text they accompany and color taken from it, sized to the line. This holds about 70% of the time. Solid filled icons are reserved for UI contexts such as buttons and controls, where they need more presence. `L1` · R068
+
+
+
+---
+
+<!-- file: references/principles/identity-and-marks.md -->
+# Design Taste: Identity & Marks
+
+> Layer tags: `L1` foundation (always), `L2` tonal preset (only for that tone), `L3` brand-negotiable. `Rnnn` = the comparison round that produced the rule (see ../evidence.md). Non-negotiables in SKILL.md survive any brand override.
+
+- **A brand needs both a strong logo mark and a strong wordmark.** It is a combination of the two, built as a modular system that breaks down as needed for the available real estate. `L1` · R113
+- **Use the combination lockup when there is room.** Where the logo mark and wordmark can sit side by side, show both. `L2 (identity)` · R113
+- **At the smallest sizes (social avatar, browser tab, app icon), use the telegraphic logo mark alone.** A strong, instantly readable mark matters most there. For the mobile header, see R137: keep the lockup unless the mark is famous. `L2 (identity)` · R113, R137
+- **A logo mark is conceptual or illustrative, not a letter pair.** A proper telegraphic mark is acceptable; a wordmark is preferred over any monogram. `L1` · R113
+- **Never use a two-letter monogram as a logo mark.** It is the lazy way out; he would never use one. `L1` · R113
+- **A mobile header keeps the full lockup (mark and wordmark).** The combination builds the brand memory structures that salience depends on. `L2 (identity, mobile)` · R137
+- **Only an extremely recognizable mark may stand alone in a mobile header.** A flagship brand with huge recall (the example given: Adidas) can; most brands lack that salience and need the wordmark beside the mark. `L2 (identity, mobile)` · R137
+- **Use the mark alone for the social avatar and the browser tab, for every brand.** `L2 (identity)` · R137
+- **The mark and wordmark can separate: the system is modular.** Drop the wordmark only where the lockup cannot stay legible (avatar, tab); keep the full lockup in a mobile header. `L2 (identity)` · R113, R137
+
+
+
+---
+
+<!-- file: references/principles/imagery-and-media-production.md -->
+# Design Taste: Imagery & Media Production
+
+> Layer tags: `L1` foundation (always), `L2` tonal preset (only for that tone), `L3` brand-negotiable. `Rnnn` = the comparison round that produced the rule (see ../evidence.md). Non-negotiables in SKILL.md survive any brand override.
+
+- **Captions depend on the video's job; choose the style by what the piece is.** Both a scrim-backed plain caption and a word-highlight caption have a place. `L2 (video)` · R109
+- **With no voiceover, text over video is a super that reinforces the message, not a transcript.** Plain text over a soft gradient scrim fits this, and fits professional, lighter-weight or emotional pieces. `L2 (video, calm)` · R109
+- **When someone is speaking to camera (interview, quick short for YouTube or social), use word-by-word highlighted captions.** They help the viewer follow along, and that is the current trend. Lean toward them for energetic, high-impact pieces. `L2 (video, energetic)` · R109
+- **Don't use a solid caption panel.** It reads as low fidelity, like the native text tool in Instagram or TikTok. `L1` · R109
 
 
 
@@ -486,6 +568,19 @@ These recur across many rounds and override stylistic defaults:
 
   Any effect must align with the concept and be executed with restraint and elegance. `L1` · R015, R051, R064
 - **Texture and effects must carry meaning.** Surface treatments, whether grain, glow or dimension, are justified by the concept or the medium, never added as decoration. `L1` · R062, R064
+
+
+
+---
+
+<!-- file: references/principles/mobile-app.md -->
+# Design Taste: Mobile App
+
+> Layer tags: `L1` foundation (always), `L2` tonal preset (only for that tone), `L3` brand-negotiable. `Rnnn` = the comparison round that produced the rule (see ../evidence.md). Non-negotiables in SKILL.md survive any brand override.
+
+- **Use the hamburger menu for websites on small screens, always.** The top bar keeps the logo and collapses to a menu button. Stated as a standing rule. `L2 (web/mobile)` · R101, R091
+- **Bottom tab bar with icons only for a super simple native mobile app.** When the app is genuinely that small, a tab bar with icon and label is acceptable. Otherwise go with the menu button. `L2 (native mobile)` · R101
+- **Never use tabs across the top as the primary navigation on mobile.** It is off the table. `L1` · R101
 
 
 
@@ -584,6 +679,63 @@ These recur across many rounds and override stylistic defaults:
 
 ---
 
+<!-- file: references/principles/print-and-physical.md -->
+# Design Taste: Print & Physical
+
+> Layer tags: `L1` foundation (always), `L2` tonal preset (only for that tone), `L3` brand-negotiable. `Rnnn` = the comparison round that produced the rule (see ../evidence.md). Non-negotiables in SKILL.md survive any brand override.
+
+- **A poster has three tiers: the event name, the date and time, then everything else.** A reader gets what the event is, then when, in one scan; the description and address are tertiary. `L1` · R138
+- **Don't let the headline crowd out the critical information.** A huge title with tiny everything else lets people overlook the date and time. Critical facts must be a clear second tier, not small print. `L1` · R138
+- **Don't flatten the hierarchy.** Shrinking the headline and styling the date, time and details alike waters everything down; there is no clear order. `L1` · R138
+- **Hierarchy and content strategy matter in every medium.** The same tiering logic holds for print and for large format. `L1` · R138
+
+
+
+---
+
+<!-- file: references/principles/product-ui-and-dashboards.md -->
+# Design Taste: Product UI & Dashboards
+
+> Layer tags: `L1` foundation (always), `L2` tonal preset (only for that tone), `L3` brand-negotiable. `Rnnn` = the comparison round that produced the rule (see ../evidence.md). Non-negotiables in SKILL.md survive any brand override.
+
+- **Separate rows of records with a single hairline, in short and long tables alike.** One line per row boundary is the least mark that still delineates clearly. Confirmed on a long table (R125). `L2 (product/utility)` · R088, R125
+- **Don't box every row.** Per-row cards multiply edges and surfaces, so a long list reads as many objects instead of one list; that adds visual overwhelm and cognitive load. Reserve a container for something that is genuinely a separate object. `L2 (product/utility)` · R088 (partial)
+- **Whitespace alone is not enough to delineate records.** He preferred the hairline over space-only separation because rows delineate more clearly with a line. Keep whitespace for separating groups and sections, not as the only divider between rows. `L2 (product/utility)` · R088 (partial; not yet tested against dense tables or very airy layouts)
+- **Show status as the word inside a tinted badge.** The word carries the meaning and the tint of the same hue reinforces it, so color and text work together in one compact unit, with less clutter than a separate dot beside neutral text. `L2 (product/utility)` · R089 (partial)
+- **Keep the badge a small rounded rectangle, not a capsule, with text darkened from the badge hue.** The tint is a quiet fill; the label stays in a deeper shade of the same hue so it passes text contrast on the tint. `L2 (product/utility)` · R089 (partial; shape inferred from the option shown)
+- **Each status gets its own stable hue, even with seven statuses.** Color coding is important for wayfinding: the viewer scans a long table and spots all the pending or delivered items at once. The hue is always paired with the word, and each status keeps the same hue across the product. `L2 (product/utility)` · R089, R128
+- **Primary is filled; secondary is outlined.** Hierarchy comes from filled vs. outlined: the outline keeps the secondary clearly an active button while leaving the filled primary dominant. `L2 (product/utility)` · R090 (partial)
+- **A secondary action must still look clickable.** A tonal fill reads as disabled, and plain text with no outline or fill doesn't read as interactive at all. Don't build secondary hierarchy by removing the affordance. `L2 (product/utility)` · R090 (partial)
+- **Primary navigation sits in a horizontal bar across the top.** It is the most standard placement, it leaves room for fly-out menus, and it collapses to mobile cleanly: the logo stays and a hamburger menu takes over on small screens. `L2 (product/utility)` · R091, R126
+- **Choose navigation by how it responds, not only how it looks on desktop.** Prefer the pattern whose small-screen collapse is the simplest and most conventional. `L1` · R091 (reasoning chain; partial)
+- **Table rows sit at a middle height, roughly three times the text size.** Too tight and the content is hard to scan; too airy and the table grows too tall to be useful. Balance scannability against vertical screen space. `L2 (product/utility)` · R092, R136 (confirmed on mobile)
+- **Density is a trade between scan speed and records per screen.** Judge a table by both: how fast the eye tracks a row, and how many records are visible without scrolling. `L2 (product/utility)` · R092 (partial; tested at one type size, hairline rows)
+- **Form labels sit above their fields.** It is the most traditional treatment and the easiest to scan. He stated it as a standing preference ("I always favor" labels above). `L2 (product/utility)` · R093 (partial: single column only; multi-column and inline-label cases untested)
+- **Don't pick a prettier pattern that is harder to build.** An inside-the-field label looks nice but is technically more difficult to implement; implementability and convention count as design criteria. `L1` · R091, R093 (partial)
+- **On desktop, show records in a table.** It is clean, easy to read, and people are used to it. `L2 (product/utility, desktop)` · R111
+- **On mobile, show each record as a small card with labeled fields.** Tables are inherently hard on a phone. Cards keep the labels, so a value like #2039 is still clearly the order number when scrolling a long list. A per-record card is acceptable here despite R088's no-boxes rule: the channel (mobile) and the need for labels separate the cases. `L2 (product/utility, mobile)` · R111, R088
+- **Avoid stacked lists that drop the field labels.** An unlabeled two-line list leaves values as random digits on the page. Labels must travel with the data. `L1` · R111
+- **Dark grounds suit dense data.** A dark field is fine for a data-dense screen; it is not reserved for expressive pieces. `L2 (product/utility)` · R094
+- **For a light/dark mode pair with no brand color to draw on, dark is a neutral gray field.** That is his preferred counterpart to the warm paper light mode for product UI. Badge tints and the primary action are re-balanced per ground, not inverted. When a brand supplies a darker color, use that instead (R106). `L2 (product/utility)` · R094, R106
+- **A brand may dictate a darker or tinted ground.** A tinted dark field is acceptable when branding calls for it; he has no objection to it. `L3` · R094
+- **An empty state is friendly and approachable: a plain line icon, a headline, one sentence of explanation and one primary action.** The icon adds warmth that copy alone lacks. Keep it a plain line icon sized to sit calmly above the headline, not boxed or decorated. `L2 (product/utility)` · R095 (empty state; for errors see R129)
+
+
+---
+
+<!-- file: references/principles/social-and-glance-media.md -->
+# Design Taste: Social & Glance Media
+
+> Layer tags: `L1` foundation (always), `L2` tonal preset (only for that tone), `L3` brand-negotiable. `Rnnn` = the comparison round that produced the rule (see ../evidence.md). Non-negotiables in SKILL.md survive any brand override.
+
+- **Never center the text block over a full-bleed photo.** It obscures the image badly, because the scrim and type land on the middle of the frame where the subject usually is. `L1` · R098
+- **Place the text high or in the lower third, by where the focal point is.** Both are acceptable; put the block in the zone away from the subject, inside the platform's safe zones (clear of the top profile bar and the bottom reply bar). `L2 (social, 9:16)` · R098, R134 (confirmed on a second photo)
+- **Read the photograph before placing the text.** Find the focal point first; the text goes in the clearer zone and the scrim stays there, so the subject stays visible. `L1` · R098
+
+
+
+---
+
 <!-- file: references/principles/sound-motion-sync.md -->
 # Design Taste: Sound / Motion Sync
 
@@ -672,69 +824,84 @@ These recur across many rounds and override stylistic defaults:
 
 ---
 
+<!-- file: references/principles/web-and-landing.md -->
+# Design Taste: Web & Landing
+
+> Layer tags: `L1` foundation (always), `L2` tonal preset (only for that tone), `L3` brand-negotiable. `Rnnn` = the comparison round that produced the rule (see ../evidence.md). Non-negotiables in SKILL.md survive any brand override.
+
+- **Choose the hero by what has to shine, not by a house layout.** All three compositions are valid; the application decides. Keep the flexibility. `L1` · R096
+- **When the visual must carry it, let the photograph lead: a half-width split beside the text, or a full-bleed background image.** Use this where the hero needs to be visually appealing. Text placed over a full-bleed image still needs a secured contrast (gradient scrim first; R071). `L2 (visual-led)` · R096, R008, R071
+- **For editorial or article-style pages, use a wide photo band above the text.** It suits a blog post or story, where the reading is primary. `L2 (editorial)` · R096
+- **When the headline has to shine, let type lead and shrink the photo to an inset.** Use it where the message matters more than the picture. `L2 (message-led)` · R096
+
+
+
+
+---
+
 <!-- file: references/ui-craft.md -->
 # Interactive UI Craft
-> **Status: imported from Open Design (OD) analysis. Not yet validated by Anthony's comparison rounds.** Follow these as defaults for surfaces his validated rules (`principles/*.md`, SKILL.md) don't cover. Wherever they conflict with a validated rule, a dealbreaker, or a non-negotiable, the validated rule wins.
+> **Status: default guidance. Not yet validated by Anthony's comparison rounds.** Follow these as defaults for surfaces his validated rules (`principles/*.md`, SKILL.md) don't cover. Wherever they conflict with a validated rule, a dealbreaker, or a non-negotiable, the validated rule wins.
 > **Read when:** building or critiquing web or app UI (dashboards, forms, lists, settings, onboarding, landing pages with interactive parts); designing hover/focus/loading/error behavior; adding motion to an interface; writing interface copy or sample content; filling a mock with data, names, numbers or images.
 
 
 ## The five states
-- Design every surface that fetches, lists or accepts data in five states: loading, empty, error, populated, edge. A mock that shows only the populated state is unfinished, because the other four are where users spend their worst moments. `L1` · OD
-- Edge means the worst plausible content: the longest title, a missing image or optional field, zero and thousands of items, a single-character query, text in another script or direction. Truncate on purpose with a visible affordance (clamp, ellipsis plus full text on demand); never let the layout break. `L1` · OD
-- Empty state has a job: say what this place is for, why it is empty, and offer the one next action. First-use empties are the onboarding moment; no-results echoes the query and offers a way out; a cleared list gets a short calm note. Never a blank panel or "No data". Build it type-led (or with concept-specific imagery); no stock or generic illustration. `L1` · OD (adapted)
-- Error is its own state: never reuse the empty layout, and never let a failed fetch masquerade as "nothing here". `L1` · OD
-- Error copy has three parts: what happened, why if it is knowable, what to do next. Name the specific cause, keep everything the user entered, and offer the recovery action in place. Not "Something went wrong"; no "Oops"; no blame. `L1` · OD
-- Choose loading treatment by expected wait, not by habit. Reference floors: under about 300 ms show nothing (a flash of loader is worse than the wait); to a couple of seconds a quiet in-place indicator; a few seconds up to about ten, a skeleton shaped like the real layout, or a labelled spinner for a single control; longer, determinate progress with cancel; past about a minute stop animating and offer retry, cancel or continue. `L1` · OD
-- Prefer a skeleton to a spinner when the final layout is known: it reserves the space so nothing jumps when content lands. Skeleton fills are flat tonal blocks; any pulse or sweep is quiet, stops the instant content arrives, and is static under reduced motion. Never replace stable chrome with a full-page loader for a partial fetch. Never an unbounded spinner. `L1` · OD (adapted)
-- Success messages are plain statements of what changed, with no exclamation marks. One celebratory moment, if any, belongs at the end of a flow, restrained and one-shot; keep the middle of a flow calm. `L1` · OD (adapted)
+- Design every surface that fetches, lists or accepts data in five states: loading, empty, error, populated, edge. A mock that shows only the populated state is unfinished, because the other four are where users spend their worst moments. `L1` · default
+- Edge means the worst plausible content: the longest title, a missing image or optional field, zero and thousands of items, a single-character query, text in another script or direction. Truncate on purpose with a visible affordance (clamp, ellipsis plus full text on demand); never let the layout break. `L1` · default
+- Empty state has a job: say what this place is for, why it is empty, and offer the one next action. First-use empties are the onboarding moment; no-results echoes the query and offers a way out; a cleared list gets a short calm note. Never a blank panel or "No data". Build it type-led (or with concept-specific imagery); no stock or generic illustration. `L1` · default
+- Error is its own state: never reuse the empty layout, and never let a failed fetch masquerade as "nothing here". `L1` · default
+- Error copy has three parts: what happened, why if it is knowable, what to do next. Name the specific cause, keep everything the user entered, and offer the recovery action in place. Not "Something went wrong"; no "Oops"; no blame. `L1` · default
+- Choose loading treatment by expected wait, not by habit. Reference floors: under about 300 ms show nothing (a flash of loader is worse than the wait); to a couple of seconds a quiet in-place indicator; a few seconds up to about ten, a skeleton shaped like the real layout, or a labelled spinner for a single control; longer, determinate progress with cancel; past about a minute stop animating and offer retry, cancel or continue. `L1` · default
+- Prefer a skeleton to a spinner when the final layout is known: it reserves the space so nothing jumps when content lands. Skeleton fills are flat tonal blocks; any pulse or sweep is quiet, stops the instant content arrives, and is static under reduced motion. Never replace stable chrome with a full-page loader for a partial fetch. Never an unbounded spinner. `L1` · default
+- Success messages are plain statements of what changed, with no exclamation marks. One celebratory moment, if any, belongs at the end of a flow, restrained and one-shot; keep the middle of a flow calm. `L1` · default
 
 ## Accessibility baseline beyond contrast
-- Reference standard for UI: WCAG 2.2 AA. Anything below it is debt; flag it to the user. `L1` · OD
-- Every interactive element has a visible keyboard-focus state, distinct from hover. Draw it as a flat outline offset outside the box so layout never shifts. This is a structural affordance, not decoration, so it is not a glow or drop shadow. Never remove the browser outline without a replacement at least as visible. Reference floor: 3:1 against what it sits on, and thicker than a hairline. `L1` · OD
-- The 3:1 floor extends to anything the user must find or operate: input outlines, icon-only controls, toggle tracks, chart marks against their ground. Text contrast alone does not make a control findable. `L1` · OD
-- Never carry a state or category by hue alone, or by motion alone. Pair color with a second channel: label, icon, shape, weight, position, underline. (The colored-and-underlined link rule is the same principle.) Status colors stay a small separate set, never the brand accent. `L1` · OD
-- Targets: reference floors, 24 px minimum and about 44 px for primary and touch-first controls, with separation so neighbouring hit areas never touch. Grow the hit area with padding, not the glyph; thin line icons stay thin. Primary actions never lean on a size exception. `L1` · OD
-- Use native elements first: button for actions, anchor for navigation, label for inputs. DOM order equals visual reading order; never reorder with positive tab indexes. Custom widgets are the last resort and must replicate role, focus and key handling. Add ARIA only where no native element fits. `L1` · OD
-- Heading level follows document structure; its visual size follows the type hierarchy. The two are independent. Content images and charts carry a text alternative (for a chart, state its takeaway); decorative marks get none. Declare the document language. Icon-only controls get an accessible name. `L1` · OD
-- Reduced motion: every movement has a variant that removes travel, scale, rotation and parallax and keeps a short opacity or color change, so the state change still reads. Gentler, not zero. Gate hover motion to devices that hover. `L1` · OD
-- Flash limit, for UI and for MP4 alike: reference floor, never more than three flashes in any one second. No strobing cuts or rapid full-frame luminance swaps. `L1` · OD
+- Reference standard for UI: WCAG 2.2 AA. Anything below it is debt; flag it to the user. `L1` · default
+- Every interactive element has a visible keyboard-focus state, distinct from hover. Draw it as a flat outline offset outside the box so layout never shifts. This is a structural affordance, not decoration, so it is not a glow or drop shadow. Never remove the browser outline without a replacement at least as visible. Reference floor: 3:1 against what it sits on, and thicker than a hairline. `L1` · default
+- The 3:1 floor extends to anything the user must find or operate: input outlines, icon-only controls, toggle tracks, chart marks against their ground. Text contrast alone does not make a control findable. `L1` · default
+- Never carry a state or category by hue alone, or by motion alone. Pair color with a second channel: label, icon, shape, weight, position, underline. (The colored-and-underlined link rule is the same principle.) Status colors stay a small separate set, never the brand accent. `L1` · default
+- Targets: reference floors, 24 px minimum and about 44 px for primary and touch-first controls, with separation so neighbouring hit areas never touch. Grow the hit area with padding, not the glyph; thin line icons stay thin. Primary actions never lean on a size exception. `L1` · default
+- Use native elements first: button for actions, anchor for navigation, label for inputs. DOM order equals visual reading order; never reorder with positive tab indexes. Custom widgets are the last resort and must replicate role, focus and key handling. Add ARIA only where no native element fits. `L1` · default
+- Heading level follows document structure; its visual size follows the type hierarchy. The two are independent. Content images and charts carry a text alternative (for a chart, state its takeaway); decorative marks get none. Declare the document language. Icon-only controls get an accessible name. `L1` · default
+- Reduced motion: every movement has a variant that removes travel, scale, rotation and parallax and keeps a short opacity or color change, so the state change still reads. Gentler, not zero. Gate hover motion to devices that hover. `L1` · default
+- Flash limit, for UI and for MP4 alike: reference floor, never more than three flashes in any one second. No strobing cuts or rapid full-frame luminance swaps. `L1` · default
 
 ## Forms
-- Visible label above every field, always. A placeholder is an example, never the label, because it vanishes when typing starts. Helper text sits between label and field when needed. Mark optional rather than required when most fields are required; say which convention once at the top. `L1` · OD
-- Validation timing: no error while the user is first typing in a field; check when they leave it. Once a field shows an error, re-check on every change so the error disappears the instant the value is valid. Untouched fields never show error or success styling, so nothing is red on first load. `L1` · OD
-- Error placement: beside or directly under its field, specific to the rule that failed, with the fix when it is determinable. On submit, move focus to the first problem; long forms add a linked summary at the top, shown on submit only. Never a generic "Invalid input". `L1` · OD
-- Match input type and keyboard to the data. Numeric identifiers (postal code, one-time code, card) are text fields with a numeric keypad hint, never spinner number fields, which strip leading zeros. Allow autofill. Accept messy input (spaces, dashes), normalise it, display one canonical format. `L1` · OD
-- Submit shows pending on the button itself, locks re-submission, and confirms the outcome in text. Never clear fields because an unrelated error occurred. Do not make users retype what they already gave in the same flow. `L1` · OD
-- Destructive, financial or legal actions are undoable, or get a review step that restates exactly what will happen. `L1` · OD
-- One primary action per view; its label is specific ("Save API key", not "Continue") and fits on one line. One label per intent across the page. Never two solid buttons for the same action in one viewport. `L1` · OD
+- Visible label above every field, always. A placeholder is an example, never the label, because it vanishes when typing starts. Helper text sits between label and field when needed. Mark optional rather than required when most fields are required; say which convention once at the top. `L1` · default
+- Validation timing: no error while the user is first typing in a field; check when they leave it. Once a field shows an error, re-check on every change so the error disappears the instant the value is valid. Untouched fields never show error or success styling, so nothing is red on first load. `L1` · default
+- Error placement: beside or directly under its field, specific to the rule that failed, with the fix when it is determinable. On submit, move focus to the first problem; long forms add a linked summary at the top, shown on submit only. Never a generic "Invalid input". `L1` · default
+- Match input type and keyboard to the data. Numeric identifiers (postal code, one-time code, card) are text fields with a numeric keypad hint, never spinner number fields, which strip leading zeros. Allow autofill. Accept messy input (spaces, dashes), normalise it, display one canonical format. `L1` · default
+- Submit shows pending on the button itself, locks re-submission, and confirms the outcome in text. Never clear fields because an unrelated error occurred. Do not make users retype what they already gave in the same flow. `L1` · default
+- Destructive, financial or legal actions are undoable, or get a review step that restates exactly what will happen. `L1` · default
+- One primary action per view; its label is specific ("Save API key", not "Continue") and fits on one line. One label per intent across the page. Never two solid buttons for the same action in one viewport. `L1` · default
 
 ## Interaction states
-- Every control defines hover, focus-visible, pressed, disabled and loading, and equivalent controls share one treatment everywhere. Inconsistent states teach users nothing. `L1` · OD
-- Hover and pressed states transition on the house ease-out; they never swap instantly and never merely dim or grey the text. Pressed reads as a tone or fill change; a tiny scale-down is optional, not required. Do not animate text weight or box size on hover in a way that shifts neighbouring layout (his validated card lift is the exception: rise, slight scale and shadow, out of flow). `L1` · OD (adapted)
-- Elevation on hover is the only shadow; it signals state, and it is gone at rest. `L1` · OD (adapted)
-- Text in a row of figures aligns: numbers that stack in columns or sit side by side (metrics, tables, dates, versions, page numbers) use tabular figures; a lone number in a sentence stays proportional. If the chosen face lacks tabular figures, change the face for the numeric tier. `L1` · OD
+- Every control defines hover, focus-visible, pressed, disabled and loading, and equivalent controls share one treatment everywhere. Inconsistent states teach users nothing. `L1` · default
+- Hover and pressed states transition on the house ease-out; they never swap instantly and never merely dim or grey the text. Pressed reads as a tone or fill change; a tiny scale-down is optional, not required. Do not animate text weight or box size on hover in a way that shifts neighbouring layout (his validated card lift is the exception: rise, slight scale and shadow, out of flow). `L1` · default
+- Elevation on hover is the only shadow; it signals state, and it is gone at rest. `L1` · default
+- Text in a row of figures aligns: numbers that stack in columns or sit side by side (metrics, tables, dates, versions, page numbers) use tabular figures; a lone number in a sentence stays proportional. If the chosen face lacks tabular figures, change the face for the numeric tier. `L1` · default
 
 ## UI motion
-- Motion has a job: orient the user across a change of place, time or state, or confirm an action. Decoration, "premium feel" and filling silence are not jobs. `L1` · OD
-- Frequency gate: the more often someone sees an effect, the shorter and quieter it is. Keyboard-driven and constantly repeated actions get none; occasional surfaces (menus, dialogs, toasts) get a standard transition; only rare, first-time moments may be more expressive. `L1` · OD
-- Duration tiers, reference floors for interactive UI only: pressed feedback near-instant (about 100 ms), standard state change about 150 ms, entering surfaces about 200 to 300 ms, cross-screen up to about 500 ms. Exits run shorter than entrances (roughly 0.7x; unvalidated, validation queue 3). Shorten on small screens. These do not apply to video or staged motion graphics. `L1` · OD
-- Easing: entrances and exits ease out; on-screen moves also ease out with a soft end (this replaces OD's ease-in-out and spring options); a determinate progress fill that tracks real progress may be linear (a gauge, not a design element; marquees and tickers are not used); never ease in on entrances, since it delays the moment the user is watching. Whether exits should accelerate away (as his motion rules suggest for staged motion) is unvalidated for UI (see `open-design-crosswalk.md` validation queue 2); until then exits ease out. No overshoot, no spring outside the playful tone. `L1` · OD (adapted)
-- Never grow an element from nothing. Entering surfaces start near full size with opacity (or just fade and rise slightly), and popovers originate at their trigger while dialogs stay centered on their own axis. `L1` · OD
+- Motion has a job: orient the user across a change of place, time or state, or confirm an action. Decoration, "premium feel" and filling silence are not jobs. `L1` · default
+- Frequency gate: the more often someone sees an effect, the shorter and quieter it is. Keyboard-driven and constantly repeated actions get none; occasional surfaces (menus, dialogs, toasts) get a standard transition; only rare, first-time moments may be more expressive. `L1` · default
+- Duration tiers, reference floors for interactive UI only: pressed feedback near-instant (about 100 ms), standard state change about 150 ms, entering surfaces about 200 to 300 ms, cross-screen up to about 500 ms. Exits run shorter than entrances (roughly 0.7x; unvalidated, validation queue 3). Shorten on small screens. These do not apply to video or staged motion graphics. `L1` · default
+- Easing: entrances and exits ease out; on-screen moves also ease out with a soft end; a determinate progress fill that tracks real progress may be linear (a gauge, not a design element; marquees and tickers are not used); never ease in on entrances, since it delays the moment the user is watching. Whether exits should accelerate away (as his motion rules suggest for staged motion) is unvalidated for UI (see `validation-queue.md` item 2); until then exits ease out. No overshoot, no spring outside the playful tone. `L1` · default
+- Never grow an element from nothing. Entering surfaces start near full size with opacity (or just fade and rise slightly), and popovers originate at their trigger while dialogs stay centered on their own axis. `L1` · default
 
 ## Content integrity
-- Never invent statistics, testimonials, awards, ratings, logos, customer names, prices or citations. Use real or user-supplied facts, or a clearly labelled placeholder, or leave the slot out. A figure shown carries its source, unit and period. `L1` · OD
-- No lorem ipsum, no "Feature one / two / three". Write real draft copy. An empty-feeling section is a composition problem to fix with layout, not to pad with words; do not add sections or copy the user did not request without asking (if you cannot ask, state the assumption). `L1` · OD
-- Name a real-world thing (person, product, cover, artwork, landmark, brand mark) and it gets its real image, confirmed to depict it; never a generated or look-alike substitute. If the right asset is unobtainable, show an honestly labelled placeholder and say so; never ship a fake or a bare grey box. Generation is for subjects with no real referent. `L1` · OD
-- Interface copy: concrete verbs, active voice, sentence case, one register per page; specific microcopy over generic ("Start tracking", not "Get started"). Skip hype and filler words (seamless, unleash, next-gen). Testimonials run to a few lines with name and role. `L1` · OD
-- Specificity test: with the logo removed, could this belong to any product in its category? If yes it is a template; change the section order or add one section only this product would have. Keep designer, presenter or "demo" controls out of the product artifact. `L1` · OD
+- Never invent statistics, testimonials, awards, ratings, logos, customer names, prices or citations. Use real or user-supplied facts, or a clearly labelled placeholder, or leave the slot out. A figure shown carries its source, unit and period. `L1` · default
+- No lorem ipsum, no "Feature one / two / three". Write real draft copy. An empty-feeling section is a composition problem to fix with layout, not to pad with words; do not add sections or copy the user did not request without asking (if you cannot ask, state the assumption). `L1` · default
+- Name a real-world thing (person, product, cover, artwork, landmark, brand mark) and it gets its real image, confirmed to depict it; never a generated or look-alike substitute. If the right asset is unobtainable, show an honestly labelled placeholder and say so; never ship a fake or a bare grey box. Generation is for subjects with no real referent. `L1` · default
+- Interface copy: concrete verbs, active voice, sentence case, one register per page; specific microcopy over generic ("Start tracking", not "Get started"). Skip hype and filler words (seamless, unleash, next-gen). Testimonials run to a few lines with name and role. `L1` · default
+- Specificity test: with the logo removed, could this belong to any product in its category? If yes it is a template; change the section order or add one section only this product would have. Keep designer, presenter or "demo" controls out of the product artifact. `L1` · default
 
 ## Laws of UX that change output
-- Fitts: speed depends on size and distance, so frequent and primary targets are larger and closer to where the pointer or thumb already is; spacing between hit zones matters as much as size. `L1` · OD
-- Hick: every added equal option slows the decision. A decision screen has one visually dominant recommended option and a small number of equals (roughly three to five); the long tail goes behind disclosure. Mark exactly one recommended item in a set; visual weight matches intended decision weight. `L1` · OD
-- Proximity first, then similarity, then common region, then connection. Gaps between groups are a clear multiple of gaps within (reference starting ratio, about 3 to 4x); uniform spacing groups nothing. Enclose only when space and alignment are not enough, because boxing every section erases the signal. Equivalent elements share one treatment; the single deviation marks the active or recommended one. `L1` · OD
-- Miller, correctly read: working memory holds a few chunks, not a menu length. Chunk long lists into named groups; show state on screen (applied filters, selected, visited) instead of making people remember; put the key items at the ends of a row. `L1` · OD
-- Jakob: default to the category's convention for position, icon and behavior. Depart only where the departure is deliberate and pays for itself; put help at the point of action. This is the UI corollary of "deviate decisively or not at all". `L1` · OD
-- Goal gradient: multi-step flows show real position ("2 of 5"); never fabricate progress or streak pressure. `L1` · OD
+- Fitts: speed depends on size and distance, so frequent and primary targets are larger and closer to where the pointer or thumb already is; spacing between hit zones matters as much as size. `L1` · default
+- Hick: every added equal option slows the decision. A decision screen has one visually dominant recommended option and a small number of equals (roughly three to five); the long tail goes behind disclosure. Mark exactly one recommended item in a set; visual weight matches intended decision weight. `L1` · default
+- Proximity first, then similarity, then common region, then connection. Gaps between groups are a clear multiple of gaps within (reference starting ratio, about 3 to 4x); uniform spacing groups nothing. Enclose only when space and alignment are not enough, because boxing every section erases the signal. Equivalent elements share one treatment; the single deviation marks the active or recommended one. `L1` · default
+- Miller, correctly read: working memory holds a few chunks, not a menu length. Chunk long lists into named groups; show state on screen (applied filters, selected, visited) instead of making people remember; put the key items at the ends of a row. `L1` · default
+- Jakob: default to the category's convention for position, icon and behavior. Depart only where the departure is deliberate and pays for itself; put help at the point of action. This is the UI corollary of "deviate decisively or not at all". `L1` · default
+- Goal gradient: multi-step flows show real position ("2 of 5"); never fabricate progress or streak pressure. `L1` · default
 
 ## Excluded
 Illustrated empty states, confetti or count-up success moments, spring-based UI motion, pill CTAs, a two-typeface cap, links demoted to unstyled text, neutral near-black dark mode, and visual-tension asymmetry were left out because each collides with a dealbreaker or non-negotiable.
@@ -744,28 +911,28 @@ Illustrated empty states, confetti or count-up success moments, spring-based UI 
 
 <!-- file: references/process-and-critique.md -->
 # Process Gates and Critique Mode
-> **Status: imported from Open Design (OD) analysis. Not yet validated by Anthony's comparison rounds.** Follow these as defaults for surfaces his validated rules (`principles/*.md`, SKILL.md) don't cover. Wherever they conflict with a validated rule, a dealbreaker, or a non-negotiable, the validated rule wins.
+> **Status: default guidance. Not yet validated by Anthony's comparison rounds.** Follow these as defaults for surfaces his validated rules (`principles/*.md`, SKILL.md) don't cover. Wherever they conflict with a validated rule, a dealbreaker, or a non-negotiable, the validated rule wins.
 > **Read when:** starting any non-trivial design task (before building); deciding whether to ask the user a question; the user asks for a critique, review, audit, or "what's wrong with this"; you are about to show or hand off finished work.
 
 ## 1. Ask or decide
 
-- Default to proceeding. Ask only when an unresolved answer would change the direction, the structure, or the delivery format; a question whose answer would only nudge a detail costs the user a turn for nothing. `L1` · OD
-- Never ask what the brief, attached assets, a supplied brand source, earlier turns, or this skill already answer. Asking again signals you did not read. `L1` · OD
-- If you can ask the user: ask once, at most three questions, each carrying your recommended default so a bare "go ahead" is a valid reply. Never run a second round of questions. `L1` · OD
-- If you cannot ask (no channel, unattended run, "just do it"): proceed on the most defensible reading and list each assumption in the delivery note, so a wrong guess is a cheap redirect. `L1` · OD
-- Local, reversible details (a heading's wording, a crop, an accent choice among sampled hues) are assumed and disclosed, never asked. Skip questions entirely for edits to existing work. `L1` · OD
-- Never ask the user to choose a visual style. Choosing one is the job; a style menu hands the decision back. The exception is an explicit request for options: give two or three that differ decisively on one stated axis, never cosmetic variants. `L1` · OD
-- Do not guess a brand. If the user says "match our brand" or "like this reference" and nothing was supplied, ask for it (this is the one question worth asking) or state that you are proceeding unbranded. `L3` · OD
+- Default to proceeding. Ask only when an unresolved answer would change the direction, the structure, or the delivery format; a question whose answer would only nudge a detail costs the user a turn for nothing. `L1` · default
+- Never ask what the brief, attached assets, a supplied brand source, earlier turns, or this skill already answer. Asking again signals you did not read. `L1` · default
+- If you can ask the user: ask once, at most three questions, each carrying your recommended default so a bare "go ahead" is a valid reply. Never run a second round of questions. `L1` · default
+- If you cannot ask (no channel, unattended run, "just do it"): proceed on the most defensible reading and list each assumption in the delivery note, so a wrong guess is a cheap redirect. `L1` · default
+- Local, reversible details (a heading's wording, a crop, an accent choice among sampled hues) are assumed and disclosed, never asked. Skip questions entirely for edits to existing work. `L1` · default
+- Never ask the user to choose a visual style. Choosing one is the job; a style menu hands the decision back. The exception is an explicit request for options: give two or three that differ decisively on one stated axis, never cosmetic variants. `L1` · default
+- Do not guess a brand. If the user says "match our brand" or "like this reference" and nothing was supplied, ask for it (this is the one question worth asking) or state that you are proceeding unbranded. `L3` · default
 
 ## 2. Direction first
 
-- Resolve direction in this order: explicit user instruction, supplied brand source (L3), supplied reference, then inference from subject, audience, channel and tone (the L2 preset). A higher source silences every lower one. `L1` · OD
-- Commit to one direction. A main direction plus hedged alternates reads as indecision, and mid-piece drift breaks series consistency. If two directions truly compete, name both in one sentence, recommend one, proceed. `L1` · OD
-- Before building, state the system in one sentence: the register and why, the ground, the three type roles, the accent logic, the motion character. It exists so the user can redirect at the cost of one reply, not after the build. `L1` · OD
-- Mark each decision in the delivery note as user-given, brand-given, or defaulted by this skill. A default presented as confirmed is a silent assumption. `L1` · OD
-- Decide the system once (ground, type roles and scale, spacing rhythm, edge treatment, icon family, motion character) and reuse it unchanged across every page, frame, variant and later turn until the user changes it. Re-inventing it per round is how a series falls apart. `L1` · OD
-- For multi-part work (several screens, slides, frames), state the structure and the rhythm between parts before building; show a rough, honestly labelled first pass early rather than a polished one late. `L1` · OD
-- Quiet constraints override register preference: accessibility-critical audiences, regulated content, children, glance-only channels. Read for them before choosing. `L1` · OD
+- Resolve direction in this order: explicit user instruction, supplied brand source (L3), supplied reference, then inference from subject, audience, channel and tone (the L2 preset). A higher source silences every lower one. `L1` · default
+- Commit to one direction. A main direction plus hedged alternates reads as indecision, and mid-piece drift breaks series consistency. If two directions truly compete, name both in one sentence, recommend one, proceed. `L1` · default
+- Before building, state the system in one sentence: the register and why, the ground, the three type roles, the accent logic, the motion character. It exists so the user can redirect at the cost of one reply, not after the build. `L1` · default
+- Mark each decision in the delivery note as user-given, brand-given, or defaulted by this skill. A default presented as confirmed is a silent assumption. `L1` · default
+- Decide the system once (ground, type roles and scale, spacing rhythm, edge treatment, icon family, motion character) and reuse it unchanged across every page, frame, variant and later turn until the user changes it. Re-inventing it per round is how a series falls apart. `L1` · default
+- For multi-part work (several screens, slides, frames), state the structure and the rhythm between parts before building; show a rough, honestly labelled first pass early rather than a polished one late. `L1` · default
+- Quiet constraints override register preference: accessibility-critical audiences, regulated content, children, glance-only channels. Read for them before choosing. `L1` · default
 
 ## 3. Discovery inputs
 
@@ -779,72 +946,72 @@ Collect these from the brief and assets; ask only for the ones that are both mis
 - **Existing work:** is this greenfield, a refinement, or an overhaul. Classify it before touching anything.
 - **Constraints:** deadline, production limits, legal or required copy, accessibility needs.
 
-`L1` · OD
+`L1` · default
 
 ## 4. Editing existing work
 
-- Existing work is a baseline: read its palette, type, spacing and component language first and continue them. `L1` · OD
-- An edit changes only what was named, everywhere that request applies, and nothing else. A change of narrative, structure or direction is a redesign; say which one you are doing. `L1` · OD
-- Before an overhaul, list what must not change (structure, labels, brand marks, legal copy). Preserve existing accessibility wins. Fix in this order: type, color, states, spacing and grid, component swaps, polish. `L1` · OD
-- After editing, confirm every targeted instance changed and every unnamed element did not. `L1` · OD
+- Existing work is a baseline: read its palette, type, spacing and component language first and continue them. `L1` · default
+- An edit changes only what was named, everywhere that request applies, and nothing else. A change of narrative, structure or direction is a redesign; say which one you are doing. `L1` · default
+- Before an overhaul, list what must not change (structure, labels, brand marks, legal copy). Preserve existing accessibility wins. Fix in this order: type, color, states, spacing and grid, component swaps, polish. `L1` · default
+- After editing, confirm every targeted instance changed and every unnamed element did not. `L1` · default
 
 ## 5. Iteration limits
 
-- Self-revision: at most three passes. Stop earlier when a pass yields no real improvement. At the cap, deliver the best pass and state what remains open. `L1` · OD
-- Refinement turns: edit in place, never rebuild from memory. Keep the system bound on every turn; earlier constraints persist until the user changes them. `L1` · OD
-- Recheck after a fix only what the fix touched, then the non-negotiables once more. `L1` · OD
+- Self-revision: at most three passes. Stop earlier when a pass yields no real improvement. At the cap, deliver the best pass and state what remains open. `L1` · default
+- Refinement turns: edit in place, never rebuild from memory. Keep the system bound on every turn; earlier constraints persist until the user changes them. `L1` · default
+- Recheck after a fix only what the fix touched, then the non-negotiables once more. `L1` · default
 
 ## 6. Anti-slop gate
 
 Before showing work, ask of every element: where did this come from? If the answer is "it is the default", change it or justify it from the concept.
 
-- Every hue traces to the imagery or the concept; a stock framework accent that nobody chose is a tell. `L1` · OD
-- No invented facts: statistics, testimonials, logos, customer names, awards, prices, citations. Use a clearly labelled placeholder or leave the slot out. Any figure shown carries its source, unit and period. `L1` · OD
-- No filler copy ("Feature one", lorem ipsum, hype adjectives). An empty area is a composition problem; solve it with scale and placement, not words. Do not add sections or copy the user did not ask for. `L1` · OD
-- A named real thing (person, product, artwork, landmark, mark) is shown by its real image, never a generated look-alike. If unavailable, show an honestly labelled placeholder. `L1` · OD
-- Structural tells to treat as defects: a rounded card with a colored left-edge stripe; an icon beside every heading or bullet; several solid primary buttons for one action in view; hover that merely greys or dims text; designer or "demo" controls inside a product artifact; placeholder-image URLs; the stock hero-features-pricing-FAQ sequence with nothing specific to this product. `L1` · OD
-- Soul test: a proven structure plus exactly one earned, concept-driven move. If a stranger could not tell what this is for, raise the specificity of content and proportion, never the decoration. `L1` · OD (adapted)
+- Every hue traces to the imagery or the concept; a stock framework accent that nobody chose is a tell. `L1` · default
+- No invented facts: statistics, testimonials, logos, customer names, awards, prices, citations. Use a clearly labelled placeholder or leave the slot out. Any figure shown carries its source, unit and period. `L1` · default
+- No filler copy ("Feature one", lorem ipsum, hype adjectives). An empty area is a composition problem; solve it with scale and placement, not words. Do not add sections or copy the user did not ask for. `L1` · default
+- A named real thing (person, product, artwork, landmark, mark) is shown by its real image, never a generated look-alike. If unavailable, show an honestly labelled placeholder. `L1` · default
+- Structural tells to treat as defects: a rounded card with a colored left-edge stripe; an icon beside every heading or bullet; several solid primary buttons for one action in view; hover that merely greys or dims text; designer or "demo" controls inside a product artifact; placeholder-image URLs; the stock hero-features-pricing-FAQ sequence with nothing specific to this product. `L1` · default
+- Soul test: a proven structure plus exactly one earned, concept-driven move. If a stranger could not tell what this is for, raise the specificity of content and proportion, never the decoration. `L1` · default
 
 ## 7. Critique mode
 
-Use when the user asks for a review, or when grading your own pass. Review the executed result (what is actually on the canvas or in the file), never the stated intent. If tooling exists to render it, look at it at the real format(s) at least once; if not, say the review was static. `L1` · OD (adapted)
+Use when the user asks for a review, or when grading your own pass. Review the executed result (what is actually on the canvas or in the file), never the stated intent. If tooling exists to render it, look at it at the real format(s) at least once; if not, say the review was static. `L1` · default
 
 **Five dimensions, scored independently** (a piece can be a 9 on one and a 4 on another, and the report must say so):
 
-| # | Dimension | Anthony's tenet | OD rubric equivalent | Judge |
+| # | Dimension | Anthony's tenet | Judge |
 |---|---|---|---|---|
-| D1 | Concept and direction | 0 and 5 | Philosophy consistency | One direction chosen from the subject and the real assets; register, type, color and motion agree with it |
-| D2 | Hierarchy and reading order | 2 | Visual hierarchy | Single unbroken chain; the first, second, third read are what the meaning demands |
-| D3 | Intent and detail | 1 | Detail execution | Grid, margins, tangents, collisions, rag, optical alignment; nothing reads as accident or default |
-| D4 | Legibility and function | 4 | Functionality | Contrast on the real background, reading time, states, every format reflowed |
-| D5 | Restraint and distinctiveness | 3 | Innovation (reworded) | Drama in one place; one earned move; never rewards a second flourish or novelty for its own sake |
+| D1 | Concept and direction | 0 and 5 | One direction chosen from the subject and the real assets; register, type, color and motion agree with it |
+| D2 | Hierarchy and reading order | 2 | Single unbroken chain; the first, second, third read are what the meaning demands |
+| D3 | Intent and detail | 1 | Grid, margins, tangents, collisions, rag, optical alignment; nothing reads as accident or default |
+| D4 | Legibility and function | 4 | Contrast on the real background, reading time, states, every format reflowed |
+| D5 | Restraint and distinctiveness | 3 | Drama in one place; one earned move; never rewards a second flourish or novelty for its own sake |
 
 **Scale and scoring rules**
-- Bands: 0–4 broken, 5–6 works but drifts, 7–8 strong, 9–10 exceptional. A 7 means strong, not acceptable. `L1` · OD
-- Every score cites evidence: the specific element, region or frame, plus the principle id. A number without evidence is invalid. `L1` · OD
-- Score the worst sustained band, never the average, and never average up. One weak region that a viewer would notice caps its dimension. `L1` · OD
-- No grade inflation. If every dimension lands at 8 or above, re-read the piece as a sceptical reviewer and find the first thing they would attack. `L1` · OD
-- For each dimension under 9, say in one line what the 10 version would do differently. `L1` · OD
-- A non-negotiable or dealbreaker hit is an automatic must-fix and caps its dimension at 4, whatever else is good. `L1` · OD
+- Bands: 0–4 broken, 5–6 works but drifts, 7–8 strong, 9–10 exceptional. A 7 means strong, not acceptable. `L1` · default
+- Every score cites evidence: the specific element, region or frame, plus the principle id. A number without evidence is invalid. `L1` · default
+- Score the worst sustained band, never the average, and never average up. One weak region that a viewer would notice caps its dimension. `L1` · default
+- No grade inflation. If every dimension lands at 8 or above, re-read the piece as a sceptical reviewer and find the first thing they would attack. `L1` · default
+- For each dimension under 9, say in one line what the 10 version would do differently. `L1` · default
+- A non-negotiable or dealbreaker hit is an automatic must-fix and caps its dimension at 4, whatever else is good. `L1` · default
 
 **Lens checks** (report separately; a strength in one does not excuse a failure in another)
 - Brief fit: does it solve the stated problem; name its thinnest part.
 - Brand (L3): conformance to supplied guidelines; a brand violation is a defect even if it looks good, except where it would break a non-negotiable (flag, change the minimum).
 - Copy: specific, terse, no filler, no invented facts.
-`L1` · OD
+`L1` · default
 
 **Verdict and thresholds**
-- SHIP when: every dimension is 7 or higher, no must-fix is open, and no non-negotiable or dealbreaker is hit. Otherwise BLOCK. Use a min over dimensions, not a weighted composite. `L1` · OD
-- Review passes: at most three. After each non-final pass, fix must-fix items first and re-score only what changed. `L1` · OD
-- **Must-fix** = non-negotiable failure, dealbreaker, hierarchy ambiguity, or any dimension under 7. **Quick win** = a small polish (minutes, not a rebuild) that does not change a verdict. Keep the two lists separate; never pad Fix with polish, and never bury a must-fix among quick wins. `L1` · OD
-- Order Fix by impact per effort, using this remedy preference: remove the element, reduce it, fix hierarchy or placement, fix type, fix color, then polish. `L1` · OD
-- Default to flagging; approval is earned. `L1` · OD
+- SHIP when: every dimension is 7 or higher, no must-fix is open, and no non-negotiable or dealbreaker is hit. Otherwise BLOCK. Use a min over dimensions, not a weighted composite. `L1` · default
+- Review passes: at most three. After each non-final pass, fix must-fix items first and re-score only what changed. `L1` · default
+- **Must-fix** = non-negotiable failure, dealbreaker, hierarchy ambiguity, or any dimension under 7. **Quick win** = a small polish (minutes, not a rebuild) that does not change a verdict. Keep the two lists separate; never pad Fix with polish, and never bury a must-fix among quick wins. `L1` · default
+- Order Fix by impact per effort, using this remedy preference: remove the element, reduce it, fix hierarchy or placement, fix type, fix color, then polish. `L1` · default
+- Default to flagging; approval is earned. `L1` · default
 
 **Citing principles**
 - Cite as `category · R-id (layer)`, taking the category from the heading and the R-id from the tag on the rule in `principles/*.md`, for example `Typography · R024 (L1)`. For an L2 rule add the tone: `(L2 quiet/premium)`. For a brand rule: `(L3)`.
 - Cite SKILL.md items by name: `Non-negotiable 3`, `Tenet 2`, `Dealbreaker: justified text`.
 - Imported, unvalidated rules are cited by file and section (for example `ui-craft.md · Forms`) and labelled provisional; they can raise a Quick win or a Fix but never a Block on their own. (Only validated rules, non-negotiables and dealbreakers block.)
-`L1` · OD (adapted)
+`L1` · default
 
 **Before / After / Why format** (one row per issue, never separate lines)
 
@@ -899,7 +1066,7 @@ Run on your own output, in this order, before showing it. Run the SKILL.md pre-f
 7. **Name the weakest element** a sceptical reviewer would attack first. Fix it or disclose it.
 8. **Report only what you ran.** The delivery note lists decisions with their source (user, brand, default), assumptions, any rule bent and why, and what remains open. Never claim a check you did not perform; do not narrate tooling trouble the user did not ask about.
 
-`L1` · OD (adapted)
+`L1` · default
 
 
 
@@ -907,142 +1074,153 @@ Run on your own output, in this order, before showing it. Run the SKILL.md pre-f
 
 <!-- file: references/formats.md -->
 # Deliverable Formats
-> **Status: imported from Open Design (OD) analysis. Not yet validated by Anthony's comparison rounds.** Follow these as defaults for surfaces his validated rules (`principles/*.md`, SKILL.md) don't cover. Wherever they conflict with a validated rule, a dealbreaker, or a non-negotiable, the validated rule wins.
+> **Status: default guidance. Not yet validated by Anthony's comparison rounds.** Follow these as defaults for surfaces his validated rules (`principles/*.md`, SKILL.md) don't cover. Wherever they conflict with a validated rule, a dealbreaker, or a non-negotiable, the validated rule wins.
 > **Read when:** the deliverable is a slide deck, dashboard, landing or marketing page, docs or long-form page, email, mobile or native screen, social card or poster set, resume, one-pager or print document, flowchart or diagram, or component documentation. Also read the closing checklist before showing any of them.
 
 Shared ground: the composition, type, color and motion rules in SKILL.md apply to every format. This file adds only what the format changes. For states, focus, forms, UI motion and accessibility, see `ui-craft.md`. For process, critique and verdicts, see `process-and-critique.md`. Do not restate them per format.
 
 ## Slide decks
 **Must have**
-- Choose the narrative skeleton from the purpose (decision, pitch, training, retrospective, case study), then cut to the content. Length follows talk time, not the amount of source material. `L1` · OD
-- State the rhythm (one row per slide: layout and role) before building, and show it if you can ask the user. Otherwise state it as an assumption. `L1` · OD
-- One idea per slide. A slide with three numbers becomes three slides. Titles are assertions, so the titles read in sequence tell the whole story. `L1` · OD
-- When content overflows, split the slide. Never shrink the type to fit. Projection legibility is the floor: body text must read from the back of the room, so size type as a fraction of canvas height. `L1` · OD
-- Choose each layout by the relationship in the content: one dominant figure = a giant number with one sentence; parallel items = equal type-led columns (no icon-in-circle rows); two-way comparison = split; sequence = a short timeline; section break = whitespace or a full-bleed image with the section name only. `L1` · OD (adapted)
-- Keep one frame across the deck: same margins, same title position, same footer band, same grid. Variety comes from layout, never from moving the frame. Fits his series rule (`principles/consistency-across-a-series.md`). `L1` · OD
-- Deck density is a dial, not a constant: place a deliberate low-density beat (full-bleed image, single number, empty field) near each third so the run does not flatten. `L1` · OD
-- One pull-quote per deck, with a real attribution. The closing slide is decisive: the ask, the takeaway sentence, or a date. Not "thank you". `L1` · OD
-- Present two audiences deliberately. Room view: large, sparse, one point, image-first. Speaker view or leave-behind: the same slide may carry notes or a denser companion, but the slide itself never becomes the document. If both are needed, make two artifacts rather than one compromised slide. `L1` · OD (adapted)
-- Screenshots in slides: crop the bottom only, never the top or sides, so the interface's start stays in frame. `L1` · OD
+- Choose the narrative skeleton from the purpose (decision, pitch, training, retrospective, case study), then cut to the content. Length follows talk time, not the amount of source material. `L1` · default
+- Slide copy follows the slide's job: one large statement for dividers; for content slides use short columns with sub-headings each topped by a conceptually connected line icon (plain columns without icons are boring), or a bullet list beside an image that helps communicate the message; templates always include image-left and image-right content layouts. See `principles/decks-and-presentations.md` (R099).
+- Title slides are immersive: a full-bleed image with the title over it (away from the focal point, scrim-secured), or a half-photo split; type-only on a deep brand color is a divider; a photo band over type only for a branding reason. See `principles/decks-and-presentations.md` (R123).
+- State the rhythm (one row per slide: layout and role) before building, and show it if you can ask the user. Otherwise state it as an assumption. `L1` · default
+- One idea per slide. A slide with three numbers becomes three slides. Titles are assertions, so the titles read in sequence tell the whole story. `L1` · default
+- When content overflows, split the slide. Never shrink the type to fit. Projection legibility is the floor: body text must read from the back of the room, so size type as a fraction of canvas height. `L1` · default
+- Choose each layout by the relationship in the content: one dominant figure = a giant number with one sentence; parallel items = equal type-led columns (no icon-in-circle rows); two-way comparison = split; sequence = a short timeline; section break = whitespace or a full-bleed image with the section name only. `L1` · default
+- Keep one frame across the deck: same margins, same title position, same footer band, same grid. Variety comes from layout, never from moving the frame. Fits his series rule (`principles/consistency-across-a-series.md`). `L1` · default
+- Deck density is a dial, not a constant: place a deliberate low-density beat (full-bleed image, single number, empty field) near each third so the run does not flatten. `L1` · default
+- One pull-quote per deck, with a real attribution. The closing slide is decisive: the ask, the takeaway sentence, or a date. Not "thank you". `L1` · default
+- Present two audiences deliberately. Room view: large, sparse, one point, image-first. Speaker view or leave-behind: the same slide may carry notes or a denser companion, but the slide itself never becomes the document. If both are needed, make two artifacts rather than one compromised slide. `L1` · default
+- Screenshots in slides: crop the bottom only, never the top or sides, so the interface's start stays in frame. `L1` · default
 
 **Avoid**
-- Centering every slide; gradient-wash title slides; an icon beside every bullet; corner blobs; abstract 3D filler. Each is already a dealbreaker or explicit-request-only. `L1` · OD
-- Invented metrics. Every number has a source line, understated. `L1` · OD
+- Centering every slide; gradient-wash title slides; an icon beside every bullet; corner blobs; abstract 3D filler. Each is already a dealbreaker or explicit-request-only. `L1` · default
+- Invented metrics. Every number has a source line, understated. `L1` · default
 
-**OPEN QUESTION (unvalidated, not a rule):** whether to alternate light and dark slides to create rhythm. His dark-version rule treats dark as a deliberate variant, and his series rule keeps brand language constant. Default to one ground per deck. If rhythm needs help, vary density and layout first. Flag the alternation question to Anthony as a candidate comparison round rather than deciding it. · OD
+**Ground per slide (validated, R105):** build every slide layout in both a light and a dark version. Use dark for divider slides and light for content slides, or the reverse, to break up the deck visually; a 100% light or 100% dark theme is equally fine. Template work always ships both versions of every layout. Do not default to one dark: the brand dictates deck colors, so draw dark grounds from darker brand colors (R106); with no brand, derive the dark from the primary hue (R038).
 
 **Check:** read only the titles; does the story survive? Any slide with two ideas or shrunken type? Frame identical across slides? A real closing ask?
 
 ## Dashboards and data-dense UI
 **Must have**
-- Treat it as reference media: dense by design, organized by the same hierarchy. Region order: KPI row, one primary chart, one secondary chart or table. Each region answers one question. `L1` structure; `L2 (utility)` density · OD
-- A KPI tile is a label, one figure and its change against the prior period. Lead with the figure, support with the label (optical-centering rule from `principles/data-information-design.md` applies). `L1` · OD
-- Figures that stack in columns or sit in rows use tabular numerals so values do not jitter. A single number inside a sentence stays proportional. If the face lacks tabular figures, change the face for the numeric tier. `L1` · OD
-- Reuse his data rules by reference: conventional axis, light grid, labeled categories, decorate one storytelling point only (`principles/data-information-design.md`). Chart titles state the finding, with a source line beneath. `L1` · OD
-- Compute every mark from the data against one shared baseline. Every datum is readable somewhere (axis plus grid satisfies it; do not add per-bar value labels by default). Prefer filled encoding over outline-only marks. In nested shapes, only one short KPI shares the center; other labels go to a legend. `L1` · OD
-- Chart selection follows the message: trend = line over time; comparison = bars from a zero baseline; part-to-whole = few segments only; one headline metric = big number. Avoid dense pictograms. `L1` · OD (adapted)
-- Filtering: filters show their current state, the result count updates, and view state (filters, tab) lives in the address so a view can be shared. Last good values stay on screen when a fetch fails; sample data is labeled as sample; freshness is shown. `L1` · OD
-- Structure comes from hairlines and spacing, not boxes. As density rises, drop containers and keep rules. Accent is scarce: active navigation plus one chart highlight. Names and values are specific and plausible, never "Metric A". `L1` · OD
+- Treat it as reference media: dense by design, organized by the same hierarchy. Region order: KPI row, one primary chart, one secondary chart or table. Each region answers one question. `L1` structure; `L2 (utility)` density · default
+- A KPI tile is a label, one figure and its change against the prior period. Lead with the figure, support with the label (optical-centering rule from `principles/data-information-design.md` applies). `L1` · default
+- Figures that stack in columns or sit in rows use tabular numerals so values do not jitter. A single number inside a sentence stays proportional. If the face lacks tabular figures, change the face for the numeric tier. `L1` · default
+- Reuse his data rules by reference: conventional axis, light grid, labeled categories, decorate one storytelling point only (`principles/data-information-design.md`). Chart titles state the finding, with a source line beneath. `L1` · default
+- Data slide default: chart beside one to three key numbers that call out the point (storytelling first); a chart alone only when the slide just showcases data with no single point. See `principles/decks-and-presentations.md` (R107).
+- Compute every mark from the data against one shared baseline. Every datum is readable somewhere (axis plus grid satisfies it; do not add per-bar value labels by default). Prefer filled encoding over outline-only marks. In nested shapes, only one short KPI shares the center; other labels go to a legend. `L1` · default
+- Chart selection follows the message: trend = line over time; comparison = bars from a zero baseline; part-to-whole = few segments only; one headline metric = big number. Avoid dense pictograms. `L1` · default
+- Filtering: filters show their current state, the result count updates, and view state (filters, tab) lives in the address so a view can be shared. Last good values stay on screen when a fetch fails; sample data is labeled as sample; freshness is shown. `L1` · default
+- Structure comes from hairlines and spacing, not boxes. As density rises, drop containers and keep rules. Accent is scarce: active navigation plus one chart highlight. Names and values are specific and plausible, never "Metric A". `L1` · default
 
 **Avoid**
-- Hero images, oversized headlines or marketing copy inside a data tool; row striping; per-chart decoration; color as the only status signal (pair with text or shape; see `ui-craft.md`). Status chips are fine; pill buttons are not. · OD
+- Hero images, oversized headlines or marketing copy inside a data tool; row striping; per-chart decoration; color as the only status signal (pair with text or shape; see `ui-craft.md`). Status chips are fine; pill buttons are not. · default
 
 **Check:** can the one question per region be answered in seconds? Numbers aligned? Every chart has axes, units and a finding title? Accent count within budget?
 
 ## Landing and marketing pages
 **Must have**
-- Hero fits the first view with the primary action visible. Stack is capped: optional label, headline, one supporting sentence, one primary action plus at most one secondary. Proof (logos, stats, avatars) moves to the next section. A headline that wraps past two lines is a size problem, not a copy problem. `L1` · OD
-- Hero is image-first and left-aligned, per his composition rules: the photograph or product leads, text follows. In wide layouts split side by side with the image read first. Content sits in the upper golden region, never floating mid-viewport. `L1` · OD (adapted)
-- Section rhythm: hero, proof, how it works, depth, decision, close. Vary section layout so the same split never repeats more than twice in a row, and alternate image and type-led sections. Do not vary by inventing bento or card mosaics. `L1` · OD (adapted)
-- Proof is concrete: a real figure with its source, a named quote, a product screenshot. Never fabricated logos or numbers. `L1` · OD
-- One CTA label per intent across nav, hero and footer. Labels are specific and fit one line. Closing section repeats the primary action once. `L1` · OD
-- One theme per page. A dark band in a light page reads as a paste accident unless it is a single deliberate switch. One accent used consistently; one radius logic. `L1` · OD
-- Responsive means reorganizing the layout for the width, not scaling it. No horizontal scroll at the narrow end. `L1` · OD
+- Hero fits the first view with the primary action visible. Stack is capped: optional label, headline, one supporting sentence, one primary action plus at most one secondary. Proof (logos, stats, avatars) moves to the next section. A headline that wraps past two lines is a size problem, not a copy problem. `L1` · default
+- Hero composition follows the application, not a house layout: photo-led (start with the full-bleed photo and scrim text for landing and home pages; a laid-over paper panel for secondary pages or busy photos; a half split as the third), band-over-text for editorial, or type-led with an inset photo. See `principles/web-and-landing.md` (R096).
+- Hero is image-first and left-aligned, per his composition rules: the photograph or product leads, text follows. In wide layouts split side by side with the image read first. Content sits in the upper golden region, never floating mid-viewport. `L1` · default
+- Section rhythm: hero, proof, how it works, depth, decision, close. Vary section layout so the same split never repeats more than twice in a row, and alternate image and type-led sections. Do not vary by inventing bento or card mosaics. `L1` · default
+- Ground rhythm down a web page: alternate sections between the base ground and a slightly darker tint; use a dark band only for the one section carrying the most important message; never one flat ground with hairlines. See `principles/web-and-landing.md` (R104).
+- Proof is concrete: a real figure with its source, a named quote, a product screenshot. Never fabricated logos or numbers. `L1` · default
+- One CTA label per intent across nav, hero and footer. Labels are specific and fit one line. Closing section repeats the primary action once. `L1` · default
+- One theme per page. A dark band in a light page reads as a paste accident unless it is a single deliberate switch. One accent used consistently; one radius logic. `L1` · default
+- Responsive means reorganizing the layout for the width, not scaling it. No horizontal scroll at the narrow end. `L1` · default
 
 **Avoid**
-- Section-number labels, "Step 01" labels, scroll cues, decorative status dots, tag overlays on photos, keyword strips under the hero. Counted tracked-caps labels: at most one per three sections. · OD
-- Left headline with a floating right paragraph and nothing visual beside it. · OD
+- Section-number labels, "Step 01" labels, scroll cues, decorative status dots, tag overlays on photos, keyword strips under the hero. Counted tracked-caps labels: at most one per three sections. · default
+- Left headline with a floating right paragraph and nothing visual beside it. · default
 
 **Check:** value and action clear in the first view? Layout families varied? Every proof item real? Same CTA wording everywhere?
 
 ## Docs and long-form reading pages
 **Must have**
-- Reading comes first: flush left, ragged right, measure within his range, body leading moderate. Make the article column the widest thing; navigation and contents are quiet. `L1` · OD
-- Layout: sticky navigation at one side, article in the middle, an "on this page" list at the other that marks the current section. On narrow widths the contents list drops and navigation moves to a drawer. Every H2 and H3 has an anchor. Use logical (start/end) properties so the layout flips for right-to-left. `L1` · OD
-- Declare the page type (tutorial, how-to, reference, concept, troubleshooting) and match tone to it. Title is the reader's question. One job per page. Sentence-case headings. `L1` · OD
-- Short paragraphs; three or more parallel items become a list; code blocks are language-tagged, short, explained in prose, with a copy control. Callouts distinguish note from warning by label and rule, not by tinted boxes with icons. `L1` · OD (adapted)
-- Accent is spent on links, the active navigation item and at most one callout rule. Links keep color and underline at rest. `L1` · OD
+- Tables in documents: alternating row shading for five or more rows, hairlines only for three or four, never a full grid of borders; numbers right-aligned in tabular figures with a total row set off by a rule. See `principles/documents-and-long-reading.md` (R117).
+- Articles and long reading: one narrow column set from the left margin, always; no side rail, no multi-column text except occasionally in print. Minimize eye travel and cognitive load. See `principles/documents-and-long-reading.md` (R118).
+- Reading comes first: flush left, ragged right, measure within his range, body leading moderate. Make the article column the widest thing; navigation and contents are quiet. `L1` · default
+- Layout: sticky navigation at one side, article in the middle, an "on this page" list at the other that marks the current section. On narrow widths the contents list drops and navigation moves to a drawer. Every H2 and H3 has an anchor. Use logical (start/end) properties so the layout flips for right-to-left. `L1` · default
+- Declare the page type (tutorial, how-to, reference, concept, troubleshooting) and match tone to it. Title is the reader's question. One job per page. Sentence-case headings. `L1` · default
+- Short paragraphs; three or more parallel items become a list; code blocks are language-tagged, short, explained in prose, with a copy control. Callouts distinguish note from warning by label and rule, not by tinted boxes with icons. `L1` · default
+- Accent is spent on links, the active navigation item and at most one callout rule. Links keep color and underline at rest. `L1` · default
 
 **Avoid**
-- Pressure words (easy, simple, just), recap openers, personified artifacts; vague quantifiers where a figure exists. · OD
+- Pressure words (easy, simple, just), recap openers, personified artifacts; vague quantifiers where a figure exists. · default
 
 **Check:** page type declared? Title a question? Contents list tracks scroll? Links underlined at rest?
 
 ## Email
 **Must have**
-- Marketing email is glance media: one idea, one primary CTA, readable in about ten seconds. Transactional or reference email may be dense but keeps one reading chain. `L1` · OD
-- Single column. Reference width: about 600 to 680 px. The body is flush left, never centered paragraphs. It must still read at about 480 px, with type stepping down one size. `L1` · OD (adapted)
-- Build for clients, not browsers: table layout, inline styles, system or safe-stack fallbacks, no dependence on web fonts, shadows, gradients or script. Every image has alt text and a solid fallback color behind it, because many clients block images by default. The CTA is a real link styled as a button with its own background color, not an image. `L1` · OD
-- Footer carries the sender address, unsubscribe and view-in-browser. Contrast is checked in both light and the client's forced dark mode; use opaque colors, not alpha. `L1` · OD
+- Marketing email is glance media: one idea, one primary CTA, readable in about ten seconds. Transactional or reference email may be dense but keeps one reading chain. `L1` · default
+- Email action hierarchy has three levels: one full-width filled primary button; compact secondary buttons (ghost or filled; ghost when there is more than one); tertiary items as colored, underlined text links. See `principles/email.md` (R100).
+- Email opens with the brand: a wordmark header aligned to the text axis (left logo over left text). Never an email without a brand header. See `principles/email.md` (R115).
+- Email content blocks sit on a clean grid (two columns that fold to one on mobile); no zigzag alternation; images stay modest so text leads and never extreme banner crops; a small image or icon left with text right is the alternative. See `principles/email.md` (R116).
+- Single column. Reference width: about 600 to 680 px. The body is flush left, never centered paragraphs. It must still read at about 480 px, with type stepping down one size. `L1` · default
+- Build for clients, not browsers: table layout, inline styles, system or safe-stack fallbacks, no dependence on web fonts, shadows, gradients or script. Every image has alt text and a solid fallback color behind it, because many clients block images by default. The CTA is a real link styled as a button with its own background color, not an image. `L1` · default
+- Footer carries the sender address, unsubscribe and view-in-browser. Contrast is checked in both light and the client's forced dark mode; use opaque colors, not alpha. `L1` · default
 
 **Avoid**
-- Skewed or faux-italic accent words, pill CTAs, stylized gradient heroes (all dealbreakers). Two competing CTAs. · OD
+- Skewed or faux-italic accent words, pill CTAs, stylized gradient heroes (all dealbreakers). Two competing CTAs. · default
 
 **Check:** one CTA? Survives images off and dark mode? Reads at the narrow width? Footer complete?
 
 ## Mobile and native screens
 **Must have**
-- Pick the platform mode first (iOS, Material, or a deliberately neutral cross-platform) and stay in it. Never one platform's chrome in the other's frame. `L1` · OD
-- Platform fidelity versus brand: platform owns navigation structure, system chrome, gestures, sheets and control behavior; brand owns color, type, imagery and tone. Where they collide, behavior follows the platform and appearance follows the brand. `L1` · OD (adapted)
-- Honor safe areas: status bar, home indicator, notch, gesture edges. Critical controls stay out of them. Reference floors: about 44 pt touch targets on iOS, about 48 dp on Material. `L1` · OD
-- One screen, one job. Top-level sections live in a tab bar or bottom navigation, drill-downs stack, secondary tasks use sheets, local switching uses segmented controls. Do not overload the bar. `L1` · OD
-- First screen: one focal point, short copy, one next action. A website hero inside a phone frame fails. Onboarding screens differ in composition, not three identical slides. `L1` · OD
-- When text feels small, cut or split to another screen rather than shrink. Prefer fewer containers over box-in-box. Hover effects only where hover exists. `L1` · OD
-- A phone-sized mockup uses one persistent, correct device frame that supports the screen. Controls work; no designer panels or demo badges inside the product. `L1` · OD
+- Pick the platform mode first (iOS, Material, or a deliberately neutral cross-platform) and stay in it. Never one platform's chrome in the other's frame. `L1` · default
+- Platform fidelity versus brand: platform owns navigation structure, system chrome, gestures, sheets and control behavior; brand owns color, type, imagery and tone. Where they collide, behavior follows the platform and appearance follows the brand. `L1` · default
+- Honor safe areas: status bar, home indicator, notch, gesture edges. Critical controls stay out of them. Reference floors: about 44 pt touch targets on iOS, about 48 dp on Material. `L1` · default
+- One screen, one job. Top-level navigation is the menu button (hamburger) for websites on small screens and for any non-trivial app; a bottom tab bar with icons only for a super simple native app (R101); never tabs across the top; drill-downs stack, secondary tasks use sheets, local switching uses segmented controls. Do not overload the bar. `L1` · default
+- Small secondary tasks open as a bottom sheet (centered dialog acceptable), never a full screen: design for how the phone is held and keep inputs and primary actions in the thumb zone. See `principles/mobile-app.md` (R119).
+- First screen: one focal point, short copy, one next action. A website hero inside a phone frame fails. Onboarding screens differ in composition, not three identical slides. `L1` · default
+- When text feels small, cut or split to another screen rather than shrink. Prefer fewer containers over box-in-box. Hover effects only where hover exists. `L1` · default
+- A phone-sized mockup uses one persistent, correct device frame that supports the screen. Controls work; no designer panels or demo badges inside the product. `L1` · default
 
 **Check:** platform coherent? Safe areas clear? Targets above floor? One job per screen?
 
 ## Social cards and posters (per channel)
 **Must have**
-- Judge at thumbnail size and at half scale: the main message must survive both. The cover carries the whole click decision. `L1` · OD
-- Re-compose for each channel and size: reset hierarchy, line breaks and crop, never scale. Keep essentials inside the central safe area and clear of the channel's own interface overlays. Variants differ in composition or message, not color alone. `L1` · OD
-- Keep his image-first chain and golden proportions (SKILL.md); only the safe-area and thumbnail tests are added. One verb-led action at most, and text share stays modest on paid placements. `L1` · OD (adapted)
-- Print: build at physical size with bleed, keep essentials a safe distance inside the trim, and size type for viewing distance. Reference floor: bleed about 3 to 5 mm; key content about 5 mm inside trim. `L1` · OD
+- Judge at thumbnail size and at half scale: the main message must survive both. The cover carries the whole click decision. `L1` · default
+- Re-compose for each channel and size: reset hierarchy, line breaks and crop, never scale. Keep essentials inside the central safe area and clear of the channel's own interface overlays. Variants differ in composition or message, not color alone. `L1` · default
+- Keep his image-first chain and golden proportions (SKILL.md); only the safe-area and thumbnail tests are added. One verb-led action at most, and text share stays modest on paid placements. `L1` · default
+- Print: build at physical size with bleed, keep essentials a safe distance inside the trim, and size type for viewing distance. Reference floor: bleed about 3 to 5 mm; key content about 5 mm inside trim. `L1` · default
 
 **Check:** message legible as a thumbnail? Each size re-laid out? Nothing under platform overlays?
 
 ## Resumes, one-pagers and print documents
 **Must have**
-- This is a composed page, not a dashboard. Warm off-white ground, one scarce accent, one warm undertone across all neutrals, hierarchy from size and weight within one family. `L2 (quiet/premium)` · OD
-- Margins track formality: denser documents take tighter margins, formal ones more. One strict grid, flush left, a clear reading chain from name or title to the first fact. `L1` · OD (adapted)
-- Use opaque colors, not alpha, anything exported to PDF; embed or outline fonts; build at the physical page size. `L1` · OD
-- One page means one page: cut, do not shrink. Dates and figures in tabular numerals. Every claim is a real one. `L1` · OD (adapted)
+- This is a composed page, not a dashboard. Warm off-white ground, one scarce accent, one warm undertone across all neutrals, hierarchy from size and weight within one family. `L2 (quiet/premium)` · default
+- Margins track formality: denser documents take tighter margins, formal ones more. One strict grid, flush left, a clear reading chain from name or title to the first fact. `L1` · default
+- Use opaque colors, not alpha, anything exported to PDF; embed or outline fonts; build at the physical page size. `L1` · default
+- One page means one page: cut, do not shrink. Dates and figures in tabular numerals. Every claim is a real one. `L1` · default
 
 **Avoid**
-- Simulated paper texture, italic emphasis, side-rail ornament, centered titles by default. · OD
+- Simulated paper texture, italic emphasis, side-rail ornament, centered titles by default. · default
 
 **Check:** fits at legible size? Exports with colors intact? Accent under budget?
 
 ## Flowcharts and diagrams
 **Must have**
-- One main path, read in his reading order (top to bottom or left to right), with branches kept to two levels. A diagram that needs more becomes two diagrams. `L1` · OD (adapted)
-- Align boxes to a grid, equalize spacing, route lines orthogonally with no crossings where avoidable, and never let a line run along an edge or end in a near-tangent. Label connectors, not just nodes. `L1` · OD (adapted)
-- Flat, hairline strokes, one accent for the path that matters, text contrast checked against each node fill. Theme any generated diagram to its slide or page background; never recolor a single label to patch contrast. `L1` · OD
-- Nested or concentric diagrams: one short label at the center, everything else in a legend or callout. `L1` · OD
+- One main path, read in his reading order (top to bottom or left to right), with branches kept to two levels. A diagram that needs more becomes two diagrams. `L1` · default
+- Align boxes to a grid, equalize spacing, route lines orthogonally with no crossings where avoidable, and never let a line run along an edge or end in a near-tangent. Label connectors, not just nodes. `L1` · default
+- Flat, hairline strokes, one accent for the path that matters, text contrast checked against each node fill. Theme any generated diagram to its slide or page background; never recolor a single label to patch contrast. `L1` · default
+- Nested or concentric diagrams: one short label at the center, everything else in a legend or callout. `L1` · default
 
 **Check:** one main path? No crossings or tangents? Labels readable on every fill?
 
 ## Design-system and component documentation
 **Must have**
-- Show each component in all its states, with its variants beside it and usage notes beneath: when to use, when not to, accessibility behavior. States follow `ui-craft.md`. `L1` · OD (adapted)
-- Document tokens by role (surface, text, accent, status), not by value, and list what is locked versus negotiable. Name the one accent and the one radius logic. `L1` · OD
-- Present specimens on the real background they ship on, in both light and dark if the system has both, with contrast stated per pair. `L1` · OD
+- Show each component in all its states, with its variants beside it and usage notes beneath: when to use, when not to, accessibility behavior. States follow `ui-craft.md`. `L1` · default
+- Document tokens by role (surface, text, accent, status), not by value, and list what is locked versus negotiable. Name the one accent and the one radius logic. `L1` · default
+- Present specimens on the real background they ship on, in both light and dark if the system has both, with contrast stated per pair. `L1` · default
 
 **Check:** every state shown? Tokens named by role? Both themes covered?
 
 ## Deliverable-format checklist
 - [ ] Format identified; its section above read; the shared SKILL.md pre-flight also run.
-- [ ] Deck: titles alone tell the story; one idea per slide; split, never shrink; one frame; light/dark alternation not assumed.
+- [ ] Deck: titles alone tell the story; one idea per slide; split, never shrink; one frame; every layout has light and dark versions.
 - [ ] Dashboard: KPI, primary chart, secondary region in order; tabular numerals; chart integrity; freshness and sample labels.
 - [ ] Landing: first view shows value and action; layout families varied; proof is real; one CTA label per intent.
 - [ ] Docs: page type declared; measure and anchors; links colored and underlined.
@@ -1060,92 +1238,95 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 
 <!-- file: references/media-prompts.md -->
 # Image, Video and Motion-Graphic Prompting
-> **Status: imported from Open Design (OD) analysis. Not yet validated by Anthony's comparison rounds.** Follow these as defaults for surfaces his validated rules (`principles/*.md`, SKILL.md) don't cover. Wherever they conflict with a validated rule, a dealbreaker, or a non-negotiable, the validated rule wins.
+> **Status: default guidance. Not yet validated by Anthony's comparison rounds.** Follow these as defaults for surfaces his validated rules (`principles/*.md`, SKILL.md) don't cover. Wherever they conflict with a validated rule, a dealbreaker, or a non-negotiable, the validated rule wins.
 > **Read when:** writing a prompt for an image or video model; briefing a generated photo or plate; authoring a timeline-based motion graphic (HTML/CSS, a timeline library or a frame renderer) or exporting MP4; building negative-prompt lists; QA-ing generated media before it enters a layout.
 
 ## Core stance
-- A prompt is a brief to a photographer, not an incantation. Name concrete things, light, lens and relationships; filler ("masterpiece", "hyper-realistic", "cinematic") adds no control and invites the generic look. `L1` · OD (adapted)
-- Restate every taste rule in prompt language. A rule left implicit gets the model's default, usually a dealbreaker (glow, gloss, faked blur, rendered type). `L1` · OD
-- Generate only what cannot be sourced. A named real thing (person, product, artwork, logo) uses its real image; generation serves atmosphere and subjects with no real referent. `L1` · OD
-- Generated media is a plate, not a layout. Type, logos, labels and data are composed over it. Ask for the picture, never the poster. `L1` · OD (adapted)
+- A prompt is a brief to a photographer, not an incantation. Name concrete things, light, lens and relationships; filler ("masterpiece", "hyper-realistic", "cinematic") adds no control and invites the generic look. `L1` · default
+- Restate every taste rule in prompt language. A rule left implicit gets the model's default, usually a dealbreaker (glow, gloss, faked blur, rendered type). `L1` · default
+- Generate only what cannot be sourced. A named real thing (person, product, artwork, logo) uses its real image; generation serves atmosphere and subjects with no real referent. `L1` · default
+- Generated media is a plate, not a layout. Type, logos, labels and data are composed over it. Ask for the picture, never the poster. `L1` · default
 
 ## Image prompt assembly order
 One clause per block; skip only what is irrelevant.
-1. **Intent and medium:** what it is for and what kind of picture ("documentary photograph, plate for a poster, text added later"). Stating the use lets the model leave the right area calm. `L1` · OD
-2. **Subject** in concrete nouns with materials, wear and scale, not adjectives of feeling. `L1` · OD
-3. **Composition:** framing, angle, subject position, and where the calm area is. Focal subject horizontally centered on the upper golden line, never dead center; keep the subject's cause and effect inside the frame. `L1` · OD (adapted)
-4. **Camera and lens** (photographic work): distance, focal-length feel, aperture feel, as capture. `L1` · OD
-5. **Light:** direction, hard or soft, color temperature, where shadows fall. One light story per image. `L1` · OD
-6. **Palette as relationships sourced from the concept** ("one warm family; shadows lean cool"), never a free-floating "vibrant" or "pastel". Choose one clear hierarchy hue and a calm neutral, since the layout will later sample them for type. A supplied brand palette replaces this. `L1` · OD (adapted)
-7. **Material and finish:** real surfaces, matte and unglossed, plus honest capture flaws when realism matters. Grain, if any, fine and over everything; never simulated paper or fabric. `L1` · OD (adapted)
-8. **Exclusions:** positive form first ("flat matte background, no scenery"), then the negative list below. `L1` · OD
-9. **Aspect ratio and size as tool parameters**, plus one prose sentence naming the safe area where text will go. `L1` · OD
+1. **Intent and medium:** what it is for and what kind of picture ("documentary photograph, plate for a poster, text added later"). Stating the use lets the model leave the right area calm. `L1` · default
+2. **Subject** in concrete nouns with materials, wear and scale, not adjectives of feeling. `L1` · default
+3. **Composition:** framing, angle, subject position, and where the calm area is. Focal subject horizontally centered on the upper golden line, never dead center; keep the subject's cause and effect inside the frame. `L1` · default
+4. **Camera and lens** (photographic work): distance, focal-length feel, aperture feel, as capture. `L1` · default
+5. **Light:** direction, hard or soft, color temperature, where shadows fall. One light story per image. `L1` · default
+6. **Palette as relationships sourced from the concept** ("one warm family; shadows lean cool"), never a free-floating "vibrant" or "pastel". Choose one clear hierarchy hue and a calm neutral, since the layout will later sample them for type. A supplied brand palette replaces this. `L1` · default
+7. **Material and finish:** real surfaces, matte and unglossed, plus honest capture flaws when realism matters. Grain, if any, fine and over everything; never simulated paper or fabric. `L1` · default
+8. **Exclusions:** positive form first ("flat matte background, no scenery"), then the negative list below. `L1` · default
+9. **Aspect ratio and size as tool parameters**, plus one prose sentence naming the safe area where text will go. `L1` · default
 
-- Change one block per revision so the cause of a difference is known. Hold the seed when testing one variable; release it when exploring. `L1` · OD (adapted)
-- Parameterize reusable prompts with named, defaulted slots (subject, palette relationships, aspect, text-safe region). `L1` · OD
+- Change one block per revision so the cause of a difference is known. Hold the seed when testing one variable; release it when exploring. `L1` · default
+- Parameterize reusable prompts with named, defaulted slots (subject, palette relationships, aspect, text-safe region). `L1` · default
 
 ## Translating his rules into prompt language
-- **Shallow depth of field, captured not faked:** ask for a long lens, wide aperture and real subject-to-background distance. Never request "blur effect", "bokeh filter" or "tilt-shift". A painted or uniformly blurred background means regenerate, not post-blur. `L1` · OD (adapted)
-- **Flat, no glow:** natural light, matte surfaces; exclude glow, bloom, halos, neon edges, flare, light leaks, drop shadows. `L1` · OD (adapted)
-- **Real-photo presentation:** phrase subjects as an actual capture shown as shot, with true color and ordinary retouching. Never "airbrushed", "polished" or "stylized" for showcased subjects. `L1` · OD (adapted)
-- **No stock 3D:** do not ask for 3D render, glossy plastic, floating objects, clay mascots or isometric illustration unless the concept is explicitly that. Volume comes from a photographed physical object in real light. `L1` · OD (adapted)
-- **Series consistency via reference anchors:** repeat verbatim the palette relationships, light direction, lens feel, background treatment and subject scale. Feed an approved frame as a reference with a named role ("match light, color and lens feel; subject differs"). Vary composition per piece, keep the language constant. For multi-panel sheets state grid, equal cells, plain backgrounds, "identical subject in every panel". `L1` · OD (adapted)
-- **Calm area for the headline:** request a quiet, even-toned, low-detail region. Do not ask the model to draw a panel or text box. Measure contrast on the delivered pixels. `L1` · OD (adapted)
-- **Generate with margin** beyond the intended crop so layout can crop decisively and bleed symmetrically. `L1` · OD
+- **Shallow depth of field, captured not faked:** ask for a long lens, wide aperture and real subject-to-background distance. Never request "blur effect", "bokeh filter" or "tilt-shift". A painted or uniformly blurred background means regenerate, not post-blur. `L1` · default
+- **Flat, no glow:** natural light, matte surfaces; exclude glow, bloom, halos, neon edges, flare, light leaks, drop shadows. `L1` · default
+- **Real-photo presentation:** phrase subjects as an actual capture shown as shot, with true color and ordinary retouching. Never "airbrushed", "polished" or "stylized" for showcased subjects. `L1` · default
+- **No stock 3D:** do not ask for 3D render, glossy plastic, floating objects, clay mascots or isometric illustration unless the concept is explicitly that. Volume comes from a photographed physical object in real light. `L1` · default
+- **Series consistency via reference anchors:** repeat verbatim the palette relationships, light direction, lens feel, background treatment and subject scale. Feed an approved frame as a reference with a named role ("match light, color and lens feel; subject differs"). Vary composition per piece, keep the language constant. For multi-panel sheets state grid, equal cells, plain backgrounds, "identical subject in every panel". `L1` · default
+- **Calm area for the headline:** request a quiet, even-toned, low-detail region. Do not ask the model to draw a panel or text box. Measure contrast on the delivered pixels. `L1` · default
+- **Generate with margin** beyond the intended crop so layout can crop decisively and bleed symmetrically. `L1` · default
 
 ## Text inside images
-- Never rely on the model to set typography: generated glyphs garble and fake weights and shapes. Request a text-free plate; compose real type in layout. `L1` · OD (adapted)
-- Sole exception is text that is part of a photographed object (a sign in a scene). Quote the exact string, keep it a few characters, treat it as decor that may need cleanup, never as meaning. `L1` · OD
-- Never prompt for real logos or look-alikes; leave a clean area and place the real asset. No lorem or filler in frame. `L1` · OD
+- Never rely on the model to set typography: generated glyphs garble and fake weights and shapes. Request a text-free plate; compose real type in layout. `L1` · default
+- Sole exception is text that is part of a photographed object (a sign in a scene). Quote the exact string, keep it a few characters, treat it as decor that may need cleanup, never as meaning. `L1` · default
+- Never prompt for real logos or look-alikes; leave a clean area and place the real asset. No lorem or filler in frame. `L1` · default
 
 ## Aspect-ratio reflow
-- Write a separate composition clause per format; do not generate one master and crop. Portrait: subject above a calm lower field. Landscape: subject on one half, calm half opposite, image leading the read. All other anchors carry over verbatim. `L1` · OD (adapted) · cf. R070
-- State which edge the gaze or motion leads toward so the text chain can follow. Request normal ratios, never extreme slivers. `L1` · OD
-- Vertical platform frames: keep subject and text out of the UI bands; reference floor: roughly the top 15% and bottom 20%. `L1` · OD
+- Write a separate composition clause per format; do not generate one master and crop. Portrait: subject above a calm lower field. Landscape: subject on one half, calm half opposite, image leading the read. All other anchors carry over verbatim. `L1` · default · cf. R070
+- State which edge the gaze or motion leads toward so the text chain can follow. Request normal ratios, never extreme slivers. `L1` · default
+- Vertical platform frames: keep subject and text out of the UI bands; reference floor: roughly the top 15% and bottom 20%. `L1` · default
 
 ## Iteration discipline
-- Record per accepted asset: final prompt, negative list, aspect, seed or variation id, reference images with roles. Series members must be reproducible. `L1` · OD (adapted)
-- Save revisions as new files. Use critique to rewrite the prompt, not to swap tools. One image per turn unless variations are requested, and variations differ on one block. `L1` · OD
-- If two prompt edits do not remove a flaw, change structure (composition, reference anchor, crop it out), not prompt length. `L1` · OD (adapted)
+- Record per accepted asset: final prompt, negative list, aspect, seed or variation id, reference images with roles. Series members must be reproducible. `L1` · default
+- Save revisions as new files. Use critique to rewrite the prompt, not to swap tools. One image per turn unless variations are requested, and variations differ on one block. `L1` · default
+- If two prompt edits do not remove a flaw, change structure (composition, reference anchor, crop it out), not prompt length. `L1` · default
 
 ## Negative-prompt templates (from his dealbreakers)
 Attach the base list to every image prompt; add modules as needed. Without a negative field, write "avoid: ...".
-- **Base:** glow, bloom, flare, light leaks, drop shadows, bevel, emboss, extrusion, mesh or rainbow gradients, neon, floating 3D objects, glossy plastic, stock 3D characters, simulated paper or fabric texture, vignette (a precaution, not one of his dealbreakers), decorative patterns, emoji-style icons, over-rounded shapes, artificial blur, any rendered text, logos, watermarks. `L1` · OD (adapted)
-- **Photographic:** airbrushed or plastic skin, warped hands, duplicated subjects, HDR halos, oversharpening, fake bokeh discs, oversaturation, teal-and-orange grade. `L1` · OD (adapted)
+- **Base:** glow, bloom, flare, light leaks, drop shadows, bevel, emboss, extrusion, mesh or rainbow gradients, neon, floating 3D objects, glossy plastic, stock 3D characters, simulated paper or fabric texture, vignette (a precaution, not one of his dealbreakers), decorative patterns, emoji-style icons, over-rounded shapes, artificial blur, any rendered text, logos, watermarks. `L1` · default
+- **Photographic:** airbrushed or plastic skin, warped hands, duplicated subjects, HDR halos, oversharpening, fake bokeh discs, oversaturation, teal-and-orange grade. `L1` · default
 - **Palette:** muddy low-contrast color, vibrating complements, near-duplicate hues, pure black against pure white. `L1` · his dealbreakers
-- **Video (adds):** identity drift, flicker, jitter, morphing, warping, stretching, sudden zoom, whip pans, camera shake, speed ramps, spinning, flashes, scene resets. `L1` · OD (adapted)
-- Pair exclusions with a target ("flat matte background, one soft natural light") so the model has something to aim at. `L1` · OD
+- **Video (adds):** identity drift, flicker, jitter, morphing, warping, stretching, sudden zoom, whip pans, camera shake, speed ramps, spinning, flashes, scene resets. `L1` · default
+- Pair exclusions with a target ("flat matte background, one soft natural light") so the model has something to aim at. `L1` · default
 
 ## Video prompt skeleton
-1. **One intent line:** feeling, palette relationships, pacing, sound or silence. `L1` · OD
-2. **One shot, one idea.** Reference floor: aim for about 10 s or less per generation and join clips in an edit; long generations drift. `L1` · OD
-3. **Shot list with ranges.** Per shot: size, camera behavior, one concrete physical action, light state, landing sound. Length follows the weight of the idea. `L1` · OD
-4. **One camera move per shot.** Static or a slow eased push-in by default; a lateral move only when it reveals more of the story. Never stack push, pan and orbit. `L1` · OD (adapted) · cf. R047
-5. **One change per beat** in transformations (expression, then color temperature, then camera). `L1` · OD
-6. **Continuity locks repeated in every shot:** subject, wardrobe, environment, light direction, color relationships, lens feel, time of day. Give references named roles (identity, light and palette, camera path). `L1` · OD
-7. **Readable text needs hold time.** Prefer a text-free clip with real type added in the edit, which guarantees the hold. If text is generated, quote it exactly and state it stays still and resolved for its reading time; reference floor: a short title about 1.5 s, more per added word. `L1` · OD (adapted) · cf. R046
-8. **Sound:** with music, name the cuts that land on beats; with voiceover, the voice drives the edit; otherwise no effects. The picture alone must carry the message with sound off. `L1` · OD (adapted)
-9. **End with the avoid line.** `L1` · OD
+
+- Captions follow the piece: plain text over a gradient scrim for voiceover-free supers and calm, professional or emotional pieces; word-by-word highlighted captions for someone speaking to camera and for energetic, high-impact shorts; never a solid caption panel (looks like native Instagram/TikTok text). See `principles/imagery-and-media-production.md` (R109).
+- End card: the brand, one call to action and a link out; never a logo-only dead end and never a block of information. See `principles/imagery-and-media-production.md` (R122).
+1. **One intent line:** feeling, palette relationships, pacing, sound or silence. `L1` · default
+2. **One shot, one idea.** Reference floor: aim for about 10 s or less per generation and join clips in an edit; long generations drift. `L1` · default
+3. **Shot list with ranges.** Per shot: size, camera behavior, one concrete physical action, light state, landing sound. Length follows the weight of the idea. `L1` · default
+4. **One camera move per shot.** Static or a slow eased push-in by default; a lateral move only when it reveals more of the story. Never stack push, pan and orbit. `L1` · default · cf. R047
+5. **One change per beat** in transformations (expression, then color temperature, then camera). `L1` · default
+6. **Continuity locks repeated in every shot:** subject, wardrobe, environment, light direction, color relationships, lens feel, time of day. Give references named roles (identity, light and palette, camera path). `L1` · default
+7. **Readable text needs hold time.** Prefer a text-free clip with real type added in the edit, which guarantees the hold. If text is generated, quote it exactly and state it stays still and resolved for its reading time; reference floor: a short title about 1.5 s, more per added word. `L1` · default · cf. R046
+8. **Sound:** with music, name the cuts that land on beats; with voiceover, the voice drives the edit; otherwise no effects. The picture alone must carry the message with sound off. `L1` · default
+9. **End with the avoid line.** `L1` · default
 
 ## Motion-graphic builds (HTML, CSS, timeline libraries, frame renderers)
-- **Build the resolved frame first,** with ordinary layout flow and padding, then tween from the entry position to rest. Collisions and near-tangents only appear once the end state exists. `L1` · OD
-- **Timeline in reading order:** label, image, headline, subhead, body, details. What moves first reads as most important; the headline enters as one unit, never word by word. `L1` · OD (adapted)
-- **Ease-out entrances, no overshoot.** Decelerating curve, responsive start, soft landing, for entrances and for slow push-ins (eased at both ends). No spring, elastic or back easing; a physics-feel library is set critically damped. Playful tone may relax this per his validated rule. `L1` · OD (adapted) · cf. R041, R048
-- **Duration by role.** Brisk for professional and energetic work, slower for luxury; exits faster than entrances; one tempo across the piece; stagger small enough that a group reads as one build. UI duration tiers (instant feedback, about 150 ms state change, up to about 500 ms cross-screen) are for product UI only, not staged video. `L1` · OD (adapted)
+- **Build the resolved frame first,** with ordinary layout flow and padding, then tween from the entry position to rest. Collisions and near-tangents only appear once the end state exists. `L1` · default
+- **Timeline in reading order:** label, image, headline, subhead, body, details. What moves first reads as most important; the headline enters as one unit, never word by word. `L1` · default
+- **Ease-out entrances, no overshoot.** Decelerating curve, responsive start, soft landing, for entrances and for slow push-ins (eased at both ends). No spring, elastic or back easing; a physics-feel library is set critically damped. Playful tone may relax this per his validated rule. `L1` · default · cf. R041, R048
+- **Duration by role.** Brisk for professional and energetic work, slower for luxury; exits faster than entrances; one tempo across the piece; stagger small enough that a group reads as one build. UI duration tiers (instant feedback, about 150 ms state change, up to about 500 ms cross-screen) are for product UI only, not staged video. `L1` · default
 - **Hold lengths come from the copy.** Every element is at full contrast before its hold starts and stays for the frame's whole text. If it drags, cut copy or split the frame; never shorten the hold. `L1` · non-negotiable (his R046)
-- **No dead zones:** about a second or more with nothing alive gets a slow eased push-in or breathing ambient movement, not decoration. `L1` · OD (adapted)
-- **Exits hand off or do not exist.** No exit tween before a transition; the transition is the exit, with outgoing content fully visible at its start, traveling the same direction as the incoming build. No dips to black between every scene; only the last frame fades; a standalone piece builds once and stays. `L1` · OD · cf. R045, R050
-- **Few simultaneous movers;** each segment has one narrative job and the hook comes early. `L1` · OD
-- **Video legibility:** headline far above body; body and data labels readable on a phone-size preview; horizontal frames keep safe-area padding, vertical frames clear the platform UI bands. `L1` · OD
-- **Dark fields:** solid colored field; any gradient subtle and tonal to avoid banding; no radial glows. `L1` · OD (adapted)
-- **Deterministic timelines:** no random or clock-driven values; synchronous, finite builds so renders repeat frame for frame. Never pass code-driven motion off as footage. `L1` · OD
+- **No dead zones:** about a second or more with nothing alive gets a slow eased push-in or breathing ambient movement, not decoration. `L1` · default
+- **Exits hand off or do not exist.** No exit tween before a transition; the transition is the exit, with outgoing content fully visible at its start, traveling the same direction as the incoming build. No dips to black between every scene; only the last frame fades; a standalone piece builds once and stays. `L1` · default · cf. R045, R050
+- **Few simultaneous movers;** each segment has one narrative job and the hook comes early. `L1` · default
+- **Video legibility:** headline far above body; body and data labels readable on a phone-size preview; horizontal frames keep safe-area padding, vertical frames clear the platform UI bands. `L1` · default
+- **Dark fields:** solid colored field; any gradient subtle and tonal to avoid banding; no radial glows. `L1` · default
+- **Deterministic timelines:** no random or clock-driven values; synchronous, finite builds so renders repeat frame for frame. Never pass code-driven motion off as footage. `L1` · default
 
 ## Export and MP4 checks
-- Sample, do not eyeball one frame: measure contrast against the rendered background and inspect collisions and near-tangents at the first frame of each hold, mid-hold, and the frame before each exit. `L1` · OD (adapted)
+- Sample, do not eyeball one frame: measure contrast against the rendered background and inspect collisions and near-tangents at the first frame of each hold, mid-hold, and the frame before each exit. `L1` · default
 - Confirm in the exported file, not the preview, that every text element is resolved and readable for its full hold. `L1` · non-negotiable (his R046)
-- Probe the file: aspect, resolution, frame rate matching the timeline, duration, audio present or intentionally absent, widely playable codec and pixel format. `L1` · OD (adapted)
-- Scrub transitions for black flashes, duplicate frames, overlapping text. Reference floor: nothing flashes more than three times per second. `L1` · OD
-- Web embeds get a reduced-motion or static fallback; motion is never the only carrier of meaning. `L1` · OD
+- Probe the file: aspect, resolution, frame rate matching the timeline, duration, audio present or intentionally absent, widely playable codec and pixel format. `L1` · default
+- Scrub transitions for black flashes, duplicate frames, overlapping text. Reference floor: nothing flashes more than three times per second. `L1` · default
+- Web embeds get a reduced-motion or static fallback; motion is never the only carrier of meaning. `L1` · default
 
 ## Prompt QA checklist
 - [ ] Assembly order followed; no filler quality words.
@@ -1179,82 +1360,82 @@ Landscape version: rewrite only the composition sentence (boat on one half, calm
 
 <!-- file: references/scripts-and-direction.md -->
 # Scripts, Direction and Localization
-> **Status: imported from Open Design (OD) analysis. Not yet validated by Anthony's comparison rounds.** Follow these as defaults for surfaces his validated rules (`principles/*.md`, SKILL.md) don't cover. Wherever they conflict with a validated rule, a dealbreaker, or a non-negotiable, the validated rule wins.
+> **Status: default guidance. Not yet validated by Anthony's comparison rounds.** Follow these as defaults for surfaces his validated rules (`principles/*.md`, SKILL.md) don't cover. Wherever they conflict with a validated rule, a dealbreaker, or a non-negotiable, the validated rule wins.
 > **Read when:** content is not Latin left-to-right (Arabic, Persian, Urdu, Hebrew, Chinese, Japanese, Korean, Devanagari and similar); the piece will be translated or shipped in several languages; a layout could render right-to-left; numbers, dates or currency are shown to an international audience; Latin and another script share one lockup.
 
 ## Scope: what the validated rules assume
 Every validated rule was proven on Latin, left-to-right copy. Treat them as written for Latin and re-derive the intent for other scripts instead of applying the letter.
 
-- **Say "start" and "end", never "left" and "right", for anything tied to reading direction.** "Flush left, ragged right" means flush to the reading-start edge, ragged at the end. "Image half read first" means the half at the reading start. Physical left/right is reserved for things that are not language-directional (a chart's value axis, a photograph's subject, a physical object). Written physically, a rule silently assumes one language and breaks the others. `L1` · OD
-- **Pull quotes, offsets, captions, wrap-around images, separators and progress fills are specified as start/end** so the whole composition mirrors from one definition. `L1` · OD
-- **Golden-section divisions stay symmetric.** The proportion is measured from each edge, so it survives mirroring; only the assignment of image, text and focal subject to a side flips with direction. Do not hand-place a "left" third. `L1` · OD (adapted)
-- **Declare language and direction on the document and on every embedded passage in another script.** Language drives font choice, hyphenation, line breaking and speech; direction drives layout. Text of unknown direction (user-generated) uses automatic direction detection. `L1` · OD
-- **Add language and direction as reflow axes** next to aspect ratio. Before showing work, view the piece once in a right-to-left language and once with long strings. Prototype with real copy in the target script, never filler text. `L1` · OD
+- **Say "start" and "end", never "left" and "right", for anything tied to reading direction.** "Flush left, ragged right" means flush to the reading-start edge, ragged at the end. "Image half read first" means the half at the reading start. Physical left/right is reserved for things that are not language-directional (a chart's value axis, a photograph's subject, a physical object). Written physically, a rule silently assumes one language and breaks the others. `L1` · default
+- **Pull quotes, offsets, captions, wrap-around images, separators and progress fills are specified as start/end** so the whole composition mirrors from one definition. `L1` · default
+- **Golden-section divisions stay symmetric.** The proportion is measured from each edge, so it survives mirroring; only the assignment of image, text and focal subject to a side flips with direction. Do not hand-place a "left" third. `L1` · default
+- **Declare language and direction on the document and on every embedded passage in another script.** Language drives font choice, hyphenation, line breaking and speech; direction drives layout. Text of unknown direction (user-generated) uses automatic direction detection. `L1` · default
+- **Add language and direction as reflow axes** next to aspect ratio. Before showing work, view the piece once in a right-to-left language and once with long strings. Prototype with real copy in the target script, never filler text. `L1` · default
 
 ## What mirrors, what never does
 The test: does the element encode reading direction or sequence? Then it mirrors. Does it encode identity, physical reality, or a mathematical convention? Then it does not.
 
-- **Mirror:** layout order, navigation order, tab and focus order, sidebars, directional arrows, back/next, disclosure chevrons, progress fills and sliders that are not media, the side a checkbox label sits on, weekday order in calendars, the entry direction of motion and the direction of travel between frames, bullet and list indents, the side of text-leading icons. `L1` · OD
-- **Never mirror:** logos and wordmarks, photographs and illustrations, physical-object icons (a phone, a pencil, a bag), clock faces and clockwise refresh symbols, media transport controls and scrubbers (play points the way time runs on the timeline, which stays start-to-end as a convention), music notation, and the mathematical axes of a chart. `L1` · OD
-- **Charts keep time running left to right and value running up by default.** A time axis is a mathematical convention, not text. If the audience's convention for the dataset is established the other way, follow it and say so, but never flip a chart just because the page flipped. Legends, labels and the page layout around the chart do mirror. `L1` · OD (adapted)
-- **Numerals follow the locale, not the direction.** Digits read left to right even inside right-to-left text; whether they are Western or script-native digits is a locale choice, set once per document. Tabular figures still apply to stacked numbers. `L1` · OD
-- **A genuinely contested symbol (the search magnifier) is decided per platform convention,** not by principle. State the choice. `L1` · OD
-- **Vertical spacing is unaffected by direction.** Only the inline axis flips. `L1` · OD
+- **Mirror:** layout order, navigation order, tab and focus order, sidebars, directional arrows, back/next, disclosure chevrons, progress fills and sliders that are not media, the side a checkbox label sits on, weekday order in calendars, the entry direction of motion and the direction of travel between frames, bullet and list indents, the side of text-leading icons. `L1` · default
+- **Never mirror:** logos and wordmarks, photographs and illustrations, physical-object icons (a phone, a pencil, a bag), clock faces and clockwise refresh symbols, media transport controls and scrubbers (play points the way time runs on the timeline, which stays start-to-end as a convention), music notation, and the mathematical axes of a chart. `L1` · default
+- **Charts keep time running left to right and value running up by default.** A time axis is a mathematical convention, not text. If the audience's convention for the dataset is established the other way, follow it and say so, but never flip a chart just because the page flipped. Legends, labels and the page layout around the chart do mirror. `L1` · default
+- **Numerals follow the locale, not the direction.** Digits read left to right even inside right-to-left text; whether they are Western or script-native digits is a locale choice, set once per document. Tabular figures still apply to stacked numbers. `L1` · default
+- **A genuinely contested symbol (the search magnifier) is decided per platform convention,** not by principle. State the choice. `L1` · default
+- **Vertical spacing is unaffected by direction.** Only the inline axis flips. `L1` · default
 
 ## Bidi isolation
-- **Isolate every run of the opposite direction** (brand names, product names, code, a quoted foreign title) with an isolating element or direction attribute, not invisible control characters. Without isolation, neutral punctuation next to the run jumps to the wrong side. `L1` · OD
-- **Force intrinsically left-to-right values to left-to-right inside right-to-left copy:** phone numbers, card numbers, bank identifiers, emails, URLs, codes, version strings. Mostly-neutral characters defeat auto-detection and the value scrambles. `L1` · OD
-- **Text links keep both signals in any script:** colored and underlined at rest. Underlines on cursive script must skip or clear descenders and dots, not strike through them. `L1` · OD (adapted)
-- **Prefer truncate-with-expand over a bare ellipsis in right-to-left text.** The cut can fall mid-word in cursive script and the ellipsis must land on the end side (verify in the target renderer). `L1` · OD
+- **Isolate every run of the opposite direction** (brand names, product names, code, a quoted foreign title) with an isolating element or direction attribute, not invisible control characters. Without isolation, neutral punctuation next to the run jumps to the wrong side. `L1` · default
+- **Force intrinsically left-to-right values to left-to-right inside right-to-left copy:** phone numbers, card numbers, bank identifiers, emails, URLs, codes, version strings. Mostly-neutral characters defeat auto-detection and the value scrambles. `L1` · default
+- **Text links keep both signals in any script:** colored and underlined at rest. Underlines on cursive script must skip or clear descenders and dots, not strike through them. `L1` · default
+- **Prefer truncate-with-expand over a bare ellipsis in right-to-left text.** The cut can fall mid-word in cursive script and the ellipsis must land on the end side (verify in the target renderer). `L1` · default
 
 ## Latin-only rules and how to scope them
 Name the script of each text element, then check it against this table before applying a Latin rule.
 
-- **Tracked all-caps:** caseless scripts (Arabic-script, Hebrew, CJK, Devanagari, Thai) have no capitals, so the smallest-metadata-tier rule has nothing to track. Express that tier by size, weight and color instead, at zero extra tracking. The tracking floor for Latin caps stays as is. `L1` · OD
-- **Letter-spacing in cursive scripts is zero, in every direction.** Tracking breaks the joins between letters. This overrides both the tight display tracking and the generous small-caps tracking. `L1` · OD
-- **Italics ban extends to "no slant at all."** Arabic-script, Hebrew and CJK have no italic tradition, so a slanted face is a synthesized fake (a dealbreaker already). If a script lacks a real face for a needed weight, choose a different family that has it. Emphasis comes from real weight or color. `L1` · OD
-- **Weight emphasis uses real weights only.** Some script faces ship few weights (reference: a Nastaliq face may offer only a regular and a bold). Plan the hierarchy inside what exists; never fake bold. `L1` · OD
-- **Flush-start, ragged-end holds in every script and "never justify" still wins.** Some Arabic typography stretches joins to justify; do not, the dealbreaker stands. CJK is set on a character grid and may look justified by nature; keep the final line ragged and do not stretch spacing. `L1` · OD (adapted)
-- **The 55 to 75 character measure is a Latin number.** Other scripts have no OD-sourced measure. Keep lines short enough that a reader never loses the start of the next line, state the assumed measure, and proof with real copy. `L1` · OD gap
-- **"Headline as tight as possible" is bounded by the glyphs, not by a ratio.** The principle is unchanged: tight until just before a collision. Scripts with tall or deep strokes hit that collision at much looser leading than Latin. Measure on the real copy. `L1` · OD
-- **Mono and numeric stacks carry the script fallback,** or labels and figures render as empty boxes. `L1` · OD
+- **Tracked all-caps:** caseless scripts (Arabic-script, Hebrew, CJK, Devanagari, Thai) have no capitals, so the smallest-metadata-tier rule has nothing to track. Express that tier by size, weight and color instead, at zero extra tracking. The tracking floor for Latin caps stays as is. `L1` · default
+- **Letter-spacing in cursive scripts is zero, in every direction.** Tracking breaks the joins between letters. This overrides both the tight display tracking and the generous small-caps tracking. `L1` · default
+- **Italics ban extends to "no slant at all."** Arabic-script, Hebrew and CJK have no italic tradition, so a slanted face is a synthesized fake (a dealbreaker already). If a script lacks a real face for a needed weight, choose a different family that has it. Emphasis comes from real weight or color. `L1` · default
+- **Weight emphasis uses real weights only.** Some script faces ship few weights (reference: a Nastaliq face may offer only a regular and a bold). Plan the hierarchy inside what exists; never fake bold. `L1` · default
+- **Flush-start, ragged-end holds in every script and "never justify" still wins.** Some Arabic typography stretches joins to justify; do not, the dealbreaker stands. CJK is set on a character grid and may look justified by nature; keep the final line ragged and do not stretch spacing. `L1` · default
+- **The 55 to 75 character measure is a Latin number.** Other scripts have no validated measure. Keep lines short enough that a reader never loses the start of the next line, state the assumed measure, and proof with real copy. `L1` · default
+- **"Headline as tight as possible" is bounded by the glyphs, not by a ratio.** The principle is unchanged: tight until just before a collision. Scripts with tall or deep strokes hit that collision at much looser leading than Latin. Measure on the real copy. `L1` · default
+- **Mono and numeric stacks carry the script fallback,** or labels and figures render as empty boxes. `L1` · default
 
 ## CJK type behavior
-- **Leading is looser than Latin because glyphs fill the whole em box and there is no ascender or descender slack.** Reference floor: display about 1.3 to 1.4, body about 1.7 to 1.8, even for huge cover titles. Latin-tight display leading collides. `L1` · OD
-- **No negative tracking on CJK.** Display CJK sits near zero tracking and is usually set smaller in absolute size than a Latin headline of equal presence; body takes slight positive tracking. `L1` · OD
-- **No caps, no italics.** Emphasize with color or real weight, or a tag. Thin-stroke serif styles (Mincho, Song) need the text color one step darker than the Latin equivalent, since the strokes carry less ink. `L1` · OD
-- **Dense CJK body has a size floor.** Reference floor: about 14 px-class for body and about 12 px-class for captions; no thin weights at body size. `L1` · OD
-- **Line breaking follows the script's own rules.** Opening brackets and quotes never end a line; closing brackets, commas, full stops and small kana never start one; do not break inside a numeral group or a Latin word embedded in the line. Set the language attribute so the engine applies its rules. `L1` · OD gap
-- **Punctuation follows the language, not the keyboard.** Use the punctuation of the language (ideographic comma and full stop; corner brackets in Japanese and Traditional Chinese, curly quotes in Simplified Chinese; Korean mostly keeps Latin-style marks; verify per locale); do not carry Latin straight quotes or periods into Chinese or Japanese copy. This extends his real-quotes-and-dashes rule to the target language's own marks. `L1` · OD (adapted)
-- **Mixed-script lockups are styled per element.** Give the Latin run its tight leading and tracking and the CJK run its own; never let one inherit from the other. Match them optically: pick the Latin face's x-height and weight to sit beside the CJK strokes, and align on a shared baseline or a shared center line, chosen once and held. `L1` · OD
-- **Slides need print values rescaled, not reused.** Moving a print layout to a slide: scale type up, scale small values (tracking, rules, radii) down. Reference ratios (verify against the actual deck): macro type about 1.6 times, micro values about 0.6 times, tracking about half. `L1` · OD
+- **Leading is looser than Latin because glyphs fill the whole em box and there is no ascender or descender slack.** Reference floor: display about 1.3 to 1.4, body about 1.7 to 1.8, even for huge cover titles. Latin-tight display leading collides. `L1` · default
+- **No negative tracking on CJK.** Display CJK sits near zero tracking and is usually set smaller in absolute size than a Latin headline of equal presence; body takes slight positive tracking. `L1` · default
+- **No caps, no italics.** Emphasize with color or real weight, or a tag. Thin-stroke serif styles (Mincho, Song) need the text color one step darker than the Latin equivalent, since the strokes carry less ink. `L1` · default
+- **Dense CJK body has a size floor.** Reference floor: about 14 px-class for body and about 12 px-class for captions; no thin weights at body size. `L1` · default
+- **Line breaking follows the script's own rules.** Opening brackets and quotes never end a line; closing brackets, commas, full stops and small kana never start one; do not break inside a numeral group or a Latin word embedded in the line. Set the language attribute so the engine applies its rules. `L1` · default
+- **Punctuation follows the language, not the keyboard.** Use the punctuation of the language (ideographic comma and full stop; corner brackets in Japanese and Traditional Chinese, curly quotes in Simplified Chinese; Korean mostly keeps Latin-style marks; verify per locale); do not carry Latin straight quotes or periods into Chinese or Japanese copy. This extends his real-quotes-and-dashes rule to the target language's own marks. `L1` · default
+- **Mixed-script lockups are styled per element.** Give the Latin run its tight leading and tracking and the CJK run its own; never let one inherit from the other. Match them optically: pick the Latin face's x-height and weight to sit beside the CJK strokes, and align on a shared baseline or a shared center line, chosen once and held. `L1` · default
+- **Slides need print values rescaled, not reused.** Moving a print layout to a slide: scale type up, scale small values (tracking, rules, radii) down. Reference ratios (verify against the actual deck): macro type about 1.6 times, micro values about 0.6 times, tracking about half. `L1` · default
 
 ## Arabic, Persian, Urdu and Nastaliq
-- **Body is set larger with generous leading,** to clear stacked dots and diacritics. Reference floor: body about 14 to 18 px-class at about 1.5 to 1.75 leading. `L1` · OD
-- **Nastaliq needs extra leading and size.** Its strokes cascade diagonally, so lines interlock vertically. Reference floor: leading at least 1.8 and never below 1.6; body at least 16 px-class; regular and bold only. Do not substitute a generic Arabic face for Urdu. `L1` · OD
-- **No shadow, glow or text-shadow on script text,** which hides dots. This already follows from his flat-type rule; do not use shadow as a legibility aid here. Over images use the scrim. `L1` · OD
-- **No rotating, tilting or parallax on running cursive text,** and no per-letter animation, which cuts the joins. Animate the line or block as one unit. `L1` · OD
-- **Contrast target rises for dotted scripts.** Reference floor: the standard text ratio is a minimum; for body in dotted scripts aim near the stricter enhanced ratio (about 7:1), since dots are the first detail to vanish. `L1` · OD
-- **Emoji do not substitute for icons** (already a dealbreaker); in right-to-left UI the directional-icon mirror rule applies to the icons used instead. `L1` · OD
+- **Body is set larger with generous leading,** to clear stacked dots and diacritics. Reference floor: body about 14 to 18 px-class at about 1.5 to 1.75 leading. `L1` · default
+- **Nastaliq needs extra leading and size.** Its strokes cascade diagonally, so lines interlock vertically. Reference floor: leading at least 1.8 and never below 1.6; body at least 16 px-class; regular and bold only. Do not substitute a generic Arabic face for Urdu. `L1` · default
+- **No shadow, glow or text-shadow on script text,** which hides dots. This already follows from his flat-type rule; do not use shadow as a legibility aid here. Over images use the scrim. `L1` · default
+- **No rotating, tilting or parallax on running cursive text,** and no per-letter animation, which cuts the joins. Animate the line or block as one unit. `L1` · default
+- **Contrast target rises for dotted scripts.** Reference floor: the standard text ratio is a minimum; for body in dotted scripts aim near the stricter enhanced ratio (about 7:1), since dots are the first detail to vanish. `L1` · default
+- **Emoji do not substitute for icons** (already a dealbreaker); in right-to-left UI the directional-icon mirror rule applies to the icons used instead. `L1` · default
 
 ## Font stack per language
-- **Choose the stack from the dominant language, then override with a language scope for embedded passages.** One family per role per language, so three type roles stay three. Never chain Latin, CJK and Arabic families into one undifferentiated list for a role; the dilution reads as a different voice. `L1` · OD
-- **Let the platform fall through per glyph for incidental mixed script,** but name a real fallback per script in the stack so nothing renders as a box. `L1` · OD
-- **Judge the face by the glyphs in the actual copy** (already a validated rule) and by whether it has the weights, tabular figures and punctuation of the target language. If the brand's face lacks the script, keep the brand face for Latin runs and pick a script companion that matches its weight, contrast and x-height; flag it as a brand gap. `L3` · OD (adapted)
+- **Choose the stack from the dominant language, then override with a language scope for embedded passages.** One family per role per language, so three type roles stay three. Never chain Latin, CJK and Arabic families into one undifferentiated list for a role; the dilution reads as a different voice. `L1` · default
+- **Let the platform fall through per glyph for incidental mixed script,** but name a real fallback per script in the stack so nothing renders as a box. `L1` · default
+- **Judge the face by the glyphs in the actual copy** (already a validated rule) and by whether it has the weights, tabular figures and punctuation of the target language. If the brand's face lacks the script, keep the brand face for Latin runs and pick a script companion that matches its weight, contrast and x-height; flag it as a brand gap. `L3` · default
 
 ## Text expansion and translation
-- **Design for expansion, not the source language's length.** Reference floors for planning: translation into a Latin-script language commonly runs 30 to 40 percent longer than English, short UI strings more (up to roughly double); CJK often runs shorter in length but taller in glyph size. `L1` · OD (adapted)
-- **Never size a container to the source string.** Buttons, tabs, labels and table headers flex in the inline direction; headlines re-break by phrase per language, which the validated phrase-break rule already requires. `L1` · OD
-- **Do not hard-code line breaks in headlines.** Set the breaks per language, since the phrase boundaries move. `L1` · OD (adapted)
-- **Long-string test:** run the longest realistic string through every text slot and a short one through every slot. Neither may collide, truncate silently, or leave a void. `L1` · OD
-- **No text baked into images** unless it is regenerated per language; keep text live so it can be swapped. `L1` · OD gap
+- **Design for expansion, not the source language's length.** Reference floors for planning: translation into a Latin-script language commonly runs 30 to 40 percent longer than English, short UI strings more (up to roughly double); CJK often runs shorter in length but taller in glyph size. `L1` · default
+- **Never size a container to the source string.** Buttons, tabs, labels and table headers flex in the inline direction; headlines re-break by phrase per language, which the validated phrase-break rule already requires. `L1` · default
+- **Do not hard-code line breaks in headlines.** Set the breaks per language, since the phrase boundaries move. `L1` · default
+- **Long-string test:** run the longest realistic string through every text slot and a short one through every slot. Neither may collide, truncate silently, or leave a void. `L1` · default
+- **No text baked into images** unless it is regenerated per language; keep text live so it can be swapped. `L1` · default
 
 ## Numbers, dates, currency
-- **Format with the locale, never by hand.** Grouping separators, decimal marks, digit shapes, date order, week start, 12/24-hour clock and currency symbol placement all vary; take them from the locale and state which locale you assumed. `L1` · OD
-- **Localize the currency symbol, its position and the numerals together.** A symbol with the wrong digit shape or on the wrong side reads as a mistake. `L1` · OD
-- **Dates are unambiguous when the audience is mixed.** Spell the month in words or use the unambiguous year-first order. `L1` · OD gap
-- **Tabular figures for stacked numbers** (columns, KPI grids, prices in lists); a lone number in a sentence stays proportional. `L1` · OD
-- **Copy register follows the locale** (formal, friendly, technical tiers). Translate meaning and tone, not word order, and keep his no-hype copy stance in every language. `L2 (per brand)` · OD
+- **Format with the locale, never by hand.** Grouping separators, decimal marks, digit shapes, date order, week start, 12/24-hour clock and currency symbol placement all vary; take them from the locale and state which locale you assumed. `L1` · default
+- **Localize the currency symbol, its position and the numerals together.** A symbol with the wrong digit shape or on the wrong side reads as a mistake. `L1` · default
+- **Dates are unambiguous when the audience is mixed.** Spell the month in words or use the unambiguous year-first order. `L1` · default
+- **Tabular figures for stacked numbers** (columns, KPI grids, prices in lists); a lone number in a sentence stays proportional. `L1` · default
+- **Copy register follows the locale** (formal, friendly, technical tiers). Translate meaning and tone, not word order, and keep his no-hype copy stance in every language. `L2 (per brand)` · default
 
 ## Pre-flight additions for non-Latin or multilingual work
 - [ ] Language and direction declared on the document and each foreign run.
@@ -1265,22 +1446,22 @@ Name the script of each text element, then check it against this table before ap
 - [ ] Longest and shortest strings tested; headline breaks set per language.
 - [ ] Numbers, dates and currency formatted by locale; locale stated.
 
-Items tagged `OD gap` are standard typographic practice added where OD gave no value, and need his confirmation. Excluded: OD's dash ban (conflicts with his real-dash rule); any literal hex or px from the source palettes.
+Items tagged `default` are standard typographic practice and need his confirmation. Excluded: a ban on en and em dashes (conflicts with his real-dash rule); any literal hex or px values.
 
 
 ---
 
 <!-- file: references/brand-and-registers.md -->
 # Brand Files (L3) and Extra Registers
-> **Status: imported from Open Design (OD) analysis. Not yet validated by Anthony's comparison rounds.** Follow these as defaults for surfaces his validated rules (`principles/*.md`, SKILL.md) don't cover. Wherever they conflict with a validated rule, a dealbreaker, or a non-negotiable, the validated rule wins.
+> **Status: default guidance. Not yet validated by Anthony's comparison rounds.** Follow these as defaults for surfaces his validated rules (`principles/*.md`, SKILL.md) don't cover. Wherever they conflict with a validated rule, a dealbreaker, or a non-negotiable, the validated rule wins.
 > **Read when:** a brand guide, design-system file or `DESIGN.md` is supplied or named; the user says "in the style of <brand>"; no brand exists but the work is for a business; the brief is a product UI, news page, document, product showcase or dashboard (none fit the five existing registers); the user asks for a style that is on the explicit-request-only list.
 
 ## A. Ingesting a brand file as L3
 
 ### Precedence
-- **Order of authority, highest first:** explicit user instruction, brand locks, brand tendencies, the chosen L2 register, L1 defaults. The non-negotiables sit above all of it. Record how the brand arrived (stated by the user, saved with the project, inherited from a template); a user-stated brand outranks an inherited one. `L3` · OD
-- **When the file and its own tokens disagree, tokens win for values and prose wins for intent.** Flag the mismatch. `L3` · OD
-- **Trust check first.** A file of boilerplate, with no atmosphere and no specifics, is a weak brand: take only its palette and type, and do not let it override structural defaults. `L3` · OD
+- **Order of authority, highest first:** explicit user instruction, brand locks, brand tendencies, the chosen L2 register, L1 defaults. The non-negotiables sit above all of it. Record how the brand arrived (stated by the user, saved with the project, inherited from a template); a user-stated brand outranks an inherited one. `L3` · default
+- **When the file and its own tokens disagree, tokens win for values and prose wins for intent.** Flag the mismatch. `L3` · default
+- **Trust check first.** A file of boilerplate, with no atmosphere and no specifics, is a weak brand: take only its palette and type, and do not let it override structural defaults. `L3` · default
 
 ### Procedure
 1. **Read** the usage notes (if any), then the prose, then the tokens. Tokens are authoritative for values, prose for intent.
@@ -1288,19 +1469,19 @@ Items tagged `OD gap` are standard typographic practice added where OD gave no v
    - **LOCKS** are closed sets and mandates: palette, type families, logo and its clear space, radius tiers, spacing base unit, voice rules, forbidden lists, mandated components. Comply exactly. `L3`
    - **TENDENCIES** are atmosphere, density, motion character, imagery mood, accent frequency. They choose the dial position inside the nearest register; they are not requirements. `L3`
    - **GAPS** are domains the file is silent on, or contradicts itself on. Fill them (step 5) and list them. `L3`
-3. **Read for these domains,** ticking which the brand specifies: atmosphere, color roles (with the contrast intent), type (families, scale, leading, tracking), spacing and layout, components with their states, elevation, radius, motion (and reduced motion), imagery, data color, voice, responsive behavior, accessibility, and the explicit do/don't list. Every unticked domain falls back to design-taste. `L3` · OD
-4. **Name the signature.** From the brand's key traits, pick the two to four that depend on each other to be recognizable. Reproduce them together or not at all; a partial copy reads as an accident. If a brand runs modes (showcase and transactional), keep tokens shared and change density and spacing between them. `L3` · OD
-5. **Fill gaps from design-taste.** Use L1 plus the nearest L2 register, chosen from the brand's atmosphere, not its name, and match the brand's own constants: same radius family, same accent frequency, same neutral undertone and temperature. `L3` · OD
-6. **Treat the palette as closed.** Never mint a new hue or tint to fix a problem. Use the nearest brand color or mix two brand colors, and flag it. Image-sampled hues apply only where the brand leaves color open. `L3` · OD
-7. **Use the supplied logo; never redraw one.** If none exists, place a flat block labelled as the logo. `L1 · L3` · OD
+3. **Read for these domains,** ticking which the brand specifies: atmosphere, color roles (with the contrast intent), type (families, scale, leading, tracking), spacing and layout, components with their states, elevation, radius, motion (and reduced motion), imagery, data color, voice, responsive behavior, accessibility, and the explicit do/don't list. Every unticked domain falls back to design-taste. `L3` · default
+4. **Name the signature.** From the brand's key traits, pick the two to four that depend on each other to be recognizable. Reproduce them together or not at all; a partial copy reads as an accident. If a brand runs modes (showcase and transactional), keep tokens shared and change density and spacing between them. `L3` · default
+5. **Fill gaps from design-taste.** Use L1 plus the nearest L2 register, chosen from the brand's atmosphere, not its name, and match the brand's own constants: same radius family, same accent frequency, same neutral undertone and temperature. `L3` · default
+6. **Treat the palette as closed.** Never mint a new hue or tint to fix a problem. Use the nearest brand color or mix two brand colors, and flag it. Image-sampled hues apply only where the brand leaves color open. `L3` · default
+7. **Use the supplied logo; never redraw one.** If none exists, place a flat block labelled as the logo. `L1 · L3` · default
 8. **Scan the non-negotiables** (below), fix minimally, flag each. `L3`
 9. **Scan the dealbreakers and explicit-request-only list** against the brand's traits (below). `L3`
-10. **Express output with named roles,** declared once; components hold no raw values; dark versions swap role values, not component rules. Tint by mixing existing roles. A new role is justified only when two components need it. `L1` for coded deliverables · OD
+10. **Express output with named roles,** declared once; components hold no raw values; dark versions swap role values, not component rules. Tint by mixing existing roles. A new role is justified only when two components need it. `L1` for coded deliverables · default
 11. **Check script and locale** if the content is not Latin left-to-right (see `scripts-and-direction.md`).
 12. **Report:** locks applied, gaps filled and from where, exceptions to his taste made, non-negotiable conflicts fixed, what the brand left unspecified.
 
 ### Conflicts with the non-negotiables
-- **Change the minimum and flag it.** The brand's intent stays; only the failing element moves. Typical cases: a brand color that fails contrast as text (darken or lighten that use only, keep it for non-text), a brand that shows links by color on hover only (add the at-rest color and underline), a brand type size or tracking that causes collisions, a brand motion pace that gives too little reading time. Never ship the failing version silently; never use the fix as a pretext to override other locks. `L3` · OD (adapted)
+- **Change the minimum and flag it.** The brand's intent stays; only the failing element moves. Typical cases: a brand color that fails contrast as text (darken or lighten that use only, keep it for non-text), a brand that shows links by color on hover only (add the at-rest color and underline), a brand type size or tracking that causes collisions, a brand motion pace that gives too little reading time. Never ship the failing version silently; never use the fix as a pretext to override other locks. `L3` · default
 
 ### Does choosing a brand count as asking for its signature traits?
 Resolved conservatively, pending his confirmation:
@@ -1311,14 +1492,14 @@ Resolved conservatively, pending his confirmation:
 - When unsure whether a trait is mandated or incidental, ask if you can; otherwise state the assumption and take the cautious reading (omit the trait). `L3`
 
 ### Revising a branded piece
-- **Work in dependency order:** neutrals, accent frequency, type (display, body, micro), radius and elevation, motion; recheck earlier layers after each later change. `L1` · OD
-- **Map mood requests to levers.** More dramatic: scale the headline or image. More minimal: delete optional layers, keep the structural system. More premium: more air and less accent. Do not answer a mood request by adding color or effects. `L1` · OD
-- **A named reference owns one dimension.** When asked to move closer to a reference, state which dimension is borrowed (palette, grid, type voice, imagery, rhythm) and change only that. `L1` · OD
+- **Work in dependency order:** neutrals, accent frequency, type (display, body, micro), radius and elevation, motion; recheck earlier layers after each later change. `L1` · default
+- **Map mood requests to levers.** More dramatic: scale the headline or image. More minimal: delete optional layers, keep the structural system. More premium: more air and less accent. Do not answer a mood request by adding color or effects. `L1` · default
+- **A named reference owns one dimension.** When asked to move closer to a reference, state which dimension is borrowed (palette, grid, type voice, imagery, rhythm) and change only that. `L1` · default
 
 ## B. Minimal brand brief (when no file exists)
 Ask for these if you can ask the user; otherwise state the assumed answers at the top of the output and proceed. Anything unanswered falls back to design-taste.
 - **Who and what:** the product or organization in one line, the audience, the channel (glance, poster, reference).
-- **Genre vocabulary:** what category it must read as. Hue family and temperature follow the genre; a color that signals another genre (tech, finance, luxury) misleads. `L2/L1` · OD
+- **Genre vocabulary:** what category it must read as. Hue family and temperature follow the genre; a color that signals another genre (tech, finance, luxury) misleads. `L2/L1` · default
 - **Locked assets:** logo files, required typefaces, required colors (any color that must not move), required legal text.
 - **Atmosphere:** three adjectives and one "not this".
 - **Accent:** which element earns the accent color, and how often it appears (one primary action, one headline, one detail).
@@ -1326,29 +1507,29 @@ Ask for these if you can ask the user; otherwise state the assumed answers at th
 - **Neighbors:** one or two reference brands, and which single dimension of each is borrowed.
 - **Scripts and locales** the piece must support.
 - **Anything forbidden.**
-Record the answers as LOCKS (stated as required), TENDENCIES (stated as preference) and GAPS (unanswered). `L3` · OD (adapted)
+Record the answers as LOCKS (stated as required), TENDENCIES (stated as preference) and GAPS (unanswered). `L3` · default
 
 ## C. Additional L2 registers
 Same shape as the table in SKILL.md. All five obey his dealbreakers: flat surfaces, three type roles, ease-out entrances with no overshoot, colored dark fields, links colored and underlined at rest. Hover lift is the only shadow. Use a register only when the concept matches; do not default to one.
 
 | Register | Display type | Color | Motion | Notes |
 |---|---|---|---|---|
-| Product / Utility (calm product UI, dashboards, settings, docs) | Neutral sans; sentence-case headings; slight negative tracking at display size relaxing to zero at body | Neutral surfaces; one accent reserved for the primary action and links; semantic status colors, closed set, never decorative | Minimal: state changes only, eased-out, short | Whitespace separates first, a hairline second, a card last. Few distinct type sizes per screen (reference: about three). Two elevation levels at most (flat plus hover lift). Density moderate to high, following the reference-media rule. All interaction states drawn. |
+| Product / Utility (calm product UI, dashboards, settings, docs) | Neutral sans; sentence-case headings; slight negative tracking at display size relaxing to zero at body | Neutral surfaces; one accent reserved for the primary action and links; semantic status colors, one stable hue per status (never grouped into fewer tones), never decorative, shown as the word in a tinted small-radius badge (R089, R128) | Minimal: state changes only, eased-out, short | Rows of records are separated by a hairline, groups by whitespace; no per-row cards (R088). Few distinct type sizes per screen (reference: about three). Two elevation levels at most (flat plus hover lift). Density moderate to high, following the reference-media rule. All interaction states drawn. |
 | Broadsheet / Editorial-news (dense editorial) | Strong serif headlines jumping scale decisively (skip the middle size); serif for any running paragraph beyond a couple of lines; sans for UI only | Near-neutral ink and paper; one link color, applied at rest | Almost none; page-level reveals only | Hairline rules and whitespace in place of boxes or shadows. Square geometry. One tracked-caps kicker tier above stories (his smallest-tier caps rule). Grid-strict, multi-column. A near-black (never pure black) reserved for footer and utility strips. |
 | Paper / Document (resumes, one-pagers, white papers, print-first decks) | Serif sized for hierarchy; hierarchy from size and his weight-within-family emphasis, not weight stacking | Warm off-white canvas, never pure white; one ink accent covering a small, stated share of the surface; all neutrals share one warm undertone; tints exported as opaque pre-blended colors | None, or a single calm fade-and-rise for decks | A variant of Quiet / premium. Margins track formality: denser documents smaller, more formal ones larger. Hairline rules, no texture. Left-aligned titles, not centered. |
 | Showcase (product-photo first, cinematic) | Large, calm; the type steps back from the photograph; sentence case | Interface nearly invisible; photograph carries color; single accent on the primary action only; one ground per piece by default | Slow eased push-in on imagery; mask or fade reveals; no bounce | Image first at near full bleed, text on or beside it with the scrim-first rule. Chrome (borders, patterns, shadows) near zero. Dark chapters, if used, use a colored field. Alternating dark and light chapters is unvalidated (validation queue 1): default to one ground, and make any switch a single deliberate one. |
 | Instrument / Technical (consoles, telemetry, trading, data-dense dark) | Neutral sans for labels; tabular figures for all numeric data (a mono face is an unvalidated option, validation queue 11; his validated rules do not favor a mono voice) | Deep tinted (not gray) dark field; every hue carries a fixed operational meaning, closed set; a status pair always has a non-color cue; tertiary text only for non-critical metadata and never under the contrast floor when it must be read | Only for signals and alerts; nothing decorative; eased-out | Dense but gridded. Small radii. Numbers in tabular figures. No glow, no translucency, no phosphor effects. Use only when the concept is a dashboard or console. |
 
 Rules shared by the registers:
-- **Product / Utility headings are sentence case, one accent, dividers by whitespace first.** `L2 (product)` · OD
-- **Broadsheet takes hairline structure but never hides link color until hover;** links stay colored and underlined at rest. `L2 (broadsheet)` · OD (adapted)
-- **Paper keeps his weight-within-family emphasis;** do not import a single-weight lock. Titles are not centered by default. `L2 (paper)` · OD (adapted)
-- **Showcase drops capsule CTAs and universal tracked-caps display** that its sources use; the structure stays. `L2 (showcase)` · OD (adapted)
-- **Instrument uses a colored dark field, not neutral near-black,** and replaces glow with a flat status color plus a shape or label. `L2 (instrument)` · OD (adapted)
-- **Reference floors that apply across registers:** stacked numbers use tabular figures; single-line controls keep leading at about 1.2 or more so descenders and script marks do not clip; opaque tints for anything exported to PDF. `L1` · OD
+- **Product / Utility headings are sentence case, one accent. Rows of records are separated by a hairline, groups by whitespace, and per-row cards are avoided.** `L2 (product)` · R088 (partial)
+- **Broadsheet takes hairline structure but never hides link color until hover;** links stay colored and underlined at rest. `L2 (broadsheet)` · default
+- **Paper keeps his weight-within-family emphasis;** do not import a single-weight lock. Titles are not centered by default. `L2 (paper)` · default
+- **Showcase drops capsule CTAs and universal tracked-caps display** common in showcase styles; the structure stays. `L2 (showcase)` · default
+- **Instrument uses a colored dark field, not neutral near-black,** and replaces glow with a flat status color plus a shape or label. `L2 (instrument)` · default
+- **Reference floors that apply across registers:** stacked numbers use tabular figures; single-line controls keep leading at about 1.2 or more so descenders and script marks do not clip; opaque tints for anything exported to PDF. `L1` · default
 
 ## D. Explicit-request-only styles: how to execute them if asked
-Use only when the user asks by name or by description. Say once, briefly, that it departs from his defaults, then execute it well. Intent first (tenet 1: it must read as deliberate). The non-negotiables still hold. `L3-like exception` · OD
+Use only when the user asks by name or by description. Say once, briefly, that it departs from his defaults, then execute it well. Intent first (tenet 1: it must read as deliberate). The non-negotiables still hold. `L3-like exception` · default
 
 - **Brutalism, raw, anti-design:** Commit fully. Square corners, hard visible borders, a flat saturated or stark palette, a heavy or monospace face, and a strict visible grid. The roughness is in the surface, the alignment stays exact: edges on the grid, no near-tangents, hierarchy still unmistakable, links colored and underlined. Jarring is the effect; illegible is a failure. Contrast is checked as usual.
 - **Neo-brutalism:** brutalism plus a flat, offset solid block behind elements. The offset is one consistent vector and one flat color, never blurred.
@@ -1363,128 +1544,36 @@ Use only when the user asks by name or by description. Say once, briefly, that i
 - **Holiday red and green, rainbow, teal-and-orange grade, typewriter or scramble text, sparkle or hype copy, icon-in-circle feature rows:** apply the standing rule from SKILL.md; execute with restraint, one place for the effect, contrast checked.
 Every execution closes with the same check as normal work: contrast against the real background, all text readable before exit, no collisions, reading order. List the style under "requested exceptions" in the report.
 
-Excluded: OD's single-weight lock, italic-serif emphasis, paper-noise overlay, side rails and corner brackets (dealbreakers or decorative motifs); the looser "treat a chosen brand as consent" step (narrowed above); all hex and px values from the source systems.
+Excluded: a single-weight lock, italic-serif emphasis, paper-noise overlay, side rails and corner brackets (dealbreakers or decorative motifs); the looser "treat a chosen brand as consent" step (narrowed above); all literal hex and px values.
 
 
 ---
 
-<!-- file: references/open-design-crosswalk.md -->
-# Open Design Crosswalk (Provenance, Conflicts, Validation Queue)
-> **Status: imported from Open Design (OD) analysis. Not yet validated by Anthony's comparison rounds.** Follow these as defaults for surfaces his validated rules (`principles/*.md`, SKILL.md) don't cover. Wherever they conflict with a validated rule, a dealbreaker, or a non-negotiable, the validated rule wins.
-> **Read when:** you are tempted to import advice from an external design guideline, or you are planning the next quiz round.
+<!-- file: references/validation-queue.md -->
+# Validation Queue
+> **Read when:** you are planning the next quiz round, or tempted to promote a `default` rule to validated.
+> Rules tagged `default` in the reference files are unvalidated. Each needs a comparison round before it is promoted into DESIGN_TASTE.md with its round id.
 
-## 1. Method and attribution
-- Four analysis passes compared Open Design's craft notes, design-system corpus, skills and templates, and prompt stack against Anthony's rules. This file keeps only the cross-cutting outcomes: where OD agrees, where OD must lose, and what still needs a comparison round.
-- Anything OD says that touches a dealbreaker, an explicit-request-only item or a non-negotiable is a conflict by default. Take the mechanism (a placement rule, a process step, a floor) and leave the look.
-- Licensing: Open Design (nexu-io/open-design) is Apache-2.0. Its `craft/` notes are adapted from the MIT-licensed refero_skill; most prompt templates are CC-BY-4.0; the kami system is MIT. All content in these imported files is paraphrased, not copied. Credit: nexu-io/open-design and the upstream authors named above. Keep this credit if the files are redistributed.
-- Tags used elsewhere: `· OD` marks a rule drawn from OD; `· OD (adapted)` marks one reshaped to fit Anthony's rules; `· OD gap` marks standard practice added where OD gave no value.
-
-## 2. Confirmations: Anthony rule -> OD source that independently agrees
-Independent agreement strengthens provenance; it does not replace his rounds.
-
-| Anthony rule | Independent OD agreement |
-|---|---|
-| No pure black or pure white surfaces | craft color notes, most design systems in the corpus, taste and redesign skills, brand sample file |
-| One scarce accent; color marks hierarchy | craft color, discovery prompt, several design systems, deck and dashboard templates |
-| Contrast checked against the real paired background (4.5:1 text, 3:1 large/UI) | craft accessibility, core prompt, marketing prompt |
-| Links need an underline, not hue alone | craft laws-of-ux (convention), design-system survey (one brand breaks it; see section 3) |
-| Never italics for emphasis | serif-only systems, Urdu system (script reasons) |
-| No glassmorphism, neumorphism, glow, bevel | kami, default, warm-editorial, Apple-style and feed-app systems, brand sample file |
-| No gradient or blob heroes | craft anti-slop and color notes, discovery prompt |
-| Emoji is not an icon | craft anti-slop, discovery prompt, several templates and checklists |
-| Top-biased placement, never vertically centered by default | default, warm-editorial, atelier systems |
-| Image-first; photography carries drama; real photography over generated | Tesla/Apple/SpaceX/Nike/Airbnb-style systems, core prompt |
-| Ease-out entrances, no ease-in on entering UI, no bounce by default | UI motion skill, hyperframes motion principles, Urdu system, craft animation notes |
-| Motion confirms, not decorates; restraint | craft animation discipline (cited study), discovery prompt ("many no's per yes") |
-| Exits are hand-offs; transition is the exit | hyperframes transition rules |
-| Reading-time holds before text exits | hyperframes notes |
-| Never rely on motion alone for state | craft animation discipline, accessibility notes |
-| Dark = tinted field, not gray | kami warm charcoal, mission-control navy (neutral near-black systems disagree; see section 3) |
-| No invented metrics or facts | several template families |
-
-## 3. Rejected OD advice: OD says -> why rejected -> what wins
-Do not import any row below, even when an OD-style source presents it as best practice.
-
-### Typography
-| OD says | Why rejected | Winner |
-|---|---|---|
-| Ban en and em dashes; use hyphens | Hyphens standing in for dashes is a dealbreaker | Real en/em dashes, true quotes |
-| Italic of the same family for emphasis; italic serif on key nouns; lowercase italic subheads | Faux or real italic emphasis reads as decoration | Never italics for emphasis |
-| Skewed headline word | Stretched or faux italic type | Dealbreaker |
-| Serif banned as default; named-font blacklists | Blacklists are one author's taste; quiet/premium defaults to a warm editorial serif | Judge faces by glyphs and role |
-| Max two typefaces | Conflicts with three roles (display serif, text serif, sans) | Three type roles; apply the cap only where there is no text serif |
-| Weight lock (400/500 only) or medium/semibold on labels and buttons | Emphasis by weight within one family; no bold below the headline | Medium allowed on controls only (provisional, validation queue 9) |
-| Universal uppercase display with tracking | Tracked caps only for the smallest tier | Sentence case; caps for metadata |
-| Title Case headings and buttons | Sentence case for promoted details | Sentence case |
-| Display serif plus mono numerics as seed defaults | No round has fixed this | Template register only (queue item 11) |
-
-### Color
-| OD says | Why rejected | Winner |
-|---|---|---|
-| Links count toward the accent cap; demote to foreground-colored underline | Breaks links colored and underlined at rest | Accent hue on links; make the CTA a filled shape |
-| Link color only on hover (WIRED-style) | Same | Links colored and underlined at rest; flag the brand conflict |
-| Neutral near-black dark mode | Dark is a deep colored field | Tinted dark field; take only the no-pure-black mechanism |
-| Palettes with secondary/domain accent plus status colors, "avoid monochrome", gradients and colored moments in UI | Color only marks hierarchy; one scarce accent | Scarce accent; status color only where data requires it, paired with a non-color cue |
-| Gradient mesh, radial purple/fuchsia washes, brand gradients | Gradients subtle and tonal only; blobs explicit-only | Flat or tonal |
-| Cyan vs coral buy/sell pair | Vibrating complements | Pair with a non-color cue and re-check |
-
-### Layout
-| OD says | Why rejected | Winner |
-|---|---|---|
-| Anti-center bias, or "cinematic center preferred" | Centered layouts are explicit-request-only | Top-biased, aligned |
-| Bento grids; gapless or diverse bento backgrounds | Explicit-request-only | Strict grid, type-led columns |
-| Asymmetric chaos, rotations, negative-margin overlaps | Deviate decisively or not at all; no near-tangents or collisions | Strict grid |
-| Masonry with unequal card heights | Strict grid | Columns strict, heights set by content |
-| Card grid with icon on top for feature lists | Icon-in-circle rows are explicit-request-only | Type-led columns |
-| Brand at top, visual in middle, CTA at bottom | Image-first; headline group tight to image | Keep only safe-area and thumbnail tests |
-| "Surprise the user, a notch more ambitious" | Restraint; do not add what was not asked | One decisive flourish at most |
-| Pill buttons, pill tags, button-in-button circles, inline pill images in headlines | Pill buttons everywhere is a dealbreaker | Square or modestly rounded, consistent |
-
-### Motion
-| OD says | Why rejected | Winner |
-|---|---|---|
-| Springs for position and scale | No overshoot by default; bounce only in the playful tone | Eased, critically damped at most |
-| Count-up numbers, confetti, sparkle, celebration moments | Restraint; word pops and sparkle are dealbreakers | Adopt only "peak at the end of the flow" |
-| Perpetual micro-interactions, shimmer, infinite loops, marquees | Nothing loops or exits without reason | Static unless it carries state |
-| Vary ease, direction, duration and stagger per scene; slowest scene 3x fastest | Steady tempo; drama in one place | Steady tempo |
-| Ease-in exits, exits 60 to 70% of entrance, stagger | Exits only hand off | Unvalidated; see validation queue 2, 3 and 4 |
-| Whip pans, speed ramps, motion-blur cuts, light leaks, glitch, scramble/typewriter text | Attention shakes, flares, glitch are dealbreakers or explicit-only | Direct motion |
-
-### Material
-| OD says | Why rejected | Winner |
-|---|---|---|
-| Grain, noise, paper-texture overlay; spotlight borders | Simulated materials; clean by default | Flat surfaces |
-| Glass or frosted panels, frosted sticky nav, glass badges on images | Glassmorphism is explicit-request-only | Gradient scrim first, solid panel second |
-| Multi-layer tinted atmospheric shadows; chunky bottom shadows; "depth by overlap" | Shadows only as interactive state | Hover lift only |
-| Phosphor glow, neon, outer glow | Glow is a dealbreaker | None |
-
-### Copy and process
-| OD says | Why rejected | Winner |
-|---|---|---|
-| Big emoji as hero or icon | Emoji dealbreaker | Real icons or type |
-| Alternating hero dark/light slides as default | Quiet registers use one ground; dark is a variant | Conditional (queue 1) |
-| Plain brutalism/neobrutalism, doodle, retro, dithered styles | Tenet 1; novelty faces | Explicit-request-only (queue 6) |
-
-## 4. Validation queue
+## Queue
 Candidates that need a comparison round before promotion. Each: question, the one variable, affected file or rule, suggested dimension.
 
-1. **Alternating light/dark slides in a deck.** Does a rhythm of alternating grounds beat a single ground? Variable: ground sequence (single vs alternating) with all else fixed. Affects: deck conventions, Showcase register, series rule. Dimension: `deck-ground-rhythm`.
+1. *(Answered: web by R104; decks by R105: build light and dark of every layout, use ground to separate dividers from content. Dark choice: the brand decides, R106.)* **Alternating light/dark slides in a deck.** Does a rhythm of alternating grounds beat a single ground? Variable: ground sequence (single vs alternating) with all else fixed. Affects: deck conventions, Showcase register, series rule. Dimension: `deck-ground-rhythm`.
 2. **Enter vs exit easing.** Should leaving UI use ease-in (accelerating away) or the same ease-out as entrances? Variable: exit curve only. Affects: UI motion rules (exits). Dimension: `ui-exit-easing`.
 3. **Exit duration vs entrance.** Is a shorter exit (about two thirds) better than equal? Variable: exit duration ratio. Affects: UI motion duration tiers. Dimension: `ui-exit-duration`.
 4. **Stagger between siblings.** Does a small stagger help or read as decoration/word-pop? Variable: stagger on or off, same total time. Affects: UI motion and list entrances. Dimension: `sibling-stagger`.
 5. **Blur to bridge a crossfade.** Does a brief blur mask a rough crossfade acceptably? Variable: blur during crossfade on or off. Affects: transition rules. Dimension: `crossfade-blur`.
 6. **Plain brutalism.** Raw, no-radius, unstyled: is it an explicit-request-only style or acceptable as a deliberate register? Variable: raw vs refined treatment of the same layout. Affects: explicit-request list. Dimension: `raw-brutalism`.
 7. **Brand as explicit request.** When a brand file conflicts with a default (radius, caps, shadow), should the brand win on that point? Variable: brand mark of the conflicting trait vs house default. Affects: L3 negotiation procedure. Dimension: `brand-override-scope`.
-8. **Three-typeface cap.** Does a text serif beside a display serif and sans read as one family? Variable: text face distinct vs same family as display. Affects: type roles; OD's two-face cap. Dimension: `type-role-count`.
+8. **Three-typeface cap.** Does a text serif beside a display serif and sans read as one family? Variable: text face distinct vs same family as display. Affects: type roles; a two-face cap. Dimension: `type-role-count`.
 9. **Medium weight on controls.** Is a medium weight on buttons and nav acceptable under "no bold below headline"? Variable: control weight. Affects: weight rules, Product register. Dimension: `control-weight`.
 10. **Tinted vs neutral interactive shadow.** On hover lift, does a hue-tinted shadow beat a neutral one? Variable: shadow tint. Affects: hover lift rule. Dimension: `hover-shadow-tint`.
 11. **Tabular or mono numerals for data.** Do tabular figures (and a mono face) suit tables and dashboards? Variable: numeral style in the same table. Affects: data and dashboard rules; seed-default pairing. Dimension: `numeral-style`.
-12. **Tracked-caps micro-eyebrow.** Do kicker labels above headings match his taste, or count as decoration? Variable: eyebrow present/absent. Affects: anti-repetition rule, caps tier. Dimension: `eyebrow-label`.
+12. *(Answered in part by R097: B tracked caps when navigational; not yet A vs B.)* **Tracked-caps micro-eyebrow.** Do kicker labels above headings match his taste, or count as decoration? Variable: eyebrow present/absent. Affects: anti-repetition rule, caps tier. Dimension: `eyebrow-label`.
 13. **Left-border accent stripe on cards.** Tell or acceptable? Variable: stripe vs hairline frame. Affects: candidate dealbreaker list. Dimension: `card-stripe`.
-14. **Business stock photography and logo walls.** Tell or acceptable when real? Variable: stock vs real vs none. Affects: imagery policy, candidate dealbreakers. Dimension: `stock-and-proof`.
+14. *(Logo walls: answered in part by R112: "mentioned in" names are valid proof when the brief calls for clout; stock photography still open.)* **Business stock photography and logo walls.** Tell or acceptable when real? Variable: stock vs real vs none. Affects: imagery policy, candidate dealbreakers. Dimension: `stock-and-proof`.
 15. **UI micro-interaction scale.** Does a slight press scale (a small shrink) feel responsive or gimmicky? Variable: press feedback on/off. Affects: UI motion press rule. Dimension: `press-feedback`.
-16. **Dense-editorial, Product/Utility and Showcase registers.** Are these distinct tones he would name? Variable: tone preset on one fixed layout. Affects: any new L2 preset. Dimension: `register-product`, `register-broadsheet`, `register-showcase`.
-17. **Instrument/telemetry dark register.** Can a data-dense dark field coexist with colored-field dark? Variable: field tint at high density. Affects: dark-surface rules. Dimension: `dark-density`.
-18. **Status color count and pairing.** How many status hues before accent scarcity breaks? Variable: number of status hues (each with a non-color cue). Affects: semantic data color. Dimension: `status-color-count`.
+16. *(Product/Utility partly answered by R088–R095; Broadsheet and Showcase open.)* **Dense-editorial, Product/Utility and Showcase registers.** Are these distinct tones he would name? Variable: tone preset on one fixed layout. Affects: any new L2 preset. Dimension: `register-product`, `register-broadsheet`, `register-showcase`.
+17. *(Answered by R094 and R106: dark suits dense data; brand decides the dark.)* **Instrument/telemetry dark register.** Can a data-dense dark field coexist with colored-field dark? Variable: field tint at high density. Affects: dark-surface rules. Dimension: `dark-density`.
+18. *(Answered by R089 and R128: word in a tinted badge; one hue per status, never grouped.)* **Status color count and pairing.** How many status hues before accent scarcity breaks? Variable: number of status hues (each with a non-color cue). Affects: semantic data color. Dimension: `status-color-count`.
 19. **Hierarchy depth and feed card height.** Three vs five visible levels above the fold; equal rows vs content-set heights in strict columns. Variable: one each. Affects: hierarchy cap, grid rule. Dimensions: `ui-hierarchy-depth`, `feed-card-height`.
 20. **Scene tempo, image-label backing, CJK/RTL defaults.** Varied scene pacing; scrim vs solid panel for labels on photos; imported script-profile defaults. Dimensions: `scene-tempo`, `image-label-backing`, `script-profile`.

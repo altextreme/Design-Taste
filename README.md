@@ -1,8 +1,8 @@
 # design-taste
 
-An AI agent skill that makes your agent design and critique the way Anthony Tackett does. It covers composition, typography, color, hierarchy, motion, tone, imagery, interface, data and his dealbreakers, written as relationships and reasoning (not fixed pixel or hex values) so it holds at any size, format or brand.
+An AI agent skill that makes your agent design and critique the way Anthony Tackett does. It covers composition, typography, color, hierarchy, motion, tone, imagery, interface, data and his dealbreakers, plus channel rules for product UI, web, email, decks, documents, mobile, social, video, brand identity and print. It is written as relationships and reasoning (not fixed pixel or hex values) so it holds at any size, format or brand.
 
-Install it once and your agent applies it whenever it builds or reviews something visual: web pages, app UI, slide decks, posters, social posts, dashboards, email, motion graphics, and prompts for image or video models. It also does scored design critique.
+Install it once and your agent applies it whenever it builds or reviews something visual: web pages, app UI, slide decks, posters, social posts and carousels, dashboards, email, resumes and documents, packaging and business cards, brand marks, motion graphics, and prompts for image or video models. It also does scored design critique.
 
 It follows the open [Agent Skills](https://agentskills.io) layout: a folder with `SKILL.md` plus `references/`.
 
@@ -57,7 +57,7 @@ skills/design-taste/
 ├── agents/openai.yaml             Codex display metadata (ignored elsewhere)
 └── references/
     ├── index.md                   what to read when
-    ├── principles/<category>.md   validated rules, one file per category (87 rounds, 108 dimensions)
+    ├── principles/<category>.md   validated rules, one file per category (140 rounds, 147 dimensions)
     ├── evidence.md                coverage tracker and round log
     ├── process-and-critique.md    ask-vs-decide, direction-first, scored critique, self-review loop
     ├── ui-craft.md                states, accessibility, forms, interface motion, content integrity
@@ -65,13 +65,28 @@ skills/design-taste/
     ├── media-prompts.md           image and video prompts, motion-graphic builds, MP4 checks
     ├── scripts-and-direction.md   RTL, CJK, Arabic/Persian/Urdu, mixed scripts, localization
     ├── brand-and-registers.md     brand-file (DESIGN.md) ingestion, extra tonal registers, explicit-request styles
-    └── open-design-crosswalk.md   provenance, rejected advice, validation queue
+    └── validation-queue.md        unvalidated defaults awaiting comparison rounds
 adapters/                          always-on core block, paste-in prompt, single-file edition
 ```
 
+## What changed in v2.2
+
+Phase 2 of the comparison rounds (R088 to R140) tested how the foundation carries into specific channels. The skill now has validated rules, from picks and reasoning, for:
+
+- **Product UI and dashboards:** row separation, status badges (one hue per status), button hierarchy (including destructive actions), navigation, empty and error states, density, forms, dark grounds, records as table or labeled cards.
+- **Web and landing:** hero composition (full-bleed first), section rhythm, proof, pricing, card graphics, section labels.
+- **Email:** brand header, three-level action hierarchy, content grid.
+- **Decks:** slide copy, title and divider slides, light and dark layouts, data slides.
+- **Documents:** article layout, resumes, tables.
+- **Mobile:** navigation, bottom sheets, touch targets, list density.
+- **Social and video:** story text placement, carousels, feed copy, cover titles, captions, end cards.
+- **Identity and print:** mark and wordmark as a modular system, packaging labels, business cards, poster hierarchy.
+
+New dealbreakers include a centered text block over a photo's focal point, top tabs as primary mobile navigation, a "More" menu in primary navigation, a monogram as a logo mark, an email with no brand header, and a solid caption panel on video. Several rules are conditional on the brief; the skill says so rather than picking a house style.
+
 ## Two tiers of rules
 
-**Validated** rules come from Anthony's side-by-side comparison rounds (the log is in `references/evidence.md`) and always win. **Imported** rules (tagged `OD`) come from an analysis of the open-source [Open Design](https://github.com/nexu-io/open-design) project, filtered so nothing violates his dealbreakers. They fill surfaces the rounds never reached, and each one is queued for a validation round in `open-design-crosswalk.md`. See [NOTICE.md](NOTICE.md) for credits.
+**Validated** rules come from Anthony's side-by-side comparison rounds (the log is in `references/evidence.md`) and always win. **Default** rules (tagged `default`) fill surfaces the rounds never reached, filtered so nothing violates his dealbreakers. Each is queued for a validation round in `validation-queue.md`.
 
 ## License
 
