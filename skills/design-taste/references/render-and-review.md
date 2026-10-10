@@ -1,16 +1,16 @@
 # Render and Review
-> **Status: default guidance. Not yet validated by Anthony's comparison rounds.** Wherever this conflicts with a validated rule, a dealbreaker, or a non-negotiable, the validated rule wins.
+> **Status:** The render loop, measurement pass, operational typography checks and truthful “Looked at” note are validated `L1` rules from R150. Tool examples, hunt-list details and format-specific checks not asked in R150 remain `default` guidance; they cannot override a validated rule.
 > **Read when:** you are about to build or show any visual (poster, page, slide, chart, email, interface, motion frame). Always, before the final pass.
 
 ## Assume you can see
-Assume you have vision and can render what you build. A design you have not looked at is a draft. Spacing, line breaks, collisions and wrong fonts are invisible in code and obvious in a picture, so the loop below is part of the work, not an extra. `L1` · default
+Assume you have vision and can render what you build. A design you have not looked at is a draft. Spacing, line breaks, collisions and wrong fonts are invisible in code and obvious in a picture, so the loop below is part of the work, not an extra. `L1` · R150
 
 ## The loop
 1. **Build** the piece.
 2. **Render** it to an image at its real pixel size.
 3. **Measure**, then **look** (both below). "Look carefully" is not a procedure: eyes miss margin drift, near-touching lines and same-color text, and a script does not.
 4. **Fix** what you found, starting with anything that breaks a non-negotiable. **Every typography item gets fixed**; typography is never a "quick win" to leave for later.
-5. **Re-render, measure and look again.** At least two looks (the first fixes layout, the second checks labels against lines and the typography tests); stop when a full pass finds nothing; four passes at most.
+5. **Re-render, measure and look again.** At least two looks (the first fixes layout, the second checks labels against lines and the typography tests); stop when a full pass finds nothing. `L1` · R150
 
 ## How to render (any harness)
 - Use headless Chrome or Chromium, Playwright, Puppeteer, or your harness's browser tool. Capture the **exact canvas at its real size**, not a scaled page. One image per slide; for an interface, one per state; for email, at about 600 and about 400 px wide.
@@ -29,7 +29,9 @@ await b.close();
 Render at 2x so you can crop and zoom without blur.
 
 ## Measure first (run this in the page before you look)
-Run this in the rendered page (for example with Playwright's `page.evaluate`). It checks every `.canvas` or `.slide` (or the page body), and lists text outside the canvas, clipped text, text whose color is almost its background, a short last line, overlapping text, and the distance from the text to each edge. It ignores images and gradients, so still look. Every finding gets zoomed on and fixed or explained.
+Run a measurement pass in the rendered page (for example with Playwright's `page.evaluate`). Check every `.canvas` or `.slide` (or the page body) for text outside the canvas, clipped text, text whose color is almost its background, a short last line, overlapping text, and distances to the edges. It ignores images and gradients, so still look. Recompute any figure used more than once. Fix typography findings. `L1` · R150
+
+The following script is an implementation example; its exact code was not part of Anthony's R150 answer.
 ```js
 () => {
   const check = (root) => {
@@ -82,6 +84,7 @@ Then recompute any figure that appears in more than one place (totals, percentag
 - **Color on the real surface.** Judge text color against the pixels directly behind it (split panels, image halves, gradients), not against the page background in your CSS.
 
 ## Operational typography tests (apply each; do not rely on a general impression)
+The line-break and spacing tests in this section were confirmed in R150. `L1` · R150
 - If a headline line ends on a preposition, article or conjunction, or splits a number from its unit or a time from "am/pm", re-break it by phrase.
 - If any line is a single short word, rebreak it or widen the measure.
 - If two gaps in a stack look almost equal, make them equal; if the gap between the image and the headline is smaller than the gaps inside the text, enlarge it.
@@ -92,12 +95,13 @@ Then recompute any figure that appears in more than one place (totals, percentag
 - Margins match on all sides, and equal gaps are really equal (two nearly equal but different gaps read as an accident).
 - Nothing sits within about a letter-height of another element unless it is meant to touch.
 - Nothing is clipped at an edge, and no box overflows.
-- No pooled voids, and the surplus space is absorbed by the image or headline.
-- In a chart, every annotation is checked against the data line at the x-positions it spans.
+- No pooled voids: after looking at the whole frame, identify the largest empty region and the nearest message or practical detail. If the gap strands that detail, enlarge or reposition the meaningful content and re-render. Do not fill the space with ornament or unsupported copy. For a deck, check this on every slide at room scale, including the ask slide.
+- In a chart, every annotation is checked against the data line at the x-positions it spans. Check category labels against mark centers, value labels against their marks, and tick labels against gridlines and the zero rule; use the same plot scales for all of them.
 - Footers and page numbers do not overlap content, and are visible.
 - The thing the brief calls primary is the largest or loudest thing.
 - The screenshot is the size the brief asked for.
 - **Interfaces:** no dead band above a footer or between regions; badges, buttons and chips share one size per kind; figures in a column share precision and align on the right; the identifying field of a row (a name, an order number) is never truncated; the first screen looks finished.
+- **Interactive interfaces:** activate every visible control and capture each required state separately. Confirm that only the intended state is shown, the recovery action works, and a refresh error leaves existing data visible. If the artifact is a static mock, label controls and states as proposed rather than claiming they work.
 - **Email:** the first screen (about 600 by 800) looks finished; at most one image slot, under about a third of it, with its placeholder label printed on the block, not only in alt text; the primary action is inside the first screen.
 
 ## Hunt list: failures seen in tests
@@ -105,6 +109,7 @@ A headline descender running into a rule · absolutely positioned labels landing
 
 ## In the delivery note
 A note without a **Looked at** line is incomplete. List what you looked at ("rendered at 1080 x 1350, three passes; found and fixed the descender collision and the widow") and anything you could not verify. Never claim a look you did not take.
+`L1` · R150
 
 ## If you cannot render
 Say so, and use no-render mode:
@@ -114,4 +119,4 @@ Say so, and use no-render mode:
 - Bind the last two words of every headline, and every time or date range, with a non-breaking space.
 - Take every text color from the surface directly beneath it. Compute contrast from the CSS values and list the ratios.
 - List each geometry check you could not verify.
-`L1` · default
+The no-render fallback is validated in principle by R150; these specific tactics remain implementation guidance. `L1` · R150 / `default` details

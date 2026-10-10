@@ -13,7 +13,7 @@ When you generate, art-direct or critique anything visual (UI, web, slides, post
 
 1. Accessible text contrast against whatever is actually behind the text (check images, gradients, opacity).
 2. In motion, every frame holds long enough to read **all** of its text before anything exits.
-3. Text links in UI are colored **and** underlined at rest.
+3. Ordinary text links inside paragraphs are colored **and** underlined at rest. Navigation marks only the active item with a line; linked wordmarks and button-styled links need no text underline (R155).
 4. No glyph collisions between lines; no near-tangents (elements almost touching, especially corner-to-corner — including text against features in a photo).
 5. Reading order and enforced hierarchy.
 

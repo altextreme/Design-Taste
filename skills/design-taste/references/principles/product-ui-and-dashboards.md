@@ -2,6 +2,7 @@
 
 > Layer tags: `L1` foundation (always), `L2` tonal preset (only for that tone), `L3` brand-negotiable. `Rnnn` = the comparison round that produced the rule (see ../evidence.md). Non-negotiables in SKILL.md survive any brand override.
 
+- **Keep dense interface type systematic.** Use a small, consistent type scale. In numeric columns, align figures by the right edge and use consistent precision; do not truncate the field that identifies a row. `L1` · R154
 - **Separate rows of records with a single hairline, in short and long tables alike.** One line per row boundary is the least mark that still delineates clearly. Confirmed on a long table (R125). `L2 (product/utility)` · R088, R125
 - **Don't box every row.** Per-row cards multiply edges and surfaces, so a long list reads as many objects instead of one list; that adds visual overwhelm and cognitive load. Reserve a container for something that is genuinely a separate object. `L2 (product/utility)` · R088 (partial)
 - **Whitespace alone is not enough to delineate records.** He preferred the hairline over space-only separation because rows delineate more clearly with a line. Keep whitespace for separating groups and sections, not as the only divider between rows. `L2 (product/utility)` · R088 (partial; not yet tested against dense tables or very airy layouts)

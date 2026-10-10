@@ -1,5 +1,5 @@
 # Image, Video and Motion-Graphic Prompting
-> **Status: default guidance. Not yet validated by Anthony's comparison rounds.** Follow these as defaults for surfaces his validated rules (`principles/*.md`, SKILL.md) don't cover. Wherever they conflict with a validated rule, a dealbreaker, or a non-negotiable, the validated rule wins.
+> **Status: mixed.** R152 validated the moment-first prompt and consistency check below; other guidance remains `default`. Follow defaults where validated rules do not cover the task. Wherever a default conflicts with a validated rule, dealbreaker, or non-negotiable, the validated rule wins.
 > **Read when:** writing a prompt for an image or video model; briefing a generated photo or plate; authoring a timeline-based motion graphic (HTML/CSS, a timeline library or a frame renderer) or exporting MP4; building negative-prompt lists; QA-ing generated media before it enters a layout.
 
 ## Core stance
@@ -10,13 +10,13 @@
 
 ## Image prompt assembly order
 One clause per block; skip only what is irrelevant.
-0. **The moment.** Before writing, name in one sentence the single moment that tells the brief at a glance and why (who is present, what is happening, what signals the time and place). Then name the first stock version of the subject and do not use it unless you can say why it serves the concept. (Method, shown on an unrelated subject: for a hospital's volunteer week the stock version is a stethoscope close-up and a smiling nurse; a specific moment is a volunteer pushing a book trolley past an open ward door at dusk.) Rejecting the stock version means changing the moment, not deleting its props from the same scene. `L1` · default
+0. **The moment.** Before writing, name in one sentence the single moment that tells the brief at a glance and why (who is present, what is happening, what signals the time and place). Then name the first stock version of the subject and do not use it unless you can say why it serves the concept. (Method, shown on an unrelated subject: for a hospital's volunteer week the stock version is a stethoscope close-up and a smiling nurse; a specific moment is a volunteer pushing a book trolley past an open ward door at dusk.) Rejecting the stock version means changing the moment, not deleting its props from the same scene. `L1` · R152
 1. **Intent and medium:** what it is for and what kind of picture ("documentary photograph, plate for a poster, text added later"). Stating the use lets the model leave the right area calm. `L1` · default
 2. **Subject** in concrete nouns with materials, wear and scale, not adjectives of feeling. `L1` · default
 3. **Composition:** framing, angle, subject position, and where the calm area is. Focal subject horizontally centered on the upper golden line, never dead center; keep the subject's cause and effect inside the frame. In the prompt itself say this in plain words ("a little above the middle, about two-fifths down"); never send skill terms such as "golden line" to the image model. `L1` · default
 4. **Camera and lens** (photographic work): distance, focal-length feel, aperture feel, as capture. `L1` · default
-5. **Light:** direction, hard or soft, color temperature, where shadows fall. One light story per image. A light source in the frame (a lamp, a window) is the light story: light falls from it, not from an off-frame direction; keep the bulb shaded so it does not bloom. `L1` · default
-6. **Palette as relationships sourced from the concept** ("one warm family; shadows lean cool"), never a free-floating "vibrant" or "pastel". Choose one clear hierarchy hue and a calm neutral, since the layout will later sample them for type. A supplied brand palette replaces this. `L1` · default
+5. **Light:** direction, hard or soft, color temperature, where shadows fall. One light story per image. A light source in the frame (a lamp, a window) is the light story: light falls from it, not from an off-frame direction; keep the bulb shaded so it does not bloom. Check that source and direction agree. `L1` · R152 for source consistency; other details `default`
+6. **Palette as relationships sourced from the concept** ("one warm family; shadows lean cool"), never a free-floating "vibrant" or "pastel". Choose one clear hierarchy hue and a calm neutral, since the layout will later sample them for type. A supplied brand palette replaces this. `L1` · default (brand precedence reaffirmed R152)
 7. **Material and finish:** real surfaces, matte and unglossed, plus honest capture flaws when realism matters. Grain, if any, fine and over everything; never simulated paper or fabric. `L1` · default
 8. **Exclusions:** state the target positively inside the prompt ("one warm family, warm brown shadows"), because many models draw the noun in "not teal". Negations belong only in the negative field or a closing "Avoid:" line. Front-load: the first two sentences carry intent, subject and composition; cut any sentence that would not change the picture. `L1` · default
 9. **Aspect ratio and size as tool parameters**, plus one prose sentence naming the safe area where text will go. `L1` · default
@@ -93,7 +93,7 @@ Attach the base list to every image prompt; add modules as needed. Without a neg
 ## Prompt QA checklist
 - [ ] Assembly order followed, starting with the moment and the stock version named and rejected or justified; no filler quality words.
 - [ ] No skill jargon ("golden line") and no negation words inside the positive prompt.
-- [ ] Consistency: the lens matches the framing, the palette matches the light source, and the light falls from where the source sits in the frame.
+- [ ] Consistency (R152): the lens matches the framing, the palette matches the light source, and the light falls from where the source sits in the frame.
 - [ ] Palette stated as relationships from the concept (or supplied brand palette), one hierarchy hue plus a calm neutral.
 - [ ] Depth of field specified as optics; no blur effect requested.
 - [ ] Base negative list attached, plus the right modules.

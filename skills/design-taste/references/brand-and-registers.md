@@ -27,7 +27,7 @@
 12. **Report:** locks applied, gaps filled and from where, exceptions to his taste made, non-negotiable conflicts fixed, what the brand left unspecified.
 
 ### Conflicts with the non-negotiables
-- **Change the minimum and flag it.** The brand's intent stays; only the failing element moves. Typical cases: a brand color that fails contrast as text (darken or lighten that use only, keep it for non-text), a brand that shows links by color on hover only (add the at-rest color and underline), a brand type size or tracking that causes collisions, a brand motion pace that gives too little reading time. Never ship the failing version silently; never use the fix as a pretext to override other locks. `L3` · default
+- **Change the minimum and flag it.** The brand's intent stays; only the failing element moves. Typical cases: a brand color that fails contrast as text (darken or lighten that use only, keep it for non-text), a brand that shows ordinary paragraph links by color on hover only (add the at-rest color and underline), a brand type size or tracking that causes collisions, a brand motion pace that gives too little reading time. Never ship the failing version silently; never use the fix as a pretext to override other locks. `L3` · default
 
 ### Does choosing a brand count as asking for its signature traits?
 Resolved conservatively, pending his confirmation:
@@ -56,7 +56,7 @@ Ask for these if you can ask the user; otherwise state the assumed answers at th
 Record the answers as LOCKS (stated as required), TENDENCIES (stated as preference) and GAPS (unanswered). `L3` · default
 
 ## C. Additional L2 registers
-Same shape as the table in SKILL.md. All five obey his dealbreakers: flat surfaces, three type roles, ease-out entrances with no overshoot, colored dark fields, links colored and underlined at rest. Hover lift is the only shadow. Use a register only when the concept matches; do not default to one.
+Same shape as the table in SKILL.md. All five obey his dealbreakers: flat surfaces, three type roles, ease-out entrances with no overshoot, colored dark fields, ordinary paragraph links colored and underlined at rest (R155). Hover lift is the only shadow. Use a register only when the concept matches; do not default to one.
 
 | Register | Display type | Color | Motion | Notes |
 |---|---|---|---|---|
@@ -68,7 +68,7 @@ Same shape as the table in SKILL.md. All five obey his dealbreakers: flat surfac
 
 Rules shared by the registers:
 - **Product / Utility headings are sentence case, one accent. Rows of records are separated by a hairline, groups by whitespace, and per-row cards are avoided.** `L2 (product)` · R088 (partial)
-- **Broadsheet takes hairline structure but never hides link color until hover;** links stay colored and underlined at rest. `L2 (broadsheet)` · default
+- **Broadsheet takes hairline structure but never hides link color until hover;** ordinary paragraph links stay colored and underlined at rest (R155). `L2 (broadsheet)` · default
 - **Paper keeps his weight-within-family emphasis;** do not import a single-weight lock. Titles are not centered by default. `L2 (paper)` · default
 - **Showcase drops capsule CTAs and universal tracked-caps display** common in showcase styles; the structure stays. `L2 (showcase)` · default
 - **Instrument uses a colored dark field, not neutral near-black,** and replaces glow with a flat status color plus a shape or label. `L2 (instrument)` · default
@@ -77,7 +77,7 @@ Rules shared by the registers:
 ## D. Explicit-request-only styles: how to execute them if asked
 Use only when the user asks by name or by description. Say once, briefly, that it departs from his defaults, then execute it well. Intent first (tenet 1: it must read as deliberate). The non-negotiables still hold. `L3-like exception` · default
 
-- **Brutalism, raw, anti-design:** Commit fully. Square corners, hard visible borders, a flat saturated or stark palette, a heavy or monospace face, and a strict visible grid. The roughness is in the surface, the alignment stays exact: edges on the grid, no near-tangents, hierarchy still unmistakable, links colored and underlined. Jarring is the effect; illegible is a failure. Contrast is checked as usual.
+- **Brutalism, raw, anti-design:** Commit fully. Square corners, hard visible borders, a flat saturated or stark palette, a heavy or monospace face, and a strict visible grid. The roughness is in the surface, the alignment stays exact: edges on the grid, no near-tangents, hierarchy still unmistakable, ordinary paragraph links colored and underlined (R155). Jarring is the effect; illegible is a failure. Contrast is checked as usual.
 - **Neo-brutalism:** brutalism plus a flat, offset solid block behind elements. The offset is one consistent vector and one flat color, never blurred.
 - **Glassmorphism:** only over a rich backdrop that actually has content behind it. Frosted panel with a tint strong enough that text meets the contrast floor against the worst pixel behind it, not the average; test over the busiest area of the backdrop. Use one glass layer, a hairline edge, and no stacked panels. Never put small body text on thin glass.
 - **Bento / card-grid layouts:** a strict modular grid with a single gap and a single radius family; tile sizes follow content weight (one dominant, the rest supporting), not uniform filling. Each tile has one job and one focal element. Reading order is still explicit.

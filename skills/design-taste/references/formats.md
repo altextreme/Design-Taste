@@ -1,5 +1,5 @@
 # Deliverable Formats
-> **Status: default guidance. Not yet validated by Anthony's comparison rounds.** Follow these as defaults for surfaces his validated rules (`principles/*.md`, SKILL.md) don't cover. Wherever they conflict with a validated rule, a dealbreaker, or a non-negotiable, the validated rule wins.
+> **Status: mixed.** R152 and R154 validated the rules cited below; other format guidance remains `default`. Follow defaults where validated rules do not cover the task. Wherever a default conflicts with a validated rule, dealbreaker, or non-negotiable, the validated rule wins.
 > **Read when:** the deliverable is a slide deck, dashboard, landing or marketing page, docs or long-form page, email, mobile or native screen, social card or poster set, resume, one-pager or print document, flowchart or diagram, or component documentation, **or a chart or data graphic**. Also read the closing checklist before showing any of them.
 
 Shared ground: the composition, type, color and motion rules in SKILL.md apply to every format. This file adds only what the format changes. For states, focus, forms, UI motion and accessibility, see `ui-craft.md`. For process, critique and verdicts, see `process-and-critique.md`. Do not restate them per format.
@@ -21,8 +21,9 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 
 **Avoid**
 - Centering every slide; gradient-wash title slides; an icon beside every bullet; corner blobs; abstract 3D filler. Each is already a dealbreaker or explicit-request-only. `L1` · default
-- Invented metrics. Never fabricate a plausible statistic, even labelled. On the slide, say the gap plainly in words ("Local figure to come") or leave it out; keep slot tokens such as `[X%]`, and "proposed, to confirm" labels, in the delivery note, never printed on a slide. Every real number has a source line, understated. Proposal details you invent (features, partners, policies) are labelled "proposed, to confirm" in the delivery note. `L1` · default
-- With no photograph supplied, do not spend half a title slide on an empty photo box: use the type-only deep field, or a tonal stand-in sized to the real crop. `L1` · default
+- Missing deck data: ask the user for the figure or source. Keep a clearly fillable placeholder such as `[X%]` in the slide’s data position until they provide it; do not replace the missing content with a sentence about the gap or invent a plausible statistic, even labelled. Every real number has an understated source line. `L1` · R152
+- Unverified proposal details (features, partners, policies) are labelled "proposed, to confirm" in the delivery note. `L1` · default
+- With no photograph supplied, do not reserve half a title slide for an empty photo box: use type on a deep field or a meaningful tonal stand-in. Choose by the brief. `L1` · R154
 
 **Ground per slide (validated, R105):** build every slide layout in both a light and a dark version. Use dark for divider slides and light for content slides, or the reverse, to break up the deck visually; a 100% light or 100% dark theme is equally fine. Template work always ships both versions of every layout. Do not default to one dark: the brand dictates deck colors, so draw dark grounds from darker brand colors (R106); with no brand, derive the dark from the primary hue (R038).
 
@@ -45,7 +46,7 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 **Avoid**
 - Hero images, oversized headlines or marketing copy inside a data tool; row striping; per-chart decoration; color as the only status signal (pair with text or shape; see `ui-craft.md`). Status chips are fine; pill buttons are not. · default
 
-**Check:** can the one question per region be answered in seconds? Numbers aligned? Every chart has axes, units and a finding title? Accent count within budget?
+**Check:** can the one question per region be answered in seconds? Numbers aligned? Do x-axis labels sit under their bars (R154)? Every chart has axes, units and a finding title? Accent count within budget?
 
 ## Landing and marketing pages
 **Must have**
@@ -85,7 +86,7 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 - Layout: sticky navigation at one side, article in the middle, an "on this page" list at the other that marks the current section. On narrow widths the contents list drops and navigation moves to a drawer. Every H2 and H3 has an anchor. Use logical (start/end) properties so the layout flips for right-to-left. `L1` · default
 - Declare the page type (tutorial, how-to, reference, concept, troubleshooting) and match tone to it. Title is the reader's question. One job per page. Sentence-case headings. `L1` · default
 - Short paragraphs; three or more parallel items become a list; code blocks are language-tagged, short, explained in prose, with a copy control. Callouts distinguish note from warning by label and rule, not by tinted boxes with icons. `L1` · default
-- Accent is spent on links, the active navigation item and at most one callout rule. Links keep color and underline at rest. `L1` · default
+- Accent is spent on links, the active navigation item and at most one callout rule. Ordinary paragraph links keep color and underline at rest (R155); navigation marks only the active item. `L1` · default
 
 **Avoid**
 - Pressure words (easy, simple, just), recap openers, personified artifacts; vague quantifiers where a figure exists. · default
@@ -96,18 +97,19 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 **Must have**
 - Marketing email is glance media: one idea, one primary CTA, readable in about ten seconds. Transactional or reference email may be dense but keeps one reading chain. `L1` · default
 - Email action hierarchy has three levels: one full-width filled primary button; compact secondary buttons (ghost or filled; ghost when there is more than one); tertiary items as colored, underlined text links. See `principles/email.md` (R100).
-- Use only the action levels the brief actually contains. One primary is required; add secondary or tertiary actions only for real needs the brief names. Extra actions dilute the primary (choice overload). `L1` · default
+- Give the email one primary objective and one clear primary action. Secondary calls to action are acceptable; keep their treatment subordinate to the primary. `L1` · R154 (clarified after the visual and rule votes)
 - Email opens with the brand: a wordmark header aligned to the text axis (left logo over left text). Never an email without a brand header. See `principles/email.md` (R115).
 - Email content blocks sit on a clean grid (two columns that fold to one on mobile); no zigzag alternation; images stay modest so text leads and never extreme banner crops; a small image or icon left with text right is the alternative. See `principles/email.md` (R116).
 - Single column. Reference width: about 600 to 680 px. The body is flush left, never centered paragraphs. It must still read at about 480 px, with type stepping down one size. `L1` · default
 - Build for clients, not browsers: table layout, inline styles, system or safe-stack fallbacks, no dependence on web fonts, shadows, gradients or script. Every image has alt text and a solid fallback color behind it, because many clients block images by default. The CTA is a real link styled as a button with its own background color, not an image. `L1` · default
 - Footer carries the sender address, unsubscribe and view-in-browser. Contrast is checked in both light and the client's forced dark mode; use opaque colors, not alpha. Add a real `prefers-color-scheme: dark` block with your own dark palette (and `[data-ogsc]` for Outlook); `color-scheme: light` alone does nothing. If you cannot test, say so. `L1` · default
-- If no photo is supplied, still design the hero slot as a solid fallback block sized to the intended image, with descriptive alt text carrying the message and a placeholder label printed on the block. Use at most one image slot, under about a third of the first screen, and set item lists in type only. The first screen (about 600 by 800) must look finished and hold the primary action. A date or time already in the headline or preheader is not repeated as a separate promoted line; bind the last two words of headlines and time ranges with a non-breaking space. Repeated item titles in a list (dishes, products) may use the display face at a reduced size. `L1` · default
+- The first screen must look finished and hold the primary action. With no supplied photo, use one labelled image placeholder under about a third of the first screen, leaving the content and action visible. `L1` · R154
+- For that image slot, use a solid fallback block sized to the intended image with descriptive alt text; set item lists in type only. A date or time already in the headline or preheader is not repeated as a separate promoted line; bind the last two words of headlines and time ranges with a non-breaking space. Repeated item titles in a list may use the display face at a reduced size. `L1` · default
 
 **Avoid**
 - Skewed or faux-italic accent words, pill CTAs, stylized gradient heroes (all dealbreakers). Two competing CTAs. · default
 
-**Check:** one CTA? Survives images off and dark mode? Reads at the narrow width? Footer complete?
+**Check:** one primary objective and action? Are any secondary actions clearly subordinate? Survives images off and dark mode? Reads at the narrow width? Footer complete?
 
 ## Mobile and native screens
 **Must have**
@@ -165,8 +167,8 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 - [ ] Deck: titles alone tell the story; one idea per slide; split, never shrink; one frame; every layout has light and dark versions.
 - [ ] Dashboard: KPI, primary chart, secondary region in order; tabular numerals; chart integrity; freshness and sample labels.
 - [ ] Landing: first view shows value and action; layout families varied; proof is real; one CTA label per intent.
-- [ ] Docs: page type declared; measure and anchors; links colored and underlined.
-- [ ] Email: one CTA; single column; survives images off and dark mode; footer complete.
+- [ ] Docs: page type declared; measure and anchors; ordinary paragraph links colored and underlined (R155).
+- [ ] Email: one primary objective and action, with any secondary actions subordinate; single column; survives images off and dark mode; footer complete.
 - [ ] Mobile: platform mode consistent; safe areas; targets above floors; one job per screen.
 - [ ] Social or print: tested at thumbnail and half scale; each size re-composed; bleed and trim margins.
 - [ ] Resume or print: opaque colors; fits without shrinking; accent under budget.

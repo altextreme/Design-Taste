@@ -4,7 +4,7 @@
 
 # Design Taste — Anthony's Prescription
 
-This skill is a ruleset distilled from 148 rounds of side-by-side comparisons covering 194 design dimensions, extended in v2 with defaults for surfaces those rounds never reached (interactive UI, decks, critique, localization, brand files), kept separate from the validated rules and marked `default`, and in v2.2 with channel and format rounds (product UI, web, email, decks, documents, mobile, social, video, identity, print) that turned many of those defaults into validated rules. v2.3 adds a reasoning layer (why he decides what he decides, confirmed over rounds R142 to R149) and a render-and-review loop with a measure script; the loop and several new rules are unvalidated `default` rules awaiting his review (see `validation-queue.md`). It tells you how Anthony would design something himself. It does not prescribe pixel sizes, hex codes, or durations; it prescribes relationships, so it works at any size, aspect ratio, format, tool, or brand. It names no agent product and works the same in any harness.
+This skill is a ruleset distilled from 154 rounds of side-by-side comparisons covering 215 design dimensions, extended in v2 with defaults for surfaces those rounds never reached (interactive UI, decks, critique, localization, brand files), kept separate from the validated rules and marked `default`, and in v2.2 with channel and format rounds (product UI, web, email, decks, documents, mobile, social, video, identity, print) that turned many of those defaults into validated rules. v2.3 and v2.4 add a reasoning layer (why he decides what he decides, confirmed over rounds R142 to R149). R150 validated the render-and-review loop, measurement, typography checks and “Looked at” note; R151 validated the delivery note, purpose framing, and composed-piece scope; R152 clarified missing facts, placeholder color, deck slots, and image prompting; R153 confirmed structure comparison and example use, with a partial finding on headline emphasis; R154 confirmed chart room, photo-free title slides, interface type, and email first screens, and email primary objective with optional secondary actions. R155 clarified which links need underlines. Other queued defaults remain in `validation-queue.md`. It tells you how Anthony would design something himself. It does not prescribe pixel sizes, hex codes, or durations; it prescribes relationships, so it works at any size, aspect ratio, format, tool, or brand. It names no agent product and works the same in any harness.
 
 **The standard.** Every design decision needs a reason you can state, rooted in research, proven practice and human psychology. This skill gives you his reasons, not just his values. Do not apply a number or a style by rote: state why each major decision was made in your delivery note, and make the judgment call (is this good, and why) instead of hedging. He is data-led, and everything has a purpose.
 
@@ -17,9 +17,10 @@ Read this file fully, then open `references/index.md` and load only what the tas
 - `references/principles/<category>.md` — **validated rules**, one file per category (composition, typography, color, motion, …), each tagged with its layer and the rounds that produced it. Read the categories relevant to the task before designing.
 - `references/principles/reasoning-and-psychology.md` — **why he decides what he decides** (his reasons, process, and what wins when two reasons collide). Read it on every non-trivial task, and whenever a situation is not covered by a specific rule: reason from the why, not from the nearest style.
 - `references/evidence.md` — the coverage tracker and round log (his picks and reasoning). For resolving ambiguity and quoting him.
-- Default references (rules tagged `default`; defaults where no validated rule exists): `render-and-review.md` (read before every final pass), `process-and-critique.md`, `ui-craft.md`, `formats.md`, `media-prompts.md`, `scripts-and-direction.md`, `brand-and-registers.md`, `validation-queue.md`. `index.md` says when to read each.
+- `references/render-and-review.md` — **validated R150 workflow**; read before every final pass. Its exact code example and untested format-specific details are still defaults.
+- Default references (rules tagged `default`; defaults where no validated rule exists): `process-and-critique.md`, `ui-craft.md`, `formats.md`, `media-prompts.md`, `scripts-and-direction.md`, `brand-and-registers.md`, `validation-queue.md`. `index.md` says when to read each.
 
-**Two tiers.** Validated rules (this file + `principles/`) always win. Unvalidated `default` rules fill gaps, never override a validated rule, dealbreaker or non-negotiable, and cannot by themselves justify a BLOCK in a critique.
+**Two tiers.** Validated rules (this file, `principles/`, and the R150 workflow in `render-and-review.md`) always win. Unvalidated `default` rules fill gaps, never override a validated rule, dealbreaker or non-negotiable, and cannot by themselves justify a BLOCK in a critique.
 
 ## Layers (how rules combine)
 
@@ -40,7 +41,7 @@ Read this file fully, then open `references/index.md` and load only what the tas
 
 1. Accessible text contrast against whatever is actually behind the text (check images, gradients, opacity).
 2. In motion, every frame holds long enough to read **all** of its text before anything exits.
-3. Text links in UI are colored **and** underlined at rest.
+3. Ordinary text links inside paragraphs are colored **and** underlined at rest. Navigation marks only the active item with a line; linked wordmarks and button-styled links need no text underline (R155).
 4. No glyph collisions between lines; no near-tangents (elements almost touching, especially corner-to-corner — including text against features in a photo).
 5. Reading order and enforced hierarchy.
 
@@ -62,23 +63,23 @@ State a conflict as "X even over Y" and say which wins. Confirmed rankings, in n
 
 **Hard lines** he will not trade on any project: readable text, accessibility for everyone, the brand's identity, the purpose of the piece, key information never buried, familiar controls for interface tasks, everything looks chosen on purpose. **Design systems and templates:** always prefer them; break one only when accessibility or legibility demands it, and flag the break as a defect in the system to fix. **Working with people:** the client has the final say, but your job is to push back first with the reason and data; in a handoff, state the rigid parts and why, and where there is room for interpretation; only design what could be built. **Build cost is never a reason to choose the simpler design**: do the work to make the nicer one accessible and sustainable.
 
-**Funnel stage sets the design** (details in `principles/reasoning-and-psychology.md`): awareness = one idea, immersive, brand early, soft ask, repetition; consideration = more detail, proof and comparison, clear next step; conversion = one prominent specific action, uncluttered, recommended option emphasized, fewer steps; loyalty = useful, familiar, warm, light on selling. Informational pieces (a chart, a diagram, a report) have no funnel stage: name the one question the piece answers, for whom, and in what medium (glance, page, reference). Internal tools and dashboards sit outside the funnel: name the job, the decision it supports and how often it is checked. Usual stage by piece: street poster awareness; prospect deck and product screens consideration; landing and pricing pages conversion; newsletter loyalty; a social post can serve any stage, so the brief decides.
+**Purpose sets the design** (details in `principles/reasoning-and-psychology.md`). For funnel pieces: awareness = one idea, immersive, brand early, soft ask, repetition; consideration = more detail, proof and comparison, clear next step; conversion = one prominent specific action, uncluttered, recommended option emphasized, fewer steps; loyalty = useful, familiar, warm, light on selling. Informational pieces (a chart, a diagram, a report) name the question they answer, for whom, and in what medium (glance, page, reference). Internal tools and dashboards name the job, the decision it supports and how often it is checked. Do not force these into a funnel stage (R151). Usual stage by funnel piece: street poster awareness; prospect deck and product screens consideration; landing and pricing pages conversion; newsletter loyalty; a social post can serve any stage, so the brief decides.
 
 **Psychology he reasons with on purpose** (name these in critiques; full list in `principles/reasoning-and-psychology.md`): proximity, similarity, isolation, directional cues, common region, scanning patterns, chunking, choice overload, recognition over recall, convention, progressive disclosure, target reach, aesthetic-usability, repetition and trust, picture superiority, peak-end, color and form feeling, faces and gaze. His line on persuasion is honesty: social proof, anchoring, defaults, scarcity and credibility only when true; labels and badges must be true.
 
 ## Workflow
 
-1. **Read the brief.** Identify subject, audience, channel (glance media vs. poster vs. reference media), format/aspect ratio, whether there's motion or sound, script and language, and whether brand guidelines exist. If brand guidelines exist, load them as L3. Also establish the **purpose**: who the audience is, the problem or opportunity, and which stage of the conversion funnel the piece serves (awareness, consideration, purchase, loyalty, or to provoke an emotion or shift a perspective). Do not accept a thin brief: if the audience, goal, funnel stage or brand is missing and it would change the direction, structure or format, ask for it, one easy question at a time, before starting. If you cannot ask, proceed on the most defensible reading and list your assumptions in the delivery note (`process-and-critique.md`).
-2. **Pick the register from the concept** (presets below). Do not apply a default house style to every brief, and do not hand the user a style menu: choosing is the job. For a composed piece, write two structurally different layouts in one sentence each and pick one with a reason, so the layout comes from this subject and not from the last poster you saw. `default`
+1. **Read the brief.** Identify subject, audience, channel (glance media vs. poster vs. reference media), format/aspect ratio, whether there's motion or sound, script and language, and whether brand guidelines exist. If brand guidelines exist, load them as L3. Establish the **purpose**: the audience, problem or opportunity, and funnel stage for a funnel piece; the question for an informational piece; or the user job and decision for an internal tool (R151). Do not accept a thin brief: if the audience, goal, purpose frame or brand is missing and would change the direction, structure or format, ask one easy question at a time. If you cannot ask, proceed on the most defensible reading and list assumptions in the delivery note (`process-and-critique.md`). Prompt the user for missing factual names, figures, years, addresses, prices and claims; use explicit placeholders until they are supplied (R152).
+2. **Pick the register from the concept** (presets below). Do not apply a default house style to every brief, and do not hand the user a style menu: choosing is the job. For a composed piece, write two structurally different layouts in one sentence each and pick one with a reason, so the layout comes from this subject and not from the last poster you saw (R153).
 3. **State the system in one sentence** before building a non-trivial piece: register and why, ground, type roles, accent logic, motion character. It lets the user redirect cheaply.
-4. **Build the structure (L1)** — image-first, top-down reading chain, strict grid, golden-section proportions, one unbroken text block. See *Composition*, *Grid*, *Text/Image* in `principles/`. For an interface, also read `ui-craft.md`; for a specific deliverable (deck, dashboard, email, …), `formats.md`.
-5. **Set the voice (L2)** — typeface, palette, motion character from the preset; pull colors from the actual imagery.
-6. **Build loop and pre-flight.** Render at the real format(s); run the measure script in `references/render-and-review.md`; look at the whole image, then at crops of every text block; run its typography and spatial checks; fix every typography item; re-render; look at least twice. Then run the checklist below and the self-review in `process-and-critique.md`. If you truly cannot render, use the no-render mode in `render-and-review.md` and say so. Deliver a short note in this fixed shape: **Purpose** · **Audience** · **Stage or question** · **Register and why** · **Assumptions** · **Looked at** · **Not verified**. Never claim a check you did not run; a note without a **Looked at** line is incomplete.
+4. **Build the structure (L1).** For a composed piece, use image-first, a top-down reading chain, strict grid, golden-section proportions, and one unbroken text block. For a chart, give the data room; for an interface, organize around the task, content, and state (R151). See *Composition*, *Grid*, *Text/Image* in `principles/`; for an interface also read `ui-craft.md`, and for a specific deliverable read `formats.md`.
+5. **Set the voice (L2)** — typeface, palette, motion character from the preset; use brand colors where specified, otherwise pull colors from actual imagery when the photograph should lead (R152).
+6. **Build loop and pre-flight (R150).** Render at the real format(s); run the measurement pass in `references/render-and-review.md`; look at the whole image, then at crops of every text block; run its typography and spatial checks; fix every typography item; re-render; look at least twice. For interactive work, exercise each visible control and required state rather than treating labels or static mock states as working. For data graphics, check labels, ticks, gridlines and marks against the same plotted coordinates. Then run the checklist below and the self-review in `process-and-critique.md`. If you truly cannot render, use the no-render mode in `render-and-review.md` and say so. Deliver a short note with relevant fields: **Purpose** · **Audience** · **Stage or question/job** · **Register and why** · **Assumptions** · **Looked at** · **Not verified** (R151). Label unknowns; never claim a check you did not run (R150).
 7. **When critiquing**, never stop at "feels off": name the cause and the reader effect (why it feels wrong), and when two principles conflict state the ranking as an "X even over Y" sentence. Audit in his order: (1) does the message get through (text over a focal point, contrast, legibility); (2) hierarchy and amount of content; (3) craft details (shadows, emoji, decoration with no job). Use the scored format in `process-and-critique.md`: cite the specific principle (and its category) a design violates, separate must-fixes from quick wins, and propose the concrete fix.
 
 ## Structural defaults (L1, composed pieces: posters, covers, heroes, title slides)
 
-These do not apply to interfaces or charts. For an interface use the Interface floor and `ui-craft.md`; for a chart or data graphic use the Data graphics rules below and `formats.md`. Image-first, the golden section and the image-height cap are for composed pieces.
+These do not apply to interfaces or charts (R151). For an interface use the Interface floor and `ui-craft.md`; for a chart or data graphic use the Data graphics rules below and `formats.md`. Image-first, the golden section and the image-height cap are for composed pieces.
 
 
 - **Image first.** Image leads, text follows to support it; weight at the top. In landscape, split side-by-side (image half read first). Never let an image interrupt the text chain.
@@ -93,19 +94,19 @@ These do not apply to interfaces or charts. For an interface use the Interface f
 ## Type defaults (L1)
 
 - **Roles:** display face for the headline only; a text-optimized companion for the one promoted practical detail (e.g., dates); a neutral sans for everything else.
-- **Scale:** dramatic jump from headline to the rest; moderate even steps below. Supporting text at one regular weight — no bold subheads. Emphasis by **weight within one family** (on the phrase that carries the meaning; modifiers lighter), moderate jumps, **never italics** for emphasis. Use it only where one phrase truly carries the claim; the same weight split on every title in a series is a template, not hierarchy. Promote a detail once: if the date is already in the headline or first sentence, do not repeat it as a separate line. `default`
+- **Scale:** dramatic jump from headline to the rest; moderate even steps below. Supporting text at one regular weight — no bold subheads. Emphasis by **weight within one family** (on the phrase that carries the meaning; modifiers lighter), moderate jumps, **never italics** for emphasis. When emphasis is needed, bold one word or phrase rather than most of the headline with only one or two words left unbolded (R153, visual pick; broader rule vote skipped). The same weight split on every title in a series is a template, not hierarchy. Promote a detail once: if the date is already in the headline or first sentence, do not repeat it as a separate line. `default` for the repeated-detail clause.
 - **Type-only pieces:** the headline carries the image's job — push to extreme scale, stopping just short of full width.
 - **Leading:** headline as tight as possible without any collision, but tight enough to read as one thought; body moderate. **Measure:** max ~55–75 characters per line. **Alignment:** flush left, ragged right; never justify.
 - **Case:** tracked all-caps only for the smallest metadata tier, applied to the whole tier; promoted details stay sentence case. Small caps get moderate-to-generous tracking; display type sits close.
 - Break headlines by phrase; balance lines; no widows/orphans. Judge a face by the actual glyphs in the copy. Character without quirkiness or robotic coldness; readability beats elegance.
 
-- **Examples are reasoning, not recipes.** The principles cite one pairing (a light lead-in beside a medium core in a warm editorial serif) as an example of weight following meaning. Do not reuse that phrase, those weights or that face unless this concept calls for them; choose the face and the split from this subject. `default`
-- **Interface type:** a defined scale of four or five sizes; figures in a column share precision and align on the right (tabular); never truncate the identifying field of a row; one size per kind of badge, button and chip. `default`
+- **Examples are reasoning, not recipes.** The principles cite one pairing (a light lead-in beside a medium core in a warm editorial serif) as an example of weight following meaning. Do not reuse that phrase, those weights or that face unless this concept calls for them; choose the face and the split from this subject (R153).
+- **Interface type:** a small consistent scale; figures in a column share precision and align on the right; never truncate the identifying field of a row (R154). Four or five sizes and one size per kind of badge, button and chip remain `default`.
 
 ## Color defaults (L1)
 
 - Color marks hierarchy: the primary hue on the headline (whole element, one color), a scarce accent on the promoted detail, everything else neutral (metadata gray). Never a lone colored text element in print — in UI that signals a link.
-- Pull exact hues from the imagery; never near-duplicates. If there is no photograph yet (a placeholder), do not invent a palette from an imagined photo: use ink plus one provisional hue and say it will be re-sampled. `default` A hierarchy color must clearly read as a color, not near-black.
+- Pull exact hues from the imagery when the photograph should lead; never near-duplicates. If that photo is still a placeholder, use ink plus one provisional hue and settle the palette when the real image arrives. A brand palette overrides image sampling (R152). A hierarchy color must clearly read as a color, not near-black.
 - Temperature follows the concept: neutral/institutional → cool lead + warm accent; warm/inviting subjects → one warm family.
 - Never pure black on pure white. Contrast is a floor, then a mood dial (secondary text may dim toward the floor).
 - Dark versions use a deep colored field drawn from the brand's darker colors, or from the primary hue when there is no brand (not a default gray or navy); white headline, the warm accent kept. Neutral gray dark is for a product-UI light/dark mode pair with no brand color to draw on. Gradients only subtle and tonal by default.
@@ -146,14 +147,15 @@ Full detail for the five `default` registers is in `references/brand-and-registe
 - Data: conventional clear charts (axis, light grid, labels); decorate one storytelling point only; big number + supporting line for fast reads; avoid dense pictograms. A label beside a big number is vertically centered on the figure's optical height (cap/figure top to baseline), never baseline-aligned. Density follows the channel: glance media minimal, posters moderate, reference media dense.
 - UI states transition (never instant swaps); purposeful motion such as a fill sweep or arrow nudge.
 
-## Data graphics (default rules; details in `references/formats.md`)
+## Data graphics (R154 chart principles plus defaults; details in `references/formats.md`)
 
-- The plot gets most of the page: the header (headline, one-line deck) takes at most about a third of the height; the plot absorbs the rest; the source and sample line sit at the foot.
+- The plot gets most of the page (R154): the header stays compact, the plot absorbs the rest, and the source and sample line sit at the foot. Keep x-axis category labels aligned with their bars. The one-third header cap remains `default`.
+- Derive mark, tick, gridline, category-label and direct-label positions from the same plot scales. At each category, compare the displayed label center with its mark or bar center; at zero, compare the tick label with the zero rule. A label that looks nearby but describes another coordinate misleads the reader.
 - Hue belongs to the data: each series owns its color, and the headline and chrome stay ink. Never reuse a series hue for non-data text.
-- Tell series apart by more than hue: direct end labels at minimum; vary line style or marker when lines cross or the piece may print in grayscale.
+- Tell series apart by more than hue (R154); direct end labels, line style, or markers are `default` ways to do it.
 - Use true minus signs. Extend the value axis one gridline past the data so no mark sits on the frame. Bars and filled areas start at zero; ticks use round steps.
-- A partial current period is never plotted as a full one, and a figure that appears twice matches everywhere.
-- The headline states the finding a reader would act on (against a target or the last period), not just any true comparison.
+- A partial current period is never plotted as a full one, and a figure that appears twice matches everywhere (R154).
+- The headline states the finding a reader would act on (R154); comparison against a target or prior period is a `default` way to frame it.
 - Never describe a source or method you were not given: write "sample" or "source not given".
 
 ## Interface floor (default rules; apply to any UI)
@@ -161,11 +163,12 @@ Full detail for the five `default` registers is in `references/brand-and-registe
 Full rules and reasoning in `references/ui-craft.md`. Before showing an interface, check:
 
 - **Five states** exist, not just the populated one: loading, empty, error, populated, edge (longest text, zero and thousands of items, missing data).
+- If you build the interface, its state controls must actually change the view. Exercise every visible control and capture each required state; a row of buttons or simultaneous state messages is not a state implementation. On refresh failure, keep previously loaded records visible with an error and recovery action.
 - **Keyboard focus** is visible on every interactive element and distinct from hover; state is never carried by hue alone; non-text controls meet a 3:1 contrast floor against their ground.
 - **Targets** are comfortably large with separated hit areas; native elements first; reading order equals DOM order.
 - **Forms**: a visible label (never placeholder-as-label), errors after the field is left and cleared the instant it's valid, one primary action per view.
 - **Motion** has a job, is eased-out, and has a reduced-motion variant. No more than three flashes in any second, in UI or MP4.
-- **Content is real**: no invented statistics, testimonials, logos, lorem ipsum or **people (even labelled sample: use order numbers or roles such as "Walk-in")**; no scarcity, popularity or sourcing claim you were not given; a named real thing gets its real image or an honestly labelled placeholder. Show the empty slot instead of a plausible figure.
+- **Content is real**: no invented statistics, testimonials, logos, lorem ipsum or **people (even labelled sample: use order numbers or roles such as "Walk-in")**; no scarcity, popularity or sourcing claim you were not given; a named real thing gets its real image or an honestly labelled placeholder. Ask the user for missing names, figures, years, addresses, prices and claims; until supplied, show a clear placeholder instead of a plausible invented value (R152).
 
 ## Dealbreakers (never, unless the user explicitly asks)
 
@@ -191,12 +194,13 @@ A brand file may *mandate* a style-level trait from these lists (for example a c
 - [ ] Nothing from the dealbreaker list.
 - [ ] Every format/aspect ratio reflowed and re-set, not just scaled.
 - [ ] Interfaces: the interface floor above passes; deliverable-specific checks from `formats.md` done.
+- [ ] Interactive controls and each required state exercised; charts checked for label-to-mark, tick-to-grid and zero-line alignment using the actual plot coordinates.
 - [ ] Non-Latin or multilingual content: direction, script type behavior and text expansion handled (`scripts-and-direction.md`).
-- [ ] Purpose stated (audience, goal, funnel stage) and the piece asks the viewer for exactly what that purpose needs.
+- [ ] Purpose stated (audience and goal, with a funnel stage, informational question, or internal job as appropriate) and the piece supports that purpose (R151).
 - [ ] Final proofread against the brief: clear, easy to read, and the intended message lands.
 - [ ] Any conflict between two rules was resolved with an explicit "even over" ranking, and only legibility or accessibility departed from a brand guide.
 - [ ] Words: the headline says what the reader gets; buttons name the specific action; errors say how to fix; tone follows the brand voice and what is at stake for the reader; clarity first.
-- [ ] Nothing invented: every number, name, quote and image is real or supplied; an unsupplied statistic, person or claim is a labelled empty slot, not a plausible figure (never an invented year, address or price either).
+- [ ] Nothing invented: prompt the user for missing facts; every number, name, quote and image is real or supplied, and any unavailable fact has a clear placeholder (never an invented year, address or price either).
 
 When a situation isn't covered, reason from the core tenets, then check `references/index.md` for the nearest category, and cite the rounds in `references/evidence.md` if you need his exact words.
 
@@ -212,8 +216,8 @@ Load only what the task needs. Every file is one level below `SKILL.md`; none re
 
 | Tier | Where | Authority |
 |---|---|---|
-| **Validated** | `principles/*.md`, SKILL.md | Distilled from 148 side-by-side rounds of Anthony's own picks. Each rule cites its rounds (`R001`…). These win every conflict. |
-| **Default (`default`)** | the files in "Default references" below | Unvalidated defaults for surfaces the rounds never covered, filtered through the validated rules. Tag: `default`. Never overrides a validated rule, dealbreaker or non-negotiable, and cannot by itself justify a BLOCK in a critique. |
+| **Validated** | `principles/*.md`, SKILL.md, R150 workflow in `render-and-review.md` | Distilled from 154 side-by-side rounds of Anthony's own picks. Each rule cites its rounds (`R001`…). These win every conflict. |
+| **Default (`default`)** | the other details in "Workflow and default references" below | Unvalidated defaults for surfaces the rounds never covered, filtered through the validated rules. Tag: `default`. Never overrides a validated rule, dealbreaker or non-negotiable, and cannot by itself justify a BLOCK in a critique. |
 
 ## Validated principles (read the categories the task touches)
 
@@ -256,11 +260,11 @@ Load only what the task needs. Every file is one level below `SKILL.md`; none re
 
 `evidence.md` holds the coverage tracker and round log (his picks and reasoning, in his words). Read it only to resolve ambiguity or to quote him.
 
-## Default references (read when the trigger matches)
+## Workflow and default references (read when the trigger matches)
 
 | File | Read when |
 |---|---|
-| `render-and-review.md` | Before every final pass on any visual: how to render the piece to an image and look at it, the typography and spatial checks, a hunt list of common failures, and the no-render fallback |
+| `render-and-review.md` | Before every final pass on any visual: the R150-validated render loop, measurement, typography checks and “Looked at” note; its tool example and unasked format details remain defaults |
 | `process-and-critique.md` | Starting any non-trivial task (ask vs decide, state the direction); the user asks for a critique, review or audit; before handing off finished work (scored review, self-review loop) |
 | `ui-craft.md` | Any interactive UI: states (loading, empty, error, edge), focus and keyboard, targets, forms, hover and press behavior, UI motion, sample content and copy, laws of UX |
 | `formats.md` | Slide decks, dashboards, charts and data graphics, landing pages, docs, email, mobile and native screens, social cards, resumes and print, diagrams, design-system docs |
@@ -285,7 +289,7 @@ Explicit user instruction > brand locks (L3) > validated rules for the chosen re
 - **The non-negotiables that survive any brand override:**
   1. Accessible text contrast.
   2. Every frame holds long enough to read all of its text.
-  3. Text links are colored and underlined in UI.
+  3. Ordinary text links inside paragraphs are colored and underlined at rest; navigation, linked wordmarks, and button-styled links use their own cues (R155).
   4. No glyph collisions and no near-tangents.
   5. Reading order and enforced hierarchy.
 
@@ -303,6 +307,7 @@ Explicit user instruction > brand locks (L3) > validated rules for the chosen re
 
 > Layer tags: `L1` foundation (always), `L2` tonal preset (only for that tone), `L3` brand-negotiable. `Rnnn` = the comparison round that produced the rule (see ../evidence.md). Non-negotiables in SKILL.md survive any brand override.
 
+- **Wait for the actual photograph before deriving colors from it.** If the image is still a placeholder and the photograph is meant to drive color, use ink and a provisional accent, then settle the palette when the real image arrives. If brand guidelines dictate a palette, follow the brand colors over the photograph. `L1/L3` · R152 (also R066)
 - **Go fully neutral or commit to a considered palette. Never use a lone token accent.** Type set entirely in neutrals is clean and acceptable. A multi-hue system applied structurally across several elements, including the ground, makes a piece feel finished and is preferred when color is used. Several hues are welcome. What fails is the in-between: a single colored text element on an otherwise neutral page reads as odd. `L1` · R033
 - **Color in type marks hierarchy, and it goes to the same two moments as the special typefaces.** The primary hue goes on the headline. A secondary accent goes on the promoted practical information, such as the date. The subhead, body and metadata stay in the neutral ink. This mirrors the type system, where the display serif and text serif mark those same two elements, so face and color reinforce one structure. `L1` · R034
 - **A hierarchy color must clearly read as a color.** Type color that sits so dark and desaturated that it nearly matches the neutral ink fails at its job, because the distinction disappears. Push the hue just far enough from the ink to be unmistakable, while keeping it restrained. `L1` · R035
@@ -329,10 +334,11 @@ Explicit user instruction > brand locks (L3) > validated rules for the chosen re
 
 > Layer tags: `L1` foundation (always), `L2` tonal preset (only for that tone), `L3` brand-negotiable. `Rnnn` = the comparison round that produced the rule (see ../evidence.md). Non-negotiables in SKILL.md survive any brand override.
 
+For composed pieces such as posters, covers, heroes, and title slides, use the image-first, golden-section, and image-height rules below. Charts give space to the data; interfaces organize around the user's task, content, and state. Do not impose those composed-piece rules on charts or interfaces. `L1` · R151
 - **Structure must look intentional, and alignment is the proof of intent.** Every element should share an edge or axis with something else so the eye can sense the system holding it in place. Placement that relies on "feel" without a visible governing logic reads as accidental, even when it was considered. Default to a modular structure; any departure from it has to be legible as a decision, not drift. `L1` · R001
 - **Build the reading order as a clear top-down sequence:** the image establishes context, then a dominant headline, then the subhead tucked directly beneath it as one unit, then supporting copy set alongside at a clearly subordinate scale. Each step should be obvious without the viewer having to search. `L1` · R001
 - **One unbroken reading path, in strict rank order.** Arrange elements so the eye travels a single continuous chain: label → image → headline → subhead → body → details. Each element should hand off directly to the next. Nothing should sit outside the chain where it can be read early or out of sequence. A side-by-side placement is only acceptable if it doesn't open a second entry point. `L1` · R001, R002
-- **Image first is a firm rule, not an accident of one layout.** The image leads, and the text follows to support and explain it. That puts the visual weight at the top, which feels grounded, as if the piece hangs from a strong anchor. Bottom-heavy arrangements feel strange. Confirmed in a direct test against two alternatives. `L1` · R002, R014
+- **Image first is a firm rule for a composed piece, not an accident of one layout.** The image leads, and the text follows to support and explain it. That puts the visual weight at the top, which feels grounded, as if the piece hangs from a strong anchor. Bottom-heavy arrangements feel strange. Confirmed in a direct test against two alternatives; the format scope was confirmed later. `L1` · R002, R014, R151
 - **Consolidate all text into one unbroken block, footer details included.** The headline, subhead, body and practical details form one continuous group. Details stranded at the far edge of the page, separated from the body by a gap, don't get read. Keeping them in the block leads the eye straight into the critical practical information. `L1` · R018 (in image layouts, a modest pause before bottom-anchored details is fine; see R019)
 - **Collect negative space into one deliberate field, outside the reading chain.** In a type-only piece, anchor the text block low and let one clean field sit above it. That field plays the role an image would, and the piece reads as top-down: field, then text. `L1` · R018
 - **With an image, the image is the field: text hugs it, and details anchor the bottom edge.** The handoff from image to headline stays direct. Pushing extra space between them breaks the image's lead into the text. Practical details sit at the bottom edge, and a modest pause above them is fine, as long as it doesn't grow into a void that strands them. `L1` · R019
@@ -343,9 +349,9 @@ Explicit user instruction > brand locks (L3) > validated rules for the chosen re
 - **Give every element its own rank, and make each rank look like its role.** *(Refined by R024: distinguish the ranks through size and tone, not bold weight.)* Prefer a finely graduated hierarchy: label, headline, subhead, body and details each get a distinct treatment through size, weight or tone, and even the minor details are ranked among themselves. A subhead has to read unmistakably as a subhead, clearly below the headline and clearly above the body. Collapsing levels into one shared style flattens the piece. `L1` · R003
 - **Ceiling on hierarchy depth.** Roughly one distinct level per content role is the upper limit. Going finer than that becomes fussy, because levels stop being distinguishable from each other. `L1` · R003 (soft ceiling — not yet tested beyond)
 - **Whitespace must look placed, never left over.** Surplus space that pools in one spot, especially a dead band between the last content block and the footer, reads as a mistake. `L1` · R004, R005
-- **Surplus space goes to the primary visual first, but only up to a point.** Grow the dominant element, such as the image, to absorb spare space. Don't spread the surplus evenly between groups, because that loosens the groups and makes the piece feel slack. Stop growing before the image starts crowding the text below. When it begins to dominate rather than lead, it reads as aggressive. In a text-bearing vertical layout, keep the image clearly under half the page height. Getting close to half feels uncomfortable, while sitting comfortably below it feels right. This held across two separate rounds. `L1` · R005, R009
+- **In a composed piece, surplus space goes to the primary visual first, but only up to a point.** Grow the dominant element, such as the image, to absorb spare space. Don't spread the surplus evenly between groups, because that loosens the groups and makes the piece feel slack. Stop growing before the image starts crowding the text below. When it begins to dominate rather than lead, it reads as aggressive. In a text-bearing vertical composition, keep the image clearly under half the page height. Getting close to half feels uncomfortable, while sitting comfortably below it feels right. This held across two separate rounds; the format scope was confirmed later. `L1` · R005, R009, R151
 - **The handoff from image to text needs more breathing room than the gaps within the text.** The first text element below an image should sit noticeably further from the image's edge than text elements sit from each other. Otherwise the text looks jammed against the picture. `L1` · R009
-- **Use classical proportion systems as the scaffold for major divisions.** Size and place major zones with golden-ratio or rule-of-thirds relationships rather than arbitrary values, because these divisions are perceptually pleasing for well-understood reasons. Working method: set golden-section guides at 61.8% in from each of the four edges. The intersections they form mark where key visual elements should anchor. This is used most rigorously in print, but kept in mind for all work. `L1` · R004, R005
+- **Use classical proportion systems as the scaffold for major divisions in composed pieces.** Size and place major zones with golden-ratio or rule-of-thirds relationships rather than arbitrary values. Working method: set golden-section guides at 61.8% in from each of the four edges. The intersections they form mark where key visual elements can anchor; judge the result by eye. This is used most rigorously in print and does not govern charts or interfaces. `L1` · R004, R005, R151
 - **Never place a focal element at the dead geometric center.** The perceived center of a page sits above its true center, so an element placed at exact center looks like it's sagging. Lift it north of center. `L1` · R006
 - **Mix strategies across axes: center on one, offset by proportion on the other.** For a single focal subject, horizontal centering is welcome. The vertical position comes from proportion. Symmetry and proportional placement are tools to combine, not rival systems. `L1` · R006, R007
 - **The upper golden-section line is the default resting height for a focal subject.** It sits 38.2% down from the top. Just above center still feels low, and the upper third line feels too high, as if the subject is floating off the top. When the two systems disagree, the golden section wins over thirds. This was confirmed blind: his eye picked the golden line before the guides were shown. `L1` · R006, R007
@@ -430,6 +436,7 @@ These recur across many rounds and override stylistic defaults:
 
 > Layer tags: `L1` foundation (always), `L2` tonal preset (only for that tone), `L3` brand-negotiable. `Rnnn` = the comparison round that produced the rule (see ../evidence.md). Non-negotiables in SKILL.md survive any brand override.
 
+- **Give the plot most of the chart.** Let the finding headline lead into a roomy plot. Keep series identifiable beyond color; keep axes, partial periods, and repeated figures truthful. For bar charts, align each x-axis category label with its bar. `L1` · R154
 - **Conventional, clear charts by default.** A proper axis, light gridlines, axis labels and every category labeled. This reads as the cleanest. Ultra-minimal data-ink that strips the axis is less preferred, and so is decorating every mark. Keep values off individual bars unless they're being called out. `L1` · R074
 - **Form follows the message and the attention budget.**
   - **A trend:** show a progression over time with a conventional chart.
@@ -450,6 +457,8 @@ These recur across many rounds and override stylistic defaults:
 
 > Layer tags: `L1` foundation (always), `L2` tonal preset (only for that tone), `L3` brand-negotiable. `Rnnn` = the comparison round that produced the rule (see ../evidence.md). Non-negotiables in SKILL.md survive any brand override.
 
+- **When a title slide has no photograph, make the composition complete without an empty image box.** Type on a deep field or a meaningful tonal stand-in can carry the slide. Which direction is stronger depends on the brief; the rule vote was Yes and the visual pick was Depends. `L1/L2` · R154
+- **Keep a fillable placeholder for missing deck data.** Ask the user to provide the figure or source. Until then, show a clearly recognizable placeholder in the slide’s data position so the user can populate it, rather than replacing the content with an audience-facing sentence about the gap. Do not invent a believable value. `L1` · R152
 - **Match the slide's copy structure to its job.** A single large statement works for divider and section slides; headline plus supporting points works for content slides, which carry more content. All three tested structures are acceptable in their place. `L2 (deck)` · R099
 - **For supporting points, use short columns with sub-headings, each with a conceptually connected line icon.** The columns read easily and the icons add visual storytelling. Columns without icons are okay but visually boring; avoid them as the default. `L2 (deck)` · R099, R132
 - **A bullet list is acceptable beside an image that helps communicate the message.** A plain bullet list on its own is too generic. Every template should include content layouts with an image on the right and an image on the left. `L2 (deck)` · R099, R132
@@ -517,6 +526,8 @@ These recur across many rounds and override stylistic defaults:
 
 > Layer tags: `L1` foundation (always), `L2` tonal preset (only for that tone), `L3` brand-negotiable. `Rnnn` = the comparison round that produced the rule (see ../evidence.md). Non-negotiables in SKILL.md survive any brand override.
 
+- **Give each email one primary objective.** A secondary call to action is acceptable; the email still needs one clear primary objective and a corresponding primary action. `L1` · R154 (clarified after the initial visual and rule votes)
+- **Make the email first screen feel complete.** Show the primary action within it. If a photograph is missing, use one clearly labelled image placeholder that stays modest, under roughly a third of that first screen, so the content and action are visible. `L1` · R154
 - **Establish a clear action hierarchy in email; it is critical.** Three levels: primary, secondary, tertiary. Each level has its own treatment. `L2 (email)` · R100
 - **One primary call to action per email, as a full-width filled button.** `L2 (email)` · R100
 - **Secondary actions are compact buttons; with two or more of equal weight, use ghost (outlined) buttons.** Filled secondaries under a filled primary make it hard to see what matters most, add visual clutter and raise cognitive load. A single secondary can still be filled (R100). `L2 (email)` · R100, R131 (a filled secondary stays acceptable alone; the channel, not the button, was the separator from the product-UI tonal fill, R090)
@@ -588,6 +599,8 @@ These recur across many rounds and override stylistic defaults:
 
 > Layer tags: `L1` foundation (always), `L2` tonal preset (only for that tone), `L3` brand-negotiable. `Rnnn` = the comparison round that produced the rule (see ../evidence.md). Non-negotiables in SKILL.md survive any brand override.
 
+- **Begin an image prompt with the moment.** Name the specific action that communicates the brief, identify the generic stock-photo version to avoid, and describe the subject plainly. Put the most important direction first. `L1` · R152
+- **Make prompt details agree.** Choose lens instructions that fit the framing and a palette that fits the light source; if the light source is visible, light must fall from it. Use a second, unrelated example when teaching or checking how to move beyond the stock version. `L1` · R152
 - **Captions depend on the video's job; choose the style by what the piece is.** Both a scrim-backed plain caption and a word-highlight caption have a place. `L2 (video)` · R109
 - **With no voiceover, text over video is a super that reinforces the message, not a transcript.** Plain text over a soft gradient scrim fits this, and fits professional, lighter-weight or emotional pieces. `L2 (video, calm)` · R109
 - **When someone is speaking to camera (interview, quick short for YouTube or social), use word-by-word highlighted captions.** They help the viewer follow along, and that is the current trend. Lean toward them for energetic, high-impact pieces. `L2 (video, energetic)` · R109
@@ -608,7 +621,7 @@ These recur across many rounds and override stylistic defaults:
 - **The medium follows the concept.** If the subject is photography, use the photography itself, meaning the actual work being promoted. Illustration is right when the piece communicates an experience or an idea rather than showcasing photographs. Stylized treatments sit between the two. `L1` · R065
 - **Image quality must match the subject's caliber.** An amateur-looking photograph, with snapshot framing, phone-camera rendering or flat light, undermines a piece about professional work, however good the layout. Source imagery is judged as rigorously as the type. `L1` · R065
 - **Prefer shallow depth of field, captured in camera, never faked.** Shallow focus draws the eye into the photograph, the way human vision blurs the periphery around what it's looking at. Favor it when choosing or directing imagery. It must come from the source photograph. Simulating blur in post is not acceptable, in line with the no-simulated-effects rule. `L1` · R067
-- **Frame the subject by the composition rules (inferred).** Within a photograph, keep the concept's cause and effect in frame (R020), and favor golden-section placement of the focal subject over dead center (R006–R007). The image's share of the page stays under half (R005). `L1` · R005, R006, R007, R020 (inferred, not separately tested)
+- **Frame the subject by the composition rules (inferred).** Within a photograph, keep the concept's cause and effect in frame (R020), and favor golden-section placement of the focal subject over dead center (R006–R007). In a text-bearing composed piece, the image's share of the page stays under half (R005, R151). `L1` · R005, R006, R007, R020, R151 (inferred framing, not separately tested)
 - **Respect the photographer's work: correct it, don't restyle it.** When the image is the subject, someone's professional photography, present it as shot. Apply only corrective retouching: proper exposure, and saturation that is neither pushed nor drained. No dramatic grades, crushed contrast or desaturation, unless brand guidelines prescribe a look. `L1` · R066
 - **Type color comes from the photograph.** Sample the accent directly from tones in the image. Choose the primary hue to complement the photograph, rather than imposing a fixed house color that fights it. Fixed brand colors are the exception. `L1` · `L3` brand overrides · R057, R066
 - **Stylization can rescue weak imagery.** When the available image is below the bar, a treatment such as a duotone in the palette's colors improves how it sits in the piece and unifies it with the system. Use it as a deliberate fix, not as a default look. `L1` · R065
@@ -634,7 +647,7 @@ These recur across many rounds and override stylistic defaults:
 > Layer tags: `L1` foundation (always), `L2` tonal preset (only for that tone), `L3` brand-negotiable. `Rnnn` = the comparison round that produced the rule (see ../evidence.md). Non-negotiables in SKILL.md survive any brand override.
 
 - **Colored text signals interactivity.** In UI and web work, a single accent color on text is reserved for links and actionable items, and isn't spent on emphasis or decoration. `L1` · R033, R076
-- **Text links: color and underline, always, at rest.** Follow UX best practice. A text link carries both signals, a distinct color and an underline, in its resting state. An underline that appears only on hover is not acceptable. `L1` · **non-negotiable in UI** · R076
+- **Underline ordinary text links inside paragraphs at rest.** They need a distinct link color and underline before hover. Navigation is different: leave the inactive labels un-underlined and mark only the active item with a line. A linked wordmark needs no underline. A link styled as a button needs no text underline because the button treatment signals the action. `L1` · **non-negotiable for paragraph links in UI** · R076, R155
 - **State changes transition, never just swap.** Hover and press states should animate between states with the house brisk ease-out. An instant color-only change on a button is too plain. Purposeful motion, like a fill sweeping in or an arrow nudging toward the destination, is welcome. `L1` · R076
 - **Elevation is a legitimate interactive affordance.** On the web, lifting a card toward the viewer on hover, with a slight rise, scale and shadow, literally pulls it out of the page and is a strong signal for cards and clickable surfaces. This is the UI exception to the no-shadow default, because there the shadow communicates state rather than decorating. Match the treatment to what is being activated. `L1` · R015, R064, R076
 
@@ -815,6 +828,7 @@ These recur across many rounds and override stylistic defaults:
 
 > Layer tags: `L1` foundation (always), `L2` tonal preset (only for that tone), `L3` brand-negotiable. `Rnnn` = the comparison round that produced the rule (see ../evidence.md). Non-negotiables in SKILL.md survive any brand override.
 
+- **Keep dense interface type systematic.** Use a small, consistent type scale. In numeric columns, align figures by the right edge and use consistent precision; do not truncate the field that identifies a row. `L1` · R154
 - **Separate rows of records with a single hairline, in short and long tables alike.** One line per row boundary is the least mark that still delineates clearly. Confirmed on a long table (R125). `L2 (product/utility)` · R088, R125
 - **Don't box every row.** Per-row cards multiply edges and surfaces, so a long list reads as many objects instead of one list; that adds visual overwhelm and cognitive load. Reserve a container for something that is genuinely a separate object. `L2 (product/utility)` · R088 (partial)
 - **Whitespace alone is not enough to delineate records.** He preferred the hairline over space-only separation because rows delineate more clearly with a line. Keep whitespace for separating groups and sections, not as the only divider between rows. `L2 (product/utility)` · R088 (partial; not yet tested against dense tables or very airy layouts)
@@ -928,6 +942,24 @@ _Why he decides what he decides. These are reasons, not styles; use them to reac
 - **Design every state, so the developer never has to decide.** Empty, loading, error, offline, long content, no results, first-time and returning. `L1` · R149
 - **Consider where and when the design will be seen.** Sequences (a pitch, an email series) follow the well-documented best practices. `L1` · R149
 
+**Render and review (R150)**
+- **A visual is a draft until it has been seen at its intended size.** Render it, inspect it, fix what fails, and inspect a new render again. Take at least two looks. When rendering is unavailable, choose layout methods less prone to collision and state what could not be checked. `L1` · R150
+- **Measure before looking, then use both forms of evidence.** Script checks for overflow, clipping, text close to its background color, short final lines, overlaps, and edge distances; recompute figures used in more than one place. Inspect the whole render and crops, then fix every typography finding. Measurement catches mistakes the eye may miss; looking catches what a script cannot judge. `L1` · R150
+- **Make typography checks concrete.** Rebreak a headline that strands a connecting word or separates a number from its unit or time marker; remove one-word final lines. Equal gaps should actually match. In an image-led composed piece, the image-to-headline gap should exceed gaps within the text group so the handoff reads clearly. `L1` · R150 (also R009, R029)
+- **Say what was actually inspected.** Every visual delivery note has a “Looked at” line with the rendered size and passes, or plainly states that no render was viewed. A chart receives at least two looks. Never claim a check that was not run. `L1` · R150
+
+**Purpose, delivery, and format scope (R151)**
+- **Close with a short delivery note.** State the purpose, audience, funnel stage or question, register and why, assumptions, what was looked at, and what was not verified. Use the fields relevant to the piece and label unknowns honestly. `L1` · R151
+- **Choose the purpose frame that fits the piece.** An informational chart, diagram, or report names the question it answers. An internal tool names the user's job, the decision it supports, and how often it is checked. Do not force either into a funnel stage. `L1` · R151
+- **Choose composition rules by the piece.** Image-first, golden-section, and image-height-cap rules govern composed pieces such as posters, covers, heroes, and title slides. In charts, give the data room; in interfaces, lead with the task, content, and state. `L1` · R151
+
+**Composed-piece process and examples (R153)**
+- **Consider two distinct structures before building.** Write each in one sentence, then choose the one that serves this brief and state the reason. `L1` · R153
+- **Use examples to teach the decision, not to supply a recipe.** A worked example shows the reasoning and level of detail; its words, typeface, and layout do not become defaults for a new brief. `L1` · R153
+
+**Missing facts (R152)**
+- **Ask the user for missing factual content before filling a slot.** Names, figures, years, addresses, prices, and scarcity claims must come from the user or a verified source. If they remain unavailable, leave a clearly identified placeholder for the user to populate. Do not insert a believable invented value even when marked “sample.” `L1` · R152
+
 **Fairness and honesty in design (R149)**
 - **Do not mislead with design.** Marketing is open to the charge of being manipulative and people are cautious of it, so be transparent and communicate clearly to build trust; that includes emphasis in charts. `L1` · R149
 - **Show people inclusively.** Do not white-wash; represent diversity of ethnicity, race, religion, sexual orientation and more. The aim is fair, accessible and inclusive design. `L1` · R149
@@ -988,7 +1020,7 @@ When two rules clash, state the ranking in this form. Each was confirmed as writ
 
 **Hard lines (he would not trade these away on any project)**
 - Readable text (contrast and reading time). Accessibility for everyone. The brand's identity (logo, colors, fonts). The purpose of the piece. The key information is never buried. Familiar controls for interface tasks. Everything looks chosen on purpose. `L1` · R143
-- **Not on the list: real content and real photos.** He did not tick it, so treat "real, not fake" as a strong preference, not a hard line, and ask when it matters (stock, placeholder and generated imagery are still open under WEB-07). `L1` · R143
+- **Real photos remain a preference; factual content has a stricter rule.** In R143 he did not tick the combined "real content and real photos" hard line. R152 clarified that missing factual names, figures, years, addresses, prices and scarcity claims must not be filled with believable inventions; ask the user and use a placeholder until supplied. The choice of stock, placeholder or generated imagery remains separate. `L1` · R143, R152
 
 
 
@@ -1083,6 +1115,7 @@ When two rules clash, state the ranking in this form. Each was confirmed as writ
 - **Let the headline carry the weight, and keep supporting text at one regular weight.** Hierarchy below the headline comes from size, tone and position, not from bold. A bolded subhead or label reads as heavy-handed and interrupts the graceful step down from the headline. Weight contrast belongs to the headline-versus-everything relationship, not to steps among the supporting text. `L1` · R024
 - **Emphasize with weight, not italics.** Italics are used sparingly, if at all. To stress a word or line, vary the weight within the same family. Serif italics at display sizes and tight leading are especially risky: their slanted ascenders and descenders collide with neighboring lines. A headline that needs internal emphasis therefore needs a family with a real weight range. `L1` · R025
 - **Weight follows meaning.** Within a headline, give weight to the phrase that carries the core idea, usually the subject noun phrase, and set the framing or modifier words lighter. Where possible, let the weight echo what the words say: "The Quiet" set in a light weight literally speaks quietly. `L1` · R027
+- **Keep internal headline emphasis selective.** If a word or phrase needs extra weight, bold that word or phrase. Bolding most of the headline while leaving only one or two words unbolded reverses the emphasis and is less deliberate. This is the narrow finding from visual A; the broader rule vote and repeated-detail clause were skipped. `L1` · R153 (partial)
 - **Headline weight jumps stay moderate.** Pair neighboring weights a couple of steps apart, such as light with medium. Extreme pairings, like hairline-thin against heavy bold, are too contrasty and become the subject themselves. `L1` · R024, R027
 - **Headline leading: as tight as it can go without a collision, and no looser than it takes to read as one thought.** Close the headline lines up until they read as a single, complete statement. Spacing that's too open breaks a headline into separate, unrelated lines. Stop before any glyph from one line touches a glyph on the next. Set it optically against the actual letter pairs, not by formula: check descenders such as the tail of *Q*, *g* and *y* against ascenders, dots and cap tops in the line below. `L1` · R029
 - **Body leading stays moderate.** Comfortable and even, neither cramped nor floating. `L1` · R029
@@ -1153,9 +1186,11 @@ When two rules clash, state the ranking in this form. Each was confirmed as writ
 
 ## The five states
 - Design every surface that fetches, lists or accepts data in five states: loading, empty, error, populated, edge. A mock that shows only the populated state is unfinished, because the other four are where users spend their worst moments. `L1` · default
+- When delivering working UI, wire and exercise the transitions among those states. One active state at a time must be visible; buttons that do nothing and loading/empty/error copy shown simultaneously do not satisfy the state design. For a design-only mock, label the states as proposed views. `L1` · default
 - Edge means the worst plausible content: the longest title, a missing image or optional field, zero and thousands of items, a single-character query, text in another script or direction. Truncate on purpose with a visible affordance (clamp, ellipsis plus full text on demand); never let the layout break. `L1` · default
 - Empty state has a job: say what this place is for, why it is empty, and offer the one next action. First-use empties are the onboarding moment; no-results echoes the query and offers a way out; a cleared list gets a short calm note. Never a blank panel or "No data". Build it type-led (or with concept-specific imagery); no stock or generic illustration. `L1` · default
 - Error is its own state: never reuse the empty layout, and never let a failed fetch masquerade as "nothing here". `L1` · default
+- A refresh failure must not erase records already on screen. Keep the last known content, show an error near the affected region, and give a retry action. A first-load failure can use the full error state. `L1` · default
 - Error copy has three parts: what happened, why if it is knowable, what to do next. Name the specific cause, keep everything the user entered, and offer the recovery action in place. Not "Something went wrong"; no "Oops"; no blame. `L1` · default
 - Choose loading treatment by expected wait, not by habit. Reference floors: under about 300 ms show nothing (a flash of loader is worse than the wait); to a couple of seconds a quiet in-place indicator; a few seconds up to about ten, a skeleton shaped like the real layout, or a labelled spinner for a single control; longer, determinate progress with cancel; past about a minute stop animating and offer retry, cancel or continue. `L1` · default
 - Prefer a skeleton to a spinner when the final layout is known: it reserves the space so nothing jumps when content lands. Skeleton fills are flat tonal blocks; any pulse or sweep is quiet, stops the instant content arrives, and is static under reduced motion. Never replace stable chrome with a full-page loader for a partial fetch. Never an unbounded spinner. `L1` · default
@@ -1165,7 +1200,7 @@ When two rules clash, state the ranking in this form. Each was confirmed as writ
 - Reference standard for UI: WCAG 2.2 AA. Anything below it is debt; flag it to the user. `L1` · default
 - Every interactive element has a visible keyboard-focus state, distinct from hover. Draw it as a flat outline offset outside the box so layout never shifts. This is a structural affordance, not decoration, so it is not a glow or drop shadow. Never remove the browser outline without a replacement at least as visible. Reference floor: 3:1 against what it sits on, and thicker than a hairline. `L1` · default
 - The 3:1 floor extends to anything the user must find or operate: input outlines, icon-only controls, toggle tracks, chart marks against their ground. Text contrast alone does not make a control findable. `L1` · default
-- Never carry a state or category by hue alone, or by motion alone. Pair color with a second channel: label, icon, shape, weight, position, underline. (The colored-and-underlined link rule is the same principle.) Status colors stay a small separate set, never the brand accent. `L1` · default
+- Never carry a state or category by hue alone, or by motion alone. Pair color with a second channel: label, icon, shape, weight, position, underline. (For ordinary paragraph links, color plus underline is the validated treatment; navigation and control-like links use different cues, R155.) Status colors stay a small separate set, never the brand accent. `L1` · default
 - Targets: reference floors, 24 px minimum and about 44 px for primary and touch-first controls, with separation so neighbouring hit areas never touch. Grow the hit area with padding, not the glyph; thin line icons stay thin. Primary actions never lean on a size exception. `L1` · default
 - Use native elements first: button for actions, anchor for navigation, label for inputs. DOM order equals visual reading order; never reorder with positive tab indexes. Custom widgets are the last resort and must replicate role, focus and key handling. Add ARIA only where no native element fits. `L1` · default
 - Heading level follows document structure; its visual size follows the type hierarchy. The two are independent. Content images and charts carry a text alternative (for a chart, state its takeaway); decorative marks get none. Declare the document language. Icon-only controls get an accessible name. `L1` · default
@@ -1185,7 +1220,7 @@ When two rules clash, state the ranking in this form. Each was confirmed as writ
 - Every control defines hover, focus-visible, pressed, disabled and loading, and equivalent controls share one treatment everywhere. Inconsistent states teach users nothing. `L1` · default
 - Hover and pressed states transition on the house ease-out; they never swap instantly and never merely dim or grey the text. Pressed reads as a tone or fill change; a tiny scale-down is optional, not required. Do not animate text weight or box size on hover in a way that shifts neighbouring layout (his validated card lift is the exception: rise, slight scale and shadow, out of flow). `L1` · default
 - Elevation on hover is the only shadow; it signals state, and it is gone at rest. `L1` · default
-- Text in a row of figures aligns: numbers that stack in columns or sit side by side (metrics, tables, dates, versions, page numbers) use tabular figures; a lone number in a sentence stays proportional. If the chosen face lacks tabular figures, change the face for the numeric tier. `L1` · default
+- Text in a row of figures aligns: numbers that stack in columns or sit side by side (metrics, tables, dates, versions, page numbers) align on the right and use consistent precision (R154). Tabular figures are a `default` implementation; a lone number in a sentence stays proportional. If the chosen face lacks tabular figures, change the face for the numeric tier. `L1` · R154 for alignment and precision; other details `default`
 
 ## UI motion
 - Motion has a job: orient the user across a change of place, time or state, or confirm an action. Decoration, "premium feel" and filling silence are not jobs. `L1` · default
@@ -1196,6 +1231,7 @@ When two rules clash, state the ranking in this form. Each was confirmed as writ
 
 ## Content integrity
 - Never invent statistics, testimonials, awards, ratings, logos, customer names, prices or citations. Use real or user-supplied facts, or a clearly labelled placeholder, or leave the slot out. A figure shown carries its source, unit and period. `L1` · default
+- For missing quantitative data, a slot names the required field, unit and period without implying a value or trend. Do not draw a plausible line or bar pattern behind placeholder labels: its direction still tells an unsupported story. Keep the chart scaffold if it helps show where verified data will go. `L1` · R152 application
 - No lorem ipsum, no "Feature one / two / three". Write real draft copy. An empty-feeling section is a composition problem to fix with layout, not to pad with words; do not add sections or copy the user did not request without asking (if you cannot ask, state the assumption). `L1` · default
 - Name a real-world thing (person, product, cover, artwork, landmark, brand mark) and it gets its real image, confirmed to depict it; never a generated or look-alike substitute. If the right asset is unobtainable, show an honestly labelled placeholder and say so; never ship a fake or a bare grey box. Generation is for subjects with no real referent. `L1` · default
 - Interface copy: concrete verbs, active voice, sentence case, one register per page; specific microcopy over generic ("Start tracking", not "Get started"). Skip hype and filler words (seamless, unleash, next-gen). Testimonials run to a few lines with name and role. `L1` · default
@@ -1380,7 +1416,7 @@ Run on your own output, in this order, before showing it. Run the SKILL.md pre-f
 
 <!-- file: references/formats.md -->
 # Deliverable Formats
-> **Status: default guidance. Not yet validated by Anthony's comparison rounds.** Follow these as defaults for surfaces his validated rules (`principles/*.md`, SKILL.md) don't cover. Wherever they conflict with a validated rule, a dealbreaker, or a non-negotiable, the validated rule wins.
+> **Status: mixed.** R152 and R154 validated the rules cited below; other format guidance remains `default`. Follow defaults where validated rules do not cover the task. Wherever a default conflicts with a validated rule, dealbreaker, or non-negotiable, the validated rule wins.
 > **Read when:** the deliverable is a slide deck, dashboard, landing or marketing page, docs or long-form page, email, mobile or native screen, social card or poster set, resume, one-pager or print document, flowchart or diagram, or component documentation, **or a chart or data graphic**. Also read the closing checklist before showing any of them.
 
 Shared ground: the composition, type, color and motion rules in SKILL.md apply to every format. This file adds only what the format changes. For states, focus, forms, UI motion and accessibility, see `ui-craft.md`. For process, critique and verdicts, see `process-and-critique.md`. Do not restate them per format.
@@ -1402,8 +1438,9 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 
 **Avoid**
 - Centering every slide; gradient-wash title slides; an icon beside every bullet; corner blobs; abstract 3D filler. Each is already a dealbreaker or explicit-request-only. `L1` · default
-- Invented metrics. Never fabricate a plausible statistic, even labelled. On the slide, say the gap plainly in words ("Local figure to come") or leave it out; keep slot tokens such as `[X%]`, and "proposed, to confirm" labels, in the delivery note, never printed on a slide. Every real number has a source line, understated. Proposal details you invent (features, partners, policies) are labelled "proposed, to confirm" in the delivery note. `L1` · default
-- With no photograph supplied, do not spend half a title slide on an empty photo box: use the type-only deep field, or a tonal stand-in sized to the real crop. `L1` · default
+- Missing deck data: ask the user for the figure or source. Keep a clearly fillable placeholder such as `[X%]` in the slide’s data position until they provide it; do not replace the missing content with a sentence about the gap or invent a plausible statistic, even labelled. Every real number has an understated source line. `L1` · R152
+- Unverified proposal details (features, partners, policies) are labelled "proposed, to confirm" in the delivery note. `L1` · default
+- With no photograph supplied, do not reserve half a title slide for an empty photo box: use type on a deep field or a meaningful tonal stand-in. Choose by the brief. `L1` · R154
 
 **Ground per slide (validated, R105):** build every slide layout in both a light and a dark version. Use dark for divider slides and light for content slides, or the reverse, to break up the deck visually; a 100% light or 100% dark theme is equally fine. Template work always ships both versions of every layout. Do not default to one dark: the brand dictates deck colors, so draw dark grounds from darker brand colors (R106); with no brand, derive the dark from the primary hue (R038).
 
@@ -1426,7 +1463,7 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 **Avoid**
 - Hero images, oversized headlines or marketing copy inside a data tool; row striping; per-chart decoration; color as the only status signal (pair with text or shape; see `ui-craft.md`). Status chips are fine; pill buttons are not. · default
 
-**Check:** can the one question per region be answered in seconds? Numbers aligned? Every chart has axes, units and a finding title? Accent count within budget?
+**Check:** can the one question per region be answered in seconds? Numbers aligned? Do x-axis labels sit under their bars (R154)? Every chart has axes, units and a finding title? Accent count within budget?
 
 ## Landing and marketing pages
 **Must have**
@@ -1466,7 +1503,7 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 - Layout: sticky navigation at one side, article in the middle, an "on this page" list at the other that marks the current section. On narrow widths the contents list drops and navigation moves to a drawer. Every H2 and H3 has an anchor. Use logical (start/end) properties so the layout flips for right-to-left. `L1` · default
 - Declare the page type (tutorial, how-to, reference, concept, troubleshooting) and match tone to it. Title is the reader's question. One job per page. Sentence-case headings. `L1` · default
 - Short paragraphs; three or more parallel items become a list; code blocks are language-tagged, short, explained in prose, with a copy control. Callouts distinguish note from warning by label and rule, not by tinted boxes with icons. `L1` · default
-- Accent is spent on links, the active navigation item and at most one callout rule. Links keep color and underline at rest. `L1` · default
+- Accent is spent on links, the active navigation item and at most one callout rule. Ordinary paragraph links keep color and underline at rest (R155); navigation marks only the active item. `L1` · default
 
 **Avoid**
 - Pressure words (easy, simple, just), recap openers, personified artifacts; vague quantifiers where a figure exists. · default
@@ -1477,18 +1514,19 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 **Must have**
 - Marketing email is glance media: one idea, one primary CTA, readable in about ten seconds. Transactional or reference email may be dense but keeps one reading chain. `L1` · default
 - Email action hierarchy has three levels: one full-width filled primary button; compact secondary buttons (ghost or filled; ghost when there is more than one); tertiary items as colored, underlined text links. See `principles/email.md` (R100).
-- Use only the action levels the brief actually contains. One primary is required; add secondary or tertiary actions only for real needs the brief names. Extra actions dilute the primary (choice overload). `L1` · default
+- Give the email one primary objective and one clear primary action. Secondary calls to action are acceptable; keep their treatment subordinate to the primary. `L1` · R154 (clarified after the visual and rule votes)
 - Email opens with the brand: a wordmark header aligned to the text axis (left logo over left text). Never an email without a brand header. See `principles/email.md` (R115).
 - Email content blocks sit on a clean grid (two columns that fold to one on mobile); no zigzag alternation; images stay modest so text leads and never extreme banner crops; a small image or icon left with text right is the alternative. See `principles/email.md` (R116).
 - Single column. Reference width: about 600 to 680 px. The body is flush left, never centered paragraphs. It must still read at about 480 px, with type stepping down one size. `L1` · default
 - Build for clients, not browsers: table layout, inline styles, system or safe-stack fallbacks, no dependence on web fonts, shadows, gradients or script. Every image has alt text and a solid fallback color behind it, because many clients block images by default. The CTA is a real link styled as a button with its own background color, not an image. `L1` · default
 - Footer carries the sender address, unsubscribe and view-in-browser. Contrast is checked in both light and the client's forced dark mode; use opaque colors, not alpha. Add a real `prefers-color-scheme: dark` block with your own dark palette (and `[data-ogsc]` for Outlook); `color-scheme: light` alone does nothing. If you cannot test, say so. `L1` · default
-- If no photo is supplied, still design the hero slot as a solid fallback block sized to the intended image, with descriptive alt text carrying the message and a placeholder label printed on the block. Use at most one image slot, under about a third of the first screen, and set item lists in type only. The first screen (about 600 by 800) must look finished and hold the primary action. A date or time already in the headline or preheader is not repeated as a separate promoted line; bind the last two words of headlines and time ranges with a non-breaking space. Repeated item titles in a list (dishes, products) may use the display face at a reduced size. `L1` · default
+- The first screen must look finished and hold the primary action. With no supplied photo, use one labelled image placeholder under about a third of the first screen, leaving the content and action visible. `L1` · R154
+- For that image slot, use a solid fallback block sized to the intended image with descriptive alt text; set item lists in type only. A date or time already in the headline or preheader is not repeated as a separate promoted line; bind the last two words of headlines and time ranges with a non-breaking space. Repeated item titles in a list may use the display face at a reduced size. `L1` · default
 
 **Avoid**
 - Skewed or faux-italic accent words, pill CTAs, stylized gradient heroes (all dealbreakers). Two competing CTAs. · default
 
-**Check:** one CTA? Survives images off and dark mode? Reads at the narrow width? Footer complete?
+**Check:** one primary objective and action? Are any secondary actions clearly subordinate? Survives images off and dark mode? Reads at the narrow width? Footer complete?
 
 ## Mobile and native screens
 **Must have**
@@ -1546,8 +1584,8 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 - [ ] Deck: titles alone tell the story; one idea per slide; split, never shrink; one frame; every layout has light and dark versions.
 - [ ] Dashboard: KPI, primary chart, secondary region in order; tabular numerals; chart integrity; freshness and sample labels.
 - [ ] Landing: first view shows value and action; layout families varied; proof is real; one CTA label per intent.
-- [ ] Docs: page type declared; measure and anchors; links colored and underlined.
-- [ ] Email: one CTA; single column; survives images off and dark mode; footer complete.
+- [ ] Docs: page type declared; measure and anchors; ordinary paragraph links colored and underlined (R155).
+- [ ] Email: one primary objective and action, with any secondary actions subordinate; single column; survives images off and dark mode; footer complete.
 - [ ] Mobile: platform mode consistent; safe areas; targets above floors; one job per screen.
 - [ ] Social or print: tested at thumbnail and half scale; each size re-composed; bleed and trim margins.
 - [ ] Resume or print: opaque colors; fits without shrinking; accent under budget.
@@ -1561,7 +1599,7 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 
 <!-- file: references/media-prompts.md -->
 # Image, Video and Motion-Graphic Prompting
-> **Status: default guidance. Not yet validated by Anthony's comparison rounds.** Follow these as defaults for surfaces his validated rules (`principles/*.md`, SKILL.md) don't cover. Wherever they conflict with a validated rule, a dealbreaker, or a non-negotiable, the validated rule wins.
+> **Status: mixed.** R152 validated the moment-first prompt and consistency check below; other guidance remains `default`. Follow defaults where validated rules do not cover the task. Wherever a default conflicts with a validated rule, dealbreaker, or non-negotiable, the validated rule wins.
 > **Read when:** writing a prompt for an image or video model; briefing a generated photo or plate; authoring a timeline-based motion graphic (HTML/CSS, a timeline library or a frame renderer) or exporting MP4; building negative-prompt lists; QA-ing generated media before it enters a layout.
 
 ## Core stance
@@ -1572,13 +1610,13 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 
 ## Image prompt assembly order
 One clause per block; skip only what is irrelevant.
-0. **The moment.** Before writing, name in one sentence the single moment that tells the brief at a glance and why (who is present, what is happening, what signals the time and place). Then name the first stock version of the subject and do not use it unless you can say why it serves the concept. (Method, shown on an unrelated subject: for a hospital's volunteer week the stock version is a stethoscope close-up and a smiling nurse; a specific moment is a volunteer pushing a book trolley past an open ward door at dusk.) Rejecting the stock version means changing the moment, not deleting its props from the same scene. `L1` · default
+0. **The moment.** Before writing, name in one sentence the single moment that tells the brief at a glance and why (who is present, what is happening, what signals the time and place). Then name the first stock version of the subject and do not use it unless you can say why it serves the concept. (Method, shown on an unrelated subject: for a hospital's volunteer week the stock version is a stethoscope close-up and a smiling nurse; a specific moment is a volunteer pushing a book trolley past an open ward door at dusk.) Rejecting the stock version means changing the moment, not deleting its props from the same scene. `L1` · R152
 1. **Intent and medium:** what it is for and what kind of picture ("documentary photograph, plate for a poster, text added later"). Stating the use lets the model leave the right area calm. `L1` · default
 2. **Subject** in concrete nouns with materials, wear and scale, not adjectives of feeling. `L1` · default
 3. **Composition:** framing, angle, subject position, and where the calm area is. Focal subject horizontally centered on the upper golden line, never dead center; keep the subject's cause and effect inside the frame. In the prompt itself say this in plain words ("a little above the middle, about two-fifths down"); never send skill terms such as "golden line" to the image model. `L1` · default
 4. **Camera and lens** (photographic work): distance, focal-length feel, aperture feel, as capture. `L1` · default
-5. **Light:** direction, hard or soft, color temperature, where shadows fall. One light story per image. A light source in the frame (a lamp, a window) is the light story: light falls from it, not from an off-frame direction; keep the bulb shaded so it does not bloom. `L1` · default
-6. **Palette as relationships sourced from the concept** ("one warm family; shadows lean cool"), never a free-floating "vibrant" or "pastel". Choose one clear hierarchy hue and a calm neutral, since the layout will later sample them for type. A supplied brand palette replaces this. `L1` · default
+5. **Light:** direction, hard or soft, color temperature, where shadows fall. One light story per image. A light source in the frame (a lamp, a window) is the light story: light falls from it, not from an off-frame direction; keep the bulb shaded so it does not bloom. Check that source and direction agree. `L1` · R152 for source consistency; other details `default`
+6. **Palette as relationships sourced from the concept** ("one warm family; shadows lean cool"), never a free-floating "vibrant" or "pastel". Choose one clear hierarchy hue and a calm neutral, since the layout will later sample them for type. A supplied brand palette replaces this. `L1` · default (brand precedence reaffirmed R152)
 7. **Material and finish:** real surfaces, matte and unglossed, plus honest capture flaws when realism matters. Grain, if any, fine and over everything; never simulated paper or fabric. `L1` · default
 8. **Exclusions:** state the target positively inside the prompt ("one warm family, warm brown shadows"), because many models draw the noun in "not teal". Negations belong only in the negative field or a closing "Avoid:" line. Front-load: the first two sentences carry intent, subject and composition; cut any sentence that would not change the picture. `L1` · default
 9. **Aspect ratio and size as tool parameters**, plus one prose sentence naming the safe area where text will go. `L1` · default
@@ -1655,7 +1693,7 @@ Attach the base list to every image prompt; add modules as needed. Without a neg
 ## Prompt QA checklist
 - [ ] Assembly order followed, starting with the moment and the stock version named and rejected or justified; no filler quality words.
 - [ ] No skill jargon ("golden line") and no negation words inside the positive prompt.
-- [ ] Consistency: the lens matches the framing, the palette matches the light source, and the light falls from where the source sits in the frame.
+- [ ] Consistency (R152): the lens matches the framing, the palette matches the light source, and the light falls from where the source sits in the frame.
 - [ ] Palette stated as relationships from the concept (or supplied brand palette), one hierarchy hue plus a calm neutral.
 - [ ] Depth of field specified as optics; no blur effect requested.
 - [ ] Base negative list attached, plus the right modules.
@@ -1715,7 +1753,7 @@ The test: does the element encode reading direction or sequence? Then it mirrors
 ## Bidi isolation
 - **Isolate every run of the opposite direction** (brand names, product names, code, a quoted foreign title) with an isolating element or direction attribute, not invisible control characters. Without isolation, neutral punctuation next to the run jumps to the wrong side. `L1` · default
 - **Force intrinsically left-to-right values to left-to-right inside right-to-left copy:** phone numbers, card numbers, bank identifiers, emails, URLs, codes, version strings. Mostly-neutral characters defeat auto-detection and the value scrambles. `L1` · default
-- **Text links keep both signals in any script:** colored and underlined at rest. Underlines on cursive script must skip or clear descenders and dots, not strike through them. `L1` · default
+- **Ordinary paragraph links keep both signals in any script:** colored and underlined at rest (R155). Underlines on cursive script must skip or clear descenders and dots, not strike through them. `L1` · R155 for link scope; script treatment `default`
 - **Prefer truncate-with-expand over a bare ellipsis in right-to-left text.** The cut can fall mid-word in cursive script and the ellipsis must land on the end side (verify in the target renderer). `L1` · default
 
 ## Latin-only rules and how to scope them
@@ -1811,7 +1849,7 @@ Items tagged `default` are standard typographic practice and need his confirmati
 12. **Report:** locks applied, gaps filled and from where, exceptions to his taste made, non-negotiable conflicts fixed, what the brand left unspecified.
 
 ### Conflicts with the non-negotiables
-- **Change the minimum and flag it.** The brand's intent stays; only the failing element moves. Typical cases: a brand color that fails contrast as text (darken or lighten that use only, keep it for non-text), a brand that shows links by color on hover only (add the at-rest color and underline), a brand type size or tracking that causes collisions, a brand motion pace that gives too little reading time. Never ship the failing version silently; never use the fix as a pretext to override other locks. `L3` · default
+- **Change the minimum and flag it.** The brand's intent stays; only the failing element moves. Typical cases: a brand color that fails contrast as text (darken or lighten that use only, keep it for non-text), a brand that shows ordinary paragraph links by color on hover only (add the at-rest color and underline), a brand type size or tracking that causes collisions, a brand motion pace that gives too little reading time. Never ship the failing version silently; never use the fix as a pretext to override other locks. `L3` · default
 
 ### Does choosing a brand count as asking for its signature traits?
 Resolved conservatively, pending his confirmation:
@@ -1840,7 +1878,7 @@ Ask for these if you can ask the user; otherwise state the assumed answers at th
 Record the answers as LOCKS (stated as required), TENDENCIES (stated as preference) and GAPS (unanswered). `L3` · default
 
 ## C. Additional L2 registers
-Same shape as the table in SKILL.md. All five obey his dealbreakers: flat surfaces, three type roles, ease-out entrances with no overshoot, colored dark fields, links colored and underlined at rest. Hover lift is the only shadow. Use a register only when the concept matches; do not default to one.
+Same shape as the table in SKILL.md. All five obey his dealbreakers: flat surfaces, three type roles, ease-out entrances with no overshoot, colored dark fields, ordinary paragraph links colored and underlined at rest (R155). Hover lift is the only shadow. Use a register only when the concept matches; do not default to one.
 
 | Register | Display type | Color | Motion | Notes |
 |---|---|---|---|---|
@@ -1852,7 +1890,7 @@ Same shape as the table in SKILL.md. All five obey his dealbreakers: flat surfac
 
 Rules shared by the registers:
 - **Product / Utility headings are sentence case, one accent. Rows of records are separated by a hairline, groups by whitespace, and per-row cards are avoided.** `L2 (product)` · R088 (partial)
-- **Broadsheet takes hairline structure but never hides link color until hover;** links stay colored and underlined at rest. `L2 (broadsheet)` · default
+- **Broadsheet takes hairline structure but never hides link color until hover;** ordinary paragraph links stay colored and underlined at rest (R155). `L2 (broadsheet)` · default
 - **Paper keeps his weight-within-family emphasis;** do not import a single-weight lock. Titles are not centered by default. `L2 (paper)` · default
 - **Showcase drops capsule CTAs and universal tracked-caps display** common in showcase styles; the structure stays. `L2 (showcase)` · default
 - **Instrument uses a colored dark field, not neutral near-black,** and replaces glow with a flat status color plus a shape or label. `L2 (instrument)` · default
@@ -1861,7 +1899,7 @@ Rules shared by the registers:
 ## D. Explicit-request-only styles: how to execute them if asked
 Use only when the user asks by name or by description. Say once, briefly, that it departs from his defaults, then execute it well. Intent first (tenet 1: it must read as deliberate). The non-negotiables still hold. `L3-like exception` · default
 
-- **Brutalism, raw, anti-design:** Commit fully. Square corners, hard visible borders, a flat saturated or stark palette, a heavy or monospace face, and a strict visible grid. The roughness is in the surface, the alignment stays exact: edges on the grid, no near-tangents, hierarchy still unmistakable, links colored and underlined. Jarring is the effect; illegible is a failure. Contrast is checked as usual.
+- **Brutalism, raw, anti-design:** Commit fully. Square corners, hard visible borders, a flat saturated or stark palette, a heavy or monospace face, and a strict visible grid. The roughness is in the surface, the alignment stays exact: edges on the grid, no near-tangents, hierarchy still unmistakable, ordinary paragraph links colored and underlined (R155). Jarring is the effect; illegible is a failure. Contrast is checked as usual.
 - **Neo-brutalism:** brutalism plus a flat, offset solid block behind elements. The offset is one consistent vector and one flat color, never blurred.
 - **Glassmorphism:** only over a rich backdrop that actually has content behind it. Frosted panel with a tint strong enough that text meets the contrast floor against the worst pixel behind it, not the average; test over the busiest area of the backdrop. Use one glass layer, a hairline edge, and no stacked panels. Never put small body text on thin glass.
 - **Bento / card-grid layouts:** a strict modular grid with a single gap and a single radius family; tile sizes follow content weight (one dominant, the rest supporting), not uniform filling. Each tile has one job and one focal element. Reading order is still explicit.
@@ -1887,6 +1925,8 @@ Excluded: a single-weight lock, italic-serif emphasis, paper-noise overlay, side
 ## Queue
 Candidates that need a comparison round before promotion. Each: question, the one variable, affected file or rule, suggested dimension.
 
+R150 (24, 36, 37, 43), R151 (25–27), R152 (29, 33, 34, 42, 44), and R153 (28, 38, 39) were answered. R152 queue 42 was rejected and replaced with a fillable slide placeholder. R153 queue 28 has a visual pick and explanation but no rule vote, so its repeated-detail clause remains open. R154 (30–32, 40, 41) was answered; queue 31 was clarified as one primary email objective with optional secondary calls to action. R155 (35, 45) was answered and promoted. All pages in this five-page queue have answers; other untested queue items remain. Building a page does not validate or promote its rules.
+
 1. *(Answered: web by R104; decks by R105: build light and dark of every layout, use ground to separate dividers from content. Dark choice: the brand decides, R106.)* **Alternating light/dark slides in a deck.** Does a rhythm of alternating grounds beat a single ground? Variable: ground sequence (single vs alternating) with all else fixed. Affects: deck conventions, Showcase register, series rule. Dimension: `deck-ground-rhythm`.
 2. **Enter vs exit easing.** Should leaving UI use ease-in (accelerating away) or the same ease-out as entrances? Variable: exit curve only. Affects: UI motion rules (exits). Dimension: `ui-exit-easing`.
 3. **Exit duration vs entrance.** Is a shorter exit (about two thirds) better than equal? Variable: exit duration ratio. Affects: UI motion duration tiers. Dimension: `ui-exit-duration`.
@@ -1910,26 +1950,26 @@ Candidates that need a comparison round before promotion. Each: question, the on
 21. **Faces and gaze, scarcity wording, loss framing.** He uses face and gaze attention on purpose (R145) but no round tested where to place a person's gaze or text near faces; scarcity and urgency are "only when true"; loss framing was marked "freely" with no note. Variable: gaze direction vs. the call to action; true vs. generic urgency copy; loss vs. gain wording. Dimensions: `gaze-direction`, `urgency-copy`, `loss-framing`.
 22. *(Answered by R148: the prospect deck is consideration; a social post can serve any stage; product screens not revisited.)* **Channel to funnel stage, three unexpected answers.** He said a social post in a feed is consideration, a deck sent to a prospect is awareness, and product screens are consideration, with no notes. Variable: the stated stage for the same social post and deck. Ask what makes each so. Dimensions: `social-stage`, `deck-stage`, `product-stage`.
 23. **AI-interface design, in design terms.** R149 answered AI uncertainty, citations and confirmation as skill behavior (ask, iterate, user decides) but not as interface design: how to show an AI's confidence, how to present sources, what actions need a confirm step. Also voice, spatial, TV, kiosk and wearables are untouched. Dimension: `ai-interface-patterns`, `newer-surfaces`.
-24. **Render-and-review loop.** New default: assume vision; render, look, fix, repeat (at least two looks), with a typography and spatial checklist and a no-render fallback (`render-and-review.md`). Needs Anthony's yes. Test: regression re-run.
-25. **Fixed delivery note** (purpose, audience, stage or question, register and why, assumptions, looked at, not verified). Needs his yes on the shape and the labels.
-26. **Funnel stage exceptions.** Informational pieces name the question they answer; internal tools sit outside the funnel. Needs his yes.
-27. **Composed-piece defaults scoped away from interfaces and charts** (image first, golden section, image cap). Needs his yes that these do not apply to dashboards and charts.
-28. **Weight emphasis and promoted detail used sparingly:** weight emphasis only where one phrase carries the claim; a detail promoted once, never repeated as a separate line. Needs a round (`emphasis-frequency`).
-29. **No invented people or plausible figures even when labelled; show the empty slot.** Includes years, addresses, prices, and scarcity or popularity claims. Needs his yes on how strict (a labelled sample figure in a deck?).
-30. **Chart rules:** plot gets most of the page, hue belongs to the data, a second series cue, true minus, axis one gridline past the data, zero baseline, partial periods, headline states the actionable finding, never describe an unsupplied method. Needs a chart round (`chart-layout`, `series-cue`).
-31. **Email:** use only the action levels the brief contains; real dark-mode block; hero slot when no photo; list titles may use the display face; no repeated date line. Needs a round (`email-actions-quota`).
-32. **Title slide with no photo:** type-only deep field or a tonal stand-in, never an empty half-slide box. Needs a round.
-33. **No palette from an imagined photo:** placeholder image means ink plus one provisional hue. Needs his yes.
-34. **Image prompts:** name the moment and the stock version first; plain words, no skill jargon; positive exclusions; front-load; light from the in-frame source; two contrasting worked examples. Needs his yes.
-35. **Open question: navigation links and non-negotiable 3.** "Text links in UI are colored and underlined at rest" made both skilled dashboards fail the lint on their navigation. Does it cover navigation items whose position and active state make them unmistakable? His call; no change made.
-36. **Measure, then look.** New default: before looking, run a script in the rendered page that lists text outside the canvas, clipped text, text colored like its background, short last lines, overlapping text and edge distances; recompute repeated figures; view crops; fix every typography item. Tested on past outputs: it caught an invisible closing figure and overlapping numbers. Needs his yes (`render-and-review.md`).
-37. **Operational typography tests:** re-break a headline line ending on a preposition, article or conjunction or splitting a number from its unit or "pm"; no one-word last lines; equal gaps; image-to-headline gap larger than gaps inside the text. Needs his yes.
-38. **Two structurally different layouts before building a composed piece.** Written in one sentence each, then one chosen with a reason. Needs a round (`layout-options`).
-39. **Examples are reasoning, not recipes** (do not reuse the pairing from the principles). Needs his yes.
-40. **Interface type block:** four or five sizes; figures in a column share precision and align right; never truncate the identifying field; one size per badge, button, chip. Needs a round (`interface-type`).
-41. **Email first screen looks finished:** at most one image slot under about a third of it, placeholder label printed on the block, primary action inside the first screen. Needs a round (`email-first-screen`).
-42. **Deck gaps stated in words on the slide, slot tokens kept in the delivery note.** Needs his yes.
-43. **A delivery note without a "Looked at" line is incomplete;** charts are looked at at least twice. Needs his yes.
-44. **Image-prompt consistency check** (lens matches framing, palette matches light source, light falls from the in-frame source) and the unrelated-subject example for the stock-version step. Needs his yes.
-45. **Lint:** button-styled links are exempt from the link-underline rule (the skill requires buttons); navigation and in-text links and logo wordmark links are still flagged pending item 35.
+24. *(Answered yes in R150; validated as PROC-01.)* **Render-and-review loop.** Assume vision; render, look, fix, repeat (at least two looks), with a typography and spatial checklist and a no-render fallback (`render-and-review.md`).
+25. *(Answered yes in R151; validated as PROC-05.)* **Fixed delivery note** (purpose, audience, stage or question, register and why, assumptions, looked at, not verified).
+26. *(Answered yes in R151; validated as PROC-06.)* **Funnel stage exceptions.** Informational pieces name the question they answer; internal tools sit outside the funnel.
+27. *(Answered yes in R151; validated as PROC-07.)* **Composed-piece defaults scoped away from interfaces and charts** (image first, golden section, image cap).
+28. *(Visual A and explanation in R153; PROC-13 partial. Rule vote skipped.)* **Weight emphasis:** bold one word or phrase if needed, rather than bolding most of the phrase and leaving one or two words unbolded. Whether a practical detail may repeat as a separate line remains open (`emphasis-frequency`).
+29. *(Answered yes in R152; validated as PROC-08. Prompt the user for missing facts.)* **No invented people or plausible figures even when labelled; show the empty slot.** Includes years, addresses, prices, and scarcity or popularity claims.
+30. *(Visual A and Yes in R154; validated core as PROC-16. X-axis labels must align with bars.)* **Chart rules:** plot gets most of the page, headline states the actionable finding, series have a second cue, and axes, partial periods, and repeated numbers stay truthful. Specific true-minus, one-gridline extension, zero-baseline, and method wording remain defaults.
+31. *(Visual B and Yes in R154; clarified after confusing wording; validated as PROC-17.)* **Email:** one primary objective, with secondary calls to action allowed. Dark-mode implementation, hero slots, list typography, and repeated date lines remain defaults.
+32. *(Visual Depends and Yes in R154; validated as PROC-18.)* **Title slide with no photo:** type on a deep field or a meaningful tonal stand-in, chosen for the brief; never reserve an empty half-slide image box.
+33. *(Answered yes with brand condition in R152; validated as PROC-09.)* **No palette from an imagined photo:** if a real photograph should drive color, use ink plus one provisional hue until it arrives; brand guidelines that dictate color supersede it.
+34. *(Answered yes in R152; validated as PROC-11 for moment, stock version, plain description, and front-loading. Other details remain defaults.)* **Image prompts:** name the moment and stock version first; plain words, no skill jargon; positive exclusions; front-load; light from the in-frame source; two contrasting worked examples.
+35. *(Answered in R155; validated as PROC-21.)* **Link underlines by role:** ordinary paragraph links are underlined at rest; navigation marks only the active item with a line; a linked wordmark has no text underline.
+36. *(Answered yes in R150; validated as PROC-02.)* **Measure, then look.** Before looking, run a script in the rendered page that lists text outside the canvas, clipped text, text colored like its background, short last lines, overlapping text and edge distances; recompute repeated figures; view crops; fix every typography item.
+37. *(Answered yes in R150; validated as PROC-03.)* **Operational typography tests:** re-break a headline line ending on a preposition, article or conjunction or splitting a number from its unit or "pm"; no one-word last lines; equal gaps; image-to-headline gap larger than gaps inside the text.
+38. *(Answered yes in R153; validated as PROC-14.)* **Two structurally different layouts before building a composed piece.** Write each in one sentence, then choose one with a reason.
+39. *(Answered yes in R153; validated as PROC-15.)* **Examples are reasoning, not recipes** (do not reuse their words, typeface, or layout by default).
+40. *(Visual A and Yes in R154; validated core as PROC-19.)* **Interface type block:** small systematic scale; figures in a column share precision and align right; never truncate the identifying field. Exact size count and per-control size remain defaults.
+41. *(Visual B and Yes in R154; validated as PROC-20.)* **Email first screen looks finished:** primary action visible; with no photo, use one labelled modest image placeholder under about a third of the first screen.
+42. *(Answered no in R152; resolved as PROC-10.)* **Deck gaps:** prefer a fillable placeholder on the slide; prompt the user for the data. Do not replace the slot with audience-facing prose about the gap.
+43. *(Answered yes in R150; validated as PROC-04.)* **A delivery note without a "Looked at" line is incomplete;** charts are looked at at least twice.
+44. *(Answered yes in R152; validated as PROC-12.)* **Image-prompt consistency check** (lens matches framing, palette matches light source, light falls from the in-frame source) and the unrelated-subject example for the stock-version step.
+45. *(Answered A in R155; validated as PROC-22.)* **Lint:** links styled as buttons need no text underline. Navigation and linked wordmarks are also exempt under PROC-21; ordinary paragraph links remain checked.
 

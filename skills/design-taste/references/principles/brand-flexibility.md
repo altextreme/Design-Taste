@@ -7,7 +7,7 @@
 - **The non-negotiables that survive any brand override:**
   1. Accessible text contrast.
   2. Every frame holds long enough to read all of its text.
-  3. Text links are colored and underlined in UI.
+  3. Ordinary text links inside paragraphs are colored and underlined at rest; navigation, linked wordmarks, and button-styled links use their own cues (R155).
   4. No glyph collisions and no near-tangents.
   5. Reading order and enforced hierarchy.
 

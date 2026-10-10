@@ -1,6 +1,6 @@
 # Design Taste: Evidence
 
-Each principle in principles/*.md cites rounds (R001–R149). This file holds the coverage tracker and the round log those citations point to. Read it only to resolve ambiguity or to quote his reasoning.
+Each principle in principles/*.md cites rounds (R001–R155). This file holds the coverage tracker and the round log those citations point to. Read it only to resolve ambiguity or to quote his reasoning.
 
 ## Coverage Tracker
 
@@ -130,7 +130,7 @@ Legend: ⬜ untested · 🟨 partial · ✅ resolved · 🔁 ambiguous — branc
 |---|---|---|---|
 | BRND-01 | Color override tolerance | ✅ | R061, R066 |
 | BRND-02 | Type override tolerance | ✅ | R087 |
-| BRND-03 | Truly non-negotiable foundation principles | ✅ | R009, R029, R046, R076, R087 |
+| BRND-03 | Truly non-negotiable foundation principles | ✅ | R009, R029, R046, R076, R087, R155 (link scope) |
 
 ### Text / Image Relationship (TXIM)
 | ID | Dimension | Status | Rounds |
@@ -150,7 +150,7 @@ Legend: ⬜ untested · 🟨 partial · ✅ resolved · 🔁 ambiguous — branc
 ### Interaction & Affordance (INTR)
 | ID | Dimension | Status | Rounds |
 |---|---|---|---|
-| INTR-01 | Clickability cues | ✅ | R033, R076 |
+| INTR-01 | Clickability cues | ✅ | R033, R076, R155 |
 | INTR-02 | State-change signaling | ✅ | R076 |
 | INTR-03 | Motion as interactivity signal vs. decoration | ✅ | R076 |
 
@@ -345,6 +345,33 @@ Started 2026-10-10. Phases 1 and 2 recorded what Anthony picks. Phase 3 records 
 | SKL-01 | How the skill itself should behave: who it serves, asking, autonomy, responsibility | ✅ | R149 |
 | CRF-01 | Craft judgment: starting from nothing, when to break a rule, knowing it is done | 🟨 | R148 (finishing test and blank page answered; references not answered; the "proud of" and "broke a rule" prompts skipped) |
 
+## Coverage Tracker, Workflow and Content Validation
+
+| ID | Dimension | Status | Rounds |
+|---|---|---|---|
+| PROC-01 | Render, inspect, fix, and inspect again; no-render fallback | ✅ | R150 (queue 24) |
+| PROC-02 | Scripted measurement before visual inspection | ✅ | R150 (queue 36) |
+| PROC-03 | Operational typography and spacing checks | ✅ | R150 (queue 37) |
+| PROC-04 | Accurate “Looked at” delivery note; charts inspected twice | ✅ | R150 (queue 43) |
+| PROC-05 | Short delivery note with purpose, audience, stage or question, register and why, assumptions, inspection, and unverified items | ✅ | R151 (queue 25) |
+| PROC-06 | Informational questions and internal jobs can replace funnel stage | ✅ | R151 (queue 26) |
+| PROC-07 | Image-first, golden-section, and image-height rules apply to composed pieces, not charts or interfaces | ✅ | R151 (queue 27) |
+| PROC-08 | Ask for missing facts; keep an explicit placeholder until supplied | ✅ | R152 (queue 29) |
+| PROC-09 | Wait for the real photo before sampling its colors; brand palette takes precedence | ✅ | R152 (queue 33) |
+| PROC-10 | Put a fillable placeholder on a deck slide when data is missing; reject audience-facing gap prose | ✅ | R152 (queue 42, proposed rule rejected) |
+| PROC-11 | Lead image prompts with a specific moment and the generic stock version to avoid | ✅ | R152 (queue 34) |
+| PROC-12 | Check image-prompt lens, framing, palette, and light for consistency | ✅ | R152 (queue 44) |
+| PROC-13 | Selective headline weight: one word or phrase, not most of a phrase bolded | 🟨 | R153 (queue 28: visual A and explanation; rule vote skipped; repeated detail untested) |
+| PROC-14 | Compare two distinct structures before building a composed piece | ✅ | R153 (queue 38) |
+| PROC-15 | Worked examples teach decisions, not reusable copy or styling | ✅ | R153 (queue 39) |
+| PROC-16 | Chart plot leads; category labels align with bars; chart claims and encodings stay truthful | ✅ | R154 (queue 30) |
+| PROC-17 | Email has one primary objective; secondary calls to action are allowed | ✅ | R154 (queue 31, clarified after confusing question) |
+| PROC-18 | Title slide with no photo: type on a deep field or a meaningful tonal stand-in, not an empty image box | ✅ | R154 (queue 32: rule Yes; visual pick Depends) |
+| PROC-19 | Systematic interface type and consistent numeric precision | ✅ | R154 (queue 40: visual A and rule Yes) |
+| PROC-20 | Email first screen holds the primary action and a modest labelled image placeholder | ✅ | R154 (queue 41: visual B and rule Yes) |
+| PROC-21 | Paragraph links underlined; navigation marks only the active item; linked wordmarks need no underline | ✅ | R155 (queue 35) |
+| PROC-22 | Links styled as buttons need no text underline | ✅ | R155 (queue 45) |
+
 ## Round Log
 
 | Round | Dimension | Options | Pick | Reasoning (paraphrased) |
@@ -497,6 +524,12 @@ Started 2026-10-10. Phases 1 and 2 recorded what Anthony picks. Phase 3 records 
 | R147 | STR-01 | Four funnel-stage design profiles (awareness, consideration, conversion, loyalty) to confirm, and which stage each of seven kinds of piece usually serves | **All four profiles: yes, as written. Channels: social post consideration, street poster awareness, landing page conversion, pricing page conversion, newsletter loyalty, prospect deck awareness, product screens consideration** | No notes. Three channel answers differ from what the skill expected (social post, prospect deck, product screens); recorded as stated and flagged for confirmation. |
 | R148 | STR-02, SYS-01, CRF-01 (+ R147 follow-up) | Open questions: why the social post and prospect deck sat where they did; finishing a piece; client pushback and requests; handoff; blank page; design systems; what designers and AI tools misunderstand | **Open answers (the "proud of" and "broke a rule" prompts skipped)** | Prospect deck is consideration, and a social post can serve any stage. Finished when it looks objectively nice, communicates its message and delivers against the brief. The client wins in the end, but the designer pushes back with reasons and data and educates, since everything has purpose. Handoff sets expectations: the rigid parts and why, and where there is room; he can build what he designs. He will not accept a half-baked brief. Always prefer the design system; break it only for accessibility or legibility, and treat that as a system defect. Core statement: designers should always be able to articulate the reason for a decision, rooted in research, proven practice and psychology; AI is binary and lacks the discernment to say "yes, this is good"; the goal is to give AI the rationale so it thinks like a good designer instead of following arbitrary rules with hard-coded values. |
 | R149 | NEW-01, INC-01, EDG-01, PSY-05, STY-01, SKL-01 | Open scenarios: AI interface processing, uncertainty, actions and labelling; accessibility, chart integrity, representation, dark patterns; states to design; sequences; viewing context | **Open answers** | Answered largely as rules for how the skill should behave. Primary users are designers iterating fast, secondary non-designers; ask one easy question at a time rather than assume; iterate or be transparent when unsure; the user has the final say; check accessibility autonomously and give sources if unable; do not label AI output by default but surface regional disclosure rules, the human is responsible; always show feedback while processing; design all states; do not mislead, white-wash or use dark patterns; follow documented best practice for sequences; consider where the design is seen. |
+| R150 | PROC-01 to PROC-04 | Four proposed workflow rules from queue 24, 36, 37 and 43: render-and-review, scripted measurement, concrete typography checks, and an accurate “Looked at” note | **Yes to all four** | Anthony confirmed each proposed rule without adding a reason or condition. The review loop, measurement before inspection, operational type checks and truthful inspection note are validated. Other queued defaults remain unanswered. |
+| R151 | PROC-05 to PROC-07 | Three proposed workflow rules from queue 25–27: a short delivery note, purpose outside the funnel, and composed-piece scope for image-first and proportion rules | **Yes to all three** | Anthony confirmed each proposed rule without adding a reason or condition. The three rules are validated; other queued defaults remain unanswered. |
+| R152 | PROC-08 to PROC-12 | Five proposals from queue 29, 33, 42, 34 and 44: missing facts, placeholder-image color, deck-data gaps, image-prompt opening, and prompt consistency | **Yes, yes with brand condition, no, yes, yes** | Missing facts: prompt the user to provide them. Image color: wait for the actual photograph only when it should drive the palette; brand guidelines that dictate colors supersede the photograph. Deck data: reject prose about the gap on the slide; a placeholder is preferred so the user can fill it or provide the information to the AI. No additional condition was given for the two image-prompt approvals. |
+| R153 | PROC-13 to PROC-15 | Queue 28 visual A/B emphasis comparison and proposed rule; queue 38 two structures; queue 39 examples as reasoning | **28: visual A, rule vote skipped; 38: Yes; 39: Yes** | For queue 28, Anthony preferred bolding one word or phrase when emphasis is needed over bolding most of a phrase and leaving only one or two words unbolded. This supports a narrow selective-emphasis rule; it does not answer the proposed ban on repeating a practical detail. No reason or condition was added for the two Yes votes. |
+| R154 | PROC-16 to PROC-20 | Five proposals from queue 30–32, 40 and 41: chart room and integrity, email actions, title slide without a photo, interface type, email first screen | **30: A / Yes; 31: B / Yes; 32: Depends / Yes; 40: A / Yes; 41: B / Yes** | Chart A was superior, with one correction: x-axis labels should align with bars. The queue 31 wording was confusing; Anthony clarified that secondary calls to action are acceptable, while every email has one primary objective. Title slide direction depends on the brief, while the no-empty-box rule was approved. No other reasons or conditions were supplied. |
+| R155 | PROC-21 to PROC-22 | Separate choices for navigation labels, paragraph links, linked wordmarks, and button-styled links | **Navigation: A; paragraph links: underline at rest; wordmark: no underline; button-styled link: A (no text underline)** | The active navigation item alone has a line; inactive navigation labels do not. Ordinary links inside paragraphs retain the at-rest underline. Linked wordmarks and links styled as buttons need no text underline. No additional reason or condition was supplied. |
 
 ## Validation Log
 

@@ -24,7 +24,7 @@ The test: does the element encode reading direction or sequence? Then it mirrors
 ## Bidi isolation
 - **Isolate every run of the opposite direction** (brand names, product names, code, a quoted foreign title) with an isolating element or direction attribute, not invisible control characters. Without isolation, neutral punctuation next to the run jumps to the wrong side. `L1` · default
 - **Force intrinsically left-to-right values to left-to-right inside right-to-left copy:** phone numbers, card numbers, bank identifiers, emails, URLs, codes, version strings. Mostly-neutral characters defeat auto-detection and the value scrambles. `L1` · default
-- **Text links keep both signals in any script:** colored and underlined at rest. Underlines on cursive script must skip or clear descenders and dots, not strike through them. `L1` · default
+- **Ordinary paragraph links keep both signals in any script:** colored and underlined at rest (R155). Underlines on cursive script must skip or clear descenders and dots, not strike through them. `L1` · R155 for link scope; script treatment `default`
 - **Prefer truncate-with-expand over a bare ellipsis in right-to-left text.** The cut can fall mid-word in cursive script and the ellipsis must land on the end side (verify in the target renderer). `L1` · default
 
 ## Latin-only rules and how to scope them

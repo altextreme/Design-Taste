@@ -72,6 +72,24 @@ _Why he decides what he decides. These are reasons, not styles; use them to reac
 - **Design every state, so the developer never has to decide.** Empty, loading, error, offline, long content, no results, first-time and returning. `L1` · R149
 - **Consider where and when the design will be seen.** Sequences (a pitch, an email series) follow the well-documented best practices. `L1` · R149
 
+**Render and review (R150)**
+- **A visual is a draft until it has been seen at its intended size.** Render it, inspect it, fix what fails, and inspect a new render again. Take at least two looks. When rendering is unavailable, choose layout methods less prone to collision and state what could not be checked. `L1` · R150
+- **Measure before looking, then use both forms of evidence.** Script checks for overflow, clipping, text close to its background color, short final lines, overlaps, and edge distances; recompute figures used in more than one place. Inspect the whole render and crops, then fix every typography finding. Measurement catches mistakes the eye may miss; looking catches what a script cannot judge. `L1` · R150
+- **Make typography checks concrete.** Rebreak a headline that strands a connecting word or separates a number from its unit or time marker; remove one-word final lines. Equal gaps should actually match. In an image-led composed piece, the image-to-headline gap should exceed gaps within the text group so the handoff reads clearly. `L1` · R150 (also R009, R029)
+- **Say what was actually inspected.** Every visual delivery note has a “Looked at” line with the rendered size and passes, or plainly states that no render was viewed. A chart receives at least two looks. Never claim a check that was not run. `L1` · R150
+
+**Purpose, delivery, and format scope (R151)**
+- **Close with a short delivery note.** State the purpose, audience, funnel stage or question, register and why, assumptions, what was looked at, and what was not verified. Use the fields relevant to the piece and label unknowns honestly. `L1` · R151
+- **Choose the purpose frame that fits the piece.** An informational chart, diagram, or report names the question it answers. An internal tool names the user's job, the decision it supports, and how often it is checked. Do not force either into a funnel stage. `L1` · R151
+- **Choose composition rules by the piece.** Image-first, golden-section, and image-height-cap rules govern composed pieces such as posters, covers, heroes, and title slides. In charts, give the data room; in interfaces, lead with the task, content, and state. `L1` · R151
+
+**Composed-piece process and examples (R153)**
+- **Consider two distinct structures before building.** Write each in one sentence, then choose the one that serves this brief and state the reason. `L1` · R153
+- **Use examples to teach the decision, not to supply a recipe.** A worked example shows the reasoning and level of detail; its words, typeface, and layout do not become defaults for a new brief. `L1` · R153
+
+**Missing facts (R152)**
+- **Ask the user for missing factual content before filling a slot.** Names, figures, years, addresses, prices, and scarcity claims must come from the user or a verified source. If they remain unavailable, leave a clearly identified placeholder for the user to populate. Do not insert a believable invented value even when marked “sample.” `L1` · R152
+
 **Fairness and honesty in design (R149)**
 - **Do not mislead with design.** Marketing is open to the charge of being manipulative and people are cautious of it, so be transparent and communicate clearly to build trust; that includes emphasis in charts. `L1` · R149
 - **Show people inclusively.** Do not white-wash; represent diversity of ethnicity, race, religion, sexual orientation and more. The aim is fair, accessible and inclusive design. `L1` · R149
@@ -132,5 +150,5 @@ When two rules clash, state the ranking in this form. Each was confirmed as writ
 
 **Hard lines (he would not trade these away on any project)**
 - Readable text (contrast and reading time). Accessibility for everyone. The brand's identity (logo, colors, fonts). The purpose of the piece. The key information is never buried. Familiar controls for interface tasks. Everything looks chosen on purpose. `L1` · R143
-- **Not on the list: real content and real photos.** He did not tick it, so treat "real, not fake" as a strong preference, not a hard line, and ask when it matters (stock, placeholder and generated imagery are still open under WEB-07). `L1` · R143
+- **Real photos remain a preference; factual content has a stricter rule.** In R143 he did not tick the combined "real content and real photos" hard line. R152 clarified that missing factual names, figures, years, addresses, prices and scarcity claims must not be filled with believable inventions; ask the user and use a placeholder until supplied. The choice of stock, placeholder or generated imagery remains separate. `L1` · R143, R152
 

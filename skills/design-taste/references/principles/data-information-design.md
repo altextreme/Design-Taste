@@ -2,6 +2,7 @@
 
 > Layer tags: `L1` foundation (always), `L2` tonal preset (only for that tone), `L3` brand-negotiable. `Rnnn` = the comparison round that produced the rule (see ../evidence.md). Non-negotiables in SKILL.md survive any brand override.
 
+- **Give the plot most of the chart.** Let the finding headline lead into a roomy plot. Keep series identifiable beyond color; keep axes, partial periods, and repeated figures truthful. For bar charts, align each x-axis category label with its bar. `L1` · R154
 - **Conventional, clear charts by default.** A proper axis, light gridlines, axis labels and every category labeled. This reads as the cleanest. Ultra-minimal data-ink that strips the axis is less preferred, and so is decorating every mark. Keep values off individual bars unless they're being called out. `L1` · R074
 - **Form follows the message and the attention budget.**
   - **A trend:** show a progression over time with a conventional chart.
