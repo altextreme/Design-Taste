@@ -47,4 +47,17 @@
 - **Near-tangents.** Elements that almost touch, especially corner to corner, such as a label's last character nearly kissing a window corner in the image. R020
 
 ---
+- **Text block centered over the middle of a full-bleed photo.** It obscures the image "in a horrible way". R098
+- **Tabs across the top as primary navigation on mobile.** Off the table. R101
+- **A web page on one flat ground, sections divided only by hairlines.** Feels like the lazy way out. R104
+- **A solid caption panel on video.** Too low fidelity; looks like the native Instagram/TikTok text tool. R109
+- **A two-letter monogram as the logo mark.** The lazy way out; a strong wordmark is better. R113
+- **An email with no brand header.** Unacceptable: it fails to establish the brand, which is a core job of the piece. R115
+- **Extreme wide-crop images (banner strips) in email content blocks.** Overwhelming; the images dominate and distract from the text. R116
+- **A table drawn as a full grid of cell borders.** Dated, spreadsheet-like default. R117
+- **A video end card with only a logo (a dead end).** Useless; there is no next step. R122
+- **A "More" drop-down in primary navigation.** Hides important sections and deprioritizes them. R126
+- **Story text placed over the photo's actual focal point.** Obscures it and muddies the whole piece. R134
+- **A poster with a huge title and the date and time lost in small print, or one with no size hierarchy at all.** Both are off the table. R138
+- **A label that splits the logo mark and the wordmark apart.** The two halves of the logo always appear together to build recall and salience. R139
 

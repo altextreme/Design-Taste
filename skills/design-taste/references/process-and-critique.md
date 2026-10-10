@@ -6,7 +6,7 @@
 
 - Default to proceeding. Ask only when an unresolved answer would change the direction, the structure, or the delivery format; a question whose answer would only nudge a detail costs the user a turn for nothing. `L1` · default
 - Never ask what the brief, attached assets, a supplied brand source, earlier turns, or this skill already answer. Asking again signals you did not read. `L1` · default
-- If you can ask the user: ask once, at most three questions, each carrying your recommended default so a bare "go ahead" is a valid reply. Never run a second round of questions. `L1` · default
+- If you can ask the user: ask one question at a time, at most three in total, each carrying your recommended default so a bare "go ahead" is a valid reply. Never run a second round of questions. `L1` · default
 - If you cannot ask (no channel, unattended run, "just do it"): proceed on the most defensible reading and list each assumption in the delivery note, so a wrong guess is a cheap redirect. `L1` · default
 - Local, reversible details (a heading's wording, a crop, an accent choice among sampled hues) are assumed and disclosed, never asked. Skip questions entirely for edits to existing work. `L1` · default
 - Never ask the user to choose a visual style. Choosing one is the job; a style menu hands the decision back. The exception is an explicit request for options: give two or three that differ decisively on one stated axis, never cosmetic variants. `L1` · default
@@ -54,7 +54,7 @@ Collect these from the brief and assets; ask only for the ones that are both mis
 Before showing work, ask of every element: where did this come from? If the answer is "it is the default", change it or justify it from the concept.
 
 - Every hue traces to the imagery or the concept; a stock framework accent that nobody chose is a tell. `L1` · default
-- No invented facts: statistics, testimonials, logos, customer names, awards, prices, citations. Use a clearly labelled placeholder or leave the slot out. Any figure shown carries its source, unit and period. `L1` · default
+- No invented facts: statistics, testimonials, logos, customer names or any invented person (even labelled as sample), awards, prices, citations, years, addresses, and any claim of scarcity, popularity or sourcing. Show the empty slot (for example `[figure: share of trips under 2 miles, source]`) or leave it out; a plausible number with a "sample" note still reads as real. Any figure shown carries its source, unit and period. `L1` · default
 - No filler copy ("Feature one", lorem ipsum, hype adjectives). An empty area is a composition problem; solve it with scale and placement, not words. Do not add sections or copy the user did not ask for. `L1` · default
 - A named real thing (person, product, artwork, landmark, mark) is shown by its real image, never a generated look-alike. If unavailable, show an honestly labelled placeholder. `L1` · default
 - Structural tells to treat as defects: a rounded card with a colored left-edge stripe; an icon beside every heading or bullet; several solid primary buttons for one action in view; hover that merely greys or dims text; designer or "demo" controls inside a product artifact; placeholder-image URLs; the stock hero-features-pricing-FAQ sequence with nothing specific to this product. `L1` · default
@@ -149,7 +149,7 @@ Run on your own output, in this order, before showing it. Run the SKILL.md pre-f
 2. **Direction.** Does the built result still match the one-sentence system you stated? If it drifted, fix the build or restate the system.
 3. **Pre-flight.** Run the SKILL.md checklist in full: non-negotiables first, then hierarchy and grid, then color and contrast on real backgrounds, then motion, then the dealbreaker scan, then per-format reflow.
 4. **Anti-slop gate** (section 6): trace each hue, each icon, each claim, each image.
-5. **Look at it.** If you can render or preview, do so at the real format(s) and inspect the result; measure what you can (contrast, spacing, line length) rather than trusting arithmetic. If you cannot, state that the check was static.
+5. **Look at it.** Render at the real format(s) and inspect the image, then zoom into every text block, following `render-and-review.md` (assume you can see). Measure what you can (contrast, spacing, line length) rather than trusting arithmetic. Fix and look again. If you truly cannot render, use its no-render mode and state that the check was static.
 6. **Score quickly** with the D1–D5 table, worst band. Anything under 7 or any must-fix: fix and repeat from step 3, at most three passes total.
 7. **Name the weakest element** a sceptical reviewer would attack first. Fix it or disclose it.
 8. **Report only what you ran.** The delivery note lists decisions with their source (user, brand, default), assumptions, any rule bent and why, and what remains open. Never claim a check you did not perform; do not narrate tooling trouble the user did not ask about.

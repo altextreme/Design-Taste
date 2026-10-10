@@ -1,6 +1,6 @@
 # Design Taste: Evidence
 
-Each principle in principles/*.md cites rounds (R001–R140). This file holds the coverage tracker and the round log those citations point to. Read it only to resolve ambiguity or to quote his reasoning.
+Each principle in principles/*.md cites rounds (R001–R149). This file holds the coverage tracker and the round log those citations point to. Read it only to resolve ambiguity or to quote his reasoning.
 
 ## Coverage Tracker
 
@@ -201,19 +201,6 @@ Legend: ⬜ untested · 🟨 partial · ✅ resolved · 🔁 ambiguous — branc
 ## Coverage Tracker, Phase 2: Channels, Formats & Media
 
 Started 2026-10-07. Phase 1 (above) resolved the foundation across 108 dimensions. Phase 2 tests how it carries into specific channels, formats and media. Each dimension is one comparison round; the Phase 1 rules are the control. **Progress: 39 / 43 resolved, 0 partial, 0 flagged (🔁).** Order of work: Product UI, Web, Social, Email, Decks, Documents, Mobile, Print, Identity, Media.
-- **Text block centered over the middle of a full-bleed photo.** It obscures the image "in a horrible way". R098
-- **Tabs across the top as primary navigation on mobile.** Off the table. R101
-- **A web page on one flat ground, sections divided only by hairlines.** Feels like the lazy way out. R104
-- **A solid caption panel on video.** Too low fidelity; looks like the native Instagram/TikTok text tool. R109
-- **A two-letter monogram as the logo mark.** The lazy way out; a strong wordmark is better. R113
-- **An email with no brand header.** Unacceptable: it fails to establish the brand, which is a core job of the piece. R115
-- **Extreme wide-crop images (banner strips) in email content blocks.** Overwhelming; the images dominate and distract from the text. R116
-- **A table drawn as a full grid of cell borders.** Dated, spreadsheet-like default. R117
-- **A video end card with only a logo (a dead end).** Useless; there is no next step. R122
-- **A "More" drop-down in primary navigation.** Hides important sections and deprioritizes them. R126
-- **Story text placed over the photo's actual focal point.** Obscures it and muddies the whole piece. R134
-- **A poster with a huge title and the date and time lost in small print, or one with no size hierarchy at all.** Both are off the table. R138
-- **A label that splits the logo mark and the wordmark apart.** The two halves of the logo always appear together to build recall and salience. R139
 
 ### Product UI & Dashboards (UI)
 | ID | Dimension | Status | Rounds |
@@ -227,19 +214,6 @@ Started 2026-10-07. Phase 1 (above) resolved the foundation across 108 dimension
 | UI-07 | Form layout (label placement, single vs. multi column) | ✅ | R093 |
 | UI-08 | Density tier (compact vs. comfortable) | ✅ | R092, R136 |
 | UI-09 | Dark vs. light field for data-dense screens | ✅ | R094, R106 (tint conflict with R038 resolved: brand dictates) |
-- **Don't shade alternating rows when rows carry status badges.** Tinted badges lose separation and contrast against a shaded row, which introduces accessibility problems. Keep the badges as they are and drop the shading. `L2 (product/utility)` · R125
-- **Alternating shading is for pure comparison tables, not records.** A feature-by-feature comparison between a few services can take shading (acceptable); records on a web page or in an app use hairlines. For purely data, hairlines. `L2 (product/utility)` · R125, R117
-- **Limit top navigation to four or five items.** More is too much information in a navigation and raises cognitive load. `L2 (product/utility)` · R126
-- **Group a larger product into a few clear categories with a sub-navigation (fly-out).** Categorizing keeps the bar short while letting the user dig into a category easily. `L2 (product/utility)` · R126
-- **Never hide sections behind a "More" drop-down.** It severely deprioritizes things that may be important by burying them in a menu. `L1` · R126
-- **A destructive confirmation makes the destructive action the primary: a filled red button, with an outlined Cancel.** The user already chose to perform the action; the confirmation's primary CTA is that action, and canceling stays easy through the secondary. `L2 (product/utility)` · R127
-- **Destructive actions are handled with color: red.** Red reads as destructive, negative or needing attention in UI. Use it for the destructive action itself, not as decoration. `L1` · R127, R089
-- **Don't collapse statuses into grouped tones.** Grouping several statuses into one color deprioritizes things that should not be deprioritized, and a single tone with only red for problems is worse. Status color is an exception to accent scarcity because it serves scanning. `L2 (product/utility)` · R128
-- **A failed load shows a banner above the list and keeps the last saved data.** It clearly calls out the problem, still gives the user useful information, and offers Try again without making the page useless. `L2 (product/utility)` · R129
-- **Don't replace a usable page with a full error panel when saved data exists.** A big error panel looks like something is broken and leaves the page useless; keep it for cases with nothing to show. `L2 (product/utility)` · R129 (partial: when no saved data exists, the full panel is acceptable; not separately tested)
-- **Never reduce an error to a lone line of text.** A single line with an inline link reads as an error and gives the user nothing; he doesn't like it at all. `L1` · R129
-- **Phone lists use medium rows too.** Medium rows keep plenty of items on the page without much scrolling, and still read as separate items. Tight rows run together into one tall wall of text. `L2 (product/utility, mobile)` · R136
-- **Roomy rows need a thumbnail to justify the height.** Tall rows are acceptable when each carries a photograph of the item at the left of the text; without one they are too tall. `L2 (product/utility, mobile)` · R136 (partial: the thumbnail version was described, not shown)
 
 ### Mobile App (MOB)
 | ID | Dimension | Status | Rounds |
@@ -247,13 +221,6 @@ Started 2026-10-07. Phase 1 (above) resolved the foundation across 108 dimension
 | MOB-01 | Primary navigation (bottom tabs vs. top) | ✅ | R101, R091 |
 | MOB-02 | Sheet vs. full-screen for secondary tasks | ✅ | R119 |
 | MOB-03 | Touch-target and list density | ✅ | R120, R136 (numbers defer to HIG/Material) |
-- **Open a small secondary task as a bottom sheet.** It sits where the thumb already is, so it is physically accessible: the bottom of the phone is easier to reach and the user doesn't have to shift their grip. `L2 (native mobile)` · R119
-- **A centered dialog is acceptable, a bottom sheet is preferred.** `L2 (native mobile)` · R119
-- **Don't send a small task to a full screen.** Putting its input at the top of a new screen forces a reach or a grip shift for something minor. Reserve full screens for large tasks. `L2 (native mobile)` · R119
-- **Design mobile interactions for how the phone is held.** Put inputs and primary actions in the easy-reach zone at the bottom of the screen; treat reachability as a design criterion. `L1` · R119
-- **Size touch targets to the platform guidelines, not by feel.** He follows Apple's Human Interface Guidelines for minimum hit area and consults Google's Material Design guidelines too; those numbers are the authority. `L1` · R120
-- **A modest visual control is fine in a dense list when the hit area still meets the platform minimum.** The compact option (about 28 px drawn) suits a list with many rows; extend the tappable area with padding so the target meets the guideline. In the round shown, the hit area equaled the drawn size and was below the 44-point guideline, so the real build must pad it. `L2 (native mobile)` · R120 (his gut pick; the numbers come from HIG/Material, so no further round is needed)
-- **Oversized controls are a mistake.** A large control eats screen space and looks clownish; being easy to hit is not a reason to enlarge the drawn control past need. `L2 (native mobile)` · R120
 
 ### Web & Landing (WEB)
 | ID | Dimension | Status | Rounds |
@@ -265,28 +232,6 @@ Started 2026-10-07. Phase 1 (above) resolved the foundation across 108 dimension
 | WEB-05 | Eyebrow labels above headings | ✅ | R097, R130 (case by case) |
 | WEB-06 | Card accents (stripe, border, fill) | ✅ | R102, R103 |
 | WEB-07 | Business stock photography vs. real vs. none | ⬜ | |
-- **An eyebrow is a navigational label: small, tracked all-caps, muted.** It helps with wayfinding and stays simple. Use it when a section needs a navigational cue (a category or section name). `L2 (web)` · R097, R130
-- **Never let an eyebrow read as a second headline.** A sentence-case, headline-like eyebrow over the real heading competes with it and complicates the section. Keep eyebrows to a short label, a word or two. `L2 (web)` · R097 (partial)
-- **On a web page, set grouped items in cards that carry a graphic: an icon or an image.** A stripe-accent card could work, but he prefers a stronger graphical treatment. A plain bordered card is clean but lacks personality. `L2 (web)` · R102, R103
-- **Open columns separated by a rule read as a presentation slide on the web.** The same structure is right for decks (R099), so the channel decides. Avoid it on web pages. `L2 (web)` · R102 (partial; compare R099)
-- **Informational cards (landing page) carry a small plain line icon.** Very clean; it conveys information, which is the job. `L2 (web)` · R103
-- **Cards that link to another area of the site can carry photography.** The image signals a destination. `L2 (web)` · R103
-- **No tinted panel behind a card's icon.** The background color adds unnecessary clutter. `L2 (web)` · R103
-- **Alternate the ground between page sections.** A subtly darker tint on alternating sections is his most common choice. A single ground with hairlines between sections feels like the lazy way out; he dislikes it. `L2 (web)` · R104
-- **Reserve a dark band for the section that carries a really important message.** The contrast draws the eye to it more, so spend it where attention matters. `L2 (web)` · R104 (partial: whether dark bands generalize beyond a three-section page is untested)
-- **Pricing steers: emphasize one plan.** Equal plan cards treat every option the same; the goal is to push people toward a specific plan, especially for a subscription. The recommended plan carries a badge, a stronger border and the filled primary button. `L2 (web)` · R110
-- **Only call a plan "most popular" if it is true.** Emphasis without a real basis is an invented claim; use another honest label (for example "Recommended") otherwise. `L1` · R110, R100 (content integrity)
-- **Use a feature-by-feature comparison table when the content is an in-depth comparison.** It is the clear winner for that job. `L2 (web)` · R110
-- **Combine them: emphasized plan cards on top, the comparison table below.** The two are often seen together; a visitor who needs detail scrolls down to the table. `L2 (web)` · R110
-- **Quotes, key numbers and "mentioned in" names are all valid proof; the creative brief and the page goal decide which sections to use.** Do not prioritize one kind over another by default. Testimonials matter when what peers say is the point; stats when the data is the point; named mentions when the brand needs clout. `L1` · R112
-- **A page often carries all three as separate sections.** Content strategy comes first: let the brief set the sections, then design each. `L1` · R112
-- **Proof is always real or clearly placeholder.** Names, quotes and numbers are supplied by the user, never invented. `L1` · R112, R100
-- **Sections don't always need a label; decide case by case.** Without labels is fine when the sections aren't closely related or wayfinding isn't critical. `L2 (web)` · R130
-- **Use a short navigational label when the page needs easy navigability.** It lets the viewer grasp the section's intent at once, without reading a sometimes ambiguous headline. `L2 (web)` · R097, R130
-- **Number the labels only when the content is sequential.** A numbered label implies an order of operations or sequence; without one, numbering is decoration. `L2 (web)` · R130
-- **For a landing page or home page, start with a full-bleed photo hero with text over a scrim.** It is the most immersive: the photo catches the eye at once, the full bleed anchors the page, and the headline stands out. Always start here. `L2 (web, landing/home)` · R133
-- **A laid-over paper panel suits secondary pages or a busy image.** Use the panel hero for second-level pages, or when the background photograph is so busy that overlaid text would lose legibility. `L2 (web)` · R133
-- **A site's hero kit includes all three: full-bleed with scrim, half split, and panel.** A modular design system should carry all of them, with the full-bleed hero as the default starting point. `L2 (web, system)` · R133, R096
 
 ### Social & Glance Media (SOC)
 | ID | Dimension | Status | Rounds |
@@ -295,19 +240,6 @@ Started 2026-10-07. Phase 1 (above) resolved the foundation across 108 dimension
 | SOC-02 | Carousel structure (continuous vs. discrete frames) | ✅ | R124 |
 | SOC-03 | Cover and thumbnail legibility at small size | ✅ | R121 |
 | SOC-04 | Amount of text per frame in a feed | ✅ | R114 |
-- **A feed post needs a headline plus its one key detail.** The headline says what the event is; the key detail says when. Headline alone does not communicate enough to be useful. `L2 (social, feed)` · R114
-- **Keep feed copy short enough to hold up on a phone.** A dense post (headline, detail, description and address) runs the text too small and there is only a brief window to win attention. Content strategy decides what earns a place. `L2 (social, feed)` · R114
-- **An acceptable fuller version: headline, two short lines of descriptive copy, and one key detail.** It sits between the headline-plus-detail post and the dense one. `L2 (social, feed)` · R114 (partial: described, not shown)
-- **A cover title is short and punchy, sized to stay legible at thumbnail scale.** The mid-length title (about three words) set large is the balance: it still reads when the cover shrinks to a feed thumbnail. `L2 (social, covers)` · R121
-- **Do not shrink a cover to fit a long title.** Too much copy on a cover is unreadable on a small phone; cut the words instead. `L2 (social, covers)` · R121
-- **Do not over-shorten either.** A title so short it no longer communicates (very large two-word title) is easy to read but fails the job; communicating effectively is the point. `L1` · R121
-- **Social is a very visual place: lead with photography.** Photography draws people in and keeps them focused on the content. `L1` · R124
-- **Carousel slides default to full-bleed photography with legible text over a scrim.** It keeps the immersive quality and feels the most polished. `L2 (social, carousel)` · R124
-- **Use the photo-above, text-below slide when the photograph is too busy for text to read over it.** Acceptable, but plainer. `L2 (social, carousel)` · R124
-- **A type-only slide is fine inside a carousel, but the first frame carries a photograph.** The opening frame is what draws the swipe. `L2 (social, carousel)` · R124
-- **Find the true focal point before placing text; it may not be the most obvious feature.** In a sunlit room the focal point was the light beam through the window, not the doorway. The text goes below it, in the lower third. `L1` · R134
-- **Keep the text block compact in height.** A short, wide block in the lower third works; a tall narrow column eats the frame and looks forced. `L2 (social)` · R134
-- **Don't contort the text around the image.** Hugging the layout to the picture's shapes tries too hard, and it can make the wrong feature the focal point. A clean horizontal block is more artful. `L1` · R134
 
 ### Email (EML)
 | ID | Dimension | Status | Rounds |
@@ -315,16 +247,6 @@ Started 2026-10-07. Phase 1 (above) resolved the foundation across 108 dimension
 | EML-01 | Header treatment | ✅ | R115 |
 | EML-02 | Call to action form (button vs. text link) | ✅ | R100, R131 |
 | EML-03 | Content block rhythm | ✅ | R116 |
-- **Establish the brand at the very top of the email.** A wordmark header comes first, every time. Brand salience depends on building memory structures, so introduce the brand early and often. `L2 (email)` · R115
-- **Align the logo to the text's axis.** With left-aligned text, the logo sits left, so the eye moves straight down from brand into the headline and content with no jump. A centered logo above left-aligned text forces the eye to start in the center and travel back left. `L1` · R115
-- **Minimize eye movement and cognitive load.** Keep the eye's path continuous, top to bottom and left to right, with no jumps between elements. Eye strain and cognitive load are the tests behind logo alignment (R115), email grids (R116) and single-column articles (R118). `L1` · R115, R116, R118
-- **Arrange email content blocks in a clean grid.** A strong grid puts content in a logical order, keeps eye strain and eye movement to a minimum, and folds easily to one column on mobile. `L2 (email)` · R116
-- **Design the email for its responsive collapse.** The desktop arrangement must shuffle down to a single column without breaking; judge a layout by how it behaves on a phone. `L1` · R116, R091
-- **An acceptable alternative: a small image or icon on the left with text on the right.** Keep the image small so the text stays the lead. `L2 (email)` · R116 (partial: described, not shown)
-- **Images must not dominate the text.** The text is arguably more important; an oversized or extreme-crop image distracts from it. `L1` · R116
-- **Avoid alternating (zigzag) image/text blocks in email.** Pieces of content sit so close together that the eye has to jump left to right, and the pattern breaks down on mobile. `L2 (email)` · R116
-- **Peer secondary actions share one treatment.** If two secondary actions have the same importance in the content strategy, style them identically and keep them compact. `L2 (email)` · R131
-- **Don't stack a filled primary on a filled secondary of a different size.** Two filled buttons directly on top of each other at different sizes complicates the hierarchy; it isn't a real option. `L2 (email)` · R131
 
 ### Decks & Presentations (DECK)
 | ID | Dimension | Status | Rounds |
@@ -333,22 +255,6 @@ Started 2026-10-07. Phase 1 (above) resolved the foundation across 108 dimension
 | DECK-02 | Title and section slides | ✅ | R123 |
 | DECK-03 | Data slide treatment | ✅ | R107 |
 | DECK-04 | Light/dark ground alternation | ✅ | R105 (tint question still open) |
-- **Every slide layout exists in both a light and a dark version.** When designing a presentation template, always create light and dark versions of every layout. `L2 (deck)` · R105
-- **Use ground to break up the deck.** Dark for divider slides and light for content slides, or the reverse, is a great way to break up the presentation visually. A 100% light or 100% dark theme is also fine. `L2 (deck)` · R105
-- **Dark and light are interchangeable per slide, not a fixed brand state.** The choice follows the slide's role, not a rule about alternation. `L2 (deck)` · R105
-- **Branding 100% dictates the colors in a deck.** Do not default to a single dark for dark slides. Draw the dark grounds from the brand. `L3` · R106
-- **Treat dark slides as a chance to introduce the brand's darker colors.** A deep brand color as a slide ground adds range to the palette. When the brand has no dark color, derive one from the primary hue (R038) rather than defaulting to gray or navy. `L3` · R106, R038
-- **A data slide pairs the chart with the key numbers to draw attention to.** The chart shows the trend over time; one to three big numbers call out the point. He almost always builds data slides this way. `L2 (deck)` · R107
-- **Storytelling comes first in a deck: say more with less.** Each data slide has a point to call forward, and the layout serves it. `L1` · R107
-- **A chart alone is acceptable when a slide only showcases data with no single point to call forward.** `L2 (deck)` · R107
-- **Key numbers are few, large and labeled in plain words.** They sit beside the chart in a quiet column, one accent color, hairline between them. `L2 (deck)` · R107 (partial: layout inferred from the option shown)
-- **A title slide is extremely immersive.** Most often a full-bleed image with the presentation name and details over it; a half-photo split is the nearer step down. `L2 (deck)` · R123
-- **Text over a full-bleed title image sits away from the focal point, with contrast secured.** Apply the scrim-first rule and keep the text block out of the middle of the photograph. `L1` · R123, R071, R098
-- **Type-only on the deep brand color is a divider slide, not a title slide.** It is the right treatment for section dividers; for the title it is too plain. `L2 (deck)` · R123
-- **A photo band across the top with type below is used only for a strong branding reason.** Otherwise avoid it for title slides. `L3` · R123
-- **Icons must be conceptually tied to the content they sit above.** They support the headline and make the slide more interesting; the point is visual storytelling and effective communication, not decoration. `L2 (deck)` · R132, R095
-- **Choose by whether a photograph aids the storytelling.** If a photo helps tell the story, use the image-beside-text layout; if not, use icon columns. `L1` · R132
-- **A presentation template includes image-left and image-right content layouts, and variations of them.** `L2 (deck)` · R132
 
 ### Documents & Long Reading (DOC)
 | ID | Dimension | Status | Rounds |
@@ -356,15 +262,6 @@ Started 2026-10-07. Phase 1 (above) resolved the foundation across 108 dimension
 | DOC-01 | Article layout (measure, columns, rhythm) | ✅ | R118 |
 | DOC-02 | Resume and one-pager density | ✅ | R108, R135 |
 | DOC-03 | Tables inside documents | ✅ | R117 |
-- **A table with many rows uses alternating row shading and no lines.** The tint lets the eye follow along a row without drifting to the row above or below. With about five or more rows plus a total, this is the strongest. `L2 (document)` · R117 (documents and comparison tables; records in a product use hairlines, R125)
-- **Hairline rows suit a table with only a few items.** Up to three or four rows is fine; beyond that, legibility and readability suffer. `L2 (document)` · R117
-- **Never draw a table as a full grid of cell borders.** It is the default out-of-the-box look: dated, like a spreadsheet, not a beautifully formatted document table. `L1` · R117
-- **Pick the table treatment by row count.** Few rows: hairlines. Many rows: shaded alternating rows. Numbers right-aligned in tabular figures, a total row set off by a rule. `L2 (document)` · R117 (partial: row-count thresholds are his stated rule of thumb; UI tables were hairline in R088 and shading was not tested there)
-- **A long-form article is one narrow column set from the left margin: always his default.** The eye doesn't have to move around, the information stays organized, and the hierarchy is strong. `L2 (document)` · R118
-- **Avoid side rails and multi-column text for reading.** A headline rail beside the text is visually interesting but raises cognitive load. `L2 (document)` · R118
-- **Two columns of text are acceptable only occasionally, in a print layout.** Even there he avoids them at all costs. `L2 (document, print)` · R118
-- **Put the most important content in the left, primary position; secondary information goes in the right rail.** The reader meets the person's name, role and experience first. `L1` · R135, R118
-- **A single column is fine for a very long resume where experience matters most.** Skills and education matter less there, so the rail can be dropped. `L2 (document)` · R135
 
 ### Print & Physical (PRNT)
 | ID | Dimension | Status | Rounds |
@@ -372,14 +269,6 @@ Started 2026-10-07. Phase 1 (above) resolved the foundation across 108 dimension
 | PRNT-01 | Large format: hierarchy by viewing distance | ✅ | R138 |
 | PRNT-02 | Packaging and label | ✅ | R139 |
 | PRNT-03 | Stationery and business card | ✅ | R140 |
-- **A packaging label is left-aligned by default.** A serif headline reads more easily left-aligned than centered; the mark and wordmark lead at the top, the product sits in the middle and the facts anchor the foot. `L2 (packaging)` · R139
-- **A small divider rule between the product name and its description reads as thoughtfully designed.** Include it. `L2 (packaging)` · R139
-- **A centered label is acceptable when the label sits at the center of the package, or when brand guidelines call for centering.** When centering, still include the small divider rule. `L2/L3 (packaging)` · R139
-- **Never separate the logo mark from the wordmark.** Showing the lockup's two halves apart on one surface undercuts brand recall and salience; they must read in context of one another. `L1` · R139, R113, R137
-- **A business card's front is the person's details.** The card's purpose is to convey contact information, so the person's details are the most important thing and sit on the front. `L2 (stationery)` · R140
-- **The back is the branding opportunity: the full logo on a deep brand color.** `L2 (stationery)` · R140
-- **The front may carry the logo mark alone as a small brand cue.** Since the full logo is always on the back, a quiet mark on the front reinforces the brand without competing with the details. `L2 (stationery)` · R140 (partial: suggested, not shown; keep the lockup rule R139 on the back)
-- **Start from the purpose of the piece.** Decide what the piece is for before deciding its layout; the content strategy sets which information leads. `L1` · R140, R112, R138
 
 ### Identity & Marks (IDNT)
 | ID | Dimension | Status | Rounds |
@@ -395,9 +284,66 @@ Started 2026-10-07. Phase 1 (above) resolved the foundation across 108 dimension
 | MEDIA-03 | Short-form video pacing (9:16) | ⬜ | round 141 built (rounds/141-MEDIA-03.html), awaiting Anthony's pick |
 | MEDIA-04 | Captions and subtitles | ✅ | R109 (conditional) |
 | MEDIA-05 | End cards and logo animation | ✅ | R122 |
-- **An end card is the brand plus one call to action and a link.** It keeps the branding, which is still very important at the end, and gives the viewer a next step to follow. `L2 (video)` · R122
-- **Never end on a dead end.** A card with only the logo gives the viewer nothing to do; always offer a next step. `L1` · R122
-- **Keep end-card information minimal and send detail out through the link.** Four lines of calls to action overwhelm; one strong call to action with a link lets the viewer get more elsewhere. `L2 (video)` · R122
+
+## Coverage Tracker, Phase 3: Reasoning & Psychology
+
+Started 2026-10-10. Phases 1 and 2 recorded what Anthony picks. Phase 3 records why, so the skill can reach his answer on briefs no round covered, and knows which reason wins when two collide. Method: inferred reasons confirmed in his own words (R142), forced-conflict choices, then spot-the-flaw, remove-one and prediction rounds. Working notes and the full gap map: `WHY_MODEL_DRAFT.md`.
+
+| ID | Dimension | Status | Rounds |
+|---|---|---|---|
+| WHY-01 | Intentionality as a reason | ✅ | R142 |
+| WHY-02 | The eye's path and where it ends | ✅ | R142 |
+| WHY-03 | Placement, weight and the image's focal point | ✅ | R142 (conditional: context decides; never over the focal point) |
+| WHY-04 | Natural proportion | ✅ | R142 |
+| WHY-05 | Reader effort (every extra element is a cost) | ✅ | R142 |
+| WHY-06 | Protect the critical information | ✅ | R142 |
+| WHY-07 | Convention for tasks, freedom for mood | ✅ | R142 |
+| WHY-08 | Reader time sets the density | ✅ | R142 |
+| WHY-09 | Hand, eye and device | ✅ | R142 |
+| WHY-10 | Color and imagery chosen for feeling (brand-bound) | ✅ | R142 (conditional) |
+| WHY-11 | Concept leads, foundation holds | ✅ | R142 |
+| WHY-12 | Decoration needs a reason (brand-bound) | ✅ | R142 (conditional) |
+| WHY-13 | Purpose and the conversion funnel | ✅ | R142 |
+| WHY-14 | Respect the source; modular systems | ✅ | R142 |
+| WHY-15 | Honesty (real, not fake) | ✅ | R142 |
+| WHY-16 | Process: the brief before any execution | ✅ | R142 |
+| WHY-17 | Process: the finish check | ✅ | R142 |
+| WHY-18 | Process: diagnosing "it feels wrong" | ✅ | R142, R144 (he audits macro to micro; see the audit order) |
+| WHY-19 | Process: resolving rule conflicts ("even over") | ✅ | R142, R143 (ordering confirmed) |
+| WHY-20 | What beginners get wrong | ✅ | R142 |
+| WHY-21 | Photo vs. legible text | ✅ | R142 (conditional: brand decides the treatment, legibility is constant) |
+| WHY-22 | Convention vs. original interface | ✅ | R142 |
+| WHY-23 | One family: template vs. reinvention | ✅ | R142 |
+| WHY-24 | Plain vs. personality | ✅ | R142 (conditional) |
+| WHY-25 | Protect the photo vs. fit the layout | ✅ | R142 |
+| WHY-26 | Beauty vs. build cost | ✅ | R142, R143 (build cost is never the reason to choose the simpler option; do the work to get both) |
+| WHY-27 | Gut vs. platform guideline | ✅ | R142 |
+| WHY-28 | Completeness vs. glanceability | ✅ | R142 (conditional: where the post links) |
+| WHY-29 | Mood vs. the accessibility floor | ✅ | R142 |
+| WHY-30 | Emphasis vs. fairness | ✅ | R142 |
+| WHY-31 | Elegance vs. instant clarity | ✅ | R142 |
+| WHY-32 | Client brand vs. own judgment | ✅ | R142 |
+| WHY-33 | Brand vs. concept for one piece | ✅ | R143 (the brand is a box of Lego; the concept decides what is built) |
+| WHY-34 | Consistency vs. freshness | ✅ | R143 (conditional: both are possible) |
+| WHY-35 | Data vs. gut | ✅ | R143 |
+| WHY-36 | Hard lines (never traded away) | ✅ | R143 |
+| WHY-37 | Order of noticing flaws | ✅ | R144 (message and legibility, then hierarchy and amount, then craft details) |
+| WHY-38 | Emphasis on the wrong option; inverted button hierarchy | ✅ | R144 (missed only because the brief was not prominent on the page; he agrees the Team plan should carry the emphasis) |
+| PSY-01 | Perception: grouping, similarity, isolation, direction cues, common region, scanning | ✅ | R145 (vocabulary: all six used on purpose; no individual mechanism round yet) |
+| PSY-02 | Cognition: chunking, choice overload, recognition vs. recall, convention, disclosure, reach, aesthetic-usability | ✅ | R145 (all seven used on purpose) |
+| PSY-03 | Emotion and memory: repetition, pictures, peak-end, color and form, faces | 🟨 | R145 (all five used on purpose; shape and type personality, tension and release, and faces and gaze rules still untested) |
+| PSY-04 | Behavior: persuasion and where it becomes manipulation | ✅ | R145 (the line is honesty: five tactics only when true, two freely) |
+| PSY-05 | Context: light, distance, posture, interruption, repeat exposure | 🟨 | R149 (take the viewing context into account; no ranking of hard conditions given) |
+| WRD-01 | Words with design: headlines, button labels, errors, empty states | 🟨 | R146 (four situations done; voice by register, copy length vs. layout, translation expansion, headline craft not yet) |
+| STY-01 | Story and sequence: arc, pacing, openings and closings | 🟨 | R149 (follow the well-documented best practices; no specifics given) |
+| STR-01 | Strategy: funnel stage drives the design; which stage each channel serves | ✅ | R147, R148 (profiles confirmed; the prospect deck is consideration and a social post can serve any stage) |
+| STR-02 | Working with stakeholders: justifying decisions, taking feedback | ✅ | R148 (the client has the final say; the designer pushes back with reasons and data) |
+| SYS-01 | Systems and handoff: when to break the system; what a handoff needs | ✅ | R148 (prefer the system; break only for accessibility or legibility, and treat it as a system defect; handoff explains the rigid parts and the why) |
+| EDG-01 | Failure, edge and stress states (reasoning behind them) | ✅ | R149 (design every state so the developer never has to decide) |
+| NEW-01 | Newer surfaces: AI interfaces, voice, spatial, TV, kiosk, wearables | 🟨 | R149 (AI interfaces: visible feedback while processing; the user has the final say; uncertainty and citation display not answered as design; voice, spatial, TV, kiosk untouched) |
+| INC-01 | Ethics and inclusion beyond contrast: motion, cognition, color-blindness, honest data graphics | ✅ | R149 (do not mislead; inclusive representation; no dark patterns; the AI checks accessibility itself) |
+| SKL-01 | How the skill itself should behave: who it serves, asking, autonomy, responsibility | ✅ | R149 |
+| CRF-01 | Craft judgment: starting from nothing, when to break a rule, knowing it is done | 🟨 | R148 (finishing test and blank page answered; references not answered; the "proud of" and "broke a rule" prompts skipped) |
 
 ## Round Log
 
@@ -543,6 +489,14 @@ Started 2026-10-07. Phase 1 (above) resolved the foundation across 108 dimension
 | R138 | PRNT-01 | One poster, tiers: A huge headline + everything small · B headline + mid-size time + small details · C moderate headline, flat detail sizes | **B (clear winner); A and C off the table** | A deprioritizes the critical information for the title, so people overlook it. C waters everything down with no clear hierarchy. B lets you scan the name, then the date and time, and treats the description and other information as tertiary. Hierarchy and content strategy matter regardless of content type. |
 | R139 | PRNT-02 | One coffee label: A centered stack · B left-aligned (name top, product middle, facts foot, divider rule) · C left-aligned with a large mark leading and the wordmark moved below the title | **B; A acceptable for a centered label position or brand guidelines (add the divider); C never** | B is thoughtfully executed: serif headlines read better left-aligned, and the small divider line is a nice touch. A suits a label centered on the bag, or a brand that wants centered content; add the divider. C splits the mark from the wordmark, which he would never do: they must show together for recall and salience. |
 | R140 | PRNT-03 | Business card: A lockup + details on the front, plain back · B details front, brand on a deep color back · C brand front, details back | **B (clear winner)** | A business card exists to convey contact information, so the person's details go on the front; the back is a branding opportunity. A quiet logo mark on the front is a good idea, since the full logo is always on the back. Content strategy: the purpose of the piece decides. |
+| R142 | WHY-01 to WHY-32 | Reasoning check: 15 inferred reasons (yes / close / no), 12 conflicts between two valid reasons, 5 open questions | **11 yes, 4 close (D3, D10, D12, D13); conflicts: 6 clean picks, 6 "it depends" with named conditions** | Confirmed the reasons. Corrections: placement is a tendency and the firm rule is never over an image's focal point; color and decoration are often fixed by the brand; purpose is framed by the conversion funnel (awareness, consideration, purchase, loyalty) or by provoking emotion. Conflicts: legibility is constant and brand decides the treatment; convention for interface because a new pattern makes the brand teach it; follow the brand except for legibility or accessibility; a social post is an invitation, not the party. Process: starts from the creative brief; finishes with a proofread against it; names the reason something feels wrong; resolves rule conflicts with an "even over" exercise. Beginners flash, reinvent, ignore brand and repetition, and skip data. Skill predicted 9 of 12 conflicts (2 more only with conditions); the miss was beauty vs. build cost, where he chose the nicer option. |
+| R143 | WHY-19, WHY-26, WHY-33 to WHY-36 | Confirm the "even over" ranking (13), probe beauty vs. build cost (3 situations), tick the hard lines | **Confirmed 11 of 13 rankings as written; E11 and E12 "depends"; build cost: A, then "depends" twice; 7 of 8 hard lines ticked** | Brand vs. concept is not a ranking: a brand guide is a box of Lego, the pieces fixed and the build free, and the concept always carries the brand. Consistency and freshness coexist if the brand still reads as itself. Build cost: accessibility is critical and an accessible design can still be rich and beautiful; a nicer design can be built sustainably with more intentionality from the team, so cost is not a reason to simplify. He did not tick real content and real photos as a hard line. Skill predicted 12 of 16; it missed the two build-cost conditions (it expected the simpler option). |
+| R144 | WHY-18, WHY-37, WHY-38 | Spot-the-flaw: three pieces (poster, pricing section, social post) with planted flaws; he names what is wrong, in order | **Flagged 7 of 10 planted flaws clearly (poster: focal point, contrast, date and details; social post: all four); missed the two pricing flaws; one partial** | Poster: headline over the focal point, serious legibility issues, date, time and location failing contrast, and a doubt about the starburst (follow-up: it "seemed random and unnecessary"). Pricing: only the icon-only navigation (does not communicate what to expect); called the pricing grid treatment fine, so the Most popular badge on the wrong plan and the inverted buttons went unflagged; follow-up: he missed them because the brief was not called out clearly on the page, and he would label the badge "Recommended", not "Most popular", so as not to deceive the user. Social: text over the focal point, way too much text, no clear hierarchy (an unplanted catch), drop shadow far too heavy, never an emoji for an icon; would change the descriptive paragraph first. His own order of looking: clear communication, brand representation, then layout and hierarchy; nothing was hard to put into words. |
+| R145 | PSY-01 to PSY-04 | Map of 25 psychology ideas: how he relates to 18 (use on purpose / know but don't think about / put differently / disagree) and where his line is on 7 persuasion tactics | **All 18: "I use it on purpose". Persuasion: only when true for social proof, anchoring, defaults, scarcity, credibility; freely for reducing friction and loss framing** | No notes given, so the pattern is the finding: he already reasons with these ideas deliberately, and his line on persuasion is honesty. Faces and gaze, scarcity specifics and loss framing have no rounds yet. |
+| R146 | WRD-01 | Same layouts, only the words change: headline (says what it is / says what you get / short and clever), button label (generic / specific / enthusiastic), error message (blunt / instructive / friendly), empty screen (flat / directive / playful) | **Headline B, button B, error B, empty screen C** | His rule of thumb: the brand's tone of voice is critical, a firm understanding of the audience and their friction points matters, and clarity of communication is important in general. Skill predicted B for all four and missed the empty screen, where he chose the playful version. |
+| R147 | STR-01 | Four funnel-stage design profiles (awareness, consideration, conversion, loyalty) to confirm, and which stage each of seven kinds of piece usually serves | **All four profiles: yes, as written. Channels: social post consideration, street poster awareness, landing page conversion, pricing page conversion, newsletter loyalty, prospect deck awareness, product screens consideration** | No notes. Three channel answers differ from what the skill expected (social post, prospect deck, product screens); recorded as stated and flagged for confirmation. |
+| R148 | STR-02, SYS-01, CRF-01 (+ R147 follow-up) | Open questions: why the social post and prospect deck sat where they did; finishing a piece; client pushback and requests; handoff; blank page; design systems; what designers and AI tools misunderstand | **Open answers (the "proud of" and "broke a rule" prompts skipped)** | Prospect deck is consideration, and a social post can serve any stage. Finished when it looks objectively nice, communicates its message and delivers against the brief. The client wins in the end, but the designer pushes back with reasons and data and educates, since everything has purpose. Handoff sets expectations: the rigid parts and why, and where there is room; he can build what he designs. He will not accept a half-baked brief. Always prefer the design system; break it only for accessibility or legibility, and treat that as a system defect. Core statement: designers should always be able to articulate the reason for a decision, rooted in research, proven practice and psychology; AI is binary and lacks the discernment to say "yes, this is good"; the goal is to give AI the rationale so it thinks like a good designer instead of following arbitrary rules with hard-coded values. |
+| R149 | NEW-01, INC-01, EDG-01, PSY-05, STY-01, SKL-01 | Open scenarios: AI interface processing, uncertainty, actions and labelling; accessibility, chart integrity, representation, dark patterns; states to design; sequences; viewing context | **Open answers** | Answered largely as rules for how the skill should behave. Primary users are designers iterating fast, secondary non-designers; ask one easy question at a time rather than assume; iterate or be transparent when unsure; the user has the final say; check accessibility autonomously and give sources if unable; do not label AI output by default but surface regional disclosure rules, the human is responsible; always show feedback while processing; design all states; do not mislead, white-wash or use dark patterns; follow documented best practice for sequences; consider where the design is seen. |
 
 ## Validation Log
 

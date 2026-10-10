@@ -1,6 +1,6 @@
 # Deliverable Formats
 > **Status: default guidance. Not yet validated by Anthony's comparison rounds.** Follow these as defaults for surfaces his validated rules (`principles/*.md`, SKILL.md) don't cover. Wherever they conflict with a validated rule, a dealbreaker, or a non-negotiable, the validated rule wins.
-> **Read when:** the deliverable is a slide deck, dashboard, landing or marketing page, docs or long-form page, email, mobile or native screen, social card or poster set, resume, one-pager or print document, flowchart or diagram, or component documentation. Also read the closing checklist before showing any of them.
+> **Read when:** the deliverable is a slide deck, dashboard, landing or marketing page, docs or long-form page, email, mobile or native screen, social card or poster set, resume, one-pager or print document, flowchart or diagram, or component documentation, **or a chart or data graphic**. Also read the closing checklist before showing any of them.
 
 Shared ground: the composition, type, color and motion rules in SKILL.md apply to every format. This file adds only what the format changes. For states, focus, forms, UI motion and accessibility, see `ui-craft.md`. For process, critique and verdicts, see `process-and-critique.md`. Do not restate them per format.
 
@@ -12,7 +12,7 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 - State the rhythm (one row per slide: layout and role) before building, and show it if you can ask the user. Otherwise state it as an assumption. `L1` · default
 - One idea per slide. A slide with three numbers becomes three slides. Titles are assertions, so the titles read in sequence tell the whole story. `L1` · default
 - When content overflows, split the slide. Never shrink the type to fit. Projection legibility is the floor: body text must read from the back of the room, so size type as a fraction of canvas height. `L1` · default
-- Choose each layout by the relationship in the content: one dominant figure = a giant number with one sentence; parallel items = equal type-led columns (no icon-in-circle rows); two-way comparison = split; sequence = a short timeline; section break = whitespace or a full-bleed image with the section name only. `L1` · default
+- Choose each layout by the relationship in the content: one dominant figure = a giant number with one sentence; parallel items = short columns, each with one thin line icon tied to its meaning (validated R099, R132); never icons in circles, never icons on bullets; two-way comparison = split; sequence = a short timeline; section break = whitespace or a full-bleed image with the section name only. `L1` · default
 - Keep one frame across the deck: same margins, same title position, same footer band, same grid. Variety comes from layout, never from moving the frame. Fits his series rule (`principles/consistency-across-a-series.md`). `L1` · default
 - Deck density is a dial, not a constant: place a deliberate low-density beat (full-bleed image, single number, empty field) near each third so the run does not flatten. `L1` · default
 - One pull-quote per deck, with a real attribution. The closing slide is decisive: the ask, the takeaway sentence, or a date. Not "thank you". `L1` · default
@@ -21,7 +21,8 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 
 **Avoid**
 - Centering every slide; gradient-wash title slides; an icon beside every bullet; corner blobs; abstract 3D filler. Each is already a dealbreaker or explicit-request-only. `L1` · default
-- Invented metrics. Every number has a source line, understated. `L1` · default
+- Invented metrics. Never fabricate a plausible statistic, even labelled. On the slide, say the gap plainly in words ("Local figure to come") or leave it out; keep slot tokens such as `[X%]`, and "proposed, to confirm" labels, in the delivery note, never printed on a slide. Every real number has a source line, understated. Proposal details you invent (features, partners, policies) are labelled "proposed, to confirm" in the delivery note. `L1` · default
+- With no photograph supplied, do not spend half a title slide on an empty photo box: use the type-only deep field, or a tonal stand-in sized to the real crop. `L1` · default
 
 **Ground per slide (validated, R105):** build every slide layout in both a light and a dark version. Use dark for divider slides and light for content slides, or the reverse, to break up the deck visually; a 100% light or 100% dark theme is equally fine. Template work always ships both versions of every layout. Do not default to one dark: the brand dictates deck colors, so draw dark grounds from darker brand colors (R106); with no brand, derive the dark from the primary hue (R038).
 
@@ -37,6 +38,8 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 - Compute every mark from the data against one shared baseline. Every datum is readable somewhere (axis plus grid satisfies it; do not add per-bar value labels by default). Prefer filled encoding over outline-only marks. In nested shapes, only one short KPI shares the center; other labels go to a legend. `L1` · default
 - Chart selection follows the message: trend = line over time; comparison = bars from a zero baseline; part-to-whole = few segments only; one headline metric = big number. Avoid dense pictograms. `L1` · default
 - Filtering: filters show their current state, the result count updates, and view state (filters, tab) lives in the address so a view can be shared. Last good values stay on screen when a fetch fails; sample data is labeled as sample; freshness is shown. `L1` · default
+- Internal tools and dashboards sit outside the funnel: state the job, the decision it supports and how often it is checked, then find the one comparison the user checks the screen for (pace against target, against last period) and build the primary region around it. Chart titles state that finding. `L1` · default
+- Do not fix region heights or scroll inside a card; let content set the height, or show "View all n" so no row is silently cut. A partial current period is never plotted as a full one. `L1` · default
 - Structure comes from hairlines and spacing, not boxes. As density rises, drop containers and keep rules. Accent is scarce: active navigation plus one chart highlight. Names and values are specific and plausible, never "Metric A". `L1` · default
 
 **Avoid**
@@ -62,6 +65,18 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 
 **Check:** value and action clear in the first view? Layout families varied? Every proof item real? Same CTA wording everywhere?
 
+## Charts and data graphics
+**Must have**
+- Allocate the page to the plot: a header (headline and one-line deck, at most about a third of the height), the plot taking the rest, the source and sample line at the foot. The poster rules (image first, golden section, image cap) do not apply. `L1` · default
+- Hue belongs to the data. Each series owns a color; the headline, labels and chrome are ink. Never set the headline in a series color, which claims the headline is about that series. `L1` · default
+- Two or more series are told apart by hue and a second cue: direct end labels at minimum; vary line style or marker when lines cross or the piece may print in grayscale. `L1` · default
+- Conventional axes and a light grid. True minus signs, not hyphens. Extend the value axis one gridline past the data so no mark or label sits on the frame. Bars and filled areas start at zero; ticks use round steps. A zero line is visible when values cross zero. `L1` · default
+- The headline states the finding a reader would act on (against a target, against a baseline), not just any true comparison. Decorate at most one storytelling point. `L1` · default
+- Honesty: label sample data as sample; never describe a source or method you were not given ("source not given"); a partial period is never plotted as a full one; a figure that appears in two places matches in both. `L1` · default
+- Compute label and annotation positions from the data in code, and check each against the series at the x-positions it spans, so no label lands on a line. `L1` · default
+
+**Look at least twice:** the first look fixes layout; the second checks every label against the lines it sits near. **Check:** headline states a finding? Plot dominates the page? No label on a line? Series distinguishable in grayscale? Axis, units, source and sample label present?
+
 ## Docs and long-form reading pages
 **Must have**
 - Tables in documents: alternating row shading for five or more rows, hairlines only for three or four, never a full grid of borders; numbers right-aligned in tabular figures with a total row set off by a rule. See `principles/documents-and-long-reading.md` (R117).
@@ -81,11 +96,13 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 **Must have**
 - Marketing email is glance media: one idea, one primary CTA, readable in about ten seconds. Transactional or reference email may be dense but keeps one reading chain. `L1` · default
 - Email action hierarchy has three levels: one full-width filled primary button; compact secondary buttons (ghost or filled; ghost when there is more than one); tertiary items as colored, underlined text links. See `principles/email.md` (R100).
+- Use only the action levels the brief actually contains. One primary is required; add secondary or tertiary actions only for real needs the brief names. Extra actions dilute the primary (choice overload). `L1` · default
 - Email opens with the brand: a wordmark header aligned to the text axis (left logo over left text). Never an email without a brand header. See `principles/email.md` (R115).
 - Email content blocks sit on a clean grid (two columns that fold to one on mobile); no zigzag alternation; images stay modest so text leads and never extreme banner crops; a small image or icon left with text right is the alternative. See `principles/email.md` (R116).
 - Single column. Reference width: about 600 to 680 px. The body is flush left, never centered paragraphs. It must still read at about 480 px, with type stepping down one size. `L1` · default
 - Build for clients, not browsers: table layout, inline styles, system or safe-stack fallbacks, no dependence on web fonts, shadows, gradients or script. Every image has alt text and a solid fallback color behind it, because many clients block images by default. The CTA is a real link styled as a button with its own background color, not an image. `L1` · default
-- Footer carries the sender address, unsubscribe and view-in-browser. Contrast is checked in both light and the client's forced dark mode; use opaque colors, not alpha. `L1` · default
+- Footer carries the sender address, unsubscribe and view-in-browser. Contrast is checked in both light and the client's forced dark mode; use opaque colors, not alpha. Add a real `prefers-color-scheme: dark` block with your own dark palette (and `[data-ogsc]` for Outlook); `color-scheme: light` alone does nothing. If you cannot test, say so. `L1` · default
+- If no photo is supplied, still design the hero slot as a solid fallback block sized to the intended image, with descriptive alt text carrying the message and a placeholder label printed on the block. Use at most one image slot, under about a third of the first screen, and set item lists in type only. The first screen (about 600 by 800) must look finished and hold the primary action. A date or time already in the headline or preheader is not repeated as a separate promoted line; bind the last two words of headlines and time ranges with a non-breaking space. Repeated item titles in a list (dishes, products) may use the display face at a reduced size. `L1` · default
 
 **Avoid**
 - Skewed or faux-italic accent words, pill CTAs, stylized gradient heroes (all dealbreakers). Two competing CTAs. · default

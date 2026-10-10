@@ -10,14 +10,15 @@
 
 ## Image prompt assembly order
 One clause per block; skip only what is irrelevant.
+0. **The moment.** Before writing, name in one sentence the single moment that tells the brief at a glance and why (who is present, what is happening, what signals the time and place). Then name the first stock version of the subject and do not use it unless you can say why it serves the concept. (Method, shown on an unrelated subject: for a hospital's volunteer week the stock version is a stethoscope close-up and a smiling nurse; a specific moment is a volunteer pushing a book trolley past an open ward door at dusk.) Rejecting the stock version means changing the moment, not deleting its props from the same scene. `L1` · default
 1. **Intent and medium:** what it is for and what kind of picture ("documentary photograph, plate for a poster, text added later"). Stating the use lets the model leave the right area calm. `L1` · default
 2. **Subject** in concrete nouns with materials, wear and scale, not adjectives of feeling. `L1` · default
-3. **Composition:** framing, angle, subject position, and where the calm area is. Focal subject horizontally centered on the upper golden line, never dead center; keep the subject's cause and effect inside the frame. `L1` · default
+3. **Composition:** framing, angle, subject position, and where the calm area is. Focal subject horizontally centered on the upper golden line, never dead center; keep the subject's cause and effect inside the frame. In the prompt itself say this in plain words ("a little above the middle, about two-fifths down"); never send skill terms such as "golden line" to the image model. `L1` · default
 4. **Camera and lens** (photographic work): distance, focal-length feel, aperture feel, as capture. `L1` · default
-5. **Light:** direction, hard or soft, color temperature, where shadows fall. One light story per image. `L1` · default
+5. **Light:** direction, hard or soft, color temperature, where shadows fall. One light story per image. A light source in the frame (a lamp, a window) is the light story: light falls from it, not from an off-frame direction; keep the bulb shaded so it does not bloom. `L1` · default
 6. **Palette as relationships sourced from the concept** ("one warm family; shadows lean cool"), never a free-floating "vibrant" or "pastel". Choose one clear hierarchy hue and a calm neutral, since the layout will later sample them for type. A supplied brand palette replaces this. `L1` · default
 7. **Material and finish:** real surfaces, matte and unglossed, plus honest capture flaws when realism matters. Grain, if any, fine and over everything; never simulated paper or fabric. `L1` · default
-8. **Exclusions:** positive form first ("flat matte background, no scenery"), then the negative list below. `L1` · default
+8. **Exclusions:** state the target positively inside the prompt ("one warm family, warm brown shadows"), because many models draw the noun in "not teal". Negations belong only in the negative field or a closing "Avoid:" line. Front-load: the first two sentences carry intent, subject and composition; cut any sentence that would not change the picture. `L1` · default
 9. **Aspect ratio and size as tool parameters**, plus one prose sentence naming the safe area where text will go. `L1` · default
 
 - Change one block per revision so the cause of a difference is known. Hold the seed when testing one variable; release it when exploring. `L1` · default
@@ -90,7 +91,9 @@ Attach the base list to every image prompt; add modules as needed. Without a neg
 - Web embeds get a reduced-motion or static fallback; motion is never the only carrier of meaning. `L1` · default
 
 ## Prompt QA checklist
-- [ ] Assembly order followed; no filler quality words.
+- [ ] Assembly order followed, starting with the moment and the stock version named and rejected or justified; no filler quality words.
+- [ ] No skill jargon ("golden line") and no negation words inside the positive prompt.
+- [ ] Consistency: the lens matches the framing, the palette matches the light source, and the light falls from where the source sits in the frame.
 - [ ] Palette stated as relationships from the concept (or supplied brand palette), one hierarchy hue plus a calm neutral.
 - [ ] Depth of field specified as optics; no blur effect requested.
 - [ ] Base negative list attached, plus the right modules.
@@ -103,9 +106,13 @@ Attach the base list to every image prompt; add modules as needed. Without a neg
 - [ ] Prompt, seed, aspect, reference roles recorded.
 
 ## Worked example: image plate (quiet, premium, photography-exhibition poster)
+*This shows the order and the level of specificity, not the wording or the subject. Do not reuse its sentences; a contrasting second example follows.*
 > Documentary photograph to serve as the full-bleed image of a poster; text is added later, so the frame contains no writing. A weathered wooden fishing boat pulled up on a pebble shore at first light, hull paint worn to bare grey timber in places, a coil of frayed rope across the bow. Portrait composition, eye level, boat horizontally centered on the upper golden line, with a quiet, low-detail stretch of pale sea and sky across the lower third kept even in tone. Shot on a long lens at a wide aperture from a distance, so the far headland falls into soft natural blur. Low sun from the left, soft and cool-neutral, long gentle shadows to the right. Palette is one restrained family: slate blue-grey sea, bone-white sky, worn ochre and grey on the hull. Matte surfaces, true color, ordinary tonal range, fine natural detail in the wood. Aspect 4:5 (parameter). Avoid: glow, bloom, flare, light leaks, drop shadows, effect gradients, HDR halos, oversaturation, teal-and-orange grade, fake blur or tilt-shift, floating objects, stock 3D, texture overlays, vignette, any text, logos, watermarks, people, birds.
 
 Landscape version: rewrite only the composition sentence (boat on one half, calm sky opposite); keep every other block verbatim.
+
+## Worked example: image plate (warm, people present, practical light; a neighborhood bakery's early-morning opening)
+> Documentary photograph to serve as the full-bleed image of a poster; text is added later, so the frame contains no writing. Inside a small bakery before opening, a baker in a flour-dusted apron slides a tray of loaves onto a wooden counter, her face turned a little away, mid-motion. The only light is the oven's open door behind the counter and a streetlamp through the front window, so the loaves and her forearms are lit warm and everything else falls to soft shadow. Portrait composition at counter height; the baker and tray a little above the middle, about two-fifths down; the upper third left as an even, dim wall with no shelves or signage. Shot from about two meters on a 50 mm lens at a wide aperture, so the back shelves go naturally soft. One warm family (toasted browns, cream flour, amber light), shadows leaning warm. Matte surfaces, fine film grain, no retouching beyond exposure. Avoid: glow or bloom around the oven light, steam rendered as a filter, visible logos or lettering, extra hands, plastic skin, fake blur.
 
 ## Worked example: video (energetic product teaser, text-free, 10 s, vertical)
 > Intent: confident, brisk, silent picture for a later music bed; deep cool navy field with one warm amber accent as the only saturated color; steady pace, no tempo changes. Vertical 9:16, 10 s, no text in frame, subject kept out of the top 15% and bottom 20%.

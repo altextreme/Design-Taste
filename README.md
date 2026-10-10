@@ -57,7 +57,7 @@ skills/design-taste/
 ├── agents/openai.yaml             Codex display metadata (ignored elsewhere)
 └── references/
     ├── index.md                   what to read when
-    ├── principles/<category>.md   validated rules, one file per category (140 rounds, 147 dimensions)
+    ├── principles/<category>.md   validated rules, one file per category (148 rounds, 194 dimensions)
     ├── evidence.md                coverage tracker and round log
     ├── process-and-critique.md    ask-vs-decide, direction-first, scored critique, self-review loop
     ├── ui-craft.md                states, accessibility, forms, interface motion, content integrity
