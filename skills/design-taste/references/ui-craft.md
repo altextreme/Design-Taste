@@ -90,7 +90,7 @@
 - Separate keyboard and mouse intent for route changes: moving focus to the new page's heading is right, but the visible ring should not draw a box around a title the user never tabbed to. `L1` · default
 
 ## Accent as a signal, and dark surfaces
-- Name the events where the accent may appear (primary action, selected item, focus, progress, a highlighted data point). Anything outside that list is neutral. The accent covers a small share of any one screen; a section label or caption is never accent-colored just to add color. `L1` · default
+- Name the events where the accent may appear: primary action, selected item, focus, progress, a highlighted data point, links, and wayfinding labels such as the active section label (his stated answer, not yet a comparison round). Anything outside that list is neutral. The accent still covers a small share of any one screen, and captions and decoration are never accent-colored just to add color. A tracked-caps eyebrow stays muted (validated, R097 and R130) unless the brand mandates otherwise. `L1` · default
 - Keep the neutral set small and tinted toward the palette's hue: a few text levels (primary, secondary, line) and no stray one-off grays. `L1` · default
 - A dark theme is designed, not inverted. Define paired roles (on-surface, on-accent, inverse) and set text explicitly on any dark or colored section, including the footer. Raise elevation by stepping to a lighter surface, not by shadow, unless the brand specifies its own dark elevation method, which then wins (stated preference from Anthony, untested in a round). A scrim is a dark dim of the page, not a white film. Re-measure contrast on the dark theme, including disabled text and dividers. `L1` · default
 
