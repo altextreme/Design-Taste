@@ -28,6 +28,9 @@ await b.close();
 ```
 Render at 2x so you can crop and zoom without blur.
 
+## Scan the source (web output)
+For HTML, CSS or JSX output, run `scripts/lint.mjs` before looking: `node scripts/lint.mjs --json <file-or-folder>`. It reports measurable dealbreakers and accessibility floors with file and line, and exits non-zero on a blocker. Record every hit in the delivery note as real or harmless; "no violations visible in the source" is only a claim if the scan was run. A clean scan means no measurable tell, not a good design: still render and look. `L1` · default (adopted from field review)
+
 ## Measure first (run this in the page before you look)
 Run a measurement pass in the rendered page (for example with Playwright's `page.evaluate`). Check every `.canvas` or `.slide` (or the page body) for text outside the canvas, clipped text, text whose color is almost its background, a short last line, overlapping text, and distances to the edges. It ignores images and gradients, so still look. Recompute any figure used more than once. Fix typography findings. `L1` · R150
 

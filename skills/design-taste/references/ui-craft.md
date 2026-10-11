@@ -43,6 +43,8 @@
 
 ## UI motion
 - Motion has a job: orient the user across a change of place, time or state, or confirm an action. Decoration, "premium feel" and filling silence are not jobs. `L1` · default
+- Motion has a gate: ask whether to animate at all. The right answer is sometimes no motion and zero lines of animation code. Decide that first, then choose the effect. `L1` · default (adopted from field review)
+- Motion claimed, motion shown: if the system sentence promises motion above state changes, the build must actually move (entrances, reveals, hover feedback) and you must see it work. If you cannot ship working motion in scope, lower the claim and ship a clean static piece. Half-built motion that clips or jumps is worse than none. `L1` · default (adopted from field review)
 - Frequency gate: the more often someone sees an effect, the shorter and quieter it is. Keyboard-driven and constantly repeated actions get none; occasional surfaces (menus, dialogs, toasts) get a standard transition; only rare, first-time moments may be more expressive. `L1` · default
 - Duration tiers, reference floors for interactive UI only: pressed feedback near-instant (about 100 ms), standard state change about 150 ms, entering surfaces about 200 to 300 ms, cross-screen up to about 500 ms. Exits run shorter than entrances (roughly 0.7x; unvalidated, validation queue 3). Shorten on small screens. These do not apply to video or staged motion graphics. `L1` · default
 - Easing: entrances and exits ease out; on-screen moves also ease out with a soft end; a determinate progress fill that tracks real progress may be linear (a gauge, not a design element; marquees and tickers are not used); never ease in on entrances, since it delays the moment the user is watching. Whether exits should accelerate away (as his motion rules suggest for staged motion) is unvalidated for UI (see `validation-queue.md` item 2); until then exits ease out. No overshoot, no spring outside the playful tone. `L1` · default
@@ -97,6 +99,10 @@
 ## Multi-page and route behavior
 - One shared set of tokens and components serves every page; pages add only their own layout. If the same token holds two values on two pages, the product has two systems. The navigation set, header and footer are designed once, identical on every page, with the current page marked. `L1` · default
 - A route change behaves like a page load: scroll to top (restore position on back), move focus to the new heading or main region, update the document title, and lazy-load images below the first view but never the main hero image. `L1` · default
+
+## Browser surfaces
+- The parts of a page you did not draw still carry the design. Theme text selection, the caret color, scrollbars, focus rings, underline offset, and tabular figures in data from the palette; leaving them at browser defaults is a cheap signal the page was assembled, not built. `L1` · default (adopted from field review)
+- For a tool-like surface, the brand or concept supplies type, palette, density and at most one signature move. It never supplies the layout, the navigation model or the controls, which stay conventional. `L1` · default (adopted from field review)
 
 ## Interface vocabulary
 - The screen speaks the user's language. File names, field names, function names, framework or dataset words never appear in the interface, and an aggregate is described by what it means to the user ("most reviewed first"), not how it was computed. `L1` · default

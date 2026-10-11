@@ -10,17 +10,19 @@
 - If you cannot ask (no channel, unattended run, "just do it"): proceed on the most defensible reading and list each assumption in the delivery note, so a wrong guess is a cheap redirect. `L1` · default
 - Local, reversible details (a heading's wording, a crop, an accent choice among sampled hues) are assumed and disclosed, never asked. Skip questions entirely for edits to existing work. `L1` · default
 - Never ask the user to choose a visual style. Choosing one is the job; a style menu hands the decision back. The exception is an explicit request for options: give two or three that differ decisively on one stated axis, never cosmetic variants. `L1` · default
+- If the platform changes the output (native iOS, native Android, web, several) and the brief does not say, ask it first, as the single most decision-changing question. Never prototype a native interface as HTML: it cannot show spring motion, system materials, text scaling or safe areas, so it misinforms the decisions. Web-only prototypes are for web. `L1` · default (adopted from field review)
 - Do not guess a brand. If the user says "match our brand" or "like this reference" and nothing was supplied, ask for it (this is the one question worth asking) or state that you are proceeding unbranded. `L3` · default
 
 ## 2. Direction first
 
 - Resolve direction in this order: explicit user instruction, supplied brand source (L3), supplied reference, then inference from subject, audience, channel and tone (the L2 preset). A higher source silences every lower one. `L1` · default
 - Commit to one direction. A main direction plus hedged alternates reads as indecision, and mid-piece drift breaks series consistency. If two directions truly compete, name both in one sentence, recommend one, proceed. `L1` · default
-- Before building, state the system in one sentence: the register and why, the ground, the three type roles, the accent logic, the motion character. It exists so the user can redirect at the cost of one reply, not after the build. `L1` · default
+- Before building, state your read in one line ("Reading this as: <piece> for <audience>, needing <facets>, with <register> restraint"), then the system in one sentence: the register and why, the ground, the three type roles, the accent logic, the motion character. It exists so the user can redirect at the cost of one reply, not after the build. `L1` · default
 - Mark each decision in the delivery note as user-given, brand-given, or defaulted by this skill. A default presented as confirmed is a silent assumption. `L1` · default
 - Decide the system once (ground, type roles and scale, spacing rhythm, edge treatment, icon family, motion character) and reuse it unchanged across every page, frame, variant and later turn until the user changes it. Re-inventing it per round is how a series falls apart. `L1` · default
 - For multi-part work (several screens, slides, frames), state the structure and the rhythm between parts before building; show a rough, honestly labelled first pass early rather than a polished one late. `L1` · default
-- Quiet constraints override register preference: accessibility-critical audiences, regulated content, children, glance-only channels. Read for them before choosing. `L1` · default
+- Quiet constraints override register preference: accessibility-critical audiences, regulated content, children, glance-only channels. Read for them before choosing; section 11 turns the main ones into vetoes. `L1` · default
+- If the brief contradicts itself (for example a trust-critical product asked to feel playful), name the contradiction and propose the trade-off. Do not silently pick one side. Where the brief leaves a coverage gap (no dark mode specified, no error state described), ask or flag it; never invent policy from silence. `L1` · default (adopted from field review)
 
 ## 3. Discovery inputs
 
@@ -32,7 +34,10 @@ Collect these from the brief and assets; ask only for the ones that are both mis
 - **Motion and sound:** is there motion, music, voiceover; this switches on the motion and sync rules.
 - **Brand:** guidelines, logo, palette, fonts, prior work. If present, load as L3 and extract real values; never invent tokens.
 - **Existing work:** is this greenfield, a refinement, or an overhaul. Classify it before touching anything.
+- **Facets and anti-reference:** the three to five perceptions the work must create (calm, expert, durable, warm, fast, crafted, trustworthy), and what it must not become, including the category default and the AI default it could fall into. Infer them from the brief; ask only when a wrong guess causes rework. `L1` · default (adopted from field review)
 - **Constraints:** deadline, production limits, legal or required copy, accessibility needs.
+- **Named products, companies and people:** do not assume facts about them. Verify by search if you can, otherwise ask. A wrong premise costs more than the check. `L1` · default (adopted from field review)
+- **References and inspiration:** treat them as material, not answers. If a reference would make the interface less readable, less useful, less credible or less true to the product, weaken or reject it and say so. `L1` · default (adopted from field review)
 
 `L1` · default
 
@@ -48,6 +53,7 @@ Collect these from the brief and assets; ask only for the ones that are both mis
 - Self-revision: at most three passes. Stop earlier when a pass yields no real improvement. At the cap, deliver the best pass and state what remains open. `L1` · default
 - Refinement turns: edit in place, never rebuild from memory. Keep the system bound on every turn; earlier constraints persist until the user changes them. `L1` · default
 - Recheck after a fix only what the fix touched, then the non-negotiables once more. `L1` · default
+- When iterating on a chosen direction, replace it in place (keep a version history) so it refines. Branch only for alternatives the user wants to compare side by side. `L1` · default (adopted from field review)
 
 ## 6. Anti-slop gate
 
@@ -59,12 +65,15 @@ Before showing work, ask of every element: where did this come from? If the answ
 - A named real thing (person, product, artwork, landmark, mark) is shown by its real image, never a generated look-alike. If unavailable, show an honestly labelled placeholder. `L1` · default
 - Structural tells to treat as defects: a rounded card with a colored left-edge stripe; an icon beside every heading or bullet; several solid primary buttons for one action in view; hover that merely greys or dims text; designer or "demo" controls inside a product artifact; placeholder-image URLs; the stock hero-features-pricing-FAQ sequence with nothing specific to this product. `L1` · default
 - More tells: a decorative squiggle or brush underline standing in for the real active-state mark (use the system's own mark: a straight rule, a ground change, a weight shift); fake browser or phone chrome around a screenshot; accent color applied to labels and captions only to add color; one hover effect stacked from three or more changes (move, scale, shadow, color together); a celebration for something the screen already shows; a placeholder person such as "Jane Doe". `L1` · default
+- More tells (field review): the hero-metric template (big number, small label, supporting stats, accent); a modal for a task that needs neither interruption nor protected focus; section numbers (01, 02, 03) where the content is not a sequence; the same fade-and-rise entrance on every section. `L1` · default
 - Photography test: if an image could have been made for any other organization, reject it. Write a short photo brief (subject types, vantage, light, color treatment, who is shown) before choosing or generating imagery. `L1` · default
 - Soul test: a proven structure plus exactly one earned, concept-driven move. If a stranger could not tell what this is for, raise the specificity of content and proportion, never the decoration. `L1` · default
 
 ## 7. Critique mode
 
 Use when the user asks for a review, or when grading your own pass. Review the executed result (what is actually on the canvas or in the file), never the stated intent. If tooling exists to render it, look at it at the real format(s) at least once; if not, say the review was static. `L1` · default
+
+**Hard blockers override the score.** A failed non-negotiable (accessible contrast, reading time, collisions and near-tangents, enforced hierarchy and reading order, paragraph links colored and underlined) fails the piece, however well the five dimensions score. A 90 with a blocker is a fail, and the report says so first. A `default` rule alone never creates a blocker. `L1` · default (adopted from field review)
 
 **Five dimensions, scored independently** (a piece can be a 9 on one and a 4 on another, and the report must say so):
 
@@ -153,7 +162,7 @@ Run on your own output, in this order, before showing it. Run the SKILL.md pre-f
 4. **Anti-slop gate** (section 6): trace each hue, each icon, each claim, each image.
 5. **Look at it.** Render at the real format(s) and inspect the image, then zoom into every text block, following `render-and-review.md` (assume you can see). Measure what you can (contrast, spacing, line length) rather than trusting arithmetic. Fix and look again. If you truly cannot render, use its no-render mode and state that the check was static.
 6. **Score quickly** with the D1–D5 table, worst band. Anything under 7 or any must-fix: fix and repeat from step 3, at most three passes total.
-7. **Name the weakest element** a sceptical reviewer would attack first. Fix it or disclose it.
+7. **Ask the retouch question:** would a designer retouch this? If any box is unchecked or any part looks assembled instead of decided, it is not done. Then name the weakest element a sceptical reviewer would attack first. Fix it or disclose it.
 8. **Report only what you ran.** The delivery note lists decisions with their source (user, brand, default), assumptions, any rule bent and why, and what remains open. Never claim a check you did not perform; do not narrate tooling trouble the user did not ask about.
 
 `L1` · default
@@ -189,3 +198,16 @@ Use these as shorthand for the cause. Each pairs the phrase a reviewer says with
 | "Optically off" | Geometric, not optical, centering or sizing | A triangle centered by its box; a circle and square at equal width | Correct by centroid or area |
 | "Not one family" | Two styles for one job | Two button treatments doing the same thing | Merge, or give them different jobs |
 | "Looks like any other X" | Could belong to any product in the category | Remove the logo and compare | Add the one thing only this subject has |
+
+## 11. Brief vetoes (absolute, before any choosing)
+
+His stated answers; not yet tested in a comparison round. A veto removes a treatment before any weighing, however good it would look. If vetoes remove everything the brief asks for, the brief contradicts itself: say so, name the contradiction, and propose the trade-off (section 2). `L1` · default
+
+| Brief signal | Ruled out entirely |
+|---|---|
+| **Trust-critical** (money, health, legal, identity) | The playful register; hype and urgency copy; novelty and kinetic type |
+| **Elevated accessibility** (public sector, health, wide age range, regulated) | Dimming secondary text toward the contrast floor; thin and light weights at body size |
+| **Very dense data** (dashboards, tables, consoles) | Decorative texture or imagery behind data; ambient or looping motion; large hero-style type and marketing layouts |
+
+- Glass and translucency stay explicit-request-only everywhere; they are not vetoed by these signals, but their fallback and contrast tests still apply.
+- Reasons he gave: the cost of getting it wrong is high; audience context sets the design; legibility and accessibility come first.

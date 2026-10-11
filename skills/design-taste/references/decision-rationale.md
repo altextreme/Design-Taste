@@ -276,3 +276,22 @@
 - **Widens:** the old rule that hover elevation was the only UI shadow (SKILL.md imagery bullet and `ui-craft.md`). R064 and R071 are not changed: they concern shadow-only fixes on busy photos.
 - **Links:** `principles/material-texture-surface.md`; `principles/negative-constraints.md`; R064; R071; core tenet 3.
 
+## Node: brief-vetoes
+- **Decision:** certain treatments are ruled out entirely by brief signal, before any weighing. Trust-critical (money, health, legal, identity): the playful register, hype and urgency copy, novelty and kinetic type. Elevated accessibility: dimming secondary text toward the contrast floor, thin and light weights at body size. Very dense data: decorative texture or imagery behind data, ambient or looping motion, large hero-style type and marketing layouts.
+- **Because:** the cost of getting it wrong is high; audience context sets the design; legibility and accessibility come first.
+- **Not chosen as a reason:** "a veto saves deliberation" was offered and not selected.
+- **Not vetoed (he left unselected):** glass and translucency under trust-critical, elevated-accessibility and dense-data signals (it stays explicit-request-only everywhere, with its fallback and contrast tests); motion beyond state changes under elevated accessibility.
+- **Links:** precedence rules 1 and 3; core tenet 4; `process-and-critique.md` section 11; the quiet-constraints rule in section 2.
+
+## Adopted from field review (reasons are the sources', not Anthony's)
+These defaults came from comparing other design-guidance projects and were not put to him one at a time. Treat the reasons as unconfirmed until he answers; do not cite them as his.
+- **Hard blockers override the score:** a failed non-negotiable fails the piece however high the score (aievolutionpl). Reason in source: a score you argued yourself into is worthless.
+- **Lint before looking:** deterministic checks catch what eyes miss and make a "no violations" claim checkable (impeccable, avoid-ai-design, ui-craft). Each tell marked scanner, render-only or judgment.
+- **Facets and anti-reference at intake:** name the perceptions to create and what the work must not become (mies).
+- **Contradictory brief is named, not silently resolved; coverage gaps are asked about, not invented** (aievolutionpl).
+- **Platform asked first when it changes the output; never prototype native UI as HTML** (senior-designer).
+- **Replace to refine, branch to compare** (superdesign).
+- **Browser surfaces themed; motion gate; motion claimed, motion shown** (impeccable, emilkowalski, taste-skill).
+- **Reject a reference that harms usability** (tasteful-ui).
+- **Other guidance never overrides his validated rules** (the Anthropic frontend-design list of tells conflicts with R097, R130, R153, R102, R103).
+

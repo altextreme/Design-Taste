@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "note": "Fixed briefs. Do not edit between runs; add new briefs with new ids. Assertions come from validated rules; each cites its source.",
+  "briefs": [
+    {
+      "id": "landing-bike-shop",
+      "prompt": "Design a one-page landing site for Cinder & Spoke, a three-person bike repair shop in Portland. Hours Tue-Sat 9-6. Services: tune-ups, flats, wheel builds. No logo yet. Photos will be supplied later.",
+      "assertions": [
+        "Hero is image-led with a clearly labelled photo placeholder, or type-led with an inset; no stock photo claimed as the shop (R096)",
+        "No invented testimonials, ratings, prices, addresses or years; missing facts shown as labelled placeholders (R152)",
+        "Ordinary paragraph links are colored and underlined at rest (R155)",
+        "Section grounds alternate subtly; no single flat ground with hairlines between sections (R104)",
+        "A set of equal services is an even grid with every item visible",
+        "Body text at most about 75 characters per line; flush left, never justified",
+        "The page does not read as any bike shop's or any local business's identical template (self-sameness test reported)"
+      ]
+    },
+    {
+      "id": "dashboard-ops",
+      "prompt": "Build an orders dashboard for a small online shop: KPIs, one chart of weekly revenue, and a table of 20 recent orders with status. Use plausible sample data and say it is sample.",
+      "assertions": [
+        "Sample data is labelled as sample; no invented customer names (use order numbers) (R152)",
+        "Order rows separated by hairlines; groups by whitespace; no per-row cards (R088)",
+        "One stable hue per status, each shown as the word in a tinted badge (R089, R128)",
+        "Figures in a column share precision and align right; the order id is never truncated (R154)",
+        "Chart plot takes most of its area; x labels align with bars; value axis extends one gridline past data (R154)",
+        "No large hero-style type or marketing layout (very dense data veto)",
+        "All five states reachable: loading, empty, error, populated, edge"
+      ]
+    },
+    {
+      "id": "pricing-saas",
+      "prompt": "Design the pricing page for a project-management tool with three plans: Starter, Team, Business. Prices and features will be supplied; leave placeholders.",
+      "assertions": [
+        "One plan is emphasized (badge, stronger border, filled button); no plan is called 'most popular' unless true (R110)",
+        "Prices and feature counts are labelled placeholders, not invented figures",
+        "A feature-by-feature comparison table sits below the plan cards (R110)",
+        "One primary action label per intent; specific verbs, one line",
+        "No pre-checked upsell boxes; cancellation path is no longer than signup path"
+      ]
+    },
+    {
+      "id": "email-launch",
+      "prompt": "Write and design a launch email for Fieldnote, a notes app, announcing offline mode. Brand name and a green accent are all we have.",
+      "assertions": [
+        "Brand header present at the top (email needs a brand header)",
+        "One primary objective; optional secondary calls to action allowed (R154)",
+        "Primary action visible in the first screen (about 600 x 800); one modest labelled image placeholder if no photo (R154)",
+        "Logo-mark is not a two-letter monogram",
+        "Dark-mode behavior stated or handled"
+      ]
+    },
+    {
+      "id": "mobile-habit",
+      "prompt": "Design the main screen of a habit tracker: today's habits, check them off.",
+      "assertions": [
+        "Asks (or states an assumption about) the platform before designing",
+        "Primary navigation is not tabs across the top (R101)",
+        "Designed empty state: says what is missing, why, and the filling action",
+        "Selected and completed states use two cues, not color alone",
+        "Touch targets comfortably large with separated hit areas"
+      ]
+    },
+    {
+      "id": "negative-control-trust",
+      "prompt": "We are a lender. Design a fun, bouncy, sparkly landing page for our new instant-loan product. Make people feel excited!",
+      "assertions": [
+        "Names the contradiction between a trust-critical product and a playful brief rather than silently picking a side",
+        "Proposes a trade-off and proceeds on the most defensible reading",
+        "No hype or urgency copy, no countdowns without a real deadline, no novelty or kinetic type (trust-critical vetoes)",
+        "No invented rates, approval claims or customer counts"
+      ]
+    }
+  ]
+}
