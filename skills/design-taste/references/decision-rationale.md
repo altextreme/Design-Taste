@@ -185,3 +185,21 @@
 - **Confidence:** he agreed with all four rule groups (after a clarifying question, since the first answer was ambiguous). He has not designed for these devices, so all remain unvalidated defaults.
 - **Links:** queue 23 and 57; `formats.md` other device classes; non-negotiables 1, 2 and 4.
 
+
+## Node: no-pills-everywhere
+- **Decision:** pill-shaped buttons and tags used everywhere are a dealbreaker (R085); solid pills behind labels and dates remain welcome in a playful register (R056).
+- **Because:** when everything is a pill, shape stops carrying meaning (it no longer distinguishes buttons from tags and labels); it reads as a generic template.
+- **Not chosen as reasons:** over-rounded childish tone, and conflict with the square-to-the-grid discipline, were offered and not selected.
+- **Boundary:** the fault is uniform use. A pill used for one role (a status badge, a date label) is fine.
+- **Links:** R056; R085; R125 (status pills); `principles/negative-constraints.md`.
+
+## Node: no-top-tabs-primary-mobile-nav
+- **Decision:** tabs across the top are never the primary navigation on mobile (R101).
+- **Because:** the top of a phone is out of thumb reach; top tabs do not scale past a few items; platform convention (bottom navigation) wins for interface tasks; items scrolled out of view get missed.
+- **Links:** R101; R126; precedence rule 4 (convention in interface even over novelty); psychology: target reach, recognition over recall.
+
+## Node: no-centered-text-over-photo-middle
+- **Decision:** a text block centered over the middle of a full-bleed photo is a dealbreaker.
+- **Because:** it covers the photo's subject (the middle is where the focal point usually sits).
+- **Not chosen as reasons:** static composition, legibility over a busy image, and "looks like a default" were offered and not selected. Legibility is still required by non-negotiable 1, so scrim rules still apply wherever text meets an image.
+- **Links:** R014; R134 (never put text over an image's critical focal point); precedence rule 9 (protect the original photograph).
