@@ -55,5 +55,43 @@
 - **Not chosen as reasons:** stakes were offered and not selected as the reason for inline placement.
 - **Links:** `ui-craft.md` AI surfaces; his honesty line on persuasion (SKILL.md); psychology: recognition over recall.
 
-## Decisions recorded without reasons yet
-These were answered but not yet asked why: toast with Undo for small confirmations; accent also on links and wayfinding labels; mixing surface treatments with a reason; reasons for "not applicable" states only when unusual; chat follows a stream until the reader scrolls; dark elevation follows the brand; hybrid hedge plus High/Medium/Low label for uncertainty. Ask before generalizing them to a new case.
+## Node: mixed-surface-treatments
+- **Decision:** surface treatments (hairline-ruled bands, flat plates, soft tiles) may be mixed when each has a reason; one treatment per role, held the same everywhere.
+- **Because:** different roles need different visual weight; it avoids the widget-kit look of one box stamped on everything.
+- **Not chosen as reasons:** "a reason matters more than uniformity" and "real products are mixed" were offered and not selected.
+- **What fails:** the same rounded-corner-plus-border box on cards, banners, dialogs and inputs with no reason.
+- **Links:** `ui-craft.md` control and component geometry; R088 (hairline separates rows, whitespace separates groups); product register.
+
+## Node: toast-with-undo
+- **Decision:** small confirmations ("Saved", "Copied") use a toast, with Undo when the action is reversible.
+- **Because:** it does not disturb the layout; Undo needs a visible, time-limited place to live; low stakes should mean low interruption; the pattern is familiar.
+- **Boundary:** inline in place for field and section feedback; a toast is never the only channel for an error that blocks progress (my addition, not yet confirmed by him).
+- **Links:** `ui-craft.md` feedback channels; precedence rule 4 (convention in interface even over novelty).
+
+## Node: accent-scope
+- **Decision:** the accent marks key moments (primary action, selection, focus, progress, a highlighted data point) plus links and wayfinding labels such as the active section. Eyebrows stay muted (R097, R130).
+- **Because:** links must be findable; the accent carries one consistent meaning, "something to act on or notice".
+- **Not chosen as reasons:** "wayfinding needs a cue" and "still scarce overall" were offered and not selected, but the accent staying small is also already validated (R040), so keep it small anyway.
+- **Links:** R040; R097; R130; `ui-craft.md` accent as a signal.
+
+## Node: na-state-reasons
+- **Decision:** a "not applicable" state gets a one-line reason only when the omission is unusual or could look like an oversight.
+- **Because:** it avoids noise; the reader's time is limited; a reason exists to prevent doubt; docs stay lean.
+- **Links:** `formats.md` design-system documentation.
+
+## Node: chat-follows-stream
+- **Decision:** a chat view follows a streaming response until the reader scrolls or touches, then stops and offers "jump to latest". Long answers and documents never autoscroll.
+- **Because:** chat convention (convention wins in interfaces); it keeps the newest text in view; it respects reader intent once they scroll; documents are read from the top and following would lose the reader's place.
+- **Links:** precedence rule 4; `ui-craft.md` AI surfaces.
+
+## Node: dark-elevation
+- **Decision:** dark-theme elevation follows the brand's method; with none, lighter surface steps rather than shadows.
+- **Because:** brand consistency; shadows disappear on dark grounds so lightness carries depth; one tonal system is simpler to keep consistent.
+- **Not chosen as reasons:** the no-shadow principle was offered and not selected as a reason here.
+- **Links:** precedence rule 2; `principles/material-texture-surface.md`; R038 and R039 (dark is a designed color field, not an inversion).
+
+## Node: ai-uncertainty
+- **Decision:** in high-stakes areas (health, money, legal) show uncertainty twice: a plain first-person hedge plus a High/Medium/Low label. A numeric percentage only if the number is real and calibrated.
+- **Because:** the hedge is readable and the label is scannable; it is honest without alarming the reader.
+- **Not chosen as reasons:** that percentages imply false precision, that high stakes need redundancy. He allows real percentages, so the ban I first wrote was my own and is removed.
+- **Links:** his honesty line on persuasion (SKILL.md); `ui-craft.md` AI surfaces.
