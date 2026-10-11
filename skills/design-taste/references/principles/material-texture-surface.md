@@ -13,4 +13,6 @@
 
   Any effect must align with the concept and be executed with restraint and elegance. `L1` · R015, R051, R064
 - **Texture and effects must carry meaning.** Surface treatments, whether grain, glow or dimension, are justified by the concept or the medium, never added as decoration. `L1` · R062, R064
+- **Give each role its own surface treatment, and hold it.** A section, an alert, a dialog and a field should not all be the same rounded bordered box. *Why:* one box on everything looks assembled from a kit, not designed; and different roles (section, alert, dialog, field) should look different so people know what each one is. *Not ticked:* consistency inside a role matters more than variety across roles; too many treatments feel chaotic; one box is calmer. *No flip condition given.* `L1` · R159
+
 

@@ -5,13 +5,14 @@ When you generate, art-direct or critique anything visual (UI, web, slides, post
 0. **Concept drives execution. Always. But the design principles still hold.** Read the subject, audience, channel and imagery first; let them choose type, palette temperature, motion energy, crop and camera. The foundation never bends.
 1. **Everything must read as intentional.** Anything that could be mistaken for an accident or a default is wrong. Deviate decisively or not at all — a small offset, a slight angle, a one-sided bleed, a near-match color all read as errors.
 2. **Hierarchy is enforced and follows meaning.** The reader never wonders what comes first. Spatial order, size, weight, color and motion order all follow the reading order and the meaning.
-3. **Restraint over effect.** Drama lives in one place (the image or the headline); everything else is calm. No gratuitous bold, bounce, shadow, glow, ornament, or lone accent.
+3. **Restraint over effect.** Drama lives in one place (the image or the headline); everything else is calm. No gratuitous bold, bounce, decorative shadow, glow, ornament, or lone accent. A subtle shadow that establishes depth is not decoration.
 4. **Legibility is non-negotiable.** Contrast, reading time, no collisions, no near-tangents.
 5. **Decide by the concept and the real assets.** Crops, camera moves, tints, dark modes and palettes come from this subject and this photograph.
+6. **Rules are reasons, not quotas.** A count in a rule is a ceiling with a condition, never a form to fill. Spend the accent only on the element the reader must act on, and none if nothing needs it. Promote a detail only if the reader fails without it. Use weight emphasis only when one phrase carries the claim. Validated rules and `default` rules are both standard practice for the surface they cover; neither is a menu.
 
 ## Non-negotiables (survive any brand override)
 
-1. Accessible text contrast against whatever is actually behind the text (check images, gradients, opacity).
+1. Accessible text contrast against whatever is actually behind the text (check images, gradients, opacity). Floors: 4.5:1 for text under about 24 px (19 px bold), 3:1 for larger text, controls and focus rings.
 2. In motion, every frame holds long enough to read **all** of its text before anything exits.
 3. Ordinary text links inside paragraphs are colored **and** underlined at rest. Navigation marks only the active item with a line; linked wordmarks and button-styled links need no text underline (R155).
 4. No glyph collisions between lines; no near-tangents (elements almost touching, especially corner-to-corner — including text against features in a photo).

@@ -1,6 +1,6 @@
 # Design Taste: Evidence
 
-Each principle in principles/*.md cites rounds (R001–R155). This file holds the coverage tracker and the round log those citations point to. Read it only to resolve ambiguity or to quote his reasoning.
+Each principle in principles/*.md cites rounds (R001–R160). This file holds the coverage tracker and the round log those citations point to. Read it only to resolve ambiguity or to quote his reasoning.
 
 ## Coverage Tracker
 
@@ -26,6 +26,8 @@ Legend: ⬜ untested · 🟨 partial · ✅ resolved · 🔁 ambiguous — branc
 | COMP-13 | Rule of thirds vs. deliberate centering | ✅ | R005, R006, R007 |
 | COMP-14 | Layering and depth cues | ✅ | R015 |
 | COMP-15 | Rhythm and repetition of structural elements | ✅ | R021 |
+| COMP-16 | Nested corners: concentric radii | ✅ | R159 (queue 53a) |
+| COMP-17 | Grouping with space before nested boxes | ✅ | R159 (queue 53b) |
 
 ### Typography (TYPE)
 | ID | Dimension | Status | Rounds |
@@ -55,6 +57,7 @@ Legend: ⬜ untested · 🟨 partial · ✅ resolved · 🔁 ambiguous — branc
 | COLR-07 | Tint/shade range usage | ✅ | R037 |
 | COLR-08 | Accent restraint | ✅ | R033, R034, R037 |
 | COLR-09 | Background-to-foreground philosophy | ✅ | R034 |
+| COLR-10 | Accent scope: named events only vs spread vs primary action only | ✅ | R158 (queue 48) |
 
 ### Contrast & Hierarchy (HIER)
 | ID | Dimension | Status | Rounds |
@@ -99,6 +102,7 @@ Legend: ⬜ untested · 🟨 partial · ✅ resolved · 🔁 ambiguous — branc
 | MATL-04 | Shadow style | ✅ | R015, R064 |
 | MATL-05 | Glow / light emission | ✅ | R064 |
 | MATL-06 | Texture as decoration vs. meaning | ✅ | R062, R064 |
+| MATL-07 | Surface treatments: one per role vs the same box everywhere | ✅ | R159 (queue 49) |
 
 ### Imagery & Photography (IMG)
 | ID | Dimension | Status | Rounds |
@@ -117,6 +121,7 @@ Legend: ⬜ untested · 🟨 partial · ✅ resolved · 🔁 ambiguous — branc
 | ICON-02 | Icon weight vs. type weight | ✅ | R068 |
 | ICON-03 | Decorative restraint vs. embellishment | ✅ | R069 |
 | ICON-04 | Pattern as background/texture | ✅ | R069 |
+| ICON-05 | Icon size matched to the neighboring text line | ✅ | R159 (queue 54) |
 
 ### Grid & Systemization (GRID)
 | ID | Dimension | Status | Rounds |
@@ -153,6 +158,7 @@ Legend: ⬜ untested · 🟨 partial · ✅ resolved · 🔁 ambiguous — branc
 | INTR-01 | Clickability cues | ✅ | R033, R076, R155 |
 | INTR-02 | State-change signaling | ✅ | R076 |
 | INTR-03 | Motion as interactivity signal vs. decoration | ✅ | R076 |
+| INTR-04 | Where a confirmation appears (inline, in place, toast, banner) | ✅ | R159 (queue 55), R160 (queue 69; resolved the conflict) |
 
 ### Sound / Motion Sync (SYNC)
 | ID | Dimension | Status | Rounds |
@@ -200,7 +206,7 @@ Legend: ⬜ untested · 🟨 partial · ✅ resolved · 🔁 ambiguous — branc
 
 ## Coverage Tracker, Phase 2: Channels, Formats & Media
 
-Started 2026-10-07. Phase 1 (above) resolved the foundation across 108 dimensions. Phase 2 tests how it carries into specific channels, formats and media. Each dimension is one comparison round; the Phase 1 rules are the control. **Progress: 39 / 43 resolved, 0 partial, 0 flagged (🔁).** Order of work: Product UI, Web, Social, Email, Decks, Documents, Mobile, Print, Identity, Media.
+Started 2026-10-07. Phase 1 (above) resolved the foundation across 108 dimensions. Phase 2 tests how it carries into specific channels, formats and media. Each dimension is one comparison round; the Phase 1 rules are the control. **Progress: 40 / 44 resolved, 0 partial, 0 flagged (🔁).** Order of work: Product UI, Web, Social, Email, Decks, Documents, Mobile, Print, Identity, Media.
 
 ### Product UI & Dashboards (UI)
 | ID | Dimension | Status | Rounds |
@@ -232,7 +238,7 @@ Started 2026-10-07. Phase 1 (above) resolved the foundation across 108 dimension
 | WEB-05 | Eyebrow labels above headings | ✅ | R097, R130 (case by case) |
 | WEB-06 | Card accents (stripe, border, fill) | ✅ | R102, R103 |
 | WEB-07 | Business stock photography vs. real vs. none | ⬜ | |
-
+| WEB-08 | Hero photo scale when the work is the evidence; how to show a set of equal items | ✅ | R157 (queue 47; the type-led exemption was not re-tested) |
 ### Social & Glance Media (SOC)
 | ID | Dimension | Status | Rounds |
 |---|---|---|---|
@@ -371,6 +377,8 @@ Started 2026-10-10. Phases 1 and 2 recorded what Anthony picks. Phase 3 records 
 | PROC-20 | Email first screen holds the primary action and a modest labelled image placeholder | ✅ | R154 (queue 41: visual B and rule Yes) |
 | PROC-21 | Paragraph links underlined; navigation marks only the active item; linked wordmarks need no underline | ✅ | R155 (queue 35) |
 | PROC-22 | Links styled as buttons need no text underline | ✅ | R155 (queue 45) |
+| PROC-23 | Hover never gates what a visitor needs to decide; opened panels stay open until closed | ✅ | R156 (queue 46; the hover-open-as-convenience clause was not tested) |
+| PROC-24 | Design-system state tables: reasons for "not applicable" only where the omission is unusual | ✅ | R159 (queue 50) |
 
 ## Round Log
 
@@ -530,6 +538,11 @@ Started 2026-10-10. Phases 1 and 2 recorded what Anthony picks. Phase 3 records 
 | R153 | PROC-13 to PROC-15 | Queue 28 visual A/B emphasis comparison and proposed rule; queue 38 two structures; queue 39 examples as reasoning | **28: visual A, rule vote skipped; 38: Yes; 39: Yes** | For queue 28, Anthony preferred bolding one word or phrase when emphasis is needed over bolding most of a phrase and leaving only one or two words unbolded. This supports a narrow selective-emphasis rule; it does not answer the proposed ban on repeating a practical detail. No reason or condition was added for the two Yes votes. |
 | R154 | PROC-16 to PROC-20 | Five proposals from queue 30–32, 40 and 41: chart room and integrity, email actions, title slide without a photo, interface type, email first screen | **30: A / Yes; 31: B / Yes; 32: Depends / Yes; 40: A / Yes; 41: B / Yes** | Chart A was superior, with one correction: x-axis labels should align with bars. The queue 31 wording was confusing; Anthony clarified that secondary calls to action are acceptable, while every email has one primary objective. Title slide direction depends on the brief, while the no-empty-box rule was approved. No other reasons or conditions were supplied. |
 | R155 | PROC-21 to PROC-22 | Separate choices for navigation labels, paragraph links, linked wordmarks, and button-styled links | **Navigation: A; paragraph links: underline at rest; wordmark: no underline; button-styled link: A (no text underline)** | The active navigation item alone has a line; inactive navigation labels do not. Ordinary links inside paragraphs retain the at-rest underline. Linked wordmarks and links styled as buttons need no text underline. No additional reason or condition was supplied. |
+| R156 | PROC-23 | Queue 46: card details that appear only on hover vs visible at rest; a panel that opens on hover and closes on leave vs click-open that stays until closed. First round with a structured why step (pick, ticked reasons, condition). | **46a: B (visible at rest, hover only adds polish); 46b: B (opens once, stays until closed)** | 46a reasons: cannot compare what you cannot see at once; touch and keyboard users lose hover-only content; hidden content makes the visitor hunt and raises effort and doubt; visible-at-rest is calmer. Condition: if the extra is truly optional, hover is fine. 46b reasons: cannot read or reach a panel that disappears while you aim for it; persistence puts the person in control; click-to-open is one behavior across touch, mouse and keyboard. No condition given. |
+| R157 | WEB-08 | Queue 47: ceramics-studio hero with the photo as a small inset vs half-width dominant; six equal items as an even grid vs one large and five small vs a two-at-a-time reel. Structured why step. | **47a: B (photo dominant); 47b: A (even grid, all visible)** | 47a reasons: when the product is the evidence a small picture cannot do its job; if the first screen looks complete without the photo, the photo is not earning its space. 47b reasons: equal items must be compared, which needs all visible; one large implies a false ranking; a reel hides most items and costs effort; an even grid is calm and orderly. No conditions given for either. |
+| R158 | COLR-10 | Queue 48: one project-dashboard screen with the accent on named events only vs spread over headings, labels, captions, statuses and icons vs the primary action only. Structured why step. | **A (named events only)** | Reasons: an accent is a signal, so if everything has it nothing stands out; spreading it makes the screen busier and less calm; accent on the selected row, progress and the active section helps people keep their place. Not ticked: the eye lands on the action and the key number; labels and captions add color without meaning; button-only loses selection and progress cues; some accent on headings carries the brand. No condition given. |
+| R159 | MATL-07, PROC-24, COMP-16, COMP-17, ICON-05, INTR-04 | Batch of six small A/B comparisons (queue 49, 50, 53a, 53b, 54, 55), each with a structured why step. | **49: B (one treatment per role); 50: C (reasons only where unusual); 53a: B (concentric); 53b: B (space-first); 54: A (icon matched to the line); 55: B (inline note)** | 49: one box looks like a kit; roles should look different. 50: an unusual omission needs a reason. 53a: shared-center corners read as one shape; equal radii look uneven. 53b: nested boxes add noise; space groups without lines; fewer borders are calmer. 54: a matched icon reads as part of the label; mismatched size looks unfinished. 55: the message should appear where the cause is; inline is always seen and stays. **55 conflicts with the stated toast-with-Undo rule, so it is flagged 🔁.** No conditions given for any. |
+| R160 | INTR-04 | Queue 69 in realistic clickable app screens (his R159 pick changed once he saw it in context): save beside its button; copy link from a menu that closes; archive with Undo; delete permanently. Each toast vs in place / inline / top-of-page note. | **69a: B (inline note); 69b: A (toast); 69c: B (in place with Undo); 69d: B (note at top of page)** | 69a: the message belongs where the cause is; inline stays; a toast can vanish before it is read. 69b: the menu closed so no cause is left and a toast is the only place; a changed label is easy to miss; toast is familiar. 69c: showing it in the row's place shows what changed; a toast can vanish before I can undo. 69d: a permanent action deserves a message that stays; the thing is gone so the message belongs where I land; a toast can vanish. No conditions given. Resolves the R159 conflict: the toast with Undo rule is overturned. |
 
 ## Validation Log
 

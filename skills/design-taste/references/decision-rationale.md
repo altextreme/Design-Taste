@@ -23,6 +23,8 @@
 - **Because:** easy comparison; fairness among equal items; a grid is predictable and calm.
 - **Boundary:** applies to equal items only. Pricing plans are not equal, so R110 (emphasize one plan) still applies. A section's lead image still follows the dominant-lead rule.
 - **Not chosen as reasons:** "nothing hidden" was offered and not selected, so do not argue for the grid on that ground alone.
+- **Confirmed R157 (comparison round):** an even grid beat one-large-five-small and a reel for six equal items. Reasons ticked: equal items must be compared, which needs all visible; one large implies a ranking that is not true; a reel leaves most items unseen and stepping costs effort; an even grid is calm and orderly. Not ticked: one large gives an entry point and rhythm; a reel is fine when there are too many to fit. Note that hiding items in a reel counted *against* the reel, so "nothing hidden" is now a supporting reason for not using reels, though not for choosing a grid on its own.
+- **What separates this node from `hero-image-test`:** whether one element outranks the others. The evidence photo or true hero leads; items with no ranking stay equal.
 - **Links:** `formats.md` landing; R110; psychology: similarity, choice overload (a grid of unequal items would fail the fairness reason).
 
 ## Node: interface-type-follows-brand
@@ -61,23 +63,29 @@
 - **Not chosen as reasons:** "a reason matters more than uniformity" and "real products are mixed" were offered and not selected.
 - **What fails:** the same rounded-corner-plus-border box on cards, banners, dialogs and inputs with no reason.
 - **Links:** `ui-craft.md` control and component geometry; R088 (hairline separates rows, whitespace separates groups); product register.
+- **Confirmed R159 (comparison round):** one treatment per role beat the same box everywhere. Ticked: one box looks assembled from a kit; different roles should look different so people know what each one is. Offered and not ticked: consistency within a role matters more than variety across roles; too many treatments feel chaotic; one box is calmer. No flip condition given.
 
 ## Node: toast-with-undo
-- **Decision:** small confirmations ("Saved", "Copied") use a toast, with Undo when the action is reversible.
-- **Because:** it does not disturb the layout; Undo needs a visible, time-limited place to live; low stakes should mean low interruption; the pattern is familiar.
-- **Boundary:** inline in place for field and section feedback; a toast is never the only channel for an error that blocks progress (my addition, not yet confirmed by him).
-- **Links:** `ui-craft.md` feedback channels; precedence rule 4 (convention in interface even over novelty).
+- **Status: overturned by R159 and R160. Kept under this name so links still resolve.**
+- **Decision now:** a confirmation appears at the cause (inline beside the control) or at the consequence (in place of the changed item, with Undo; or at the top of the page after a permanent action), and stays until it has been read. A toast is used only when the cause has left the screen and nothing remains to point at ("Link copied" after a menu closes).
+- **Because (his reasons, comparison rounds):** the message belongs where the cause is, or where the person lands; a message that stays is always seen; a toast can vanish before it is read or before the person can undo; showing the change in place shows what changed and where it went; a permanent action deserves a message that stays; for the cause-gone case, a toast is the only place left and is the familiar pattern, and a changed label is easy to miss.
+- **Not chosen as reasons:** a toast does not disturb the layout; a toast gives Undo a visible, time-limited place; low stakes should mean low interruption.
+- **Provenance:** the original toast-with-Undo rule was a stated preference. R159 picked inline on a bare mock; he said seeing it in context changed his mind, so R160 rebuilt it in realistic clickable screens. In R160 he picked inline for save (69a), toast for copy-from-a-closing-menu (69b), in place with Undo for archive (69c), top-of-page note for permanent delete (69d). No flip condition given.
+- **Boundary:** never make a toast the only channel for an error that blocks progress (my addition, not asked).
+- **Links:** `ui-craft.md` feedback channels; `judge-in-context` lesson (isolated mocks mislead him); precedence rule 4 (convention in interface even over novelty) did not decide this.
 
 ## Node: accent-scope
 - **Decision:** the accent marks key moments (primary action, selection, focus, progress, a highlighted data point) plus links and wayfinding labels such as the active section. Eyebrows stay muted (R097, R130).
 - **Because:** links must be findable; the accent carries one consistent meaning, "something to act on or notice".
 - **Not chosen as reasons:** "wayfinding needs a cue" and "still scarce overall" were offered and not selected, but the accent staying small is also already validated (R040), so keep it small anyway.
+- **Confirmed R158 (comparison round):** accent on named events only beat both spreading it across headings, labels, captions, statuses and icons, and using it on the primary action alone. Reasons ticked: an accent is a signal, so if everything has it nothing stands out; spreading it makes the screen busier and less calm; and accent on the selected row, progress and the active section helps people keep their place. **This corrects the line above:** the wayfinding reason was chosen in R158, so it now counts. Not ticked: the eye lands on the action and key number; labels and captions add color without meaning; button-only loses selection and progress cues; headings carry the brand. No flip condition given.
 - **Links:** R040; R097; R130; `ui-craft.md` accent as a signal.
 
 ## Node: na-state-reasons
 - **Decision:** a "not applicable" state gets a one-line reason only when the omission is unusual or could look like an oversight.
 - **Because:** it avoids noise; the reader's time is limited; a reason exists to prevent doubt; docs stay lean.
 - **Links:** `formats.md` design-system documentation.
+- **Confirmed R159 (comparison round):** reasons only where unusual beat all-blank and reason-in-every-cell. Ticked: an unusual omission needs a reason so a developer does not have to guess. Not ticked: blank reads as forgotten; a reason in every cell is noise; the reason teaches why. Note the tick supports the reason for unusual cases; the "noise" reason for obvious ones was not ticked, but the pick implies it.
 
 ## Node: chat-follows-stream
 - **Decision:** a chat view follows a streaming response until the reader scrolls or touches, then stops and offers "jump to latest". Long answers and documents never autoscroll.
@@ -101,6 +109,7 @@
 - **Applies when:** the photograph is meant to lead (full-bleed or half split). Exempt: type-led heroes with an inset photo (R096).
 - **Because:** immersion and first impression; picture superiority (images register faster and are remembered better); an image that can be removed without loss is filler.
 - **Not chosen as a reason:** "image first" as a stand-alone reason was offered and not selected.
+- **Confirmed R157 (comparison round):** when the work is the evidence, a dominant photo beat a small inset. Reasons ticked: a small picture cannot do the job of proof; a photo the first screen does not need is not earning its space. Reasons offered and not ticked: one dominant image as the single landing place; a weak photo is worse large; the space cost. No flip condition given.
 - **Links:** R096; R133; `formats.md` landing; `principles/web-and-landing.md`; psychology: picture superiority.
 
 ## Node: self-sameness-test
@@ -116,6 +125,7 @@
 - **Because:** the gap looks even around the curve; mismatched corners read as an accident or a default (core tenet 1); it matches how the eye judges curves (optical correctness); it is a craft signal separating polished from templated work.
 - **Overridden by:** none stated. Brand radius rules were offered as an option and not selected.
 - **Links:** core tenet 1 (everything reads as intentional); `ui-craft.md` shape, layers and icons; R103 (card radius).
+- **Confirmed R159 (comparison round):** concentric beat equal radii. Ticked: corners that share a center look like one continuous shape; equal radii make the gap look uneven at the corners. Not ticked: nobody notices; matching radii is simpler. No flip condition given.
 
 ## Node: space-before-boxes
 - **Decision:** separate groups, sections and cards with space first, a surface change second, a hairline last. Rows of records keep hairlines (R088).
@@ -123,6 +133,7 @@
 - **Not chosen as a reason:** restraint over effect was offered and not selected for this rule.
 - **Boundary:** applies to groups, sections and cards, not to record rows.
 - **Links:** R088; R104 (alternating section ground); psychology: proximity, common region.
+- **Confirmed R159 (comparison round):** space-first beat nested boxes for a form. Ticked: boxes inside boxes add visual noise; space groups without extra lines; fewer borders mean a calmer screen. Not ticked: a box makes grouping explicit and easier to scan. No flip condition given.
 
 ## Node: form-stability
 - **Decision:** a field's border keeps one width in every state; focus is an offset outline in a reserved slot; helper and error text own a reserved line, so nothing shifts when focus lands or a message appears.
@@ -147,6 +158,7 @@
 - **Exception:** a vector icon may be scaled up for a large slot in a sparse context, keeping its stroke weight matched to nearby type. Raster icons are never scaled up.
 - **Because:** icon and text read as a unit; consistent weight; visual balance (an oversized icon pulls attention from its label); restraint (icons support text, not compete).
 - **Links:** `principles/iconography-and-supporting-graphics.md` (thin line icons matched to type weight); core tenet 3.
+- **Confirmed R159 (comparison round):** an icon matched to the text line beat one about twice the size. Ticked: it reads as part of the label; a mismatched size looks unfinished. Not ticked: bigger icons are easier to recognize and tap; a large icon pulls the eye first. The scaled-up vector exception above was not tested.
 
 ## Node: icon-optical-correction
 - **Decision:** icons are corrected optically: a circle gets slightly more area than a square of the same box; a play triangle centers on its centroid.

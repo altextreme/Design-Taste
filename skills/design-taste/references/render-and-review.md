@@ -2,8 +2,15 @@
 > **Status:** The render loop, measurement pass, operational typography checks and truthful “Looked at” note are validated `L1` rules from R150. Tool examples, hunt-list details and format-specific checks not asked in R150 remain `default` guidance; they cannot override a validated rule.
 > **Read when:** you are about to build or show any visual (poster, page, slide, chart, email, interface, motion frame). Always, before the final pass.
 
-## Assume you can see
-Assume you have vision and can render what you build. A design you have not looked at is a draft. Spacing, line breaks, collisions and wrong fonts are invisible in code and obvious in a picture, so the loop below is part of the work, not an extra. `L1` · R150
+## Assume you can verify
+Probe what you have, then pick the mode below. A design you have not verified is a draft.
+- **Mode A, render and see images:** the full loop below.
+- **Mode B, render but cannot see images:** run the measurement script on the rendered page; its findings are the review. Fix and re-run until it reports none, and check chart geometry in code. Note `Looked at: not viewed; verified by measurement on N elements`.
+- **Mode C, cannot render:** see "If you cannot render"; state `Mode: no-render` in the first line of the note.
+
+Never write "looked at" unless you viewed an image. `default`
+
+In Mode A, spacing, line breaks, collisions and wrong fonts are invisible in code and obvious in a picture, so the loop below is part of the work, not an extra. `L1` · R150
 
 ## The loop
 1. **Build** the piece.
@@ -49,7 +56,7 @@ The following script is an implementation example; its exact code was not part o
     if (r.left < rb.left - 1 || r.right > rb.right + 1 || r.top < rb.top - 1 || r.bottom > rb.bottom + 1) found.push(`OUTSIDE canvas: "${t}"`);
     if (cs.overflow !== 'visible' && (e.scrollWidth > e.clientWidth + 1 || e.scrollHeight > e.clientHeight + 1)) found.push(`CLIPPED: "${t}"`);
     const L1 = lum(num(cs.color).slice(0, 3)), L2 = lum(bgOf(e)), ratio = (Math.max(L1, L2) + 0.05) / (Math.min(L1, L2) + 0.05);
-    if (ratio < 3) found.push(`TEXT COLOUR ~ BACKGROUND ${ratio.toFixed(1)}:1 (ignores images and gradients): "${t}"`);
+    if (ratio < ((parseFloat(cs.fontSize) >= 24 || (parseFloat(cs.fontSize) >= 19 && +cs.fontWeight >= 700)) ? 3 : 4.5)) found.push(`TEXT COLOUR ~ BACKGROUND ${ratio.toFixed(1)}:1 (ignores images and gradients): "${t}"`);
     const tn = [...e.childNodes].find((n) => n.nodeType === 3 && n.textContent.trim());
     if (tn) { const rg = document.createRange(); rg.selectNodeContents(tn); const rs = [...rg.getClientRects()].filter((x) => x.width > 1);
       const lines = [...new Set(rs.map((x) => Math.round(x.top)))].length;
@@ -111,7 +118,7 @@ The line-break and spacing tests in this section were confirmed in R150. `L1` ·
 A headline descender running into a rule · absolutely positioned labels landing on top of lines or numbers · a large figure colliding with a chart · text the same color as its panel (a figure that vanishes) · a page number nobody can see · a placeholder photo box taking half a slide · a lone word or "pm" on its own line · sans type where a display face was needed · invented customer names and statistics.
 
 ## In the delivery note
-A note without a **Looked at** line is incomplete. List what you looked at ("rendered at 1080 x 1350, three passes; found and fixed the descender collision and the widow") and anything you could not verify. Never claim a look you did not take.
+A note without a **Looked at** line is incomplete. Also name the mode (A, B or C) and any check you did not run. List what you looked at ("rendered at 1080 x 1350, three passes; found and fixed the descender collision and the widow") and anything you could not verify. Never claim a look you did not take.
 `L1` · R150
 
 ## If you cannot render

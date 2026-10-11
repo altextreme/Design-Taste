@@ -37,3 +37,6 @@
 - **Never reduce an error to a lone line of text.** A single line with an inline link reads as an error and gives the user nothing; he doesn't like it at all. `L1` · R129
 - **Phone lists use medium rows too.** Medium rows keep plenty of items on the page without much scrolling, and still read as separate items. Tight rows run together into one tall wall of text. `L2 (product/utility, mobile)` · R136
 - **Roomy rows need a thumbnail to justify the height.** Tall rows are acceptable when each carries a photograph of the item at the left of the text; without one they are too tall. `L2 (product/utility, mobile)` · R136 (partial: the thumbnail version was described, not shown)
+- **In a design-system state table, give a reason for a "not applicable" cell only where the omission is unusual.** Obvious omissions (a static badge has no hover) stay blank; an unusual one (a sold-out card is disabled in look only and still opens its page) gets one line. *Why:* an unusual omission needs a reason so a developer does not have to guess. *Not ticked:* blank looks forgotten; a reason in every cell is noise; the reason teaches why. *No flip condition given.* `L1` · R159
+
+

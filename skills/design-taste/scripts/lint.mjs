@@ -4,7 +4,8 @@
 // It finds evidence of a default nobody chose; it does not judge taste.
 // Zero dependencies. Usage: node lint.mjs [--json] [--warn-only] <file|dir> ...
 import { readFileSync, readdirSync, statSync } from 'node:fs';
-import { join, extname } from 'node:path';
+import { join, extname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const EXT = new Set(['.html', '.htm', '.css', '.jsx', '.tsx', '.vue', '.svelte']);
 const SKIP = new Set(['node_modules', '.git', 'dist', 'build']);
@@ -129,7 +130,7 @@ export function lintPaths(paths) {
   return paths.flatMap((p) => walk(p)).flatMap((f) => lintText(f, readFileSync(f, 'utf8')));
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1])) {
   const args = process.argv.slice(2);
   const json = args.includes('--json');
   const warnOnly = args.includes('--warn-only');
