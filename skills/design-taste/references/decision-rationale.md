@@ -124,3 +124,21 @@
 - **Boundary:** applies to groups, sections and cards, not to record rows.
 - **Links:** R088; R104 (alternating section ground); psychology: proximity, common region.
 
+## Node: form-stability
+- **Decision:** a field's border keeps one width in every state; focus is an offset outline in a reserved slot; helper and error text own a reserved line, so nothing shifts when focus lands or a message appears.
+- **Because:** it looks intentional and polished; it protects the user's place; layout stability; it is a craft signal.
+- **Overridden by:** none stated.
+- **Links:** core tenet 1; `ui-craft.md` control and component geometry; non-negotiable 4 (no near-tangents, no collisions).
+
+## Node: matched-control-height
+- **Decision:** a text field and the button beside it share one height; density variants step together.
+- **Because:** alignment and grid discipline; it reads as intentional; consistent density across one system.
+- **Not chosen as a reason:** "equal height tells the eye the two belong together" was offered and not selected.
+- **Links:** `principles/grid-and-systemization.md`; `ui-craft.md` control and component geometry.
+
+## Node: disabled-three-ways
+- **Decision:** a disabled control is visibly muted, shows a not-allowed cursor where a pointer exists, and is truly disabled for the keyboard and assistive tech. Opacity alone is not enough.
+- **Because:** the signifier must match the behavior; keyboard and assistive tech users depend on the real state; never rely on one channel.
+- **Not chosen as a reason:** "not everyone sees opacity" was offered and not selected.
+- **Links:** `ui-craft.md` accessibility baseline (never carry state by one channel); non-negotiable 1.
+
