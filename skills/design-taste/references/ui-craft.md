@@ -113,7 +113,7 @@
 - Label everything in navigation. Icon-only is for roughly a dozen universally understood actions (search, close, more, add, delete, edit, share, settings), each with a tooltip and an accessible name. `L1` · default
 
 ## Feedback channels
-- Put the message where its cause is. Inline in place for field and section feedback; a toast only for low-stakes confirmation, with Undo when the action is reversible; one persistent banner at most for page or system status; a dialog only for a decision that must block. Never make a toast the only channel for an error that stops progress, and let any timed message that carries an action be paused. `L1` · default
+- Put the message where its cause is. Inline in place for field and section feedback; a toast for low-stakes confirmations such as "Saved" or "Copied", with Undo when the action is reversible (his stated answer, not yet a comparison round); one persistent banner at most for page or system status; a dialog only for a decision that must block. Never make a toast the only channel for an error that stops progress, and let any timed message that carries an action be paused. `L1` · default
 - Honest-interface lint for the machine-detectable cases: a pre-checked consent or marketing box; accept and decline with unequal emphasis; the same request repeated after the user dismissed it; a countdown with no real deadline behind it; decline copy that shames the user; a cancel path longer than the signup path. Treat each as a defect. (This extends the honesty line in `SKILL.md`.) `L1` · default
 
 ## AI surfaces (default; queue 23 is not yet answered)
