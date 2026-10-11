@@ -165,3 +165,10 @@
 - **Applies when:** the user explicitly requests glass (it stays on the explicit-request-only list).
 - **Links:** non-negotiable 1; `principles/negative-constraints.md`; `brand-and-registers.md` section D.
 
+## Node: one-focal-point
+- **Decision:** one element plainly dominates each screen; the first view holds a handful of meaning units; competing motion is minimized. No numeric thresholds.
+- **Because:** enforced hierarchy; fewer competing choices; reading order follows meaning (the biggest thing is the most important).
+- **Not chosen as a reason:** drama in one place was offered and not selected for this rule, though it is validated elsewhere (core tenet 3).
+- **Rejected detail:** "about twice the area" and "no more than two things moving" were dropped. He keeps the dominance and drops the numbers.
+- **Links:** core tenet 2; psychology: Hick, isolation; `principles/contrast-and-hierarchy.md`.
+
