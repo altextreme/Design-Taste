@@ -118,7 +118,7 @@
 
 ## AI surfaces (default; queue 23 is not yet answered)
 - Mark generated content as generated. Place a source next to the claim it supports, styled differently from body text, and say what it is (a name, not "Source"); show how many sources back a claim when there are several. Sources go next to the claim, not only in a list at the end (his stated answer, not yet a comparison round). `L1` · default
-- State uncertainty in plain first-person words for high-stakes content, instead of a fake confidence number. Do not present a step-by-step reasoning trace as the explanation of why: it can misdescribe how the answer was produced. Keep the voice neutral rather than human-like, so users do not overrate what it can do. `L1` · default
+- For high-stakes content (health, money, legal), show uncertainty twice: a plain first-person hedge in the text, plus a High/Medium/Low label beside the answer. Do not use a numeric percentage, which implies precision the system lacks (his stated answer on using both, not yet a comparison round). Do not present a step-by-step reasoning trace as the explanation of why: it can misdescribe how the answer was produced. Keep the voice neutral rather than human-like, so users do not overrate what it can do. `L1` · default
 - Give the user control: stop, regenerate, edit, copy and a way to flag a bad answer; every AI action can be undone or corrected. Do not autoscroll while a response streams; announce streamed text to assistive tech at completion or in chunks, not word by word. Put the caution near the input with an action ("check this answer") rather than a footer disclaimer. `L1` · default
 
 ## Excluded
