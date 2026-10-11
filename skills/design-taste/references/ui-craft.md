@@ -66,6 +66,9 @@
 - Goal gradient: multi-step flows show real position ("2 of 5"); never fabricate progress or streak pressure. `L1` · default
 - Do not misuse the laws. Miller's number is not a seven-item cap on navigation (menus work by recognition). Hick's law is not a reason to delete options: novices scan linearly, so group and add search instead. The Zeigarnik effect is not a basis for nag or reminder features. The Doherty threshold is not an excuse to add delay so work seems valuable. Choice overload depends on conditions, so do not hard-cap catalog or result counts on its authority. A pretty design is not proof it is usable. `L1` · default
 
+## Interface typeface
+- Interface typefaces follow the brand file. Where the brand names a heading face, use it on product screens too; where there is no brand, use one neutral sans family and let weight and size carry hierarchy. Do not add a display face to product screens on your own. Stated preference from Anthony, not yet tested in a comparison round. `L1` · default
+
 ## Control and component geometry
 - A field's border keeps one width in every state. Express focus with an offset outline in a reserved slot, not a thicker border, so nothing shifts by a pixel when focus lands. Focus appears instantly; a ring that fades in is late exactly when the keyboard user needs it. Show it for keyboard focus only, never after a mouse click. `L1` · default
 - A text field and the button beside it share one height, and density variants step together (compact, regular, roomy) so a row of mixed controls stays level. `L1` · default
