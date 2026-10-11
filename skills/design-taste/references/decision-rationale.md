@@ -154,3 +154,14 @@
 - **Not chosen as a reason:** "the eye judges, not the ruler" was offered and not selected as a stand-alone reason.
 - **Links:** core tenet 1; the big-number-and-label optical centering rule (SKILL.md data defaults).
 
+## Node: named-layer-order
+- **Decision:** name the stacking order once (base, sticky bar, dropdown, scrim, dialog, popover, toast, skip link); every layer takes its place from it; no ad hoc z-index values.
+- **Because:** it prevents overlap bugs; consistency across the system; handoff clarity; it reads as intentional.
+- **Links:** `ui-craft.md` shape, layers and icons; the handoff stance in SKILL.md (state rigid parts and where there is room).
+
+## Node: glass-fallback-and-contrast
+- **Decision:** when a translucent or blurred surface is explicitly requested, ship an opaque fallback for reduced-transparency settings and check text contrast over white, black and a busy photo.
+- **Because:** legibility is non-negotiable; accessibility for everyone; glass is risky so it must be earned; worst-case thinking (test the busiest background).
+- **Applies when:** the user explicitly requests glass (it stays on the explicit-request-only list).
+- **Links:** non-negotiable 1; `principles/negative-constraints.md`; `brand-and-registers.md` section D.
+
