@@ -117,3 +117,10 @@
 - **Overridden by:** none stated. Brand radius rules were offered as an option and not selected.
 - **Links:** core tenet 1 (everything reads as intentional); `ui-craft.md` shape, layers and icons; R103 (card radius).
 
+## Node: space-before-boxes
+- **Decision:** separate groups, sections and cards with space first, a surface change second, a hairline last. Rows of records keep hairlines (R088).
+- **Because:** proximity does the grouping; less clutter; boxing everything erases the signal of a deliberate group.
+- **Not chosen as a reason:** restraint over effect was offered and not selected for this rule.
+- **Boundary:** applies to groups, sections and cards, not to record rows.
+- **Links:** R088; R104 (alternating section ground); psychology: proximity, common region.
+

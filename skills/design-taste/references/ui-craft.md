@@ -104,7 +104,7 @@
 
 ## Shape, layers and icons
 - Nested rounded shapes are concentric: the inner radius is the outer radius minus the padding between them (never below a small floor); his stated answer, not yet a comparison round. The same radius on a card and on the button inside it reads as a mistake. Let radius grow with the element's size, and drop any radius step no component uses. `L1` · default
-- Separate things with space first, a change of surface second, and a hairline last. Nested boxes (a card inside a card inside a panel) are a sign grouping is being done with containers instead of gaps. `L1` · default
+- Separate groups, sections and cards with space first, a change of surface second, and a hairline last (his stated answer, not yet a comparison round). Rows of records in a table or list keep their hairlines (R088 stands). Nested boxes (a card inside a card inside a panel) are a sign grouping is being done with containers instead of gaps. `L1` · default
 - Name the stacking order once (base, sticky bar, dropdown, scrim, dialog, popover, toast, skip link) and take every layer from it; no ad hoc z-index numbers in components. `L1` · default
 - If a translucent or blurred surface is used at all (it is explicit-request territory), ship an opaque twin for reduced-transparency settings and check text contrast over white, black and a busy photo. `L1` · default
 - An icon is used at the size it was drawn for; scaling a small icon up makes it look chunky, so choose or draw a large one. Size icons to the line height of the text beside them, and center them on the text line, not the cap height. `L1` · default
