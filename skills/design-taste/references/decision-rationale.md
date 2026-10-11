@@ -111,3 +111,9 @@
 - **History:** he first said "new designs only", then changed to "always" once the test was explained with an example.
 - **Links:** core tenet 0; the two-layouts step (R153); the logo-removed specificity test; brand-as-Lego ranking.
 
+## Node: concentric-corners
+- **Decision:** a rounded shape nested inside another has inner radius = outer radius minus the padding between them, with a small floor so it never reaches zero.
+- **Because:** the gap looks even around the curve; mismatched corners read as an accident or a default (core tenet 1); it matches how the eye judges curves (optical correctness); it is a craft signal separating polished from templated work.
+- **Overridden by:** none stated. Brand radius rules were offered as an option and not selected.
+- **Links:** core tenet 1 (everything reads as intentional); `ui-craft.md` shape, layers and icons; R103 (card radius).
+

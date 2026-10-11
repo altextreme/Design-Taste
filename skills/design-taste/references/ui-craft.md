@@ -103,7 +103,7 @@
 - A single quiet line in the footer (and on detail pages where money is shown) is enough to say content is sample; not a top banner, and not repeated in every section. This is a default; the honesty rules in the content-integrity section still require placeholders to be labelled. `L1` · default
 
 ## Shape, layers and icons
-- Nested rounded shapes are concentric: the inner radius is the outer radius minus the padding between them (never below a small floor). The same radius on a card and on the button inside it reads as a mistake. Let radius grow with the element's size, and drop any radius step no component uses. `L1` · default
+- Nested rounded shapes are concentric: the inner radius is the outer radius minus the padding between them (never below a small floor); his stated answer, not yet a comparison round. The same radius on a card and on the button inside it reads as a mistake. Let radius grow with the element's size, and drop any radius step no component uses. `L1` · default
 - Separate things with space first, a change of surface second, and a hairline last. Nested boxes (a card inside a card inside a panel) are a sign grouping is being done with containers instead of gaps. `L1` · default
 - Name the stacking order once (base, sticky bar, dropdown, scrim, dialog, popover, toast, skip link) and take every layer from it; no ad hoc z-index numbers in components. `L1` · default
 - If a translucent or blurred surface is used at all (it is explicit-request territory), ship an opaque twin for reduced-transparency settings and check text contrast over white, black and a busy photo. `L1` · default
