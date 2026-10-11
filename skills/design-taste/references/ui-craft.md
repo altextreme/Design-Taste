@@ -92,7 +92,7 @@
 ## Accent as a signal, and dark surfaces
 - Name the events where the accent may appear (primary action, selected item, focus, progress, a highlighted data point). Anything outside that list is neutral. The accent covers a small share of any one screen; a section label or caption is never accent-colored just to add color. `L1` · default
 - Keep the neutral set small and tinted toward the palette's hue: a few text levels (primary, secondary, line) and no stray one-off grays. `L1` · default
-- A dark theme is designed, not inverted. Define paired roles (on-surface, on-accent, inverse) and set text explicitly on any dark or colored section, including the footer. Raise elevation by stepping to a lighter surface, not by shadow. A scrim is a dark dim of the page, not a white film. Re-measure contrast on the dark theme, including disabled text and dividers. `L1` · default
+- A dark theme is designed, not inverted. Define paired roles (on-surface, on-accent, inverse) and set text explicitly on any dark or colored section, including the footer. Raise elevation by stepping to a lighter surface, not by shadow, unless the brand specifies its own dark elevation method, which then wins (stated preference from Anthony, untested in a round). A scrim is a dark dim of the page, not a white film. Re-measure contrast on the dark theme, including disabled text and dividers. `L1` · default
 
 ## Multi-page and route behavior
 - One shared set of tokens and components serves every page; pages add only their own layout. If the same token holds two values on two pages, the product has two systems. The navigation set, header and footer are designed once, identical on every page, with the current page marked. `L1` · default
