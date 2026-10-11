@@ -103,3 +103,11 @@
 - **Not chosen as a reason:** "image first" as a stand-alone reason was offered and not selected.
 - **Links:** R096; R133; `formats.md` landing; `principles/web-and-landing.md`; psychology: picture superiority.
 
+## Node: self-sameness-test
+- **Decision:** before showing any non-trivial piece, name the part that would appear unchanged for a very different brief, change it, and report the change.
+- **Applies when:** always. Inside a brand, only to what the brand leaves open; brand-fixed pieces are skipped.
+- **Because:** concept drives execution (the design should be derived from this subject); it breaks the template habits models fall into.
+- **Not chosen as reasons:** specific work feeling human-designed, and brand recognition, were offered and not selected.
+- **History:** he first said "new designs only", then changed to "always" once the test was explained with an example.
+- **Links:** core tenet 0; the two-layouts step (R153); the logo-removed specificity test; brand-as-Lego ranking.
+
