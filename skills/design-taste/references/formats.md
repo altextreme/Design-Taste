@@ -79,6 +79,7 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 - Conventional axes and a light grid. True minus signs, not hyphens. Extend the value axis one gridline past the data so no mark or label sits on the frame. Bars and filled areas start at zero; ticks use round steps. A zero line is visible when values cross zero. `L1` · default
 - The headline states the finding a reader would act on (against a target, against a baseline), not just any true comparison. Decorate at most one storytelling point. `L1` · default
 - Honesty: label sample data as sample; never describe a source or method you were not given ("source not given"); a partial period is never plotted as a full one; a figure that appears in two places matches in both. `L1` · default
+- Offer a text summary of the finding and a way to view the numbers as a table, in addition to direct labels. `L1` · default
 - Compute label and annotation positions from the data in code, and check each against the series at the x-positions it spans, so no label lands on a line. `L1` · default
 
 **Look at least twice:** the first look fixes layout; the second checks every label against the lines it sits near. **Check:** headline states a finding? Plot dominates the page? No label on a line? Series distinguishable in grayscale? Axis, units, source and sample label present?
@@ -128,6 +129,15 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 - A phone-sized mockup uses one persistent, correct device frame that supports the screen. Controls work; no designer panels or demo badges inside the product. `L1` · default
 
 **Check:** platform coherent? Safe areas clear? Targets above floor? One job per screen?
+
+## Other device classes: TV, watch, car, kiosk, spatial (default)
+- Decide whether a device class is first-class by whether a core task happens there, not by whether the app merely runs there. If the input changes (touch, remote pad, crown, voice), build a new component; if only the size changes, make a mode of the existing one. `L1` · default
+- Size targets by input, not by device: the less stable the hand or the farther the eye, the larger the target. Size type by viewing distance: keep the role and roughly the visual angle when moving to a farther screen, not the pixel number. A large TV is a far-away phone. `L1` · default
+- Keep the destinations the same on every device and swap only the container. Count steps on the most constrained device you support, and fit the structure to that. Focus must stay visible from the farthest distance the device is used at. `L1` · default
+- Glance surfaces (watch faces, widgets, live activities, notifications) carry one number or one status. Design the glance first, then the app. `L1` · default
+- The motion budget shrinks as attention narrows: animate less when the user is driving, walking, or wearing the screen. The environment sets the default theme: the darker and closer the environment, the darker the default. `L1` · default
+- Keep anything to read or select out of a TV's outer margin (about 5%). In a vehicle context, a design that needs a second glance fails, and the limits are hard rules, not warnings. `L1` · default
+- Each first-class device class gets its own accessibility pass (one screen reader, one motor alternative, the largest text size). `L1` · default
 
 ## Social cards and posters (per channel)
 **Must have**

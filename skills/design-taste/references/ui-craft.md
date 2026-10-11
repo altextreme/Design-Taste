@@ -47,6 +47,7 @@
 - Duration tiers, reference floors for interactive UI only: pressed feedback near-instant (about 100 ms), standard state change about 150 ms, entering surfaces about 200 to 300 ms, cross-screen up to about 500 ms. Exits run shorter than entrances (roughly 0.7x; unvalidated, validation queue 3). Shorten on small screens. These do not apply to video or staged motion graphics. `L1` · default
 - Easing: entrances and exits ease out; on-screen moves also ease out with a soft end; a determinate progress fill that tracks real progress may be linear (a gauge, not a design element; marquees and tickers are not used); never ease in on entrances, since it delays the moment the user is watching. Whether exits should accelerate away (as his motion rules suggest for staged motion) is unvalidated for UI (see `validation-queue.md` item 2); until then exits ease out. No overshoot, no spring outside the playful tone. `L1` · default
 - Never grow an element from nothing. Entering surfaces start near full size with opacity (or just fade and rise slightly), and popovers originate at their trigger while dialogs stay centered on their own axis. `L1` · default
+- Applying a motion recipe never rewrites the product's copy: use the existing text, and use sample copy only for a standalone demo. Replacing one text with another (a state change) is its own choreography, different from a first-load reveal; the former should be quick and quiet. Frame work stays within budget: a movement that drops frames on a mid-range phone is cut, not tuned. `L1` · default
 
 ## Content integrity
 - Never invent statistics, testimonials, awards, ratings, logos, customer names, prices or citations. Use real or user-supplied facts, or a clearly labelled placeholder, or leave the slot out. A figure shown carries its source, unit and period. `L1` · default
@@ -63,6 +64,7 @@
 - Miller, correctly read: working memory holds a few chunks, not a menu length. Chunk long lists into named groups; show state on screen (applied filters, selected, visited) instead of making people remember; put the key items at the ends of a row. `L1` · default
 - Jakob: default to the category's convention for position, icon and behavior. Depart only where the departure is deliberate and pays for itself; put help at the point of action. This is the UI corollary of "deviate decisively or not at all". `L1` · default
 - Goal gradient: multi-step flows show real position ("2 of 5"); never fabricate progress or streak pressure. `L1` · default
+- Do not misuse the laws. Miller's number is not a seven-item cap on navigation (menus work by recognition). Hick's law is not a reason to delete options: novices scan linearly, so group and add search instead. The Zeigarnik effect is not a basis for nag or reminder features. The Doherty threshold is not an excuse to add delay so work seems valuable. Choice overload depends on conditions, so do not hard-cap catalog or result counts on its authority. A pretty design is not proof it is usable. `L1` · default
 
 ## Control and component geometry
 - A field's border keeps one width in every state. Express focus with an offset outline in a reserved slot, not a thicker border, so nothing shifts by a pixel when focus lands. Focus appears instantly; a ring that fades in is late exactly when the keyboard user needs it. Show it for keyboard focus only, never after a mouse click. `L1` · default
@@ -96,6 +98,25 @@
 ## Interface vocabulary
 - The screen speaks the user's language. File names, field names, function names, framework or dataset words never appear in the interface, and an aggregate is described by what it means to the user ("most reviewed first"), not how it was computed. `L1` · default
 - A single quiet line in the footer (and on detail pages where money is shown) is enough to say content is sample; not a top banner, and not repeated in every section. This is a default; the honesty rules in the content-integrity section still require placeholders to be labelled. `L1` · default
+
+## Shape, layers and icons
+- Nested rounded shapes are concentric: the inner radius is the outer radius minus the padding between them (never below a small floor). The same radius on a card and on the button inside it reads as a mistake. Let radius grow with the element's size, and drop any radius step no component uses. `L1` · default
+- Separate things with space first, a change of surface second, and a hairline last. Nested boxes (a card inside a card inside a panel) are a sign grouping is being done with containers instead of gaps. `L1` · default
+- Name the stacking order once (base, sticky bar, dropdown, scrim, dialog, popover, toast, skip link) and take every layer from it; no ad hoc z-index numbers in components. `L1` · default
+- If a translucent or blurred surface is used at all (it is explicit-request territory), ship an opaque twin for reduced-transparency settings and check text contrast over white, black and a busy photo. `L1` · default
+- An icon is used at the size it was drawn for; scaling a small icon up makes it look chunky, so choose or draw a large one. Size icons to the line height of the text beside them, and center them on the text line, not the cap height. `L1` · default
+- Icons that are not the same shape need optical correction: a circle sits visually smaller than a square of the same box (give it more area), and a play triangle centers on its centroid, not its bounding box. `L1` · default
+- Selection in a set of icons uses two cues (outline becomes filled, plus the accent) so it survives color blindness. Hover and pressed feedback lives on the control's container, not the glyph. `L1` · default
+- Label everything in navigation. Icon-only is for roughly a dozen universally understood actions (search, close, more, add, delete, edit, share, settings), each with a tooltip and an accessible name. `L1` · default
+
+## Feedback channels
+- Put the message where its cause is. Inline in place for field and section feedback; a toast only for low-stakes confirmation, with Undo when the action is reversible; one persistent banner at most for page or system status; a dialog only for a decision that must block. Never make a toast the only channel for an error that stops progress, and let any timed message that carries an action be paused. `L1` · default
+- Honest-interface lint for the machine-detectable cases: a pre-checked consent or marketing box; accept and decline with unequal emphasis; the same request repeated after the user dismissed it; a countdown with no real deadline behind it; decline copy that shames the user; a cancel path longer than the signup path. Treat each as a defect. (This extends the honesty line in `SKILL.md`.) `L1` · default
+
+## AI surfaces (default; queue 23 is not yet answered)
+- Mark generated content as generated. Place a source next to the claim it supports, styled differently from body text, and say what it is (a name, not "Source"); show how many sources back a claim when there are several. `L1` · default
+- State uncertainty in plain first-person words for high-stakes content, instead of a fake confidence number. Do not present a step-by-step reasoning trace as the explanation of why: it can misdescribe how the answer was produced. Keep the voice neutral rather than human-like, so users do not overrate what it can do. `L1` · default
+- Give the user control: stop, regenerate, edit, copy and a way to flag a bad answer; every AI action can be undone or corrected. Do not autoscroll while a response streams; announce streamed text to assistive tech at completion or in chunks, not word by word. Put the caution near the input with an action ("check this answer") rather than a footer disclaimer. `L1` · default
 
 ## Excluded
 Illustrated empty states, confetti or count-up success moments, spring-based UI motion, pill CTAs, a two-typeface cap, links demoted to unstyled text, neutral near-black dark mode, and visual-tension asymmetry were left out because each collides with a dealbreaker or non-negotiable.
