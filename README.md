@@ -55,6 +55,7 @@ The Claude Code plugin install and the macOS/Linux installer (install, rerun, un
 skills/design-taste/
 ├── SKILL.md                       tenets, non-negotiables, workflow, defaults, presets, dealbreakers, checklist
 ├── agents/openai.yaml             Codex display metadata (ignored elsewhere)
+├── scripts/lint.mjs               no-model source scan for measurable dealbreakers (zero dependencies; tests alongside)
 └── references/
     ├── index.md                   what to read when
     ├── principles/<category>.md   validated rules, one file per category (154 rounds, 215 dimensions)
@@ -67,6 +68,7 @@ skills/design-taste/
     ├── brand-and-registers.md     brand-file (DESIGN.md) ingestion, extra tonal registers, explicit-request styles
     └── validation-queue.md        unvalidated defaults awaiting comparison rounds
 adapters/                          always-on core block, paste-in prompt, single-file edition
+evals/                             protocol and fixed briefs for testing the skill against a baseline (not yet run)
 ```
 
 ## What changed in v2.2

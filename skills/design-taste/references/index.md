@@ -54,6 +54,7 @@ Load only what the task needs. Every file is one level below `SKILL.md`; none re
 
 | File | Read when |
 |---|---|
+| `../scripts/lint.mjs`, `../../../evals/` | Web output: run the no-model source scan before looking (`render-and-review.md`). Evals: a protocol and fixed briefs for testing whether the skill improves output; not loaded during design work |
 | `render-and-review.md` | Before every final pass on any visual: the R150-validated render loop, measurement, typography checks and “Looked at” note; its tool example and unasked format details remain defaults |
 | `process-and-critique.md` | Starting any non-trivial task (ask vs decide, state the direction); the user asks for a critique, review or audit; before handing off finished work (scored review, self-review loop, review passes, system derivation) |
 | `ui-craft.md` | Any interactive UI: states (loading, empty, error, edge), focus and keyboard, targets, forms, control and card geometry, hover and touch behavior, accent and dark surfaces, multi-page consistency, UI motion, sample content and copy, laws of UX |
