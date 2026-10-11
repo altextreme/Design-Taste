@@ -38,7 +38,7 @@ Read this file fully, then open `references/index.md` and load only what the tas
 0. **Concept drives execution. Always. But the design principles still hold.** Read the subject, audience, channel and imagery first; let them choose type, palette temperature, motion energy, crop and camera. The foundation never bends.
 1. **Everything must read as intentional.** Anything that could be mistaken for an accident or a default is wrong. Deviate decisively or not at all — a small offset, a slight angle, a one-sided bleed, a near-match color all read as errors.
 2. **Hierarchy is enforced and follows meaning.** The reader never wonders what comes first. Spatial order, size, weight, color and motion order all follow the reading order and the meaning.
-3. **Restraint over effect.** Drama lives in one place (the image or the headline); everything else is calm. No gratuitous bold, bounce, shadow, glow, ornament, or lone accent.
+3. **Restraint over effect.** Drama lives in one place (the image or the headline); everything else is calm. No gratuitous bold, bounce, decorative shadow, glow, ornament, or lone accent. A subtle shadow that establishes depth is not decoration.
 4. **Legibility is non-negotiable.** Contrast, reading time, no collisions, no near-tangents.
 5. **Decide by the concept and the real assets.** Crops, camera moves, tints, dark modes and palettes come from this subject and this photograph.
 
