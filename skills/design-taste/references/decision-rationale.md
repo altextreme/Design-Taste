@@ -203,3 +203,27 @@
 - **Because:** it covers the photo's subject (the middle is where the focal point usually sits).
 - **Not chosen as reasons:** static composition, legibility over a busy image, and "looks like a default" were offered and not selected. Legibility is still required by non-negotiable 1, so scrim rules still apply wherever text meets an image.
 - **Links:** R014; R134 (never put text over an image's critical focal point); precedence rule 9 (protect the original photograph).
+
+## Node: no-two-letter-monogram-mark
+- **Decision:** a two-letter monogram is never the logo mark.
+- **Because:** it is not distinctive (it could belong to any company); it looks like a placeholder; it is a lazy shortcut.
+- **Not chosen as a reason:** weakness at small sizes was offered and not selected.
+- **Links:** `principles/identity-and-marks.md`; core tenet 1.
+
+## Node: email-needs-brand-header
+- **Decision:** an email with no brand header is a dealbreaker.
+- **Because:** recognition and trust; repetition builds the brand; an unbranded email resembles phishing.
+- **Not chosen as a reason:** that it looks unfinished was offered and not selected.
+- **Links:** `principles/email.md`; precedence rule 2 (brand consistency); psychology: repetition and trust.
+
+## Node: no-solid-caption-panel-on-video
+- **Decision:** no solid caption panel on video.
+- **Because:** it is heavy and clumsy; better options exist (a gradient scrim, or a quiet area of the frame); it breaks the image-first principle.
+- **Not chosen as a reason:** that it blocks the picture was offered and not selected.
+- **Links:** `principles/imagery-and-media-production.md`; `principles/social-and-glance-media.md`; the scrim-first rule (SKILL.md imagery); non-negotiable 1.
+
+## Node: video-end-card-needs-action
+- **Decision:** a video end card with only a logo is a dealbreaker; the ending should give viewers something to do.
+- **Because:** it wastes the final moment; it gives no call to action.
+- **Not chosen as reasons:** the peak-end effect, and "reads as abrupt or lazy", were offered and not selected.
+- **Links:** `principles/social-and-glance-media.md`; purpose sets the design (SKILL.md funnel stages).
