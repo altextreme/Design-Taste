@@ -227,3 +227,27 @@
 - **Because:** it wastes the final moment; it gives no call to action.
 - **Not chosen as reasons:** the peak-end effect, and "reads as abrupt or lazy", were offered and not selected.
 - **Links:** `principles/social-and-glance-media.md`; purpose sets the design (SKILL.md funnel stages).
+
+## Node: no-hairline-didone-outside-luxury
+- **Decision:** hairline Didone typefaces are a dealbreaker outside the luxury register (where a high-contrast Didone at full display scale is welcome).
+- **Because:** the hairlines vanish at small sizes; extreme thick-thin contrast makes legibility fragile.
+- **Not chosen as reasons:** tone mismatch and overuse as a cliché were offered and not selected. The reason is legibility, so a Didone at large display scale is not objected to on these grounds.
+- **Links:** luxury register (SKILL.md tonal presets); core tenet 4; `principles/typography.md`.
+
+## Node: no-floating-3d-or-stock-3d
+- **Decision:** no floating 3D shapes and no generic stock 3D illustration.
+- **Because:** they are generic and overused.
+- **Not chosen as reasons:** decoration with no job, not tied to the concept, and dated look were offered and not selected.
+- **Links:** `principles/negative-constraints.md`; `principles/imagery-and-media-production.md`; core tenet 0.
+
+## Node: no-letterspaced-lowercase
+- **Decision:** lowercase is never letterspaced; tracked caps are for the smallest metadata tier only.
+- **Because:** it hurts readability; tracking belongs to caps.
+- **Not chosen as reasons:** word shapes breaking apart, and "looks affected", were offered and not selected.
+- **Links:** `principles/typography.md`; `scripts-and-direction.md` (caseless scripts).
+
+## Node: no-vibrating-complements-or-muddy-palettes
+- **Decision:** no vibrating complements; no muddy, low-contrast palettes (which is why blush pink plus sage fails).
+- **Because:** vibrating complements strain the eye; muddy low-contrast pairs blur together and lose hierarchy.
+- **Not chosen as reasons:** that blush plus sage is a cliché, or that these pairings are applied by fashion and not the concept, were offered and not selected. The objection to blush plus sage is low contrast, so a version with clear value separation is not objected to on these grounds.
+- **Links:** `principles/color.md`; core tenet 4; `principles/contrast-and-hierarchy.md`.
