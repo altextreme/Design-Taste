@@ -176,7 +176,7 @@ Use these as shorthand for the cause. Each pairs the phrase a reviewer says with
 |---|---|---|---|
 | "Everything is shouting" / no entry point | Several elements share top emphasis | More than one element at the largest size or strongest contrast | Demote all but one to the second level |
 | "Type soup" | More sizes, weights or families than the scale allows | Count them in the view | Snap to the roles in the scale |
-| "Conflict, not contrast" | Two levels differ, but not enough to read as different | Neighboring sizes under about 1.25x; weights close together | Widen the step or the weight gap, not both slightly |
+| "Conflict, not contrast" | Two levels differ, but not enough to read as different | Neighboring levels look too close in size or weight | Widen the step or the weight gap, not both slightly |
 | "Busy" / "noisy" | Too many borders, colors or boxes | Count borders and distinct colors | Replace inner borders with space |
 | "Floating" | A label sits as close to the wrong group as to its own | Gap to own group is not smaller than gap to the neighbor | Tighten the label to its field |
 | "Ragged" | Too many different left edges | Count the unique x-positions | Snap to the grid |
