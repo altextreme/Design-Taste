@@ -61,6 +61,7 @@ Load only what the task needs. Every file is one level below `SKILL.md`; none re
 | `media-prompts.md` | Writing prompts for image or video models; building timeline-based motion graphics; exporting MP4; negative-prompt lists; QA of generated media |
 | `scripts-and-direction.md` | Any non-Latin script, right-to-left layout, CJK, mixed-language or translated content, locale formats; before writing "left" or "right" in a spec |
 | `brand-and-registers.md` | A brand guide, `DESIGN.md` or "in the style of X" is supplied; no brand exists but the work is for a business; the brief is product UI, news, document, showcase or console (extra tonal registers) |
+| `decision-rationale.md` | A stated preference does not obviously fit the case, two rules seem to pull apart, or you must explain a decision: his reasons for each stated preference, its exceptions and links |
 | `validation-queue.md` | You are planning the next quiz round, or want to promote a `default` rule to validated |
 
 ## Precedence in one line
