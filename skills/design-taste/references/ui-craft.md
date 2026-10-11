@@ -109,7 +109,7 @@
 - If a translucent or blurred surface is used at all (it is explicit-request territory), ship an opaque twin for reduced-transparency settings and check text contrast over white, black and a busy photo. `L1` · default
 - An icon is used at the size it was drawn for; scaling a small icon up makes it look chunky, so choose or draw a large one. Size icons to the line height of the text beside them, and center them on the text line, not the cap height. `L1` · default
 - Icons that are not the same shape need optical correction: a circle sits visually smaller than a square of the same box (give it more area), and a play triangle centers on its centroid, not its bounding box. `L1` · default
-- Selection in a set of icons uses two cues (outline becomes filled, plus the accent) so it survives color blindness. Hover and pressed feedback lives on the control's container, not the glyph. `L1` · default
+- Selection in a set (nav icons, tabs, filters) uses two cues: a form change (outline becomes filled, or a fill or weight change) plus the accent, so it survives color blindness (his stated answer, not yet a comparison round). Hover and pressed feedback lives on the control's container, not the glyph. `L1` · default
 - Label everything in navigation. Icon-only is for roughly a dozen universally understood actions (search, close, more, add, delete, edit, share, settings), each with a tooltip and an accessible name. `L1` · default
 
 ## Feedback channels
