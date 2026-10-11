@@ -58,6 +58,7 @@ Before showing work, ask of every element: where did this come from? If the answ
 - No filler copy ("Feature one", lorem ipsum, hype adjectives). An empty area is a composition problem; solve it with scale and placement, not words. Do not add sections or copy the user did not ask for. `L1` · default
 - A named real thing (person, product, artwork, landmark, mark) is shown by its real image, never a generated look-alike. If unavailable, show an honestly labelled placeholder. `L1` · default
 - Structural tells to treat as defects: a rounded card with a colored left-edge stripe; an icon beside every heading or bullet; several solid primary buttons for one action in view; hover that merely greys or dims text; designer or "demo" controls inside a product artifact; placeholder-image URLs; the stock hero-features-pricing-FAQ sequence with nothing specific to this product. `L1` · default
+- More tells: a decorative squiggle or brush underline standing in for the real active-state mark (use the system's own mark: a straight rule, a ground change, a weight shift); fake browser or phone chrome around a screenshot; accent color applied to labels and captions only to add color; one hover effect stacked from three or more changes (move, scale, shadow, color together); a celebration for something the screen already shows; a placeholder person such as "Jane Doe". `L1` · default
 - Soul test: a proven structure plus exactly one earned, concept-driven move. If a stranger could not tell what this is for, raise the specificity of content and proportion, never the decoration. `L1` · default
 
 ## 7. Critique mode
@@ -156,3 +157,12 @@ Run on your own output, in this order, before showing it. Run the SKILL.md pre-f
 
 `L1` · default
 
+
+## 9. Review passes that catch what a single read misses
+
+- **Eyes first, then the lint.** Judge the render before running any mechanical check, and write the verdict down, so the scan cannot talk you into approving something that looks wrong. A page can pass every automated check and still feel flat. Add the mechanical results after. `L1` · default
+- **Walk it as three people:** a desktop user with a mouse; a one-handed phone user with a thumb; a keyboard user with no hover. For each, record what they saw with no input, and where they were blocked. Report friction, not opinions. `L1` · default
+- **Grep what a grep can find,** and keep the log. Reference starter patterns for web builds: `transition: all`, a disabled state expressed by opacity alone, color values written inline instead of from tokens, a viewport-height hero with a centered stack, an unstyled native select, border-width changes between states. "No violations visible in the source" is only a claim if the search was run; a hit is judged real or harmless and written down. `L1` · default
+- **Self-sameness test.** Name the part of the design that would appear unchanged for a very different brief in a different category, then change it, and say what you changed and why. If you cannot name one, you have not looked hard enough. This sits beside the logo-removed specificity test in `ui-craft.md`. `L1` · default
+- **Derive, then build, when making a system.** For a design system or multi-screen product: state a stance and two or three principles, each with what it gives up; write a short decision list with one-line reasons; turn it into tokens that point back at the decision; specify components (anatomy, state matrix, hit areas) before pages; declare each page's layout grammar and make sure the content volume supports it (a carousel needs enough slides, a mosaic enough items), asking for more content rather than shrinking the layout. Pages then consume the system; a new value means going back and adding a decision. A token with no reason behind it is an improvisation. `L1` · default
+- **Declare density and motion before building.** One line: how dense (airy to packed) and how much motion (still to lively). When density is low, the cap on focus and fold content wins over any rule that says to fill space. `L1` · default

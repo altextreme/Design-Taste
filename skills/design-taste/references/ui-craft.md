@@ -64,5 +64,38 @@
 - Jakob: default to the category's convention for position, icon and behavior. Depart only where the departure is deliberate and pays for itself; put help at the point of action. This is the UI corollary of "deviate decisively or not at all". `L1` · default
 - Goal gradient: multi-step flows show real position ("2 of 5"); never fabricate progress or streak pressure. `L1` · default
 
+## Control and component geometry
+- A field's border keeps one width in every state. Express focus with an offset outline in a reserved slot, not a thicker border, so nothing shifts by a pixel when focus lands. Focus appears instantly; a ring that fades in is late exactly when the keyboard user needs it. Show it for keyboard focus only, never after a mouse click. `L1` · default
+- A text field and the button beside it share one height, and density variants step together (compact, regular, roomy) so a row of mixed controls stays level. `L1` · default
+- Helper and error text own a reserved line, so a message appearing does not push the form down. Disabled is stated three ways at once: visibly muted, a not-allowed cursor, and truly disabled for the keyboard. Opacity alone is a look, not a state. A read-only field can still be focused and copied; a disabled one cannot. `L1` · default
+- Error travels on three channels together: color, a supporting sentence, and the programmatic invalid state. Color alone fails. `L1` · default
+- Every control that can be selected has a persistent selected mark (ring, check, rule or fill) that differs from the hover cue. Hover that merely nudges position is not a state. Selection and the primary call to action never both take a full accent fill on one screen. `L1` · default
+- Restyle native form controls from the page's tokens rather than shipping the browser's default look, but keep the real native element underneath for keyboard and assistive tech. A default blue radio inside a custom-designed page reads as an accident. For a select, the native element is correct when options are few and plain (style the trigger at least); build a custom listbox only for rich or long option lists, and then match the full combobox keyboard model. This refines "native first": native behavior, designed appearance. `L1` · default
+- Roles are not mixed in one component: a filter chip, an input chip, a dismissible chip and a static badge behave differently. A static badge is never clickable. A chip may look compact, but its hit area still reaches the target floor; a dismiss icon takes its own focus and state. `L1` · default
+- Card anatomy is spaced by meaning, not uniformly: the identifying name and the price sit closest together, secondary meta follows, and the action is separated by the largest step or a rule. Media and text share one width, and the image edge, text edge and action edge line up. One clickable region per card: a whole-card link or an inner action, not both competing. `L1` · default
+- Choose one surface genre per product and hold it: hairline-ruled bands, flat ink plates, or soft raised tiles. Do not stamp the same rounded-corner-plus-border box on cards, banners, dialogs and inputs alike; that is a widget kit, not a design. Match the genre to the domain: shopping surfaces want bounded cards with a dominant price, operations tools want compact rows and status badges, reading surfaces want rules and a long measure. `L1` · default
+- Empty states and dialogs are their own surfaces (a distinct container, or the native dialog with a styled backdrop), not a muted paragraph inside the card they interrupt. `L1` · default
+- Carousels are short (a handful of slides at most), keep their controls inside the frame, and pause when the user needs them to. A master-detail view shows one pane on narrow screens and two only when wide. Decorative layout pieces are hidden from assistive tech, and reading order matches DOM order. `L1` · default
+
+## Hover, touch and what moves on its own
+- Hover amplifies; it never gates. Nothing a visitor needs may be reachable only by hovering, and on touch or keyboard-only use the hover layer should already be in its open state. Cap hover at a small lift or tone shift, or a pause. `L1` · default
+- Anything that opens on interaction opens once and stays: a panel that snaps shut when the pointer drifts teaches people to hold still. Opening on view, or on click or tap, persists until an explicit close (second click, Escape). Hover menus open promptly but close with a short grace delay so crossing a small gap does not lose them. `L1` · default
+- Automatic motion passes a four-part test before it ships: the repeated item is one of many equivalents (nothing unique is lost if you miss it); the same content has a still route; the user can pause or slow it; and it arrives without effort. Motion that changes what can be seen is a gate; motion that changes only how it looks is decoration. `L1` · default
+- A reveal-on-scroll plays once, on content that is not a task screen, and never replays body copy. Reveal with opacity and a small travel, not clips or blurs. `L1` · default
+- Separate keyboard and mouse intent for route changes: moving focus to the new page's heading is right, but the visible ring should not draw a box around a title the user never tabbed to. `L1` · default
+
+## Accent as a signal, and dark surfaces
+- Name the events where the accent may appear (primary action, selected item, focus, progress, a highlighted data point). Anything outside that list is neutral. The accent covers a small share of any one screen; a section label or caption is never accent-colored just to add color. `L1` · default
+- Keep the neutral set small and tinted toward the palette's hue: a few text levels (primary, secondary, line) and no stray one-off grays. `L1` · default
+- A dark theme is designed, not inverted. Define paired roles (on-surface, on-accent, inverse) and set text explicitly on any dark or colored section, including the footer. Raise elevation by stepping to a lighter surface, not by shadow. A scrim is a dark dim of the page, not a white film. Re-measure contrast on the dark theme, including disabled text and dividers. `L1` · default
+
+## Multi-page and route behavior
+- One shared set of tokens and components serves every page; pages add only their own layout. If the same token holds two values on two pages, the product has two systems. The navigation set, header and footer are designed once, identical on every page, with the current page marked. `L1` · default
+- A route change behaves like a page load: scroll to top (restore position on back), move focus to the new heading or main region, update the document title, and lazy-load images below the first view but never the main hero image. `L1` · default
+
+## Interface vocabulary
+- The screen speaks the user's language. File names, field names, function names, framework or dataset words never appear in the interface, and an aggregate is described by what it means to the user ("most reviewed first"), not how it was computed. `L1` · default
+- A single quiet line in the footer (and on detail pages where money is shown) is enough to say content is sample; not a top banner, and not repeated in every section. This is a default; the honesty rules in the content-integrity section still require placeholders to be labelled. `L1` · default
+
 ## Excluded
 Illustrated empty states, confetti or count-up success moments, spring-based UI motion, pill CTAs, a two-typeface cap, links demoted to unstyled text, neutral near-black dark mode, and visual-tension asymmetry were left out because each collides with a dealbreaker or non-negotiable.

@@ -59,6 +59,11 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 - One CTA label per intent across nav, hero and footer. Labels are specific and fit one line. Closing section repeats the primary action once. `L1` · default
 - One theme per page. A dark band in a light page reads as a paste accident unless it is a single deliberate switch. One accent used consistently; one radius logic. `L1` · default
 - Responsive means reorganizing the layout for the width, not scaling it. No horizontal scroll at the narrow end. `L1` · default
+- The main image earns its size. Test: delete the hero image; if the first screen still looks complete, the image was too small or too weak to matter. Each section's lead image should clearly dominate its section. To show many items, stack them in time (a sequence, a slow reel) rather than packing many small images on screen at once. `L1` · default
+- One focal point per screen: the lead element is plainly bigger than the runner-up (about twice the area is a working floor), and no more than two independent things move at once in a section. First view holds a handful of meaning units (headline, support line, action, one visual), not a collage. `L1` · default
+- Whitespace is spent in chunks. Keep at least one generous pause between sections (a large block with nothing in it) and a small set of section gaps rather than many near-identical ones; if every gap is the same step, the page has no rhythm, and if there are a dozen different gaps, no logic. Where a reading pause follows a pinned or scrolling moment, put something to read in it. `L1` · default
+- Wide screens get a stated strategy, one of three: center a capped column (editorial), anchor left with a capped column (product), or add columns (dense). Never stretch text or controls edge to edge; keep buttons from growing to full grid width. Full-bleed is for backgrounds; controls and body stay in the content well. `L1` · default
+- Before building a page that leans on scroll choreography, write a one-line note per section: what shows with no input, what remains on touch, how the keyboard reaches it, and what is read in the first five seconds. If any section needs hover or dragging to reveal content, rework it. `L1` · default
 
 **Avoid**
 - Section-number labels, "Step 01" labels, scroll cues, decorative status dots, tag overlays on photos, keyword strips under the hero. Counted tracked-caps labels: at most one per three sections. · default
@@ -159,8 +164,11 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 - Show each component in all its states, with its variants beside it and usage notes beneath: when to use, when not to, accessibility behavior. States follow `ui-craft.md`. `L1` · default
 - Document tokens by role (surface, text, accent, status), not by value, and list what is locked versus negotiable. Name the one accent and the one radius logic. `L1` · default
 - Present specimens on the real background they ship on, in both light and dark if the system has both, with contrast stated per pair. `L1` · default
+- A state matrix states why a state does not apply, not just that it does ("disabled: not applicable, a sold-out item still opens its page"). A blank cell reads as forgotten; a reasoned "not applicable" tells the developer it was decided. `L1` · default
+- Every token and component rule carries a one-line reason, and the reason traces to a stated principle. A principle that names no sacrifice, or changes no token, is decoration; cut it or make it do work. `L1` · default
+- Note the anatomy (named parts and their spacing steps), the hit area versus the visual size, and the optical alignment of icon and label; these are the details a developer cannot guess. `L1` · default
 
-**Check:** every state shown? Tokens named by role? Both themes covered?
+**Check:** every state shown, with reasons for the ones that do not apply? Tokens named by role and traced to a reason? Both themes covered?
 
 ## Deliverable-format checklist
 - [ ] Format identified; its section above read; the shared SKILL.md pre-flight also run.
