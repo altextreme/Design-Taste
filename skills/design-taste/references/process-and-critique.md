@@ -58,6 +58,8 @@ Before showing work, ask of every element: where did this come from? If the answ
 - No filler copy ("Feature one", lorem ipsum, hype adjectives). An empty area is a composition problem; solve it with scale and placement, not words. Do not add sections or copy the user did not ask for. `L1` · default
 - A named real thing (person, product, artwork, landmark, mark) is shown by its real image, never a generated look-alike. If unavailable, show an honestly labelled placeholder. `L1` · default
 - Structural tells to treat as defects: a rounded card with a colored left-edge stripe; an icon beside every heading or bullet; several solid primary buttons for one action in view; hover that merely greys or dims text; designer or "demo" controls inside a product artifact; placeholder-image URLs; the stock hero-features-pricing-FAQ sequence with nothing specific to this product. `L1` · default
+- More tells: a decorative squiggle or brush underline standing in for the real active-state mark (use the system's own mark: a straight rule, a ground change, a weight shift); fake browser or phone chrome around a screenshot; accent color applied to labels and captions only to add color; one hover effect stacked from three or more changes (move, scale, shadow, color together); a celebration for something the screen already shows; a placeholder person such as "Jane Doe". `L1` · default
+- Photography test: if an image could have been made for any other organization, reject it. Write a short photo brief (subject types, vantage, light, color treatment, who is shown) before choosing or generating imagery. `L1` · default
 - Soul test: a proven structure plus exactly one earned, concept-driven move. If a stranger could not tell what this is for, raise the specificity of content and proportion, never the decoration. `L1` · default
 
 ## 7. Critique mode
@@ -156,3 +158,34 @@ Run on your own output, in this order, before showing it. Run the SKILL.md pre-f
 
 `L1` · default
 
+
+## 9. Review passes that catch what a single read misses
+
+- **Eyes first, then the lint.** Judge the render before running any mechanical check, and write the verdict down, so the scan cannot talk you into approving something that looks wrong. A page can pass every automated check and still feel flat. Add the mechanical results after. `L1` · default
+- **For interactive work, walk it as three people** (his stated answer, not yet a comparison round; skip for static pieces such as posters and charts): a desktop user with a mouse; a one-handed phone user with a thumb; a keyboard user with no hover. For each, record what they saw with no input, and where they were blocked. Report friction, not opinions. `L1` · default
+- **Grep what a grep can find,** and keep the log. Reference starter patterns for web builds: `transition: all`, a disabled state expressed by opacity alone, color values written inline instead of from tokens, a viewport-height hero with a centered stack, an unstyled native select, border-width changes between states. "No violations visible in the source" is only a claim if the search was run; a hit is judged real or harmless and written down. `L1` · default
+- **Self-sameness test, always.** (His stated answer, not yet a comparison round.) Before showing any non-trivial piece, name the part of the design that would appear unchanged for a very different brief in a different category, then change it and say what you changed and why in the delivery note. Inside a brand, examine only what the brand leaves open (layout, structure, content decisions); brand-fixed pieces such as font, color and logo are skipped. If you cannot name one, you have not looked hard enough. This sits beside the logo-removed specificity test in `ui-craft.md` and the two-layouts step. `L1` · default
+- **Derive, then build, when making a system.** For a design system or multi-screen product: state a stance and two or three principles, each with what it gives up; write a short decision list with one-line reasons; turn it into tokens that point back at the decision; specify components (anatomy, state matrix, hit areas) before pages; declare each page's layout grammar and make sure the content volume supports it (a carousel needs enough slides, a mosaic enough items), asking for more content rather than shrinking the layout. Pages then consume the system; a new value means going back and adding a decision. A token with no reason behind it is an improvisation. `L1` · default
+- **Declare density and motion before building.** One line: how dense (airy to packed) and how much motion (still to lively). When density is low, the cap on focus and fold content wins over any rule that says to fill space. `L1` · default
+
+## 10. Critique vocabulary (name the cause, then the fix)
+
+Use these as shorthand for the cause. Each pairs the phrase a reviewer says with what is wrong, a signal you can check in the render, and the usual fix. Always tie it to the goal of the piece, not to taste. Anthony confirmed this is how he talks (a stated answer, not yet a comparison round), so use the phrases in critiques, with the cause named alongside. `L1` · default
+
+| Phrase | What is actually wrong | Signal to check | Usual fix |
+|---|---|---|---|
+| "Everything is shouting" / no entry point | Several elements share top emphasis | More than one element at the largest size or strongest contrast | Demote all but one to the second level |
+| "Type soup" | More sizes, weights or families than the scale allows | Count them in the view | Snap to the roles in the scale |
+| "Conflict, not contrast" | Two levels differ, but not enough to read as different | Neighboring levels look too close in size or weight | Widen the step or the weight gap, not both slightly |
+| "Busy" / "noisy" | Too many borders, colors or boxes | Count borders and distinct colors | Replace inner borders with space |
+| "Floating" | A label sits as close to the wrong group as to its own | Gap to own group is not smaller than gap to the neighbor | Tighten the label to its field |
+| "Ragged" | Too many different left edges | Count the unique x-positions | Snap to the grid |
+| "Muddy" | Colors differ in hue but not in value | Look at it in grayscale | Separate by lightness |
+| "Rainbow" | Accent spread across many elements | Count accent-colored elements | Keep it for the action and status |
+| "Washed out" | Gray text on a colored surface | Secondary text token on a tinted ground | Use the on-color text token |
+| "Lopsided" | Visual weight sits on one side unintentionally | Blur the image and see where the mass falls | Rebalance size, value or position |
+| "Doesn't look clickable" | Weak signifier | A ghost or text-style primary action; links styled like body | Solid variant, underline for text links |
+| "Boxes in boxes" | Containers used for grouping | Nesting deeper than two | Use gaps instead of the inner box |
+| "Optically off" | Geometric, not optical, centering or sizing | A triangle centered by its box; a circle and square at equal width | Correct by centroid or area |
+| "Not one family" | Two styles for one job | Two button treatments doing the same thing | Merge, or give them different jobs |
+| "Looks like any other X" | Could belong to any product in the category | Remove the logo and compare | Add the one thing only this subject has |

@@ -59,6 +59,11 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 - One CTA label per intent across nav, hero and footer. Labels are specific and fit one line. Closing section repeats the primary action once. `L1` · default
 - One theme per page. A dark band in a light page reads as a paste accident unless it is a single deliberate switch. One accent used consistently; one radius logic. `L1` · default
 - Responsive means reorganizing the layout for the width, not scaling it. No horizontal scroll at the narrow end. `L1` · default
+- The main image earns its size (his stated answer, not yet a comparison round). The test applies to image-led heroes only (full-bleed or half split); a type-led hero with an inset photo (R096) is exempt. Test: delete the hero image; if the first screen still looks complete, the image was too small or too weak to matter. Each section's lead image should clearly dominate its section. This is about the lead image of a section. A set of equal items (a gallery, a feature list, a row of logos) is shown as an even grid with every item visible at once, so nothing is hidden and items compare easily; do not hide items in a sequence or reel to avoid a grid. Pricing plans are not equal items: R110 still applies, with one recommended plan emphasized. Stated preference from Anthony, not yet tested in a comparison round. `L1` · default
+- One focal point per screen: the lead element is plainly dominant over the runner-up, and the first view holds a handful of meaning units (headline, support line, action, one visual), not a collage. Keep motion to a minimum so independent movements do not compete. No numeric thresholds: judge dominance by eye and the render (his stated answer, not yet a comparison round). `L1` · default
+- Whitespace is spent in chunks. Keep at least one generous pause between sections (a large block with nothing in it) and a small set of section gaps rather than many near-identical ones; if every gap is the same step, the page has no rhythm, and if there are a dozen different gaps, no logic. Where a reading pause follows a pinned or scrolling moment, put something to read in it. `L1` · default
+- Wide screens: on content pages (marketing, reading, landing), center a capped content column by default (his stated answer, not yet a comparison round). Dashboards and app screens are exempt: they may fill the width or add columns, and still cap line length for text. The column container is centered; the text inside stays flush left, so this is not the "centered layout" on the explicit-request list. On content pages, left-anchored columns are a departure to state and justify. Never stretch text or controls edge to edge, and keep buttons from growing to full grid width. Full-bleed is for backgrounds; controls and body stay in the content well. `L1` · default
+- Before building a page that leans on scroll choreography, write a one-line note per section: what shows with no input, what remains on touch, how the keyboard reaches it, and what is read in the first five seconds. If any section needs hover or dragging to reveal content, rework it. `L1` · default
 
 **Avoid**
 - Section-number labels, "Step 01" labels, scroll cues, decorative status dots, tag overlays on photos, keyword strips under the hero. Counted tracked-caps labels: at most one per three sections. · default
@@ -74,6 +79,7 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 - Conventional axes and a light grid. True minus signs, not hyphens. Extend the value axis one gridline past the data so no mark or label sits on the frame. Bars and filled areas start at zero; ticks use round steps. A zero line is visible when values cross zero. `L1` · default
 - The headline states the finding a reader would act on (against a target, against a baseline), not just any true comparison. Decorate at most one storytelling point. `L1` · default
 - Honesty: label sample data as sample; never describe a source or method you were not given ("source not given"); a partial period is never plotted as a full one; a figure that appears in two places matches in both. `L1` · default
+- Offer a text summary of the finding and a way to view the numbers as a table, in addition to direct labels. `L1` · default
 - Compute label and annotation positions from the data in code, and check each against the series at the x-positions it spans, so no label lands on a line. `L1` · default
 
 **Look at least twice:** the first look fixes layout; the second checks every label against the lines it sits near. **Check:** headline states a finding? Plot dominates the page? No label on a line? Series distinguishable in grayscale? Axis, units, source and sample label present?
@@ -124,6 +130,15 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 
 **Check:** platform coherent? Safe areas clear? Targets above floor? One job per screen?
 
+## Other device classes: TV, watch, car, kiosk, spatial (default)
+- Decide whether a device class is first-class by whether a core task happens there, not by whether the app merely runs there. If the input changes (touch, remote pad, crown, voice), build a new component; if only the size changes, make a mode of the existing one. `L1` · default
+- Size targets by input, not by device: the less stable the hand or the farther the eye, the larger the target. Size type by viewing distance: keep the role and roughly the visual angle when moving to a farther screen, not the pixel number. A large TV is a far-away phone. `L1` · default
+- Keep the destinations the same on every device and swap only the container. Count steps on the most constrained device you support, and fit the structure to that. Focus must stay visible from the farthest distance the device is used at. `L1` · default
+- Glance surfaces (watch faces, widgets, live activities, notifications) carry one number or one status. Design the glance first, then the app. `L1` · default
+- The motion budget shrinks as attention narrows: animate less when the user is driving, walking, or wearing the screen. The environment sets the default theme: the darker and closer the environment, the darker the default. `L1` · default
+- Keep anything to read or select out of a TV's outer margin (about 5%). In a vehicle context, a design that needs a second glance fails, and the limits are hard rules, not warnings. `L1` · default
+- Each first-class device class gets its own accessibility pass (one screen reader, one motor alternative, the largest text size). `L1` · default
+
 ## Social cards and posters (per channel)
 **Must have**
 - Judge at thumbnail size and at half scale: the main message must survive both. The cover carries the whole click decision. `L1` · default
@@ -159,8 +174,11 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 - Show each component in all its states, with its variants beside it and usage notes beneath: when to use, when not to, accessibility behavior. States follow `ui-craft.md`. `L1` · default
 - Document tokens by role (surface, text, accent, status), not by value, and list what is locked versus negotiable. Name the one accent and the one radius logic. `L1` · default
 - Present specimens on the real background they ship on, in both light and dark if the system has both, with contrast stated per pair. `L1` · default
+- A state matrix gives a one-line reason for a state that does not apply when the omission is unusual or could look like an oversight ("disabled: not applicable, a sold-out item still opens its page"). Obvious omissions (a static badge has no disabled state) can be left out. His stated answer, not yet a comparison round. `L1` · default
+- Every token and component rule carries a one-line reason, and the reason traces to a stated principle. A principle that names no sacrifice, or changes no token, is decoration; cut it or make it do work. `L1` · default
+- Note the anatomy (named parts and their spacing steps), the hit area versus the visual size, and the optical alignment of icon and label; these are the details a developer cannot guess. `L1` · default
 
-**Check:** every state shown? Tokens named by role? Both themes covered?
+**Check:** every state shown, with reasons for unusual omissions? Tokens named by role and traced to a reason? Both themes covered?
 
 ## Deliverable-format checklist
 - [ ] Format identified; its section above read; the shared SKILL.md pre-flight also run.
