@@ -174,11 +174,11 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 - Show each component in all its states, with its variants beside it and usage notes beneath: when to use, when not to, accessibility behavior. States follow `ui-craft.md`. `L1` · default
 - Document tokens by role (surface, text, accent, status), not by value, and list what is locked versus negotiable. Name the one accent and the one radius logic. `L1` · default
 - Present specimens on the real background they ship on, in both light and dark if the system has both, with contrast stated per pair. `L1` · default
-- A state matrix states why a state does not apply, not just that it does ("disabled: not applicable, a sold-out item still opens its page"). A blank cell reads as forgotten; a reasoned "not applicable" tells the developer it was decided. `L1` · default
+- A state matrix gives a one-line reason for a state that does not apply when the omission is unusual or could look like an oversight ("disabled: not applicable, a sold-out item still opens its page"). Obvious omissions (a static badge has no disabled state) can be left out. His stated answer, not yet a comparison round. `L1` · default
 - Every token and component rule carries a one-line reason, and the reason traces to a stated principle. A principle that names no sacrifice, or changes no token, is decoration; cut it or make it do work. `L1` · default
 - Note the anatomy (named parts and their spacing steps), the hit area versus the visual size, and the optical alignment of icon and label; these are the details a developer cannot guess. `L1` · default
 
-**Check:** every state shown, with reasons for the ones that do not apply? Tokens named by role and traced to a reason? Both themes covered?
+**Check:** every state shown, with reasons for unusual omissions? Tokens named by role and traced to a reason? Both themes covered?
 
 ## Deliverable-format checklist
 - [ ] Format identified; its section above read; the shared SKILL.md pre-flight also run.
