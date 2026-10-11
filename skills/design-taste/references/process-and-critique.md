@@ -170,7 +170,7 @@ Run on your own output, in this order, before showing it. Run the SKILL.md pre-f
 
 ## 10. Critique vocabulary (name the cause, then the fix)
 
-Use these as shorthand for the cause. Each pairs the phrase a reviewer says with what is wrong, a signal you can check in the render, and the usual fix. Always tie it to the goal of the piece, not to taste. `L1` · default
+Use these as shorthand for the cause. Each pairs the phrase a reviewer says with what is wrong, a signal you can check in the render, and the usual fix. Always tie it to the goal of the piece, not to taste. Anthony confirmed this is how he talks (a stated answer, not yet a comparison round), so use the phrases in critiques, with the cause named alongside. `L1` · default
 
 | Phrase | What is actually wrong | Signal to check | Usual fix |
 |---|---|---|---|
