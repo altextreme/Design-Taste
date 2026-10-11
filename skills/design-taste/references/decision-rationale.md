@@ -251,3 +251,28 @@
 - **Because:** vibrating complements strain the eye; muddy low-contrast pairs blur together and lose hierarchy.
 - **Not chosen as reasons:** that blush plus sage is a cliché, or that these pairings are applied by fashion and not the concept, were offered and not selected. The objection to blush plus sage is low contrast, so a version with clear value separation is not objected to on these grounds.
 - **Links:** `principles/color.md`; core tenet 4; `principles/contrast-and-hierarchy.md`.
+
+## Node: no-stock-motion-effects
+- **Decision:** no elastic drop-ins, spin-ins, attention shakes or word-by-word pops.
+- **Because:** they have an amateur, template look.
+- **Not chosen as reasons:** motion should have a job, breaking the reading flow, and drama belonging in one place were offered and not selected. The objection is about how they look, so judge a new effect by whether it reads as a stock preset.
+- **Links:** `principles/motion.md`; `principles/negative-constraints.md`.
+
+## Node: no-dip-to-black-between-every-transition
+- **Decision:** do not dip to black between every transition.
+- **Because:** it reads as an unedited default.
+- **Not chosen as reasons:** broken continuity, dead air, and repetitiveness were offered and not selected.
+- **Links:** `principles/motion.md` (sequences hand off with motion).
+
+## Node: no-decorative-patterns
+- **Decision:** no decorative motifs or background patterns.
+- **Because:** they compete with content; they date quickly and look busy.
+- **Not chosen as reasons:** decoration with no job, and restraint over effect, were offered and not selected.
+- **Links:** `principles/material-texture-surface.md`; `principles/negative-constraints.md`.
+
+## Node: shadows-for-depth
+- **Decision:** bevel, emboss, glows, colored or heavy shadows, and decorative shadows with no depth job stay banned. Subtle, neutral shadows are acceptable to establish z-depth on raised cards, floating layers, sticky bars, and hover and drag states. A subtle shadow on text is acceptable when it helps legibility: alone over mild imagery; over a busy photo a scrim or panel comes first.
+- **Because:** the dated look of bevel and emboss is the objection; a subtle shadow that establishes depth does a job.
+- **Widens:** the old rule that hover elevation was the only UI shadow (SKILL.md imagery bullet and `ui-craft.md`). R064 and R071 are not changed: they concern shadow-only fixes on busy photos.
+- **Links:** `principles/material-texture-surface.md`; `principles/negative-constraints.md`; R064; R071; core tenet 3.
+

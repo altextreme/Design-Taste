@@ -38,7 +38,7 @@
 ## Interaction states
 - Every control defines hover, focus-visible, pressed, disabled and loading, and equivalent controls share one treatment everywhere. Inconsistent states teach users nothing. `L1` · default
 - Hover and pressed states transition on the house ease-out; they never swap instantly and never merely dim or grey the text. Pressed reads as a tone or fill change; a tiny scale-down is optional, not required. Do not animate text weight or box size on hover in a way that shifts neighbouring layout (his validated card lift is the exception: rise, slight scale and shadow, out of flow). `L1` · default
-- Elevation on hover is the only shadow; it signals state, and it is gone at rest. `L1` · default
+- Shadows exist to establish z-depth and are subtle, neutral and soft: on hover and drag states, on cards raised above the page, on floating layers (menus, popovers, dialogs) and on sticky headers and bars. Never bevel, emboss, glow, colored or heavy shadows, nor decorative shadows with no depth job. A subtle shadow on text is acceptable when it helps legibility: alone over mild imagery, but over a busy photo a scrim or panel comes first (R064, R071 stand). His stated answer, which widens the old "hover elevation is the only shadow" rule; not yet a comparison round. `L1` · default
 - Text in a row of figures aligns: numbers that stack in columns or sit side by side (metrics, tables, dates, versions, page numbers) align on the right and use consistent precision (R154). Tabular figures are a `default` implementation; a lone number in a sentence stays proportional. If the chosen face lacks tabular figures, change the face for the numeric tier. `L1` · R154 for alignment and precision; other details `default`
 
 ## UI motion
