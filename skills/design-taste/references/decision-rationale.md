@@ -178,3 +178,10 @@
 - **Because:** inclusive by default; it catches hover and touch gaps; observation beats opinion; every state is designed so a developer does not decide.
 - **Links:** SKILL.md workflow step 6 and "design every state"; `ui-craft.md` hover, touch and what moves on its own; non-negotiable 1.
 
+## Node: other-device-classes
+- **Decision:** keep default rules for TV, watch, car, kiosk and spatial devices: size targets by input and type by viewing distance; glance surfaces carry one number or status; the motion budget shrinks as attention narrows and darker environments default darker; keep reading and selecting out of a TV's outer margin, and treat a second glance in a vehicle as a failure.
+- **Because:** it covers a gap his rounds never reached; it stays inside his principles (legibility, hierarchy); safe defaults beat none.
+- **Not chosen as a reason:** "easy to correct later" was offered and not selected.
+- **Confidence:** he agreed with all four rule groups (after a clarifying question, since the first answer was ambiguous). He has not designed for these devices, so all remain unvalidated defaults.
+- **Links:** queue 23 and 57; `formats.md` other device classes; non-negotiables 1, 2 and 4.
+
