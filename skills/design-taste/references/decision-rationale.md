@@ -142,3 +142,15 @@
 - **Not chosen as a reason:** "not everyone sees opacity" was offered and not selected.
 - **Links:** `ui-craft.md` accessibility baseline (never carry state by one channel); non-negotiable 1.
 
+## Node: icon-size-matches-text
+- **Decision:** an icon is sized to the line height of the text beside it and centered on the text line; it is used at the size it was drawn for.
+- **Exception:** a vector icon may be scaled up for a large slot in a sparse context, keeping its stroke weight matched to nearby type. Raster icons are never scaled up.
+- **Because:** icon and text read as a unit; consistent weight; visual balance (an oversized icon pulls attention from its label); restraint (icons support text, not compete).
+- **Links:** `principles/iconography-and-supporting-graphics.md` (thin line icons matched to type weight); core tenet 3.
+
+## Node: icon-optical-correction
+- **Decision:** icons are corrected optically: a circle gets slightly more area than a square of the same box; a play triangle centers on its centroid.
+- **Because:** it reads as intentional; it is a craft signal; it is consistent with optical centering elsewhere in the skill.
+- **Not chosen as a reason:** "the eye judges, not the ruler" was offered and not selected as a stand-alone reason.
+- **Links:** core tenet 1; the big-number-and-label optical centering rule (SKILL.md data defaults).
+
