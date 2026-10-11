@@ -172,3 +172,9 @@
 - **Rejected detail:** "about twice the area" and "no more than two things moving" were dropped. He keeps the dominance and drops the numbers.
 - **Links:** core tenet 2; psychology: Hick, isolation; `principles/contrast-and-hierarchy.md`.
 
+## Node: three-person-walkthrough
+- **Decision:** for interactive work, walk it as a desktop mouse user, a one-handed phone user, and a keyboard user with no hover; record what each saw with no input and where each was blocked.
+- **Applies when:** interactive work. Skipped for static pieces (posters, charts).
+- **Because:** inclusive by default; it catches hover and touch gaps; observation beats opinion; every state is designed so a developer does not decide.
+- **Links:** SKILL.md workflow step 6 and "design every state"; `ui-craft.md` hover, touch and what moves on its own; non-negotiable 1.
+
