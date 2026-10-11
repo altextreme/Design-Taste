@@ -95,3 +95,11 @@
 - **Because:** the hedge is readable and the label is scannable; it is honest without alarming the reader.
 - **Not chosen as reasons:** that percentages imply false precision, that high stakes need redundancy. He allows real percentages, so the ban I first wrote was my own and is removed.
 - **Links:** his honesty line on persuasion (SKILL.md); `ui-craft.md` AI surfaces.
+
+## Node: hero-image-test
+- **Decision:** for an image-led hero, delete the image mentally; if the first screen still looks complete, the image was too small or too weak and must be enlarged or replaced.
+- **Applies when:** the photograph is meant to lead (full-bleed or half split). Exempt: type-led heroes with an inset photo (R096).
+- **Because:** immersion and first impression; picture superiority (images register faster and are remembered better); an image that can be removed without loss is filler.
+- **Not chosen as a reason:** "image first" as a stand-alone reason was offered and not selected.
+- **Links:** R096; R133; `formats.md` landing; `principles/web-and-landing.md`; psychology: picture superiority.
+
