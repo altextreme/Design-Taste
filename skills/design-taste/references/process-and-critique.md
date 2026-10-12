@@ -1,6 +1,6 @@
 # Process Gates and Critique Mode
 > **Status: default guidance. Not yet validated by Anthony's comparison rounds.** Follow these as defaults for surfaces his validated rules (`principles/*.md`, SKILL.md) don't cover. Wherever they conflict with a validated rule, a dealbreaker, or a non-negotiable, the validated rule wins.
-> **Read when:** starting any non-trivial design task (before building); deciding whether to ask the user a question; the user asks for a critique, review, audit, or "what's wrong with this"; you are about to show or hand off finished work.
+> **Read when:** starting any non-trivial design task (before building); deciding whether to ask the user a question; the user asks for a critique, review, audit, or "what's wrong with this"; you are about to show or hand off finished work; asked to add or find motion; asked for several variants.
 
 ## 1. Ask or decide
 
@@ -211,3 +211,28 @@ His stated answers; not yet tested in a comparison round. A veto removes a treat
 
 - Glass and translucency stay explicit-request-only everywhere; they are not vetoed by these signals, but their fallback and contrast tests still apply.
 - Reasons he gave: the cost of getting it wrong is high; audience context sets the design; legibility and accessibility come first.
+
+## 12. Motion opportunity pass (restraint first)
+> Adopted from field review (emilkowalski/skills, find-animation-opportunities). Reasons are the source's, not Anthony's.
+
+Use when asked to "add motion", "make it feel alive" or "what could animate here". The job is a filter as much as a finder: expect to reject most candidates.
+- Run each candidate through four questions in order and record the answers: how often will a person see it (the frequency gate in `ui-craft.md`); what is its job (feedback, orientation, a state change made legible, a jarring change bridged, explanation, or delight only at the rare tier); can it stay quick; and does it help or hinder where it sits (readouts and data being acted on do not move for style). A candidate that fails any one is dropped. `L1` · default
+- Name what you rejected and which question rejected it ("command palette open and close: used constantly, no motion"; "line drawing on the live chart: the reader is reading it"). A list of only additions is a wishlist. `L1` · default
+- Cap proposals by leverage, not by how fun they would be to build: a short list for a view, a handful for a whole product. Zero is a legitimate answer, and good news when the interface is already close to right. `L1` · default
+- A calm product earns fewer and subtler proposals than a playful one. Read the product's character and its existing motion vocabulary first and extend it; never add a second, parallel one. `L1` · default
+- Where feel cannot be judged without seeing it move, say so and mark which proposals depend on that, rather than guessing. `L1` · default
+
+## 13. Exploring options (variants worth flipping between)
+> Adopted from field review (emilkowalski/skills, prototype). Applies when the user asked for options; otherwise section 1 stands and the style choice is never handed back.
+
+- Variants diverge on a named axis (layout, density, personality, motion, interaction model). Three tints of one idea waste the comparison: if two differ only in accent or copy they are one direction, so replace one. State each variant's axis in a phrase before building. `L1` · default
+- Divergence never lowers the craft floor. Every variant is individually shippable and meets the same rules; a sloppy one only loses on execution and teaches nothing about its direction. Sharing the product's tokens is not convergence, since each should feel native to the product. `L1` · default
+- Judge each variant at real size and in real surroundings (a toast over a page, a card among siblings, a button in a form), one at a time. Thumbnails side by side distort spacing and scale. Switching between them is instant: it is a repeated act, so by the frequency gate it gets no motion. `L1` · default
+- Say honestly when each variant is the right choice and what it costs. Do not pre-pick a favorite in the comparison; if asked, answer from the product's character and how often the thing is seen, not from aesthetics alone. If two converge while building, cut one and say so. `L1` · default
+- The comparison harness is chrome, not a contestant: plain, neutral, identical across rounds so its look never sways the verdict, and kept out of production code. When a winner is chosen, promote only that one by the project's conventions and remove the rest. `L1` · default
+
+## 14. Defaults are the product
+> Adopted from field review (emilkowalski/skills). Reasons are the source's.
+
+- For a component, kit or system, most people never change a setting, so the default easing, timing, spacing and look are the design. Make the call and ship it well rather than exposing an option in place of a decision. This is "commit to one direction" (section 2) applied to reusable parts. `L1` · default
+- Invisible correctness compounds. Details a person never consciously notices (an origin set to the trigger, a hover that cannot stick on touch, an edge case that does not break) are the goal: the thing behaves as assumed and nobody gives it a second thought. They are cheap to skip and expensive in aggregate, so they stay on the checklist even though no one will praise them. `L1` · default
