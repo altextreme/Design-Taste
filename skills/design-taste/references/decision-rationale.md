@@ -305,5 +305,12 @@ These defaults came from comparing other design-guidance projects and were not p
 - **Replace to refine, branch to compare** (superdesign).
 - **Browser surfaces themed; motion gate; motion claimed, motion shown** (impeccable, emilkowalski, taste-skill).
 - **Reject a reference that harms usability** (tasteful-ui).
+- **Stress with the worst believable content; choose truncation per field; the identifying and actionable parts do not shrink** (emilkowalski/skills, break-ui). Reason in source: demo data is chosen to flatter the design, so the breaks arrive in production; and one global truncation rule is wrong for some field.
+- **Interruptible by default; release continues the hand's speed; edges give instead of walling; settle without overshoot** (emilkowalski/skills, Apple's fluid-interface talks as distilled there). Reason in source: thought and gesture run in parallel, so an interface that cannot be redirected feels like it is not listening. The no-overshoot default is this repo's own (R041, R048, R058) and is stricter than the source.
+- **Slow where deciding, fast where the system answers; quicker motion is a quicker product; warm-up skips the repeat delay** (emilkowalski/skills). Reason in source: the deliberate wait is the safeguard, while any delay on the system's answer reads as lag.
+- **Phone platform layer fixes** (emilkowalski/skills, mobile-native). Reason in source: most "janky on my phone" reports come from the tap flash, stuck hover, viewport height or input zoom, not from animation, and none reproduce in emulation.
+- **Cause before fix for dropped frames; a cheaper property that looks the same; promote layers last** (emilkowalski/skills, animation-performance). Reason in source: a fast laptop hides almost every problem, and a premature layer promotion fixes nothing while costing memory.
+- **Motion opportunity pass is a filter that reports rejections; variants diverge on a named axis** (emilkowalski/skills). Reason in source: an opportunity finder that suggests motion everywhere produces the over-animated product it exists to prevent; three tints of one idea teach nothing.
+- **Simplicity is not minimalism; mapping; navigation named for contents; confirmation for the irreversible** (Apple's design-principles talk as distilled in emilkowalski/skills).
 - **Other guidance never overrides his validated rules** (the Anthropic frontend-design list of tells conflicts with R097, R130, R153, R102, R103).
 

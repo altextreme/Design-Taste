@@ -55,9 +55,9 @@ Load only what the task needs. Every file is one level below `SKILL.md`; none re
 | File | Read when |
 |---|---|
 | `../scripts/lint.mjs`, `../../../evals/` | Web output: run the no-model source scan before looking (`render-and-review.md`). Evals: a protocol and fixed briefs for testing whether the skill improves output; not loaded during design work |
-| `render-and-review.md` | Before every final pass on any visual: the R150-validated render loop, measurement, typography checks and “Looked at” note; its tool example and unasked format details remain defaults |
-| `process-and-critique.md` | Starting any non-trivial task (ask vs decide, state the direction); the user asks for a critique, review or audit; before handing off finished work (scored review, self-review loop, review passes, system derivation) |
-| `ui-craft.md` | Any interactive UI: states (loading, empty, error, edge), focus and keyboard, targets, forms, control and card geometry, hover and touch behavior, accent and dark surfaces, multi-page consistency, UI motion, sample content and copy, laws of UX |
+| `render-and-review.md` | Before every final pass on any visual: the R150-validated render loop, measurement, typography checks and “Looked at” note; its tool example and unasked format details remain defaults; the motion review (slow it down, step it, test touch on a device) |
+| `process-and-critique.md` | Starting any non-trivial task (ask vs decide, state the direction); the user asks for a critique, review or audit; before handing off finished work (scored review, self-review loop, review passes, system derivation); asked to add motion or to produce variants (sections 12 and 13) |
+| `ui-craft.md` | Any interactive UI: states (loading, empty, error, edge), worst-case content stress tests, focus and keyboard, targets, forms, control and card geometry, hover and touch behavior, drag and gesture feel, web on phones, accent and dark surfaces, multi-page consistency, UI motion and dropped frames, sample content and copy, laws of UX |
 | `formats.md` | Slide decks, dashboards, charts and data graphics, landing pages, docs, email, mobile and native screens, social cards, resumes and print, diagrams, design-system docs |
 | `media-prompts.md` | Writing prompts for image or video models; building timeline-based motion graphics; exporting MP4; negative-prompt lists; QA of generated media |
 | `scripts-and-direction.md` | Any non-Latin script, right-to-left layout, CJK, mixed-language or translated content, locale formats; before writing "left" or "right" in a spec |

@@ -171,7 +171,7 @@ Registers are starting points chosen from the concept, not defaults to reach for
 
 Full rules and reasoning in `references/ui-craft.md`. Before showing an interface, check:
 
-- **Five states** exist, not just the populated one: loading, empty, error, populated, edge (longest text, zero and thousands of items, missing data).
+- **Five states** exist, not just the populated one: loading, empty, error, populated, edge (longest text, zero and thousands of items, missing data). Stress them with the worst believable content, not the kindest demo data (`ui-craft.md`, Worst-case content).
 - If you build the interface, its state controls must actually change the view. Exercise every visible control and capture each required state; a row of buttons or simultaneous state messages is not a state implementation. On refresh failure, keep previously loaded records visible with an error and recovery action.
 - **Keyboard focus** is visible on every interactive element and distinct from hover; state is never carried by hue alone; non-text controls meet a 3:1 contrast floor against their ground.
 - **Targets** are comfortably large with separated hit areas; any control may be custom-drawn, but it must replicate the native role, state, keyboard operation and visible focus (his stated answer, untested in a round); reading order equals DOM order.

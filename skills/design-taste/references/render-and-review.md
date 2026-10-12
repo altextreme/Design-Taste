@@ -114,6 +114,14 @@ The line-break and spacing tests in this section were confirmed in R150. `L1` ·
 - **Interactive interfaces:** activate every visible control and capture each required state separately. Confirm that only the intended state is shown, the recovery action works, and a refresh error leaves existing data visible. If the artifact is a static mock, label controls and states as proposed rather than claiming they work.
 - **Email:** the first screen (about 600 by 800) looks finished; at most one image slot, under about a third of it, with its placeholder label printed on the block, not only in alt text; the primary action is inside the first screen.
 
+## Motion review (defaults; adopted from field review, emilkowalski/skills)
+Motion that is fine at full speed can hide its flaws there. Apply to interface motion you built, and to staged motion at its own scale.
+- Play it slowed down (several times its duration, or the browser's animation inspector). Look for two states visibly overlapping where one should replace the other; an easing that stops or starts abruptly; a scale or rotation pivoting from the wrong point; coordinated properties (opacity, travel, color) drifting out of sync. `L1` · default
+- Step through it frame by frame when two or more properties are supposed to move as one. Timing drift between them is invisible at speed. `L1` · default
+- Anything touched (drag, swipe, sheet) is judged on a real device in the hand; emulation cannot show it. If you cannot, say it is unverified. `L1` · default
+- If the schedule allows, look again after a break or the next day. Imperfections that were invisible while building are obvious to fresh eyes. If not, say the motion was reviewed in the same sitting it was made. `L1` · default
+- The "motion claimed, motion shown" rule still applies: do not report timing or feel you did not observe. `L1` · default
+
 ## Hunt list: failures seen in tests
 A headline descender running into a rule · absolutely positioned labels landing on top of lines or numbers · a large figure colliding with a chart · text the same color as its panel (a figure that vanishes) · a page number nobody can see · a placeholder photo box taking half a slide · a lone word or "pm" on its own line · sans type where a display face was needed · invented customer names and statistics.
 
