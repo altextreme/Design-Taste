@@ -1,6 +1,6 @@
 # Design Taste: Evidence
 
-Each principle in principles/*.md cites rounds (R001–R165). This file holds the coverage tracker and the round log those citations point to. Read it only to resolve ambiguity or to quote his reasoning.
+Each principle in principles/*.md cites rounds (R001–R169). This file holds the coverage tracker and the round log those citations point to. Read it only to resolve ambiguity or to quote his reasoning.
 
 ## Coverage Tracker
 
@@ -210,7 +210,7 @@ Legend: ⬜ untested · 🟨 partial · ✅ resolved · 🔁 ambiguous — branc
 
 ## Coverage Tracker, Phase 2: Channels, Formats & Media
 
-Started 2026-10-07. Phase 1 (above) resolved the foundation across 108 dimensions. Phase 2 tests how it carries into specific channels, formats and media. Each dimension is one comparison round; the Phase 1 rules are the control. **Progress: 40 / 44 resolved, 0 partial, 0 flagged (🔁).** Order of work: Product UI, Web, Social, Email, Decks, Documents, Mobile, Print, Identity, Media.
+Started 2026-10-07. Phase 1 (above) resolved the foundation across 108 dimensions. Phase 2 tests how it carries into specific channels, formats and media. Each dimension is one comparison round; the Phase 1 rules are the control. **Progress: 48 / 52 resolved, 0 partial, 0 flagged (🔁).** Order of work: Product UI, Web, Social, Email, Decks, Documents, Mobile, Print, Identity, Media.
 
 ### Product UI & Dashboards (UI)
 | ID | Dimension | Status | Rounds |
@@ -224,6 +224,14 @@ Started 2026-10-07. Phase 1 (above) resolved the foundation across 108 dimension
 | UI-07 | Form layout (label placement, single vs. multi column) | ✅ | R093 |
 | UI-08 | Density tier (compact vs. comfortable) | ✅ | R092, R136 |
 | UI-09 | Dark vs. light field for data-dense screens | ✅ | R094, R106 (tint conflict with R038 resolved: brand dictates) |
+| UI-10 | Form messages: reserved line vs a line that appears | ✅ | R166 (queue 52; agrees with his stated answer) |
+| UI-11 | Selected option: accent plus a second cue | ✅ | R166 (queue 54; pick confirmed B afterwards) |
+| UI-12 | Custom-drawn controls vs the browser's own (dropdown list) | ✅ | R166 (queue 51; agrees with his stated answer) |
+| UI-13 | Display face on product screens with no brand typeface: by tone | ✅ | R166 (Depends on brand and tone), R169 (playful consumer: yes; neutral work tool: no) |
+| UI-14 | Long navigation: all items in named groups, not a seven-item cap | ✅ | R167 (queue 58, Miller) |
+| UI-15 | Many options: keep them all, grouped and searchable, rather than delete | ✅ | R167 (queue 58, Hick) |
+| UI-16 | Unfinished setup: a quiet pointer, not a recurring progress nag | ✅ | R167 (queue 58, Zeigarnik) |
+| UI-17 | Waits: never pad; show real stages for a real wait; say what was checked on a fast result | ✅ | R167 (conflict), R168 (resolved: truth and frequency separate the cases) |
 
 ### Mobile App (MOB)
 | ID | Dimension | Status | Rounds |
@@ -385,6 +393,7 @@ Started 2026-10-10. Phases 1 and 2 recorded what Anthony picks. Phase 3 records 
 | PROC-24 | Design-system state tables: reasons for "not applicable" only where the omission is unusual | ✅ | R159 (queue 50) |
 | PROC-25 | Tooltip warm-up: after the first label, neighbours open at once | 🟨 | R161 (queue 72; one round) |
 | PROC-26 | Motion suggestions come with the rejected candidates and why | 🟨 | R164 (queue 74; one round) |
+| PROC-27 | A failed non-negotiable blocks a piece whatever its score | 🟨 | R169 (queue 61; one round) |
 
 ## Round Log
 
@@ -554,6 +563,10 @@ Started 2026-10-10. Phases 1 and 2 recorded what Anthony picks. Phase 3 records 
 | R163 | INTR-06 | Queue 70 rebuilt after the R162 defect: a Details panel that slides in below the header with its button always clickable; on a second click mid-motion, A jumps to the end then reverses, B finishes then reverses, C turns around from where it is. Verified with real pointer clicks. | **C (turn around from where it is)** | Turning around at once feels like the interface is listening; a jump reads as a glitch; finishing first feels like lag, as if my click was ignored. Also ticked: I never click this fast, so it does not matter much. No condition given. |
 | R164 | PROC-26, MOTN-14 | Last two PR #3 items in realistic form: a motion-pass report for the project page, proposals only vs proposals plus four rejected candidates with reasons (queue 74); a project list with Sort and account dropdowns opening on the house moderate ease-out vs a strong ease-out at the same duration, distance and close (queue 75; measured 60% vs 86% of travel at about 80ms). | **74: B (proposals plus rejections); 75: B (strong ease-out)** | 74: seeing rejections shows the pass was careful so I trust it more; they teach the reasoning; they stop repeats. 75: strong feels faster and more responsive; moderate feels slightly slow for a menu I open often; for a menu speed matters more than the curve. Scopes R041/R042 (staged motion) rather than overturning it; the separating condition is inferred. |
 | R165 | MOTN-14 | Narrowing R164: the same moderate vs strong ease-out on a page-level Details panel (a few times a session), a delete-confirmation dialog (occasional) and a first-visit welcome card (once), with durations scaled to distance; plus an open "where is the line" question. | **75b panel: B (strong); 75c dialog: B (strong); 75d welcome: A (moderate)** | Panel: strong feels faster, moderate feels slow. Dialog: same, plus an interrupting dialog should arrive quickly and get out of the way. Welcome: strong rushes in and hangs, abrupt here; moderate lands gently; something seen once can take its time. His line: "For things like welcome screens, a slower animation is fine. For quick, action-based things, a faster animation is appropriate." Size and frequency did not decide it; what triggered it did. |
+| R166 | UI-10, UI-11, UI-12, UI-13 | Four stated-only form rules on working screens: error message on a reserved line vs one that appears and pushes the form (queue 52); selected option by accent only vs accent plus check and heavier border, with an optional grayscale switch (queue 54); the browser's own country list styled when closed vs a custom list with full keyboard support (queue 51); a settings screen in one neutral sans vs sans plus a serif display face for headings (queue 59). | **52: B (reserved line); 54: B (pick left blank on the page, confirmed in chat); 51: B (custom list); 59: Depends (brand and tone)** | 52: nothing jumping keeps my place; a stable form looks polished. 54: color-blind users need more than color; never color alone; the check is clear at a glance; B looks more intentional. 51: the open list should match the design; same on every device; control over every state; "accessibility and mobile usability" must stay top-of-mind for every custom form type. 59: "It depends on the brand. I'm all for a display face or an alternate typeface or, at least, weight to make content easier to scan." |
+| R167 | UI-14, UI-15, UI-16, UI-17 | Queue 58 on working screens, popular reading of a law (A) vs the skill's alternative (B): eleven settings sections capped at seven with More vs all in two named groups (Miller); five popular integrations vs all fourteen grouped with search (Hick); a recurring 60%-complete banner vs one quiet line (Zeigarnik); a report shown at once (0.25 s) vs after about 2.8 s of staged "analysing" steps (Doherty). | **58a: B; 58b: B; 58c: B; 58d: B (staged delay)** | 58a: I recognise items, I do not remember them; More makes me hunt; named groups scan. 58b: removing options fails people; grouping and search keep it fast. 58c: a nag is pressure not a reason; home leads with my work; a daily banner wears down trust; "a nag is fine once, but not every day." 58d: the steps feel more trustworthy; instant feels too easy to be thorough; steps are fine if the work really takes time. **58d conflicted with the skill's no-added-delay guardrail; resolved by R168.** |
+| R168 | UI-17 | Narrowing R167's padded-report pick: a dashboard refresh used many times a day, shown at once (0.25 s) vs after about 2.9 s of padded real-stage steps; an annual report with a real 3 s wait, spinner vs its real stages ticking off; and a direct question on a rare result ready at once (add steps, show at once, or show at once with a line saying what was checked). | **168a: A (shown at once); 168b: B (real stages); padding question: show at once with a line saying what was checked** | 168a: often-used means instant; waiting for nothing adds up; steps suit a rare big result, not a routine action; steps get annoying after the first time. 168b: stages show it is working and how far along; feel more trustworthy; the wait feels shorter; "stages are fine only when they are true." Resolves UI-17: never pad; real stages for real waits; a what-was-checked line for fast results. |
+| R169 | UI-13, PROC-27 | Same serif display face for headings vs one neutral sans on two products with no brand typeface: a friendly habit tracker and a neutral invoicing tool; and a landing-page review scoring 104/125 with a body-text contrast failure, "ship after fixes" vs "blocked by a non-negotiable". | **59b playful: B (display face); 59c work tool: A (one sans); 61: B (blocker overrides)** | 59b: warmth and character; headings easier to find; a friendly product can carry a second face. 59c: a work tool stays out of the way; one family reads precise and trustworthy; a heavier weight does the job. 61: some failures stop a piece being usable; a high score can hide a serious problem; blocked makes sure it gets fixed first. Resolves UI-13 by tone. |
 
 ## Validation Log
 

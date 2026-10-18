@@ -10,6 +10,7 @@
 - **Overridden by:** a tight deadline or prototype; a platform-native app where matching the OS is the goal.
 - **Not chosen as an exception:** date, time and file pickers were offered and not selected, so do not treat them as exempt on their own.
 - **Constraint that never relaxes:** the custom control replicates the native role, state, keyboard operation, visible focus and submitted value (accessibility is a non-negotiable).
+- **Confirmed R166 (working screen):** a custom country list beat the browser's own. Ticked: the open list should match the design; same on every device; control over every state. His condition: "It's just critical that, for every custom form type, accessibility and mobile usability is kept top-of-mind."
 - **Links:** `ui-craft.md` control and component geometry; SKILL.md interface floor; non-negotiable 1 and 5 (contrast, reading order).
 
 ## Node: hover-never-gates
@@ -29,7 +30,9 @@
 - **Links:** `formats.md` landing; R110; psychology: similarity, choice overload (a grid of unequal items would fail the fairness reason).
 
 ## Node: interface-type-follows-brand
-- **Decision:** interface typefaces follow the brand file; with no brand, one neutral sans; no display face added to product screens unprompted.
+- **Decision (revised R166):** interface typefaces follow the brand file and the product's tone; a display face or second face for headings is welcome when they support it; with no brand and a neutral tone, one sans with clear weight steps so headings scan. Previously: no display face on product screens unprompted.
+- **His words (R166):** "It depends on the brand. I'm all for a display face or an alternate typeface or, at least, weight to make content easier to scan."
+- **Resolved by tone (R169, same serif on both):** friendly habit tracker took the display face (warmth and character, headings easier to find); neutral invoicing tool kept one sans (stays out of the way, reads precise and trustworthy, a heavier weight does the job).
 - **Because:** brand consistency over personal taste; recognition across every screen; a separate face on product screens sends mixed signals.
 - **Not chosen as reasons:** client authority was offered and not selected.
 - **Links:** precedence rule 2 (brand consistency even over personal taste); `brand-and-registers.md`.
@@ -50,6 +53,7 @@
 - **Decision:** a selected item (icon set, tab, filter, nav item) carries two cues: a form change plus the accent. In navigation the active item keeps its line (R155) and adds the second cue.
 - **Because:** color-blind users; accessibility standards (meaning is never carried by color alone).
 - **Not chosen as reasons:** clarity at a glance and a more intentional look were offered and not selected, so the rule is justified by accessibility, not taste.
+- **R166 (working screen):** pick left blank, but he ticked color-blindness, never color alone, and this time also clear at a glance and more intentional. So taste now supports it too. He confirmed B in chat.
 - **Links:** R155; non-negotiable 3; `ui-craft.md` accessibility baseline (never state by hue alone).
 
 ## Node: ai-sources-inline
@@ -148,6 +152,20 @@
 - **Not chosen as reasons:** rejections are noise; shorter is easier to act on; rejections on request only.
 - **Links:** `process-and-critique.md` section 12.
 
+## Node: staged-delay-for-thoroughness
+- **Status:** resolved R168 (was 🔁 after R167).
+- **Decision:** never pad a wait. Frequent actions are instant. A real multi-second wait shows its true stages as they finish. A substantial result ready at once is shown at once with a short line saying what was checked.
+- **Because (R168):** often-used things should be instant and waiting for nothing adds up; steps suit a rare big result, not routine actions, and get annoying after the first time; real stages show it is working and how far along, make the wait feel shorter and the result more trustworthy; "stages are fine only when they are true."
+- **History:** in R167 he chose a padded report because instant felt "too easy to be thorough". Offered the what-was-checked line in R168, he took it over padding: the trust comes from seeing the work, not from the wait.
+- **Links:** `ui-craft.md` laws (Doherty); honesty non-negotiables.
+
+## Node: blocker-overrides-score
+- **Decision:** a failed non-negotiable blocks a piece whatever its score; the review names the blocker first.
+- **Because (R169):** some failures stop a piece being usable whatever else is good; a high score can hide a serious problem; calling it blocked makes sure it gets fixed first.
+- **Not chosen as reasons:** the score already reflects it; blocked is too harsh; only accessibility failures should block.
+- **Provenance:** adopted from field review (queue 61), confirmed by one round. 🟨.
+- **Links:** `process-and-critique.md` scoring.
+
 ## Node: hero-image-test
 - **Decision:** for an image-led hero, delete the image mentally; if the first screen still looks complete, the image was too small or too weak and must be enlarged or replaced.
 - **Applies when:** the photograph is meant to lead (full-bleed or half split). Exempt: type-led heroes with an inset photo (R096).
@@ -181,6 +199,7 @@
 
 ## Node: form-stability
 - **Decision:** a field's border keeps one width in every state; focus is an offset outline in a reserved slot; helper and error text own a reserved line, so nothing shifts when focus lands or a message appears.
+- **Confirmed R166 (working screen):** reserved line beat a line that appears. Ticked: nothing jumping keeps my place; a stable form looks polished.
 - **Because:** it looks intentional and polished; it protects the user's place; layout stability; it is a craft signal.
 - **Overridden by:** none stated.
 - **Links:** core tenet 1; `ui-craft.md` control and component geometry; non-negotiable 4 (no near-tangents, no collisions).

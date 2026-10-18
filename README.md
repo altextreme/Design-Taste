@@ -58,7 +58,7 @@ skills/design-taste/
 ├── scripts/lint.mjs               no-model source scan for measurable dealbreakers (zero dependencies; tests alongside)
 └── references/
     ├── index.md                   what to read when
-    ├── principles/<category>.md   validated rules, one file per category (164 rounds, 225 dimensions)
+    ├── principles/<category>.md   validated rules, one file per category (168 rounds, 233 dimensions)
     ├── evidence.md                coverage tracker and round log
     ├── process-and-critique.md    ask-vs-decide, direction-first, scored critique, self-review loop
     ├── ui-craft.md                states, accessibility, forms, interface motion, content integrity

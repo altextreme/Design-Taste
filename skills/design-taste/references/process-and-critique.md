@@ -73,7 +73,7 @@ Before showing work, ask of every element: where did this come from? If the answ
 
 Use when the user asks for a review, or when grading your own pass. Review the executed result (what is actually on the canvas or in the file), never the stated intent. If tooling exists to render it, look at it at the real format(s) at least once; if not, say the review was static. `L1` · default
 
-**Hard blockers override the score.** A failed non-negotiable (accessible contrast, reading time, collisions and near-tangents, enforced hierarchy and reading order, paragraph links colored and underlined) fails the piece, however well the five dimensions score. A 90 with a blocker is a fail, and the report says so first. A `default` rule alone never creates a blocker. `L1` · default (adopted from field review)
+**Hard blockers override the score.** A failed non-negotiable (accessible contrast, reading time, collisions and near-tangents, enforced hierarchy and reading order, paragraph links colored and underlined) fails the piece, however well the five dimensions score. A 90 with a blocker is a fail, and the report says so first. A `default` rule alone never creates a blocker. His reasons (R169): some failures stop a piece being usable whatever else is good; a high score can hide a serious problem; calling it blocked makes sure it gets fixed first. `L1` · R169
 
 **Five dimensions, scored independently** (a piece can be a 9 on one and a 4 on another, and the report must say so):
 
