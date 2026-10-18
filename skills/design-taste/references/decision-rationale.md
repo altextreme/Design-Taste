@@ -13,9 +13,10 @@
 - **Links:** `ui-craft.md` control and component geometry; SKILL.md interface floor; non-negotiable 1 and 5 (contrast, reading order).
 
 ## Node: hover-never-gates
-- **Decision:** nothing a visitor needs is reachable only by hover; hover only adds polish, including secondary details. Hover may open a menu on desktop only if click, tap and keyboard also open it.
+- **Decision:** nothing a visitor needs is reachable only by hover; hover only adds polish, including secondary details. Menus open on click, tap or keyboard only, even on desktop (R161 overturned the stated hover-open convenience).
 - **Because:** touch devices have no hover; keyboard and assistive-tech users cannot hover; hidden content is not discovered; making people hover repeatedly is effort.
 - **Overridden by:** none stated.
+- **Confirmed R161 (realistic screens):** details at rest beat hover details on a billing page; click-open-and-stay beat hover-open on a live filter panel; click-only beat hover-open-then-stay and hover-open-close-on-leave on a navigation menu. His note on the menu: click sets the precedent that the menu is reached the same way on every device. Not ticked: hover saves a click; nav menus open on hover by convention.
 - **Links:** `ui-craft.md` hover, touch and what moves on its own; psychology: recognition over recall, target reach; precedence: legibility and accessibility even over styling.
 
 ## Node: even-grid-for-equal-sets
@@ -103,6 +104,49 @@
 - **Because:** the hedge is readable and the label is scannable; it is honest without alarming the reader.
 - **Not chosen as reasons:** that percentages imply false precision, that high stakes need redundancy. He allows real percentages, so the ban I first wrote was my own and is removed.
 - **Links:** his honesty line on persuasion (SKILL.md); `ui-craft.md` AI surfaces.
+
+## Node: tooltip-warm-up
+- **Decision:** the first tooltip in a row waits; once one is showing, its neighbours open at once with no fade.
+- **Because (R161):** waiting again for each label is slow once exploring; instant neighbours feel like the toolbar keeps up; the first wait stops labels flashing as the pointer passes, after that it is only in the way.
+- **Not chosen as reasons:** the same wait every time is consistent and calmer; instant labels feel jumpy; visible text labels instead of icon tooltips.
+- **Provenance:** adopted from emilkowalski/skills as a default (queue 72), confirmed by one round. 🟨.
+- **Links:** `ui-craft.md` motion speed; `hover-never-gates`.
+
+## Node: gesture-release
+- **Decision:** a short fast flick commits; past a boundary the surface follows with rising resistance; it settles without overshoot.
+- **Because (R162):** a flick is what the hand meant; a soft edge says the limit is reached without feeling broken; a hard stop feels stuck.
+- **Not chosen as reasons:** a fixed distance is predictable; a flick risks closing by accident; resistance is a gimmick.
+- **Provenance:** adopted from emilkowalski/skills (queue 71), confirmed by one round. 🟨.
+- **Links:** `ui-craft.md` gestures; direct motion with no overshoot (motion principles).
+
+## Node: identifying-name-truncation
+- **Decision:** the identifying name gets room first (widen the column), then wraps; a middle cut with a pause-on-hover tooltip (also on focus and tap) is the fallback; never an end cut when names differ near the end.
+- **Because (R162):** an end cut hides what tells the files apart; a middle cut keeps version and type visible. His note: there was clearly room to widen the table, and he prefers wrapping for file names like these.
+- **Not chosen as reasons:** never cut at all; wrapping makes rows uneven; a middle cut looks odd; one line per row is calmer.
+- **Tension:** the tooltip is a hover reveal; it fits R156 only because the visible middle cut already tells rows apart, so the full name is a backup, and it must also show on focus and tap.
+- **Links:** R154 (do not truncate the identifying field); `hover-never-gates`; `tooltip-warm-up`.
+
+## Node: interruptible-motion
+- **Decision:** a motion triggered again mid-way reverses from its current position at once; no jump to the end, no finishing first.
+- **Because (R163):** turning around at once feels like the interface is listening; a jump reads as a glitch; finishing first feels like lag, as if the click was ignored.
+- **Weight:** he also ticked that he never clicks this fast, so it matters little to him; a quality floor, not a headline.
+- **Not chosen as reasons:** finishing first is calmer; the panel should always be where the last click asked.
+- **Provenance:** adopted from emilkowalski/skills (queue 70); R162's build was unusable (the panel covered its button), rebuilt as R163. 🟨.
+- **Links:** `ui-craft.md` interruptible by default; `gesture-release`.
+
+## Node: strong-ease-out-for-menus
+- **Decision:** motion that answers the person's action (menu, side panel, dialog) uses a strong ease-out; composed entrances that arrive on their own (welcome card, staged poster) keep the moderate house ease-out (R041, R042).
+- **Because (R164, R165):** strong feels faster and more responsive; moderate feels slow when someone is waiting; an interrupting dialog should arrive quickly and get out of the way. On a one-time entrance the strong curve rushes in and hangs, which feels abrupt, and something seen once can take its time.
+- **His line:** "For things like welcome screens, a slower animation is fine. For quick, action-based things, a faster animation is appropriate."
+- **What does not decide it:** size and frequency; the page panel (a few times a session) and the occasional dialog both took the strong curve.
+- **Not chosen as reasons:** the strong curve snaps and stops (on action-driven motion); hard to tell apart; a bigger surface needs a calmer arrival; a serious question deserves a calmer arrival.
+- **Links:** motion principles (entrances ease out); `ui-craft.md` easing; `interruptible-motion`.
+
+## Node: motion-pass-reports-rejections
+- **Decision:** a motion pass lists rejected candidates with one-line reasons beside short, ranked proposals.
+- **Because (R164):** shows the pass was careful, so proposals earn trust; teaches the reasoning; stops repeats.
+- **Not chosen as reasons:** rejections are noise; shorter is easier to act on; rejections on request only.
+- **Links:** `process-and-critique.md` section 12.
 
 ## Node: hero-image-test
 - **Decision:** for an image-led hero, delete the image mentally; if the first screen still looks complete, the image was too small or too weak and must be enlarged or replaced.

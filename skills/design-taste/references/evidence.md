@@ -1,6 +1,6 @@
 # Design Taste: Evidence
 
-Each principle in principles/*.md cites rounds (R001–R160). This file holds the coverage tracker and the round log those citations point to. Read it only to resolve ambiguity or to quote his reasoning.
+Each principle in principles/*.md cites rounds (R001–R165). This file holds the coverage tracker and the round log those citations point to. Read it only to resolve ambiguity or to quote his reasoning.
 
 ## Coverage Tracker
 
@@ -83,6 +83,7 @@ Legend: ⬜ untested · 🟨 partial · ✅ resolved · 🔁 ambiguous — branc
 | MOTN-11 | Motion as transition vs. attention device | ✅ | R045, R047, R050 |
 | MOTN-12 | Tempo consistency vs. intentional shifts | ✅ | R052 |
 | MOTN-13 | Hold duration philosophy | ✅ | R046 |
+| MOTN-14 | Easing by trigger: strong ease-out for anything answering an action; moderate ease-out for what arrives on its own | ✅ | R164 (menu), R165 (panel, dialog, welcome card; condition stated) |
 
 ### Tone & Emotional Register (TONE)
 | ID | Dimension | Status | Rounds |
@@ -159,6 +160,8 @@ Legend: ⬜ untested · 🟨 partial · ✅ resolved · 🔁 ambiguous — branc
 | INTR-02 | State-change signaling | ✅ | R076 |
 | INTR-03 | Motion as interactivity signal vs. decoration | ✅ | R076 |
 | INTR-04 | Where a confirmation appears (inline, in place, toast, banner) | ✅ | R159 (queue 55), R160 (queue 69; resolved the conflict) |
+| INTR-05 | Gesture release: a flick commits, edges give with resistance, no overshoot | 🟨 | R162 (queue 71; one round) |
+| INTR-06 | Re-triggered motion: turn around from where it is, not jump or finish first | 🟨 | R163 (queue 70; R162 build was unusable) |
 
 ### Sound / Motion Sync (SYNC)
 | ID | Dimension | Status | Rounds |
@@ -173,6 +176,7 @@ Legend: ⬜ untested · 🟨 partial · ✅ resolved · 🔁 ambiguous — branc
 | DENS-01 | Sparse vs. dense tolerance | ✅ | R077 |
 | DENS-02 | Single vs. multi-message composition | ✅ | R077 |
 | DENS-03 | "Too busy" vs. "appropriately rich" threshold | ✅ | R021, R069, R074, R075, R077 |
+| DENS-04 | Long identifying names in a narrow column: room first, wrap, middle cut with a tooltip, never end cut | 🟨 | R162 (queue 73; answered Depends with conditions) |
 
 ### Consistency Across a Series (SERS)
 | ID | Dimension | Status | Rounds |
@@ -377,8 +381,10 @@ Started 2026-10-10. Phases 1 and 2 recorded what Anthony picks. Phase 3 records 
 | PROC-20 | Email first screen holds the primary action and a modest labelled image placeholder | ✅ | R154 (queue 41: visual B and rule Yes) |
 | PROC-21 | Paragraph links underlined; navigation marks only the active item; linked wordmarks need no underline | ✅ | R155 (queue 35) |
 | PROC-22 | Links styled as buttons need no text underline | ✅ | R155 (queue 45) |
-| PROC-23 | Hover never gates what a visitor needs to decide; opened panels stay open until closed | ✅ | R156 (queue 46; the hover-open-as-convenience clause was not tested) |
+| PROC-23 | Hover never gates what a visitor needs to decide; opened panels stay open until closed; menus open on click only | ✅ | R156 (queue 46), R161 (confirmed in context; hover-open convenience rejected) |
 | PROC-24 | Design-system state tables: reasons for "not applicable" only where the omission is unusual | ✅ | R159 (queue 50) |
+| PROC-25 | Tooltip warm-up: after the first label, neighbours open at once | 🟨 | R161 (queue 72; one round) |
+| PROC-26 | Motion suggestions come with the rejected candidates and why | 🟨 | R164 (queue 74; one round) |
 
 ## Round Log
 
@@ -543,6 +549,11 @@ Started 2026-10-10. Phases 1 and 2 recorded what Anthony picks. Phase 3 records 
 | R158 | COLR-10 | Queue 48: one project-dashboard screen with the accent on named events only vs spread over headings, labels, captions, statuses and icons vs the primary action only. Structured why step. | **A (named events only)** | Reasons: an accent is a signal, so if everything has it nothing stands out; spreading it makes the screen busier and less calm; accent on the selected row, progress and the active section helps people keep their place. Not ticked: the eye lands on the action and the key number; labels and captions add color without meaning; button-only loses selection and progress cues; some accent on headings carries the brand. No condition given. |
 | R159 | MATL-07, PROC-24, COMP-16, COMP-17, ICON-05, INTR-04 | Batch of six small A/B comparisons (queue 49, 50, 53a, 53b, 54, 55), each with a structured why step. | **49: B (one treatment per role); 50: C (reasons only where unusual); 53a: B (concentric); 53b: B (space-first); 54: A (icon matched to the line); 55: B (inline note)** | 49: one box looks like a kit; roles should look different. 50: an unusual omission needs a reason. 53a: shared-center corners read as one shape; equal radii look uneven. 53b: nested boxes add noise; space groups without lines; fewer borders are calmer. 54: a matched icon reads as part of the label; mismatched size looks unfinished. 55: the message should appear where the cause is; inline is always seen and stays. **55 conflicts with the stated toast-with-Undo rule, so it is flagged 🔁.** No conditions given for any. |
 | R160 | INTR-04 | Queue 69 in realistic clickable app screens (his R159 pick changed once he saw it in context): save beside its button; copy link from a menu that closes; archive with Undo; delete permanently. Each toast vs in place / inline / top-of-page note. | **69a: B (inline note); 69b: A (toast); 69c: B (in place with Undo); 69d: B (note at top of page)** | 69a: the message belongs where the cause is; inline stays; a toast can vanish before it is read. 69b: the menu closed so no cause is left and a toast is the only place; a changed label is easy to miss; toast is familiar. 69c: showing it in the row's place shows what changed; a toast can vanish before I can undo. 69d: a permanent action deserves a message that stays; the thing is gone so the message belongs where I land; a toast can vanish. No conditions given. Resolves the R159 conflict: the toast with Undo rule is overturned. |
+| R161 | PROC-23, PROC-25 | Queue 46 rechecked in realistic clickable screens (billing-page plan details; a live project filter panel), the untested hover-open clause on a top navigation menu (click only vs hover opens then stays vs hover opens and closes on leave), and queue 72 tooltip warm-up on an editor toolbar. Structured why step. | **46e: B (visible at rest); 46f: B (click open, stays); 46g: A (click only); 72: B (neighbours open at once)** | 46e: touch and keyboard users never see hover details; hidden details make me hunt; a page that changes under the pointer is less calm. 46f: several filters means the panel must stay; drift-closing panels are hard to use; click is the same everywhere. 46g: click only is predictable and the same on every device; "it sets a precedent that the menu is accessed the same way on all devices." Overturns the stated hover-open convenience. 72: re-waiting for each label is slow; instant neighbours keep up with me; the first wait stops flashing, after that it is in the way. R156 confirmed in context. |
+| R162 | DENS-04, INTR-05, INTR-06 | Three adopted-but-unasked rules from PR #3 (emilkowalski/skills) in realistic clickable screens: long file names in a narrow column (end cut vs middle cut vs wrap, queue 73); re-triggering a sliding panel mid-motion (jump vs finish first vs turn around, queue 70); letting go of a phone sheet (distance-only with hard stop vs flick counts with soft edge, queue 71). | **73: Depends (wrap preferred; middle cut plus hover-pause tooltip as fallback; widen the column when there is room); 70: no answer (build defect); 71: B (flick counts, soft edge)** | 73: end cut hides what tells the files apart; middle cut keeps version and type visible; "there's clearly enough space on the screen to make the table wider"; if middle cut, a tooltip after a pause on hover reveals the full name. 70: the panel slid over the Details button, so it could not be clicked twice; rebuilt as R163. 71: a flick is what my hand meant; the soft edge says I reached the limit without feeling broken; a hard stop feels stuck. |
+| R163 | INTR-06 | Queue 70 rebuilt after the R162 defect: a Details panel that slides in below the header with its button always clickable; on a second click mid-motion, A jumps to the end then reverses, B finishes then reverses, C turns around from where it is. Verified with real pointer clicks. | **C (turn around from where it is)** | Turning around at once feels like the interface is listening; a jump reads as a glitch; finishing first feels like lag, as if my click was ignored. Also ticked: I never click this fast, so it does not matter much. No condition given. |
+| R164 | PROC-26, MOTN-14 | Last two PR #3 items in realistic form: a motion-pass report for the project page, proposals only vs proposals plus four rejected candidates with reasons (queue 74); a project list with Sort and account dropdowns opening on the house moderate ease-out vs a strong ease-out at the same duration, distance and close (queue 75; measured 60% vs 86% of travel at about 80ms). | **74: B (proposals plus rejections); 75: B (strong ease-out)** | 74: seeing rejections shows the pass was careful so I trust it more; they teach the reasoning; they stop repeats. 75: strong feels faster and more responsive; moderate feels slightly slow for a menu I open often; for a menu speed matters more than the curve. Scopes R041/R042 (staged motion) rather than overturning it; the separating condition is inferred. |
+| R165 | MOTN-14 | Narrowing R164: the same moderate vs strong ease-out on a page-level Details panel (a few times a session), a delete-confirmation dialog (occasional) and a first-visit welcome card (once), with durations scaled to distance; plus an open "where is the line" question. | **75b panel: B (strong); 75c dialog: B (strong); 75d welcome: A (moderate)** | Panel: strong feels faster, moderate feels slow. Dialog: same, plus an interrupting dialog should arrive quickly and get out of the way. Welcome: strong rushes in and hangs, abrupt here; moderate lands gently; something seen once can take its time. His line: "For things like welcome screens, a slower animation is fine. For quick, action-based things, a faster animation is appropriate." Size and frequency did not decide it; what triggered it did. |
 
 ## Validation Log
 
