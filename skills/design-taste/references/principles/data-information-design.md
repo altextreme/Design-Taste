@@ -13,4 +13,4 @@
   `L1` · R075
 - **Optically center a label beside a big number.** When a large figure sits beside a multi-line label, center the label block vertically on the figure's optical height, from cap or figure top to baseline. Don't baseline-align them, and don't center on the line box: either way the label sinks below the number. The same applies to any large element paired with smaller text. `L1` · V01
 - **Decorate only to tell the story, and only once.** If one data point matters to the narrative, such as a record year, treat that single mark differently: a highlight color, an icon or a direct label. Decorating every mark makes nothing important, the same hierarchy logic as everywhere else. `L1` · R074
-
+- **Figures that stack use tabular numerals.** Currency and other numbers in a table or column use tabular figures, or a well-made monospace for the numeric tier, so every digit takes the same width and the eye can scan down the column. A lone number in a sentence stays proportional. *His words:* tabular or monospace figures "are always superior for currency when presented in a table." `L1` · R170 (queue 11)

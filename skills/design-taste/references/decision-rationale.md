@@ -166,7 +166,41 @@
 - **Provenance:** adopted from field review (queue 61), confirmed by one round. 🟨.
 - **Links:** `process-and-critique.md` scoring.
 
-## Node: hero-image-test
+## Node: ui-exit-accelerates
+- **Decision (R170):** interface surfaces leave on an ease-in over the same duration as their entrance.
+- **Because:** ease-in "feels a bit more elegant when the filter is sliding away"; an ease-out exit "feels too jarring, as if attention to detail has been missed". Equal duration "feels more thoughtful and consistent in the way the content comes in and exits."
+- **Replaces:** the ease-out exit and the 0.7x shorter exit, both adopted from other guidance and never asked.
+- **Open:** the two were tested separately (queue 77 tests them together). 🟨 one round each.
+- **Links:** `principles/motion.md`; R045; `ui-craft.md` UI motion.
+
+## Node: list-row-cascade
+- **Decision (R170):** sibling rows that arrive together stagger slightly within the same total time.
+- **Because:** "more elegant and sequential"; it "quickly lets me know that something new is being populated or assembled"; all at once is "too default in behavior".
+- **Limit:** the reading-order rule still holds: one thought enters as one piece.
+- **Links:** `principles/motion.md`; queue 4.
+
+## Node: no-crossfade-blur
+- **Decision (R170):** a plain quick crossfade for in-place swaps; never a blur.
+- **Because:** "The blur almost looks like a mistake"; it distorts the content; "too amateur".
+- **Links:** `ui-craft.md` UI motion; queue 5.
+
+## Node: press-is-tone-only
+- **Decision (R170):** pressing a simple control changes its tone; no scale-down.
+- **Because:** the shrink "simulates a physical button depression" and is an unnecessary bell and whistle for simple interactions; "the color change on active is perfectly fine."
+- **Scope:** simple interactions; a playful or expressive control is not covered.
+- **Links:** `principles/interaction-and-affordance.md`; queue 15.
+
+## Node: controls-medium-weight
+- **Decision (R170):** buttons, action links and tab labels take medium weight; reading text stays regular.
+- **Because:** it "helps subtly establish hierarchy and also better balances with the icons."
+- **Links:** `principles/typography.md`; queue 9.
+
+## Node: card-stripe-unresolved
+- **Status:** 🔁 (R170 confounded). The stripe version also had a tinted fill, no outline and tighter corners, so the pick cannot be credited to the stripe.
+- **His words:** "I like the contrast between the cards and their background", "more action oriented", "a stronger visual hierarchy"; he expects such cards to be tappable.
+- **Conflicts to settle:** the structural-tell list in `process-and-critique.md` (a rounded card with a colored left stripe) and the R102–R103 web preference for a stronger graphic than a stripe. Do not change either until queue 76 isolates the stripe.
+
+
 - **Decision:** for an image-led hero, delete the image mentally; if the first screen still looks complete, the image was too small or too weak and must be enlarged or replaced.
 - **Applies when:** the photograph is meant to lead (full-bleed or half split). Exempt: type-led heroes with an inset photo (R096).
 - **Because:** immersion and first impression; picture superiority (images register faster and are remembered better); an image that can be removed without loss is filler.

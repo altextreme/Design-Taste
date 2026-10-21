@@ -6,7 +6,7 @@ Load only what the task needs. Every file is one level below `SKILL.md`; none re
 
 | Tier | Where | Authority |
 |---|---|---|
-| **Validated** | `principles/*.md`, SKILL.md, R150 workflow in `render-and-review.md` | Distilled from 168 side-by-side rounds of Anthony's own picks. Each rule cites its rounds (`R001`…). These win every conflict. |
+| **Validated** | `principles/*.md`, SKILL.md, R150 workflow in `render-and-review.md` | Distilled from 169 side-by-side rounds of Anthony's own picks. Each rule cites its rounds (`R001`…). These win every conflict. |
 | **Default (`default`)** | the other details in "Workflow and default references" below | Unvalidated defaults for surfaces the rounds never covered, filtered through the validated rules. Tag: `default`. Never overrides a validated rule, dealbreaker or non-negotiable, and cannot by itself justify a BLOCK in a critique. |
 
 ## Validated principles (read the categories the task touches)

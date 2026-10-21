@@ -4,12 +4,12 @@ description: "Anthony Tackett's design prescription. Apply it whenever you gener
 license: MIT. See LICENSE; third-party credits in NOTICE.md.
 metadata:
   author: Anthony Tackett
-  version: "2.7"
+  version: "2.8"
 ---
 
 # Design Taste — Anthony's Prescription
 
-This skill is a ruleset distilled from 168 rounds of side-by-side comparisons covering 233 design dimensions, extended in v2 with defaults for surfaces those rounds never reached (interactive UI, decks, critique, localization, brand files), kept separate from the validated rules and marked `default`, and in v2.2 with channel and format rounds (product UI, web, email, decks, documents, mobile, social, video, identity, print) that turned many of those defaults into validated rules. v2.3 and v2.4 add a reasoning layer (why he decides what he decides, confirmed over rounds R142 to R149). R150 validated the render-and-review loop, measurement, typography checks and “Looked at” note; R151 validated the delivery note, purpose framing, and composed-piece scope; R152 clarified missing facts, placeholder color, deck slots, and image prompting; R153 confirmed structure comparison and example use, with a partial finding on headline emphasis; R154 confirmed chart room, photo-free title slides, interface type, and email first screens, and email primary objective with optional secondary actions. R155 clarified which links need underlines. Other queued defaults remain in `validation-queue.md`. It tells you how Anthony would design something himself. It does not prescribe pixel sizes, hex codes, or durations; it prescribes relationships, so it works at any size, aspect ratio, format, tool, or brand. It names no agent product and works the same in any harness.
+This skill is a ruleset distilled from 169 rounds of side-by-side comparisons covering 241 design dimensions, extended in v2 with defaults for surfaces those rounds never reached (interactive UI, decks, critique, localization, brand files), kept separate from the validated rules and marked `default`, and in v2.2 with channel and format rounds (product UI, web, email, decks, documents, mobile, social, video, identity, print) that turned many of those defaults into validated rules. v2.3 and v2.4 add a reasoning layer (why he decides what he decides, confirmed over rounds R142 to R149). R150 validated the render-and-review loop, measurement, typography checks and “Looked at” note; R151 validated the delivery note, purpose framing, and composed-piece scope; R152 clarified missing facts, placeholder color, deck slots, and image prompting; R153 confirmed structure comparison and example use, with a partial finding on headline emphasis; R154 confirmed chart room, photo-free title slides, interface type, and email first screens, and email primary objective with optional secondary actions. R155 clarified which links need underlines. Other queued defaults remain in `validation-queue.md`. It tells you how Anthony would design something himself. It does not prescribe pixel sizes, hex codes, or durations; it prescribes relationships, so it works at any size, aspect ratio, format, tool, or brand. It names no agent product and works the same in any harness.
 
 **The standard.** Every design decision needs a reason you can state, rooted in research, proven practice and human psychology. This skill gives you his reasons, not just his values. Do not apply a number or a style by rote: state why each major decision was made in your delivery note, and make the judgment call (is this good, and why) instead of hedging. He is data-led, and everything has a purpose.
 
@@ -103,7 +103,7 @@ These do not apply to interfaces or charts (R151). For an interface use the Inte
 ## Type defaults (L1)
 
 - **Roles:** display face for the headline only; a text-optimized companion for the one promoted practical detail (e.g., dates); a neutral sans for everything else.
-- **Scale:** dramatic jump from headline to the rest; moderate even steps below. Supporting text at one regular weight — no bold subheads. Emphasis by **weight within one family** (on the phrase that carries the meaning; modifiers lighter), moderate jumps, **never italics** for emphasis. When emphasis is needed, bold one word or phrase rather than most of the headline with only one or two words left unbolded (R153, visual pick; broader rule vote skipped). The same weight split on every title in a series is a template, not hierarchy. Promote a detail once: if the date is already in the headline or first sentence, do not repeat it as a separate line. `default` for the repeated-detail clause.
+- **Scale:** dramatic jump from headline to the rest; moderate even steps below. Supporting text at one regular weight — no bold subheads; controls (buttons, action links, tab labels) take medium (R170). Emphasis by **weight within one family** (on the phrase that carries the meaning; modifiers lighter), moderate jumps, **never italics** for emphasis. When emphasis is needed, bold one word or phrase rather than most of the headline with only one or two words left unbolded (R153, visual pick; broader rule vote skipped). The same weight split on every title in a series is a template, not hierarchy. Promote a detail once: if the date is already in the headline or first sentence, do not repeat it as a separate line. `default` for the repeated-detail clause.
 - **Type-only pieces:** the headline carries the image's job — push to extreme scale, stopping just short of full width.
 - **Leading:** headline as tight as possible without any collision, but tight enough to read as one thought; body moderate. **Measure:** max ~55–75 characters per line. **Alignment:** flush left, ragged right; never justify.
 - **Case:** tracked all-caps only for the smallest metadata tier, applied to the whole tier; promoted details stay sentence case. Small caps get moderate-to-generous tracking; display type sits close.
@@ -128,7 +128,7 @@ These do not apply to interfaces or charts (R151). For an interface use the Inte
 - Exits exist only to hand off: continue the direction of travel into the next frame; if nothing follows, don't exit (build once, breathe). Sequences hand off with motion — not cuts, not dissolves. Steady tempo.
 - Let the concept inform the hero motion (literal or, preferably, metaphorical); contrast rules apply to the resolved state.
 - With music: snap transitions to the beat. With voiceover: the voice drives the edit. No sound effects by default.
-- Interface motion (state changes, menus, dialogs) is a different regime — short, eased-out, purposeful, with a reduced-motion variant. See `ui-craft.md`.
+- Interface motion (state changes, menus, dialogs) is a different regime — short and purposeful: entrances ease out, exits accelerate away over the same duration (R170), sibling rows cascade slightly, swaps crossfade without blur, with a reduced-motion variant. See `ui-craft.md`.
 
 ## Tonal presets (L2)
 
@@ -154,7 +154,7 @@ Registers are starting points chosen from the concept, not defaults to reach for
 - Type over busy imagery: gradient scrim first (a barely-there shadow may refine it), solid sampled-color panel as backup; shadow alone never. Captions sit on the image, small and dimmed (not below the contrast floor), in the least competing corner.
 - Icons beside text: thin line icons matched to the type weight, colored with their text (filled icons for UI controls). No ornament or background patterns; a plain hairline rule occasionally.
 - Data: conventional clear charts (axis, light grid, labels); decorate one storytelling point only; big number + supporting line for fast reads; avoid dense pictograms. A label beside a big number is vertically centered on the figure's optical height (cap/figure top to baseline), never baseline-aligned. Density follows the channel: glance media minimal, posters moderate, reference media dense.
-- UI states transition (never instant swaps); purposeful motion such as a fill sweep or arrow nudge.
+- UI states transition (never instant swaps); purposeful motion such as a fill sweep or arrow nudge. A press is a tone change, never a shrink (R170).
 
 ## Data graphics (R154 chart principles plus defaults; details in `references/formats.md`)
 
@@ -176,7 +176,7 @@ Full rules and reasoning in `references/ui-craft.md`. Before showing an interfac
 - **Keyboard focus** is visible on every interactive element and distinct from hover; state is never carried by hue alone; non-text controls meet a 3:1 contrast floor against their ground.
 - **Targets** are comfortably large with separated hit areas; controls are custom-drawn to match the design, but each must replicate the native role, state, keyboard operation and visible focus, and stay easy to use on a phone (R166); reading order equals DOM order.
 - **Forms**: a visible label (never placeholder-as-label), errors after the field is left and cleared the instant it's valid, one primary action per view.
-- **Motion** has a job, is eased-out, and has a reduced-motion variant. No more than three flashes in any second, in UI or MP4.
+- **Motion** has a job, enters eased-out and leaves eased-in, and has a reduced-motion variant. No more than three flashes in any second, in UI or MP4.
 - **Content is real**: no invented statistics, testimonials, logos, lorem ipsum or **people (even labelled sample: use order numbers or roles such as "Walk-in")**; no scarcity, popularity or sourcing claim you were not given; a named real thing gets its real image or an honestly labelled placeholder. Ask the user for missing names, figures, years, addresses, prices and claims; until supplied, show a clear placeholder instead of a plausible invented value (R152).
 
 ## Dealbreakers (never, unless the user explicitly asks)

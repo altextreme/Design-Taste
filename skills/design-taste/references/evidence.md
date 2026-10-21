@@ -1,6 +1,6 @@
 # Design Taste: Evidence
 
-Each principle in principles/*.md cites rounds (R001–R169). This file holds the coverage tracker and the round log those citations point to. Read it only to resolve ambiguity or to quote his reasoning.
+Each principle in principles/*.md cites rounds (R001–R170). This file holds the coverage tracker and the round log those citations point to. Read it only to resolve ambiguity or to quote his reasoning.
 
 ## Coverage Tracker
 
@@ -44,6 +44,7 @@ Legend: ⬜ untested · 🟨 partial · ✅ resolved · 🔁 ambiguous — branc
 | TYPE-10 | Alignment logic | ✅ | R030 |
 | TYPE-11 | All-caps vs. mixed case | ✅ | R028 |
 | TYPE-12 | Italics usage | ✅ | R025 |
+| TYPE-13 | Weight on controls: medium vs regular | 🟨 | R170 (queue 9; one round) |
 
 ### Color (COLR)
 | ID | Dimension | Status | Rounds |
@@ -84,6 +85,10 @@ Legend: ⬜ untested · 🟨 partial · ✅ resolved · 🔁 ambiguous — branc
 | MOTN-12 | Tempo consistency vs. intentional shifts | ✅ | R052 |
 | MOTN-13 | Hold duration philosophy | ✅ | R046 |
 | MOTN-14 | Easing by trigger: strong ease-out for anything answering an action; moderate ease-out for what arrives on its own | ✅ | R164 (menu), R165 (panel, dialog, welcome card; condition stated) |
+| MOTN-15 | Interface exit easing: accelerate away (ease-in) vs ease out | 🟨 | R170 (queue 2; one round) |
+| MOTN-16 | Interface exit duration: equal to the entrance vs shorter | 🟨 | R170 (queue 3; one round; combination untested, queue 77) |
+| MOTN-17 | Sibling rows arriving: small stagger vs all at once | 🟨 | R170 (queue 4; one round) |
+| MOTN-18 | In-place swap: plain crossfade vs crossfade with blur | 🟨 | R170 (queue 5; one round) |
 
 ### Tone & Emotional Register (TONE)
 | ID | Dimension | Status | Rounds |
@@ -104,6 +109,7 @@ Legend: ⬜ untested · 🟨 partial · ✅ resolved · 🔁 ambiguous — branc
 | MATL-05 | Glow / light emission | ✅ | R064 |
 | MATL-06 | Texture as decoration vs. meaning | ✅ | R062, R064 |
 | MATL-07 | Surface treatments: one per role vs the same box everywhere | ✅ | R159 (queue 49) |
+| MATL-08 | Left-edge stripe on cards vs a hairline frame | 🔁 | R170 (queue 13; confounded with fill, outline and radius; retest queue 76) |
 
 ### Imagery & Photography (IMG)
 | ID | Dimension | Status | Rounds |
@@ -152,6 +158,7 @@ Legend: ⬜ untested · 🟨 partial · ✅ resolved · 🔁 ambiguous — branc
 | DATA-01 | Chart restraint (data-ink vs. decorated) | ✅ | R074 |
 | DATA-02 | Iconographic vs. literal representation | ✅ | R075 |
 | DATA-03 | Label density | ✅ | R074 |
+| DATA-04 | Numerals in stacked currency: tabular vs proportional | ✅ | R170 (queue 11; "always") |
 
 ### Interaction & Affordance (INTR)
 | ID | Dimension | Status | Rounds |
@@ -162,6 +169,7 @@ Legend: ⬜ untested · 🟨 partial · ✅ resolved · 🔁 ambiguous — branc
 | INTR-04 | Where a confirmation appears (inline, in place, toast, banner) | ✅ | R159 (queue 55), R160 (queue 69; resolved the conflict) |
 | INTR-05 | Gesture release: a flick commits, edges give with resistance, no overshoot | 🟨 | R162 (queue 71; one round) |
 | INTR-06 | Re-triggered motion: turn around from where it is, not jump or finish first | 🟨 | R163 (queue 70; R162 build was unusable) |
+| INTR-07 | Press feedback on simple controls: tone only vs tone plus a slight shrink | 🟨 | R170 (queue 15; one round) |
 
 ### Sound / Motion Sync (SYNC)
 | ID | Dimension | Status | Rounds |
@@ -567,6 +575,7 @@ Started 2026-10-10. Phases 1 and 2 recorded what Anthony picks. Phase 3 records 
 | R167 | UI-14, UI-15, UI-16, UI-17 | Queue 58 on working screens, popular reading of a law (A) vs the skill's alternative (B): eleven settings sections capped at seven with More vs all in two named groups (Miller); five popular integrations vs all fourteen grouped with search (Hick); a recurring 60%-complete banner vs one quiet line (Zeigarnik); a report shown at once (0.25 s) vs after about 2.8 s of staged "analysing" steps (Doherty). | **58a: B; 58b: B; 58c: B; 58d: B (staged delay)** | 58a: I recognise items, I do not remember them; More makes me hunt; named groups scan. 58b: removing options fails people; grouping and search keep it fast. 58c: a nag is pressure not a reason; home leads with my work; a daily banner wears down trust; "a nag is fine once, but not every day." 58d: the steps feel more trustworthy; instant feels too easy to be thorough; steps are fine if the work really takes time. **58d conflicted with the skill's no-added-delay guardrail; resolved by R168.** |
 | R168 | UI-17 | Narrowing R167's padded-report pick: a dashboard refresh used many times a day, shown at once (0.25 s) vs after about 2.9 s of padded real-stage steps; an annual report with a real 3 s wait, spinner vs its real stages ticking off; and a direct question on a rare result ready at once (add steps, show at once, or show at once with a line saying what was checked). | **168a: A (shown at once); 168b: B (real stages); padding question: show at once with a line saying what was checked** | 168a: often-used means instant; waiting for nothing adds up; steps suit a rare big result, not a routine action; steps get annoying after the first time. 168b: stages show it is working and how far along; feel more trustworthy; the wait feels shorter; "stages are fine only when they are true." Resolves UI-17: never pad; real stages for real waits; a what-was-checked line for fast results. |
 | R169 | UI-13, PROC-27 | Same serif display face for headings vs one neutral sans on two products with no brand typeface: a friendly habit tracker and a neutral invoicing tool; and a landing-page review scoring 104/125 with a body-text contrast failure, "ship after fixes" vs "blocked by a non-negotiable". | **59b playful: B (display face); 59c work tool: A (one sans); 61: B (blocker overrides)** | 59b: warmth and character; headings easier to find; a friendly product can carry a second face. 59c: a work tool stays out of the way; one family reads precise and trustworthy; a heavier weight does the job. 61: some failures stop a piece being usable; a high score can hide a serious problem; blocked makes sure it gets fixed first. Resolves UI-13 by tone. |
+| R170 | MOTN-15, MOTN-16, MOTN-17, MOTN-18, INTR-07, MATL-08, TYPE-13, DATA-04 | First phone-sized round, blind "1 or 2" with the variants revealed after each pick: a press on settings rows and a Save button, tone only vs tone plus a 97% shrink (queue 15); a filter sheet closing on ease-in vs ease-out at 220 ms (queue 2); the same sheet closing at 190 ms vs 280 ms against a 280 ms entrance (queue 3); five inbox rows arriving staggered 30 ms apart vs all at once in 300 ms (queue 4); a Week and Month switch as a plain 200 ms crossfade vs one with a 4 px blur (queue 5); project cards with a hairline frame vs a left stripe (queue 13; the stripe version also had a tinted fill, no outline and tighter corners); controls at medium vs regular (queue 9); an invoice column in proportional vs tabular figures (queue 11). | **15: tone only; 2: ease-in; 3: equal; 4: stagger; 5: plain crossfade; 13: stripe (confounded); 9: medium; 11: tabular** | 15: the shrink simulates a physical button and is unnecessary for simple interactions; the color change is fine. 2: ease-in is more elegant as the filter slides away; ease-out feels jarring, as if attention to detail was missed. 3: equal feels more thoughtful and consistent. 4: the cascade is more elegant and sequential and shows something is being assembled; all at once feels default. 5: the blur looks like a mistake and distorts the content; amateur. 13: likes the contrast between cards and background for active projects; more action-oriented, stronger hierarchy; expects the cards to be tappable; the frame feels informational. 9: medium subtly sets hierarchy and balances with the icons. 11: tabular or monospace is always superior for currency in a table; easier to scan. |
 
 ## Validation Log
 
