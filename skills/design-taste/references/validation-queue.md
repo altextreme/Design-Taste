@@ -1,6 +1,6 @@
 # Validation Queue
 > **Read when:** you are planning the next quiz round, or tempted to promote a `default` rule to validated.
-> Rules tagged `default` in the reference files are unvalidated. Each needs a comparison round before it is promoted into DESIGN_TASTE.md with its round id.
+> Rules tagged `default` in the reference files are unvalidated. Each needs a comparison round before it is promoted into `principles/<category>.md` with its round id.
 
 ## Queue
 Candidates that need a comparison round before promotion. Each: question, the one variable, affected file or rule, suggested dimension.
@@ -52,10 +52,10 @@ R150 (24, 36, 37, 43), R151 (25–27), R152 (29, 33, 34, 42, 44), and R153 (28, 
 43. *(Answered yes in R150; validated as PROC-04.)* **A delivery note without a "Looked at" line is incomplete;** charts are looked at at least twice.
 44. *(Answered yes in R152; validated as PROC-12.)* **Image-prompt consistency check** (lens matches framing, palette matches light source, light falls from the in-frame source) and the unrelated-subject example for the stock-version step.
 45. *(Answered A in R155; validated as PROC-22.)* **Lint:** links styled as buttons need no text underline. Navigation and linked wordmarks are also exempt under PROC-21; ordinary paragraph links remain checked.
-46. *(Resolved R156: hover never gates what is needed to decide, flips only for truly optional extras; opened panels persist. Promoted to DESIGN_TASTE.md Interaction & Affordance. R161 confirmed both parts in realistic screens and settled the open clause: menus open on click only, even on hover devices; the stated hover-open convenience is overturned.)* **Hover amplifies, never gates; opened panels persist.**
-47. *(Resolved R157: dominant photo when the work is the evidence; six equal items as an even grid, no lead, no reel. Promoted to DESIGN_TASTE.md Web & Landing. Still untested: "one focal point per screen" and the type-led exemption.)* **Subject-sized hero image.**
-48. *(Resolved R158: accent for named events only beat spread and button-only. Promoted to DESIGN_TASTE.md Color.)* **Accent by event.**
-49. *(Resolved R159: one treatment per role. Promoted to DESIGN_TASTE.md Material / Texture / Surface.)* **One surface genre per product.**
+46. *(Resolved R156: hover never gates what is needed to decide, flips only for truly optional extras; opened panels persist. Promoted to `principles/interaction-and-affordance.md`. R161 confirmed both parts in realistic screens and settled the open clause: menus open on click only, even on hover devices; the stated hover-open convenience is overturned.)* **Hover amplifies, never gates; opened panels persist.**
+47. *(Resolved R157: dominant photo when the work is the evidence; six equal items as an even grid, no lead, no reel. Promoted to `principles/web-and-landing.md`. Still untested: "one focal point per screen" and the type-led exemption.)* **Subject-sized hero image.**
+48. *(Resolved R158: accent for named events only beat spread and button-only. Promoted to `principles/color.md`.)* **Accent by event.**
+49. *(Resolved R159: one treatment per role. Promoted to `principles/material-texture-surface.md`.)* **One surface genre per product.**
 50. *(Resolved R159: reasons only where the omission is unusual. Promoted.)* **Reasoned "not applicable" in state matrices.**
 51. *(Resolved R166: custom list beat the browser's own; condition: accessibility and mobile usability for every custom form type. Promoted as UI-12.)* **Restyled native controls vs. custom replacements.** Native element with designed appearance, versus a fully custom widget, for selects and checkboxes. Variable: custom vs. restyled native. Affects: native-first rule vs. component geometry. Dimension: `native-control-styling`.
 52. *(Reserved line resolved R166, promoted as UI-10. Matched height and three-way disabled remain stated agreement.)* **Fixed-height fields and reserved helper line.** Does a stable layout when messages appear matter more to him than a tighter form? Variable: reserved helper space vs. collapsing. Affects: Forms. Dimension: `helper-slot`.

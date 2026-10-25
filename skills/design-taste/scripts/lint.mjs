@@ -10,16 +10,17 @@ import { fileURLToPath } from 'node:url';
 const EXT = new Set(['.html', '.htm', '.css', '.jsx', '.tsx', '.vue', '.svelte']);
 const SKIP = new Set(['node_modules', '.git', 'dist', 'build']);
 
-// severity: blocker = a dealbreaker or accessibility floor; warn = a default
+// severity: blocker = a dealbreaker; a11y-floor = an accessibility floor (both
+//           fail the scan; neither is a critique BLOCK by itself); warn = a default
 // source:   where the rule lives in the skill
 const RULES = {
-  'pure-black-on-white': { severity: 'blocker', source: 'principles/typography.md (R083)', message: 'Pure black text on a pure white ground vibrates. Use a warm off-black ink on an off-white ground.' },
+  'pure-black-on-white': { severity: 'blocker', source: 'principles/color.md (R083)', message: 'Pure black text on a pure white ground vibrates. Use a warm off-black ink on an off-white ground.' },
   'justified-text': { severity: 'blocker', source: 'SKILL.md dealbreakers', message: 'Justified text creates rivers. Set flush left, ragged right.' },
   'italic-heading': { severity: 'blocker', source: 'SKILL.md dealbreakers', message: 'Italic emphasis in headings (especially display serifs) is a dealbreaker. Emphasize with weight.' },
   'tracked-lowercase': { severity: 'blocker', source: 'SKILL.md dealbreakers', message: 'Letterspaced lowercase. Tracking belongs to small all-caps metadata only.' },
-  'focus-outline-removed': { severity: 'blocker', source: 'ui-craft.md accessibility baseline', message: 'Focus outline removed with no replacement. Keyboard focus must stay visible.' },
-  'img-missing-alt': { severity: 'blocker', source: 'ui-craft.md accessibility baseline', message: 'Image has no alt attribute. Use descriptive alt, or alt="" if decorative.' },
-  'positive-tabindex': { severity: 'blocker', source: 'ui-craft.md accessibility baseline', message: 'Positive tabindex reorders keyboard focus. Match DOM order to reading order.' },
+  'focus-outline-removed': { severity: 'a11y-floor', source: 'SKILL.md interface floor and non-negotiable 1 (focus-ring contrast)', message: 'Focus outline removed with no replacement. Keyboard focus must stay visible.' },
+  'img-missing-alt': { severity: 'a11y-floor', source: 'SKILL.md interface floor; ui-craft.md accessibility baseline', message: 'Image has no alt attribute. Use descriptive alt, or alt="" if decorative.' },
+  'positive-tabindex': { severity: 'a11y-floor', source: 'SKILL.md interface floor (reading order equals DOM order)', message: 'Positive tabindex reorders keyboard focus. Match DOM order to reading order.' },
   'placeholder-content': { severity: 'blocker', source: 'SKILL.md interface floor', message: 'Placeholder or invented content (lorem ipsum, a stock person name). Use real content or a labelled placeholder.' },
   'transition-all': { severity: 'warn', source: 'process-and-critique.md review passes', message: '`transition: all` animates properties nobody chose. Name the properties.' },
   'no-reduced-motion': { severity: 'warn', source: 'ui-craft.md accessibility baseline', message: 'Animation or transition with no prefers-reduced-motion variant.' },
@@ -141,10 +142,12 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1
   }
   const findings = lintPaths(paths);
   const blockers = findings.filter((f) => f.severity === 'blocker');
-  if (json) console.log(JSON.stringify({ blockers: blockers.length, warnings: findings.length - blockers.length, findings }, null, 2));
+  const floors = findings.filter((f) => f.severity === 'a11y-floor');
+  const warnings = findings.length - blockers.length - floors.length;
+  if (json) console.log(JSON.stringify({ blockers: blockers.length, a11yFloor: floors.length, warnings, findings }, null, 2));
   else {
-    for (const f of findings) console.log(`${f.severity.toUpperCase().padEnd(7)} ${f.file}:${f.line}  ${f.rule}  ${f.message}${f.detail ? `  [${f.detail}]` : ''}`);
-    console.log(`\n${blockers.length} blocker(s), ${findings.length - blockers.length} warning(s). A clean scan means no measurable tell, not a good design: still render and look.`);
+    for (const f of findings) console.log(`${f.severity.toUpperCase().padEnd(10)} ${f.file}:${f.line}  ${f.rule}  ${f.message}${f.detail ? `  [${f.detail}]` : ''}`);
+    console.log(`\n${blockers.length} blocker(s), ${floors.length} a11y-floor hit(s), ${warnings} warning(s). A clean scan means no measurable tell, not a good design: still render and look.`);
   }
-  process.exit(blockers.length && !warnOnly ? 1 : 0);
+  process.exit((blockers.length || floors.length) && !warnOnly ? 1 : 0);
 }

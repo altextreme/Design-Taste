@@ -10,7 +10,7 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 - Slide copy follows the slide's job: one large statement for dividers; for content slides use short columns with sub-headings each topped by a conceptually connected line icon (plain columns without icons are boring), or a bullet list beside an image that helps communicate the message; templates always include image-left and image-right content layouts. See `principles/decks-and-presentations.md` (R099).
 - Title slides are immersive: a full-bleed image with the title over it (away from the focal point, scrim-secured), or a half-photo split; type-only on a deep brand color is a divider; a photo band over type only for a branding reason. See `principles/decks-and-presentations.md` (R123).
 - State the rhythm (one row per slide: layout and role) before building, and show it if you can ask the user. Otherwise state it as an assumption. `L1` · default
-- One idea per slide. A slide with three numbers becomes three slides. Titles are assertions, so the titles read in sequence tell the whole story. `L1` · default
+- One idea per slide; a data slide may carry one to three key numbers beside its chart (R107). Unrelated numbers become separate slides. Titles are assertions, so the titles read in sequence tell the whole story. `L1` · default
 - When content overflows, split the slide. Never shrink the type to fit. Projection legibility is the floor: body text must read from the back of the room, so size type as a fraction of canvas height. `L1` · default
 - Choose each layout by the relationship in the content: one dominant figure = a giant number with one sentence; parallel items = short columns, each with one thin line icon tied to its meaning (validated R099, R132); never icons in circles, never icons on bullets; two-way comparison = split; sequence = a short timeline; section break = whitespace or a full-bleed image with the section name only. `L1` · default
 - Keep one frame across the deck: same margins, same title position, same footer band, same grid. Variety comes from layout, never from moving the frame. Fits his series rule (`principles/consistency-across-a-series.md`). `L1` · default
@@ -41,7 +41,7 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 - Filtering: filters show their current state, the result count updates, and view state (filters, tab) lives in the address so a view can be shared. Last good values stay on screen when a fetch fails; sample data is labeled as sample; freshness is shown. `L1` · default
 - Internal tools and dashboards sit outside the funnel: state the job, the decision it supports and how often it is checked, then find the one comparison the user checks the screen for (pace against target, against last period) and build the primary region around it. Chart titles state that finding. `L1` · default
 - Do not fix region heights or scroll inside a card; let content set the height, or show "View all n" so no row is silently cut. A partial current period is never plotted as a full one. `L1` · default
-- Structure comes from hairlines and spacing, not boxes. As density rises, drop containers and keep rules. Accent is scarce: active navigation plus one chart highlight. Names and values are specific and plausible, never "Metric A". `L1` · default
+- Structure comes from hairlines and spacing, not boxes. As density rises, drop containers and keep rules. Accent on named events only: primary action, selected item, progress, the one key number, active section label, links (R158). Names and values are specific and plausible, never "Metric A". `L1` · default
 
 **Avoid**
 - Hero images, oversized headlines or marketing copy inside a data tool; row striping; per-chart decoration; color as the only status signal (pair with text or shape; see `ui-craft.md`). Status chips are fine; pill buttons are not. · default
@@ -52,7 +52,7 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 **Must have**
 - Hero fits the first view with the primary action visible. Stack is capped: optional label, headline, one supporting sentence, one primary action plus at most one secondary. Proof (logos, stats, avatars) moves to the next section. A headline that wraps past two lines is a size problem, not a copy problem. `L1` · default
 - Hero composition follows the application, not a house layout: photo-led (start with the full-bleed photo and scrim text for landing and home pages; a laid-over paper panel for secondary pages or busy photos; a half split as the third), band-over-text for editorial, or type-led with an inset photo. See `principles/web-and-landing.md` (R096).
-- Hero is image-first and left-aligned, per his composition rules: the photograph or product leads, text follows. In wide layouts split side by side with the image read first. Content sits in the upper golden region, never floating mid-viewport. `L1` · default
+- Whatever hero type is chosen (line above), text stays flush left and the reading chain holds. `L1` · default
 - Section rhythm: hero, proof, how it works, depth, decision, close. Vary section layout so the same split never repeats more than twice in a row, and alternate image and type-led sections. Do not vary by inventing bento or card mosaics. `L1` · default
 - Ground rhythm down a web page: alternate sections between the base ground and a slightly darker tint; use a dark band only for the one section carrying the most important message; never one flat ground with hairlines. See `principles/web-and-landing.md` (R104).
 - Proof is concrete: a real figure with its source, a named quote, a product screenshot. Never fabricated logos or numbers. `L1` · default
@@ -66,7 +66,7 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 - Before building a page that leans on scroll choreography, write a one-line note per section: what shows with no input, what remains on touch, how the keyboard reaches it, and what is read in the first five seconds. If any section needs hover or dragging to reveal content, rework it. `L1` · default
 
 **Avoid**
-- Section-number labels, "Step 01" labels, scroll cues, decorative status dots, tag overlays on photos, keyword strips under the hero. Counted tracked-caps labels: at most one per three sections. · default
+- Section numbers or "Step 01" labels where the content is not a sequence (R130), scroll cues, decorative status dots, tag overlays on photos, keyword strips under the hero. Navigational eyebrows only where wayfinding needs them (R097, R130). · default
 - Left headline with a floating right paragraph and nothing visual beside it. · default
 
 **Check:** value and action clear in the first view? Layout families varied? Every proof item real? Same CTA wording everywhere?
@@ -75,7 +75,7 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 **Must have**
 - Allocate the page to the plot: a header (headline and one-line deck, at most about a third of the height), the plot taking the rest, the source and sample line at the foot. The poster rules (image first, golden section, image cap) do not apply. `L1` · default
 - Hue belongs to the data. Each series owns a color; the headline, labels and chrome are ink. Never set the headline in a series color, which claims the headline is about that series. `L1` · default
-- Two or more series are told apart by hue and a second cue: direct end labels at minimum; vary line style or marker when lines cross or the piece may print in grayscale. `L1` · default
+- Two or more series are told apart by hue and a second cue (direct end labels preferred; line style or markers when lines cross or the piece may print in grayscale). `L1` · default
 - Conventional axes and a light grid. True minus signs, not hyphens. Extend the value axis one gridline past the data so no mark or label sits on the frame. Bars and filled areas start at zero; ticks use round steps. A zero line is visible when values cross zero. `L1` · default
 - The headline states the finding a reader would act on (against a target, against a baseline), not just any true comparison. Decorate at most one storytelling point. `L1` · default
 - Honesty: label sample data as sample; never describe a source or method you were not given ("source not given"); a partial period is never plotted as a full one; a figure that appears in two places matches in both. `L1` · default
@@ -89,7 +89,7 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 - Tables in documents: alternating row shading for five or more rows, hairlines only for three or four, never a full grid of borders; numbers right-aligned in tabular figures with a total row set off by a rule. See `principles/documents-and-long-reading.md` (R117).
 - Articles and long reading: one narrow column set from the left margin, always; no side rail, no multi-column text except occasionally in print. Minimize eye travel and cognitive load. See `principles/documents-and-long-reading.md` (R118).
 - Reading comes first: flush left, ragged right, measure within his range, body leading moderate. Make the article column the widest thing; navigation and contents are quiet. `L1` · default
-- Layout: sticky navigation at one side, article in the middle, an "on this page" list at the other that marks the current section. On narrow widths the contents list drops and navigation moves to a drawer. Every H2 and H3 has an anchor. Use logical (start/end) properties so the layout flips for right-to-left. `L1` · default
+- Layout for reference docs (not articles): quiet navigation rails are allowed, with sticky navigation at one side and an "on this page" list at the other that marks the current section; article and essay pages keep one column with no rail (R118). On narrow widths the contents list drops and navigation moves to a drawer. Every H2 and H3 has an anchor. Use logical (start/end) properties so the layout flips for right-to-left. `L1` · default
 - Declare the page type (tutorial, how-to, reference, concept, troubleshooting) and match tone to it. Title is the reader's question. One job per page. Sentence-case headings. `L1` · default
 - Short paragraphs; three or more parallel items become a list; code blocks are language-tagged, short, explained in prose, with a copy control. Callouts distinguish note from warning by label and rule, not by tinted boxes with icons. `L1` · default
 - Accent is spent on links, the active navigation item and at most one callout rule. Ordinary paragraph links keep color and underline at rest (R155); navigation marks only the active item. `L1` · default
@@ -101,16 +101,16 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 
 ## Email
 **Must have**
-- Marketing email is glance media: one idea, one primary CTA, readable in about ten seconds. Transactional or reference email may be dense but keeps one reading chain. `L1` · default
+- A promotional blast can be glance media: one idea, one primary CTA, readable in about ten seconds. Newsletters, transactional and reference email may be dense (R077) and keep one reading chain. `L1` · default
 - Email action hierarchy has three levels: one full-width filled primary button; compact secondary buttons (ghost or filled; ghost when there is more than one); tertiary items as colored, underlined text links. See `principles/email.md` (R100).
 - Give the email one primary objective and one clear primary action. Secondary calls to action are acceptable; keep their treatment subordinate to the primary. `L1` · R154 (clarified after the visual and rule votes)
 - Email opens with the brand: a wordmark header aligned to the text axis (left logo over left text). Never an email without a brand header. See `principles/email.md` (R115).
 - Email content blocks sit on a clean grid (two columns that fold to one on mobile); no zigzag alternation; images stay modest so text leads and never extreme banner crops; a small image or icon left with text right is the alternative. See `principles/email.md` (R116).
-- Single column. Reference width: about 600 to 680 px. The body is flush left, never centered paragraphs. It must still read at about 480 px, with type stepping down one size. `L1` · default
+- About 600 to 680 px wide; content blocks on a grid that folds to one column (R116). The body is flush left, never centered paragraphs. It must still read at about 480 px, with type stepping down one size. `L1` · default
 - Build for clients, not browsers: table layout, inline styles, system or safe-stack fallbacks, no dependence on web fonts, shadows, gradients or script. Every image has alt text and a solid fallback color behind it, because many clients block images by default. The CTA is a real link styled as a button with its own background color, not an image. `L1` · default
 - Footer carries the sender address, unsubscribe and view-in-browser. Contrast is checked in both light and the client's forced dark mode; use opaque colors, not alpha. Add a real `prefers-color-scheme: dark` block with your own dark palette (and `[data-ogsc]` for Outlook); `color-scheme: light` alone does nothing. If you cannot test, say so. `L1` · default
 - The first screen must look finished and hold the primary action. With no supplied photo, use one labelled image placeholder under about a third of the first screen, leaving the content and action visible. `L1` · R154
-- For that image slot, use a solid fallback block sized to the intended image with descriptive alt text; set item lists in type only. A date or time already in the headline or preheader is not repeated as a separate promoted line; bind the last two words of headlines and time ranges with a non-breaking space. Repeated item titles in a list may use the display face at a reduced size. `L1` · default
+- For that image slot, use a solid fallback block sized to the intended image with descriptive alt text; set item lists in type only. A date or time already in the headline or preheader is not repeated as a separate promoted line; bind the last two words of headlines and time ranges with a non-breaking space. Repeated item titles in a list may use the text-optimized companion of the display face (R023). `L1` · default
 
 **Avoid**
 - Skewed or faux-italic accent words, pill CTAs, stylized gradient heroes (all dealbreakers). Two competing CTAs. · default
@@ -122,7 +122,7 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 - Pick the platform mode first (iOS, Material, or a deliberately neutral cross-platform) and stay in it. Never one platform's chrome in the other's frame. `L1` · default
 - Platform fidelity versus brand: platform owns navigation structure, system chrome, gestures, sheets and control behavior; brand owns color, type, imagery and tone. Where they collide, behavior follows the platform and appearance follows the brand. `L1` · default
 - Honor safe areas: status bar, home indicator, notch, gesture edges. Critical controls stay out of them. Reference floors: about 44 pt touch targets on iOS, about 48 dp on Material. `L1` · default
-- One screen, one job. Top-level navigation is the menu button (hamburger) for websites on small screens and for any non-trivial app; a bottom tab bar with icons only for a super simple native app (R101); never tabs across the top; drill-downs stack, secondary tasks use sheets, local switching uses segmented controls. Do not overload the bar. `L1` · default
+- One screen, one job. Top-level navigation is the menu button (hamburger) for websites on small screens and for any non-trivial app; a bottom tab bar (icon plus label) only for a super simple native app (R101, R144); never tabs across the top; drill-downs stack, secondary tasks use sheets, local switching uses segmented controls. Do not overload the bar. `L1` · default
 - Small secondary tasks open as a bottom sheet (centered dialog acceptable), never a full screen: design for how the phone is held and keep inputs and primary actions in the thumb zone. See `principles/mobile-app.md` (R119).
 - First screen: one focal point, short copy, one next action. A website hero inside a phone frame fails. Onboarding screens differ in composition, not three identical slides. `L1` · default
 - When text feels small, cut or split to another screen rather than shrink. Prefer fewer containers over box-in-box. Hover effects only where hover exists. `L1` · default
@@ -156,7 +156,7 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 - One page means one page: cut, do not shrink. Dates and figures in tabular numerals. Every claim is a real one. `L1` · default
 
 **Avoid**
-- Simulated paper texture, italic emphasis, side-rail ornament, centered titles by default. · default
+- Simulated paper texture, italic emphasis, side-rail ornament (the R108 content rail is required), centered titles by default. · default
 
 **Check:** fits at legible size? Exports with colors intact? Accent under budget?
 
@@ -192,5 +192,5 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 - [ ] Resume or print: opaque colors; fits without shrinking; accent under budget.
 - [ ] Diagram: one main path; no crossings or tangents; contrast per node.
 - [ ] Component docs: all states, tokens by role, both themes.
-- [ ] Nothing from the dealbreaker or explicit-request-only lists; image-first and left-aligned kept.
+- [ ] Nothing from the dealbreaker or explicit-request-only lists; composed pieces only: image-first and left-aligned kept (R151).
 

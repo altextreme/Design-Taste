@@ -6,7 +6,7 @@ Each principle in principles/*.md cites rounds (R001–R170). This file holds th
 
 Legend: ⬜ untested · 🟨 partial · ✅ resolved · 🔁 ambiguous — branch deeper
 
-**Progress: 108 / 108 resolved across 87 rounds** · Composition 15/15 · Typography 12/12 · Color 9/9 · Hierarchy 4/4 · Motion 13/13 · Tone 5/5 · Material 6/6 · Imagery 6/6 · Iconography 4/4 · Grid 3/3 · Brand 3/3 · Text/Image 4/4 · Data 3/3 · Interaction 3/3 · Sync 3/3 · Density 3/3 · Series 2/2 · Culture 3/3 · Imperfection 2/2 · Negative Constraints 5/5
+**Progress: 116 / 126 resolved across 94 rounds, 9 partial, 1 flagged (🔁)** · Composition 17/17 · Typography 12/13 · Color 10/10 · Hierarchy 4/4 · Motion 14/18 · Tone 5/5 · Material 7/8 · Imagery 6/6 · Iconography 5/5 · Grid 3/3 · Brand 3/3 · Text/Image 4/4 · Data 4/4 · Interaction 4/7 · Sync 3/3 · Density 3/4 · Series 2/2 · Culture 3/3 · Imperfection 2/2 · Negative Constraints 5/5
 
 ### Composition & Structure (COMP)
 | ID | Dimension | Status | Rounds |

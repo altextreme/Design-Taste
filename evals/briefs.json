@@ -23,7 +23,7 @@
         "Order rows separated by hairlines; groups by whitespace; no per-row cards (R088)",
         "One stable hue per status, each shown as the word in a tinted badge (R089, R128)",
         "Figures in a column share precision and align right; the order id is never truncated (R154)",
-        "Chart plot takes most of its area; x labels align with bars; value axis extends one gridline past data (R154)",
+        "Chart plot takes most of its area; x labels align with bars; value axis extends one gridline past data",
         "No large hero-style type or marketing layout (very dense data veto)",
         "All five states reachable: loading, empty, error, populated, edge"
       ]

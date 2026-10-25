@@ -12,7 +12,7 @@
   5. Reading order and enforced hierarchy.
 
   *(Proposed in R087 and not contested.)*
-- **Brand guidelines override personal color and image-treatment preferences.** If a brand document fixes the palette or prescribes a photographic look, it wins over taste-driven choices such as sampling colors from the image or grading naturally. Only the non-negotiables survive the override: accessible contrast and reading time. `L3` · R061, R066
+- **Brand guidelines override personal color and image-treatment preferences.** If a brand document fixes the palette or prescribes a photographic look, it wins over taste-driven choices such as sampling colors from the image or grading naturally. Only the five non-negotiables (above) survive the override. `L3` · R061, R066
 - **Non-negotiable: in motion, hold every frame long enough to read all of its text.** R046
-- **Non-negotiable: accessible text contrast.** If a brand palette would produce text that fails contrast standards, flag it and fix the pairing. Don't comply silently. `L1` · R009 (partial — other non-negotiables still to probe)
+- **Non-negotiable: accessible text contrast.** If a brand palette would produce text that fails contrast standards, flag it and fix the pairing. Don't comply silently. `L1` · R009
 
