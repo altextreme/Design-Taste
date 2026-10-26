@@ -1,6 +1,6 @@
 # Design Taste: Evidence
 
-Each principle in principles/*.md cites rounds (R001–R171). This file holds the coverage tracker and the round log those citations point to. Read it only to resolve ambiguity or to quote his reasoning.
+Each principle in principles/*.md cites rounds (R001–R172). This file holds the coverage tracker and the round log those citations point to. Read it only to resolve ambiguity or to quote his reasoning.
 
 ## Coverage Tracker
 
@@ -59,6 +59,7 @@ Legend: ⬜ untested · 🟨 partial · ✅ resolved · 🔁 ambiguous — branc
 | COLR-08 | Accent restraint | ✅ | R033, R034, R037 |
 | COLR-09 | Background-to-foreground philosophy | ✅ | R034 |
 | COLR-10 | Accent scope: named events only vs spread vs primary action only | ✅ | R158 (queue 48) |
+| COLR-11 | Color budget on a whole page: accent only vs one hue with tints vs many hues | 🟨 | R171 (direction), R172 (pricing and dashboard; one round) |
 
 ### Contrast & Hierarchy (HIER)
 | ID | Dimension | Status | Rounds |
@@ -259,6 +260,7 @@ Started 2026-10-07. Phase 1 (above) resolved the foundation across 108 dimension
 | WEB-06 | Card accents (stripe, border, fill) | ✅ | R102, R103 |
 | WEB-07 | Business stock photography vs. real vs. none | ⬜ | |
 | WEB-08 | Hero photo scale when the work is the evidence; how to show a set of equal items | ✅ | R157 (queue 47; the type-led exemption was not re-tested) |
+| WEB-09 | Extra section on a pricing page: functional estimator vs nothing vs decorative mock | 🟨 | R172 (one round) |
 ### Social & Glance Media (SOC)
 | ID | Dimension | Status | Rounds |
 |---|---|---|---|
@@ -577,6 +579,7 @@ Started 2026-10-10. Phases 1 and 2 recorded what Anthony picks. Phase 3 records 
 | R169 | UI-13, PROC-27 | Same serif display face for headings vs one neutral sans on two products with no brand typeface: a friendly habit tracker and a neutral invoicing tool; and a landing-page review scoring 104/125 with a body-text contrast failure, "ship after fixes" vs "blocked by a non-negotiable". | **59b playful: B (display face); 59c work tool: A (one sans); 61: B (blocker overrides)** | 59b: warmth and character; headings easier to find; a friendly product can carry a second face. 59c: a work tool stays out of the way; one family reads precise and trustworthy; a heavier weight does the job. 61: some failures stop a piece being usable; a high score can hide a serious problem; blocked makes sure it gets fixed first. Resolves UI-13 by tone. |
 | R170 | MOTN-15, MOTN-16, MOTN-17, MOTN-18, INTR-07, MATL-08, TYPE-13, DATA-04 | First phone-sized round, blind "1 or 2" with the variants revealed after each pick: a press on settings rows and a Save button, tone only vs tone plus a 97% shrink (queue 15); a filter sheet closing on ease-in vs ease-out at 220 ms (queue 2); the same sheet closing at 190 ms vs 280 ms against a 280 ms entrance (queue 3); five inbox rows arriving staggered 30 ms apart vs all at once in 300 ms (queue 4); a Week and Month switch as a plain 200 ms crossfade vs one with a 4 px blur (queue 5); project cards with a hairline frame vs a left stripe (queue 13; the stripe version also had a tinted fill, no outline and tighter corners); controls at medium vs regular (queue 9); an invoice column in proportional vs tabular figures (queue 11). | **15: tone only; 2: ease-in; 3: equal; 4: stagger; 5: plain crossfade; 13: stripe (confounded); 9: medium; 11: tabular** | 15: the shrink simulates a physical button and is unnecessary for simple interactions; the color change is fine. 2: ease-in is more elegant as the filter slides away; ease-out feels jarring, as if attention to detail was missed. 3: equal feels more thoughtful and consistent. 4: the cascade is more elegant and sequential and shows something is being assembled; all at once feels default. 5: the blur looks like a mistake and distorts the content; amateur. 13: likes the contrast between cards and background for active projects; more action-oriented, stronger hierarchy; expects the cards to be tappable; the frame feels informational. 9: medium subtly sets hierarchy and balances with the icons. 11: tabular or monospace is always superior for currency in a table; easier to scan. |
 | R171 | PROC-08; color by surface; interface convention | Eval run 2, whole pieces (`evals/log.md`): the skill as is vs the skill with five restraint rules suspended vs no guidance, on pricing, dashboard and habit-tracker briefs, all with real-looking content and the same review loop; plus a direct question after eval run 1 on how missing content should look. | **Content: "as real as possible". Pricing: loosened; dashboard: no guidance; habit: as is. Worst: as is, loosened, loosened.** | Pricing: loved the cost calculator and the color; the restrained version was "so simple" and did not impress. Dashboard: no-guidance used color very well with a left nav; the loosened one went "over the top with color", "a bit clowny". Habit: the restrained version was most intuitive; the loosened one was "a bit too non-traditional". Reading: color is a dial set by surface; interfaces stay conventional; real-looking content removed the wireframe read. |
+| R172 | COLR-11, WEB-09 | Queue 78 and 79 on whole pieces built from one template: a pricing page and an orders dashboard at three color levels (accent only; one hue with tints, a solid key card and hue-colored chart; many hues on cards and tiles), changing only color; and the pricing page's middle section as a team-size estimator, nothing, or a decorative product mock. | **Both color sets: one hue with tints best, many hues worst. Middle: estimator best, decorative mock worst, nothing a fallback.** | 2 strikes the right balance of color; 3 has too many conflicting colors (both pages). The estimator makes a lot of sense and adds value; the mock has nothing to do with pricing; nothing is a nice fallback. Note: the moderate version sat in position 2 both times. |
 
 ## Validation Log
 
