@@ -67,3 +67,34 @@ Void of color; wireframe; boilerplate; lacking finesse, nuance and personality; 
 - Replace R152's empty slot with real-looking content plus an "Invented, confirm before shipping" list (Anthony: "as real as possible").
 - Scale the color budget by surface: consideration and marketing pages may tint sections and cards beyond the named events; work tools use color for hierarchy and status but not on every tile.
 - Marketing pages look for one functional delight that answers the visitor's real question (an estimator or calculator), never decoration.
+
+## Run 3 — 2026-10-26 (rerun of run 1 with v2.10.0)
+
+- **Skill commit:** b6975b8 (v2.10.0: contradiction fixes, ask-when-possible, real-looking content, one hue with tints). Same briefs, arms and worker instructions as run 1; arm B and C told not to edit after writing. No AI grader this time; Anthony's blind pick is the only verdict.
+- **Mapping** (revealed after picking): A=M, B=Q, C=V, D=Z, E=X.
+
+| Brief | Best | Worst | His reason, short |
+|---|---|---|---|
+| landing-bike-shop | E baseline + loop | B frontend-design | E: typography, accent use, strong flow, "Book repair" top right; B: the bike-wheel illustration, "void of all life and personality" |
+| dashboard-ops | D skill + loop | C skill only | D: top nav, clean colored quick metrics, narrow bars, search in the standard place above the table; C: wide bars for few data points, search in an atypical spot, extra clicks to filter |
+| pricing-saas | A baseline | D skill + loop | A: comparison table with check marks; D: generic, and its placeholders suggest text where check marks belong |
+| email-launch | D skill + loop | B frontend-design | D: to the point, large call to action; B: too much scrolling before the call to action |
+| mobile-habit | B frontend-design | D skill + loop | B: light tint of the primary color in the background, non-generic fonts, the water stepper; D: the simplest, "almost looks like a wireframe" |
+| negative-control-trust | B frontend-design | E baseline + loop | B: a seasoned designer with a clear system, fun without overdoing it; E: too much color, overwhelming |
+
+**Best:** B 2 · D 2 · A 1 · E 1 · C 0. **Worst:** B 2 · D 2 · C 1 · E 1 · A 0.
+
+**Against run 1:** the full skill (D) went from best 1 / worst 4 to best 2 / worst 2, tied with frontend-design for most wins. The skill without the loop (C) is still never picked best. **The protocol's stopping rule still fails** (C is not picked best most often).
+
+### Reading (n = 1 per cell; picks for the same arm swing between runs, so treat as direction)
+
+1. The changes helped D, but the skill is not yet reliably better than a strong general skill (B) or no guidance.
+2. **Both D losses trace to the same two causes as run 1:** the pricing page kept placeholders because the brief asked for them, and they read as text where check marks belong; the habit screen was the most restrained and read as a wireframe.
+3. The loop matters: C (same rules, no render) won nothing and lost the dashboard on layout details a render would catch (bar width, search placement).
+4. New concrete preferences he named: bar width proportional to the number of data points; table search in the standard top-right spot; a strong primary action top right in the nav; a light tint of the primary color behind an app screen; a stepper for counted habits; the call to action within the first screen of an email; no illustration that adds nothing.
+
+### Next
+
+- When a brief requires placeholders, shape them like the content they stand for (a check mark where a feature goes, a price-shaped figure), never bracketed text.
+- Turn the named preferences into queue items and test the uncertain ones.
+- Reduce noise before the next verdict: two pieces per arm per brief, or fewer arms (B vs D only).
