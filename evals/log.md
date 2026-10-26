@@ -41,3 +41,29 @@ Void of color; wireframe; boilerplate; lacking finesse, nuance and personality; 
 - Holistic rounds: whole pieces, not single variables, to find where the atomic rules stop adding up.
 - Ask Anthony how finished placeholder content should look (R152 vs the wireframe read).
 - Re-run after changes with the same briefs; keep Anthony's blind pick as the only verdict.
+
+## Run 2 — 2026-10-26 (whole pieces)
+
+- **Question:** do the restraint rules hurt in combination, and did placeholders cause run 1's losses?
+- **Skill commit:** f376ded for both skill versions (the v2.8.1 fixes were not yet on main when the workers read the skill).
+- **Versions** (revealed after picking): F the skill as is · G the skill with five restraint rules suspended (accent scarcity, neutral product surfaces, one sans for work tools, restraint on delight, the AI-tells list) · H no guidance. All three used real-looking content (invented facts listed in the notes) and the same mandatory render-and-fix loop.
+- **Briefs:** pricing-saas, dashboard-ops, mobile-habit.
+
+| Brief | Best | Worst | His reason, short |
+|---|---|---|---|
+| pricing-saas | G loosened | F as is | G: the cost calculator and "very nice" color; F: strong but simple, "doesn't really impress me" |
+| dashboard-ops | H none | G loosened | H: color used very well, left-hand nav; G: "goes over the top with color, and looks a bit clowny" |
+| mobile-habit | F as is | G loosened | F: intuitive; G: "UI that is a bit too non-traditional" |
+
+### Reading (n = 1 per cell)
+
+1. **Placeholders were a large part of run 1.** With real-looking content the skill as is won one brief and lost one; it was no longer the default loser.
+2. **Color is a dial, not a switch.** Too little lost a marketing page; too much lost a work tool ("clowny"). The winner on the dashboard used color for hierarchy plus a familiar left nav.
+3. **Interfaces stay conventional.** Loosening "restraint on delight" produced non-traditional mobile UI, which lost, which fits R142: a new pattern makes the brand teach it.
+4. **A functional delight sells a marketing page.** The pricing winner's team-size cost estimator was the first thing he named.
+
+### Proposed, not yet validated
+
+- Replace R152's empty slot with real-looking content plus an "Invented, confirm before shipping" list (Anthony: "as real as possible").
+- Scale the color budget by surface: consideration and marketing pages may tint sections and cards beyond the named events; work tools use color for hierarchy and status but not on every tile.
+- Marketing pages look for one functional delight that answers the visitor's real question (an estimator or calculator), never decoration.
