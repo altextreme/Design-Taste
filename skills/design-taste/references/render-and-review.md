@@ -123,7 +123,7 @@ Motion that is fine at full speed can hide its flaws there. Apply to interface m
 - The "motion claimed, motion shown" rule still applies: do not report timing or feel you did not observe. `L1` · default
 
 ## Hunt list: failures seen in tests
-A headline descender running into a rule · absolutely positioned labels landing on top of lines or numbers · a large figure colliding with a chart · text the same color as its panel (a figure that vanishes) · a page number nobody can see · a placeholder photo box taking half a slide · a lone word or "pm" on its own line · sans type where a display face was needed · invented customer names and statistics.
+A headline descender running into a rule · absolutely positioned labels landing on top of lines or numbers · a large figure colliding with a chart · text the same color as its panel (a figure that vanishes) · a page number nobody can see · a placeholder photo box taking half a slide · a lone word or "pm" on its own line · sans type where a display face was needed · invented customer names and statistics. · CSS rules that cancel each other (a type selector such as .section and a component selector such as .cta both setting padding or margin), so spacing between sections silently collapses or doubles: check the computed spacing, not the stylesheet (adapted from anthropics/skills frontend-design)
 
 ## In the delivery note
 A note without a **Looked at** line is incomplete. Also name the mode (A, B or C) and any check you did not run. List what you looked at ("rendered at 1080 x 1350, three passes; found and fixed the descender collision and the widow") and anything you could not verify. Never claim a look you did not take.
