@@ -112,7 +112,7 @@ The line-break and spacing tests in this section were confirmed in R150. `L1` ·
 - The screenshot is the size the brief asked for.
 - **Interfaces:** no dead band above a footer or between regions; badges, buttons and chips share one size per kind; figures in a column share precision and align on the right; the identifying field of a row (a name, an order number) is never truncated; the first screen looks finished.
 - **Interactive interfaces:** activate every visible control and capture each required state separately. Confirm that only the intended state is shown, the recovery action works, and a refresh error leaves existing data visible. If the artifact is a static mock, label controls and states as proposed rather than claiming they work.
-- **Email:** the first screen (about 600 by 800) looks finished; at most one image slot, under about a third of it, with its placeholder label printed on the block, not only in alt text; the primary action is inside the first screen.
+- **Email:** the first screen (about 600 by 800) looks finished; at most one stand-in image, under about a third of it, listed in the delivery note as to be replaced; the primary action is inside the first screen.
 
 ## Motion review (defaults; adopted from field review, emilkowalski/skills)
 Motion that is fine at full speed can hide its flaws there. Apply to interface motion you built, and to staged motion at its own scale.

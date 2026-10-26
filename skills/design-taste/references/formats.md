@@ -21,7 +21,7 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 
 **Avoid**
 - Centering every slide; gradient-wash title slides; an icon beside every bullet; corner blobs; abstract 3D filler. Each is already a dealbreaker or explicit-request-only. `L1` · default
-- Missing deck data: ask the user for the figure or source. Keep a clearly fillable placeholder such as `[X%]` in the slide’s data position until they provide it; do not replace the missing content with a sentence about the gap or invent a plausible statistic, even labelled. Every real number has an understated source line. `L1` · R152
+- Missing deck data: ask the user for the figure or source when they can answer; otherwise use a realistic value in the slide's data position and list it under "Invented, confirm before shipping". Never replace the content with a sentence about the gap. Every real number has an understated source line. `L1` · R171
 - Unverified proposal details (features, partners, policies) are labelled "proposed, to confirm" in the delivery note. `L1` · default
 - With no photograph supplied, do not reserve half a title slide for an empty photo box: use type on a deep field or a meaningful tonal stand-in. Choose by the brief. `L1` · R154
 
@@ -109,7 +109,7 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 - About 600 to 680 px wide; content blocks on a grid that folds to one column (R116). The body is flush left, never centered paragraphs. It must still read at about 480 px, with type stepping down one size. `L1` · default
 - Build for clients, not browsers: table layout, inline styles, system or safe-stack fallbacks, no dependence on web fonts, shadows, gradients or script. Every image has alt text and a solid fallback color behind it, because many clients block images by default. The CTA is a real link styled as a button with its own background color, not an image. `L1` · default
 - Footer carries the sender address, unsubscribe and view-in-browser. Contrast is checked in both light and the client's forced dark mode; use opaque colors, not alpha. Add a real `prefers-color-scheme: dark` block with your own dark palette (and `[data-ogsc]` for Outlook); `color-scheme: light` alone does nothing. If you cannot test, say so. `L1` · default
-- The first screen must look finished and hold the primary action. With no supplied photo, use one labelled image placeholder under about a third of the first screen, leaving the content and action visible. `L1` · R154
+- The first screen must look finished and hold the primary action. With no supplied photo, use one convincing stand-in image (listed as to be replaced) under about a third of the first screen, leaving the content and action visible. `L1` · R154, R171
 - For that image slot, use a solid fallback block sized to the intended image with descriptive alt text; set item lists in type only. A date or time already in the headline or preheader is not repeated as a separate promoted line; bind the last two words of headlines and time ranges with a non-breaking space. Repeated item titles in a list may use the text-optimized companion of the display face (R023). `L1` · default
 
 **Avoid**

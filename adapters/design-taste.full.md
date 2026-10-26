@@ -4,7 +4,7 @@
 
 # Design Taste — Anthony's Prescription
 
-This skill is a ruleset distilled from 169 rounds of side-by-side comparisons covering 258 design dimensions, extended in v2 with defaults for surfaces those rounds never reached (interactive UI, decks, critique, localization, brand files), kept separate from the validated rules and marked `default`, and in v2.2 with channel and format rounds (product UI, web, email, decks, documents, mobile, social, video, identity, print) that turned many of those defaults into validated rules. v2.3 and v2.4 add a reasoning layer (why he decides what he decides, confirmed over rounds R142 to R149). R150 validated the render-and-review loop, measurement, typography checks and “Looked at” note; R151 validated the delivery note, purpose framing, and composed-piece scope; R152 clarified missing facts, placeholder color, deck slots, and image prompting; R153 confirmed structure comparison and example use, with a partial finding on headline emphasis; R154 confirmed chart room, photo-free title slides, interface type, and email first screens, and email primary objective with optional secondary actions. R155 clarified which links need underlines. Other queued defaults remain in `validation-queue.md`. It tells you how Anthony would design something himself. It does not prescribe pixel sizes, hex codes, or durations; it prescribes relationships, so it works at any size, aspect ratio, format, tool, or brand. It names no agent product and works the same in any harness.
+This skill is a ruleset distilled from 170 rounds of side-by-side comparisons covering 258 design dimensions, extended in v2 with defaults for surfaces those rounds never reached (interactive UI, decks, critique, localization, brand files), kept separate from the validated rules and marked `default`, and in v2.2 with channel and format rounds (product UI, web, email, decks, documents, mobile, social, video, identity, print) that turned many of those defaults into validated rules. v2.3 and v2.4 add a reasoning layer (why he decides what he decides, confirmed over rounds R142 to R149). R150 validated the render-and-review loop, measurement, typography checks and “Looked at” note; R151 validated the delivery note, purpose framing, and composed-piece scope; R152 clarified missing facts, placeholder color, deck slots, and image prompting; R153 confirmed structure comparison and example use, with a partial finding on headline emphasis; R154 confirmed chart room, photo-free title slides, interface type, and email first screens, and email primary objective with optional secondary actions. R155 clarified which links need underlines. Other queued defaults remain in `validation-queue.md`. It tells you how Anthony would design something himself. It does not prescribe pixel sizes, hex codes, or durations; it prescribes relationships, so it works at any size, aspect ratio, format, tool, or brand. It names no agent product and works the same in any harness.
 
 **The standard.** Every design decision needs a reason you can state, rooted in research, proven practice and human psychology. This skill gives you his reasons, not just his values. Do not apply a number or a style by rote: state why each major decision was made in your delivery note, and make the judgment call (is this good, and why) instead of hedging. He is data-led, and everything has a purpose.
 
@@ -172,7 +172,7 @@ Full rules and reasoning in `references/ui-craft.md`. Before showing an interfac
 - **Targets** are comfortably large with separated hit areas; controls are custom-drawn to match the design, but each must replicate the native role, state, keyboard operation and visible focus, and stay easy to use on a phone (R166); reading order equals DOM order.
 - **Forms**: a visible label (never placeholder-as-label), errors after the field is left and cleared the instant it's valid, one primary action per view.
 - **Motion** has a job, enters eased-out and leaves eased-in, and has a reduced-motion variant. No more than three flashes in any second, in UI or MP4.
-- **Content is real**: no invented statistics, testimonials, logos, lorem ipsum or **people (even labelled sample: use order numbers or roles such as "Walk-in")**; no scarcity, popularity or sourcing claim you were not given; a named real thing gets its real image or an honestly labelled placeholder. Ask the user for missing names, figures, years, addresses, prices and claims; until supplied, show a clear placeholder instead of a plausible invented value (R152).
+- **Content looks real**: when someone can answer, ask for missing names, figures, prices and claims first. Fill whatever is still missing with specific, realistic content so the piece looks finished: no brackets, "TBD", lorem ipsum or grey boxes. List every invented fact that would mislead if shipped (prices, fees, rates, reviews and testimonials, ratings, customer counts, awards, scarcity or popularity claims, legal or regulatory figures) in the delivery note under "Invented, confirm before shipping". Never borrow a real company's logo or a real person's name or likeness as invented proof; a named real thing gets its real image (R171, replacing R152's empty slot).
 
 ## Dealbreakers (never, unless the user explicitly asks)
 
@@ -204,7 +204,7 @@ A brand file may *mandate* a style-level trait from these lists (for example a c
 - [ ] Final proofread against the brief: clear, easy to read, and the intended message lands.
 - [ ] Any conflict between two rules was resolved with an explicit "even over" ranking, and only legibility or accessibility departed from a brand guide.
 - [ ] Words: the headline says what the reader gets; buttons name the specific action; errors say how to fix; tone follows the brand voice and what is at stake for the reader; clarity first.
-- [ ] Nothing invented: prompt the user for missing facts; every number, name, quote and image is real or supplied, and any unavailable fact has a clear placeholder (never an invented year, address or price either).
+- [ ] Content looks real: missing facts were asked for where someone could answer; nothing reads as a placeholder; every invented claim that would mislead if shipped is listed under "Invented, confirm before shipping".
 
 When a situation isn't covered, reason from the core tenets, then check `references/index.md` for the nearest category, and cite the rounds in `references/evidence.md` if you need his exact words.
 
@@ -220,7 +220,7 @@ Load only what the task needs. Every file is one level below `SKILL.md`; none re
 
 | Tier | Where | Authority |
 |---|---|---|
-| **Validated** | `principles/*.md`, SKILL.md, R150 workflow in `render-and-review.md` | Distilled from 169 side-by-side rounds of Anthony's own picks. Each rule cites its rounds (`R001`…). These win every conflict. |
+| **Validated** | `principles/*.md`, SKILL.md, R150 workflow in `render-and-review.md` | Distilled from 170 side-by-side rounds of Anthony's own picks. Each rule cites its rounds (`R001`…). These win every conflict. |
 | **Default (`default`)** | the other details in "Workflow and default references" below | Unvalidated defaults for surfaces the rounds never covered, filtered through the validated rules. Tag: `default`. Never overrides a validated rule, dealbreaker or non-negotiable, and cannot by itself justify a BLOCK in a critique. |
 
 ## Validated principles (read the categories the task touches)
@@ -469,7 +469,7 @@ These recur across many rounds and override stylistic defaults:
 > Layer tags: `L1` foundation (always), `L2` tonal preset (only for that tone), `L3` brand-negotiable. `Rnnn` = the comparison round that produced the rule (see ../evidence.md). Non-negotiables in SKILL.md survive any brand override.
 
 - **When a title slide has no photograph, make the composition complete without an empty image box.** Type on a deep field or a meaningful tonal stand-in can carry the slide. Which direction is stronger depends on the brief; the rule vote was Yes and the visual pick was Depends. `L1/L2` · R154
-- **Keep a fillable placeholder for missing deck data.** Ask the user to provide the figure or source. Until then, show a clearly recognizable placeholder in the slide’s data position so the user can populate it, rather than replacing the content with an audience-facing sentence about the gap. Do not invent a believable value. `L1` · R152
+- **Missing deck data looks real and is flagged.** Ask the user for the figure or source when they can answer. Otherwise put a realistic value in the slide's data position, never an audience-facing sentence about the gap, and list it under "Invented, confirm before shipping" in the delivery note. `L1` · R171 (R152)
 - **Match the slide's copy structure to its job.** A single large statement works for divider and section slides; headline plus supporting points works for content slides, which carry more content. All three tested structures are acceptable in their place. `L2 (deck)` · R099
 - **For supporting points, use short columns with sub-headings, each with a conceptually connected line icon.** The columns read easily and the icons add visual storytelling. Columns without icons are okay but visually boring; avoid them as the default. `L2 (deck)` · R099, R132
 - **A bullet list is acceptable beside an image that helps communicate the message.** A plain bullet list on its own is too generic. Every template should include content layouts with an image on the right and an image on the left. `L2 (deck)` · R099, R132
@@ -539,7 +539,7 @@ These recur across many rounds and override stylistic defaults:
 > Layer tags: `L1` foundation (always), `L2` tonal preset (only for that tone), `L3` brand-negotiable. `Rnnn` = the comparison round that produced the rule (see ../evidence.md). Non-negotiables in SKILL.md survive any brand override.
 
 - **Give each email one primary objective.** A secondary call to action is acceptable; the email still needs one clear primary objective and a corresponding primary action. `L1` · R154 (clarified after the initial visual and rule votes)
-- **Make the email first screen feel complete.** Show the primary action within it. If a photograph is missing, use one clearly labelled image placeholder that stays modest, under roughly a third of that first screen, so the content and action are visible. `L1` · R154
+- **Make the email first screen feel complete.** Show the primary action within it. If a photograph is missing, use one convincing stand-in image (built or generated, listed in the delivery note as to be replaced) that stays modest, under roughly a third of that first screen, so the content and action are visible. `L1` · R154, R171
 - **Establish a clear action hierarchy in email; it is critical.** Three levels: primary, secondary, tertiary. Each level has its own treatment. `L2 (email)` · R100
 - **One primary call to action per email, as a full-width filled button.** `L2 (email)` · R100
 - **Secondary actions are compact buttons; with two or more of equal weight, use ghost (outlined) buttons.** Filled secondaries under a filled primary make it hard to see what matters most, add visual clutter and raise cognitive load. A single secondary can still be filled (R100). `L2 (email)` · R100, R131 (a filled secondary stays acceptable alone; the channel, not the button, was the separator from the product-UI tonal fill, R090)
@@ -999,8 +999,8 @@ _Why he decides what he decides. These are reasons, not styles; use them to reac
 - **Consider two distinct structures before building.** Write each in one sentence, then choose the one that serves this brief and state the reason. `L1` · R153
 - **Use examples to teach the decision, not to supply a recipe.** A worked example shows the reasoning and level of detail; its words, typeface, and layout do not become defaults for a new brief. `L1` · R153
 
-**Missing facts (R152)**
-- **Ask the user for missing factual content before filling a slot.** Names, figures, years, addresses, prices, and scarcity claims must come from the user or a verified source. If they remain unavailable, leave a clearly identified placeholder for the user to populate. Do not insert a believable invented value even when marked “sample.” `L1` · R152
+**Missing facts (R152, revised R171)**
+- **Ask for missing facts, then make the content look real.** When someone can answer, ask for names, figures, years, addresses, prices and claims first. Whatever is still missing is filled with specific, realistic content, because a bracketed slot makes the work read as a wireframe (eval run 1, where placeholder-heavy pieces lost). Every invented fact that would mislead if shipped is listed in the delivery note under "Invented, confirm before shipping", so a person confirms it before it goes live. *His words:* "I want the content to look as real as possible." *History:* R152 required an explicit placeholder; R171 replaced it after the blind evals. `L1` · R171 (R152)
 
 **Fairness and honesty in design (R149)**
 - **Do not mislead with design.** Marketing is open to the charge of being manipulative and people are cautious of it, so be transparent and communicate clearly to build trust; that includes emphasis in charts. `L1` · R149
@@ -1062,7 +1062,7 @@ When two rules clash, state the ranking in this form. Each was confirmed as writ
 
 **Hard lines (he would not trade these away on any project)**
 - Readable text (contrast and reading time). Accessibility for everyone. The brand's identity (logo, colors, fonts). The purpose of the piece. The key information is never buried. Familiar controls for interface tasks. Everything looks chosen on purpose. `L1` · R143
-- **Real photos remain a preference; factual content has a stricter rule.** In R143 he did not tick the combined "real content and real photos" hard line. R152 clarified that missing factual names, figures, years, addresses, prices and scarcity claims must not be filled with believable inventions; ask the user and use a placeholder until supplied. The choice of stock, placeholder or generated imagery remains separate. `L1` · R143, R152
+- **Real photos remain a preference; factual content has a stricter rule.** In R143 he did not tick the combined "real content and real photos" hard line. R171 (revising R152): ask for missing facts where someone can answer, then fill gaps with realistic content and list the invented claims under "Invented, confirm before shipping". The choice of stock, stand-in or generated imagery remains separate. `L1` · R143, R171
 
 
 
@@ -1208,7 +1208,7 @@ When two rules clash, state the ranking in this form. Each was confirmed as writ
 - **Combine them: emphasized plan cards on top, the comparison table below.** The two are often seen together; a visitor who needs detail scrolls down to the table. `L2 (web)` · R110
 - **Quotes, key numbers and "mentioned in" names are all valid proof; the creative brief and the page goal decide which sections to use.** Do not prioritize one kind over another by default. Testimonials matter when what peers say is the point; stats when the data is the point; named mentions when the brand needs clout. `L1` · R112
 - **A page often carries all three as separate sections.** Content strategy comes first: let the brief set the sections, then design each. `L1` · R112
-- **Proof is always real or clearly placeholder.** Names, quotes and numbers are supplied by the user, never invented. `L1` · R112, R100
+- **Proof is real, or realistic and flagged.** Use supplied names, quotes and numbers first. Where none exist, realistic proof is allowed so the page looks finished, but every invented quote, name and number is listed under "Invented, confirm before shipping", and no real company or person is borrowed as proof. `L1` · R112, R100, R171
 - **Sections don't always need a label; decide case by case.** Without labels is fine when the sections aren't closely related or wayfinding isn't critical. `L2 (web)` · R130
 - **Use a short navigational label when the page needs easy navigability.** It lets the viewer grasp the section's intent at once, without reading a sometimes ambiguous headline. `L2 (web)` · R097, R130
 - **Number the labels only when the content is sequential.** A numbered label implies an order of operations or sequence; without one, numbering is decoration. `L2 (web)` · R130
@@ -1297,8 +1297,8 @@ When two rules clash, state the ranking in this form. Each was confirmed as writ
 - When motion drops frames, name the cause before touching code. Likely causes, in the order they usually occur: an animated property that forces re-layout or repaint where a cheaper one looks the same (scale in place of size, translate in place of position, opacity in place of show and hide, a shadow filter in place of an animated shadow); the page doing heavy work at that moment (a route change, a fetch, a mount), when work that can run off the main thread should; state updated every frame; a value inherited by many descendants changing every frame; a heavy blur. Promoting a layer in advance is the last step, only after a shift or a measured drop, since each promoted layer costs memory. Name properties explicitly in transitions; "all" animates whatever changes next. The developer's machine is the least representative device it will run on, and a high-refresh screen halves the frame budget. Verify on a mid-range phone, not by feel. `L1` · default (adopted from field review)
 
 ## Content integrity
-- Never invent statistics, testimonials, awards, ratings, logos, customer names, prices or citations. Use real or user-supplied facts, or a clearly labelled placeholder, or leave the slot out. A figure shown carries its source, unit and period. `L1` · default
-- For missing quantitative data, a slot names the required field, unit and period without implying a value or trend. Do not draw a plausible line or bar pattern behind placeholder labels: its direction still tells an unsupported story. Keep the chart scaffold if it helps show where verified data will go. `L1` · R152 application
+- Use real or user-supplied facts first. Fill the rest with realistic content (R171), and list invented statistics, testimonials, awards, ratings, prices and citations under "Invented, confirm before shipping". Never invent a real company's logo or a real person's endorsement. A real figure carries its source, unit and period. `L1` · R171
+- For missing quantitative data, draw realistic sample data so the chart reads as finished, mark it as sample in one quiet line, and list it under "Invented, confirm before shipping"; the trend it shows is not a finding until real data replaces it, so do not write a finding headline about invented data. `L1` · R171 application
 - No lorem ipsum, no "Feature one / two / three". Write real draft copy. An empty-feeling section is a composition problem to fix with layout, not to pad with words; do not add sections or copy the user did not request without asking (if you cannot ask, state the assumption). `L1` · default
 - Name a real-world thing (person, product, cover, artwork, landmark, brand mark) and it gets its real image, confirmed to depict it; never a generated or look-alike substitute. If the right asset is unobtainable, show an honestly labelled placeholder and say so; never ship a fake or a bare grey box. Generation is for subjects with no real referent. `L1` · default
 - Interface copy: concrete verbs, active voice, sentence case, one register per page; specific microcopy over generic ("Start tracking", not "Get started"). Skip hype and filler words (seamless, unleash, next-gen). Testimonials run to a few lines with name and role. `L1` · default
@@ -1475,7 +1475,7 @@ Collect these from the brief and assets; ask only for the ones that are both mis
 Before showing work, ask of every element: where did this come from? If the answer is "it is the default", change it or justify it from the concept.
 
 - Every hue traces to the imagery or the concept; a stock framework accent that nobody chose is a tell. `L1` · default
-- No invented facts: statistics, testimonials, logos, customer names or any invented person (even labelled as sample), awards, prices, citations, years, addresses, and any claim of scarcity, popularity or sourcing. Show the empty slot (for example `[figure: share of trips under 2 miles, source]`) or leave it out; a plausible number with a "sample" note still reads as real. Any figure shown carries its source, unit and period. `L1` · default
+- Content looks real (R171): no brackets, "TBD" or grey boxes. Invented statistics, testimonials, customer names, awards, prices, citations, years, addresses and claims of scarcity, popularity or sourcing are allowed only as realistic fill, and each one that would mislead if shipped is listed under "Invented, confirm before shipping". Never use a real company's logo or a real person as invented proof. A real figure carries its source, unit and period. `L1` · R171
 - No filler copy ("Feature one", lorem ipsum, hype adjectives). An empty area is a composition problem; solve it with scale and placement, not words. Do not add sections or copy the user did not ask for. `L1` · default
 - A named real thing (person, product, artwork, landmark, mark) is shown by its real image, never a generated look-alike. If unavailable, show an honestly labelled placeholder. `L1` · default
 - Structural tells to treat as defects: a colored left-edge stripe used as the only graphic on a card (flag it as weaker than an icon or image, R102; not a defect until validation queue 76 isolates it); an icon beside every heading or bullet (an icon tied to each column's meaning in a deck, R132, or on practical details, R068, is not a tell); several solid primary buttons for one action in view; hover that merely greys or dims text; designer or "demo" controls inside a product artifact; placeholder-image URLs; the stock hero-features-pricing-FAQ sequence with nothing specific to this product. `L1` · default
@@ -1511,7 +1511,7 @@ Use when the user asks for a review, or when grading your own pass. Review the e
 **Lens checks** (report separately; a strength in one does not excuse a failure in another)
 - Brief fit: does it solve the stated problem; name its thinnest part.
 - Brand (L3): conformance to supplied guidelines; a brand violation is a defect even if it looks good, except where it would break a non-negotiable (flag, change the minimum).
-- Copy: specific, terse, no filler, no invented facts.
+- Copy: specific, terse, no filler; invented facts listed under "Invented, confirm before shipping".
 `L1` · default
 
 **Verdict and thresholds**
@@ -1571,7 +1571,7 @@ Lenses: Brief fit — <note> · Brand (L3) — <note or n/a> · Copy — <note>
 
 Run on your own output, in this order, before showing it. Run the SKILL.md pre-flight checklist as step 3.
 
-1. **Completeness.** No placeholder left that is not labelled; no invented facts; every required asset and format present.
+1. **Completeness.** Nothing reads as a placeholder; every invented claim is listed under "Invented, confirm before shipping"; every required asset and format present.
 2. **Direction.** Does the built result still match the one-sentence system you stated? If it drifted, fix the build or restate the system.
 3. **Pre-flight.** Run the SKILL.md checklist in full: non-negotiables first, then hierarchy and grid, then color and contrast on real backgrounds, then motion, then the dealbreaker scan, then per-format reflow.
 4. **Anti-slop gate** (section 6): trace each hue, each icon, each claim, each image.
@@ -1679,7 +1679,7 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 
 **Avoid**
 - Centering every slide; gradient-wash title slides; an icon beside every bullet; corner blobs; abstract 3D filler. Each is already a dealbreaker or explicit-request-only. `L1` · default
-- Missing deck data: ask the user for the figure or source. Keep a clearly fillable placeholder such as `[X%]` in the slide’s data position until they provide it; do not replace the missing content with a sentence about the gap or invent a plausible statistic, even labelled. Every real number has an understated source line. `L1` · R152
+- Missing deck data: ask the user for the figure or source when they can answer; otherwise use a realistic value in the slide's data position and list it under "Invented, confirm before shipping". Never replace the content with a sentence about the gap. Every real number has an understated source line. `L1` · R171
 - Unverified proposal details (features, partners, policies) are labelled "proposed, to confirm" in the delivery note. `L1` · default
 - With no photograph supplied, do not reserve half a title slide for an empty photo box: use type on a deep field or a meaningful tonal stand-in. Choose by the brief. `L1` · R154
 
@@ -1767,7 +1767,7 @@ Shared ground: the composition, type, color and motion rules in SKILL.md apply t
 - About 600 to 680 px wide; content blocks on a grid that folds to one column (R116). The body is flush left, never centered paragraphs. It must still read at about 480 px, with type stepping down one size. `L1` · default
 - Build for clients, not browsers: table layout, inline styles, system or safe-stack fallbacks, no dependence on web fonts, shadows, gradients or script. Every image has alt text and a solid fallback color behind it, because many clients block images by default. The CTA is a real link styled as a button with its own background color, not an image. `L1` · default
 - Footer carries the sender address, unsubscribe and view-in-browser. Contrast is checked in both light and the client's forced dark mode; use opaque colors, not alpha. Add a real `prefers-color-scheme: dark` block with your own dark palette (and `[data-ogsc]` for Outlook); `color-scheme: light` alone does nothing. If you cannot test, say so. `L1` · default
-- The first screen must look finished and hold the primary action. With no supplied photo, use one labelled image placeholder under about a third of the first screen, leaving the content and action visible. `L1` · R154
+- The first screen must look finished and hold the primary action. With no supplied photo, use one convincing stand-in image (listed as to be replaced) under about a third of the first screen, leaving the content and action visible. `L1` · R154, R171
 - For that image slot, use a solid fallback block sized to the intended image with descriptive alt text; set item lists in type only. A date or time already in the headline or preheader is not repeated as a separate promoted line; bind the last two words of headlines and time ranges with a non-breaking space. Repeated item titles in a list may use the text-optimized companion of the display face (R023). `L1` · default
 
 **Avoid**
@@ -2264,3 +2264,5 @@ R150 (24, 36, 37, 43), R151 (25–27), R152 (29, 33, 34, 42, 44), and R153 (28, 
 75. *(Strong-curve question resolved R164 and R165: strong ease-out for anything answering an action (menu, panel, dialog), moderate for composed entrances that arrive on their own (welcome card); promoted as MOTN-14 ✅. Stagger, press scale and blur were settled in R170.)* **Open motion items, source evidence.** emilkowalski/skills argues for a short stagger between siblings, a press scale, blur to fuse a crossfade and a stronger ease-out curve. None is adopted. His soft-ending ease-out was settled for staged motion (R041, R042) but never tested for interface motion, so when rounds 4, 5 and 15 are run, add a strong-curve vs soft-ending pair on a dropdown. Dimension: `ui-strong-ease-out`.
 76. **Left-edge stripe, isolated.** R170 confounded the stripe with a tinted fill, no outline and tighter corners. Hold the fill, outline and radius fixed and vary only the stripe, on tappable product cards and on a web card. Affects: the structural-tell list in `process-and-critique.md`, R102–R103. Dimension: `card-stripe`.
 77. **Exit easing and duration together.** R170 picked an ease-in exit (at 220 ms) and an exit as long as the entrance (on an ease-out) in separate comparisons. Show the combination, ease-in at the full 280 ms, against ease-in at about two thirds, on the same sheet. Dimension: `ui-exit-combined`.
+78. **Color budget by surface.** R171 lost a pricing page for too little color and a dashboard for too much. Same piece at three color levels (named-event accent only; tinted sections and a colored key card; color on most tiles), shown on a pricing page and on a work dashboard. Dimension: `color-budget-by-surface`.
+79. **One functional delight on marketing pages.** R171's pricing winner had a team-size cost estimator. Same pricing page with and without an estimator, and with a decorative hero visual instead. Dimension: `functional-delight`.

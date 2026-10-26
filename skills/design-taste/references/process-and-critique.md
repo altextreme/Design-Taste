@@ -60,7 +60,7 @@ Collect these from the brief and assets; ask only for the ones that are both mis
 Before showing work, ask of every element: where did this come from? If the answer is "it is the default", change it or justify it from the concept.
 
 - Every hue traces to the imagery or the concept; a stock framework accent that nobody chose is a tell. `L1` · default
-- No invented facts: statistics, testimonials, logos, customer names or any invented person (even labelled as sample), awards, prices, citations, years, addresses, and any claim of scarcity, popularity or sourcing. Show the empty slot (for example `[figure: share of trips under 2 miles, source]`) or leave it out; a plausible number with a "sample" note still reads as real. Any figure shown carries its source, unit and period. `L1` · default
+- Content looks real (R171): no brackets, "TBD" or grey boxes. Invented statistics, testimonials, customer names, awards, prices, citations, years, addresses and claims of scarcity, popularity or sourcing are allowed only as realistic fill, and each one that would mislead if shipped is listed under "Invented, confirm before shipping". Never use a real company's logo or a real person as invented proof. A real figure carries its source, unit and period. `L1` · R171
 - No filler copy ("Feature one", lorem ipsum, hype adjectives). An empty area is a composition problem; solve it with scale and placement, not words. Do not add sections or copy the user did not ask for. `L1` · default
 - A named real thing (person, product, artwork, landmark, mark) is shown by its real image, never a generated look-alike. If unavailable, show an honestly labelled placeholder. `L1` · default
 - Structural tells to treat as defects: a colored left-edge stripe used as the only graphic on a card (flag it as weaker than an icon or image, R102; not a defect until validation queue 76 isolates it); an icon beside every heading or bullet (an icon tied to each column's meaning in a deck, R132, or on practical details, R068, is not a tell); several solid primary buttons for one action in view; hover that merely greys or dims text; designer or "demo" controls inside a product artifact; placeholder-image URLs; the stock hero-features-pricing-FAQ sequence with nothing specific to this product. `L1` · default
@@ -96,7 +96,7 @@ Use when the user asks for a review, or when grading your own pass. Review the e
 **Lens checks** (report separately; a strength in one does not excuse a failure in another)
 - Brief fit: does it solve the stated problem; name its thinnest part.
 - Brand (L3): conformance to supplied guidelines; a brand violation is a defect even if it looks good, except where it would break a non-negotiable (flag, change the minimum).
-- Copy: specific, terse, no filler, no invented facts.
+- Copy: specific, terse, no filler; invented facts listed under "Invented, confirm before shipping".
 `L1` · default
 
 **Verdict and thresholds**
@@ -156,7 +156,7 @@ Lenses: Brief fit — <note> · Brand (L3) — <note or n/a> · Copy — <note>
 
 Run on your own output, in this order, before showing it. Run the SKILL.md pre-flight checklist as step 3.
 
-1. **Completeness.** No placeholder left that is not labelled; no invented facts; every required asset and format present.
+1. **Completeness.** Nothing reads as a placeholder; every invented claim is listed under "Invented, confirm before shipping"; every required asset and format present.
 2. **Direction.** Does the built result still match the one-sentence system you stated? If it drifted, fix the build or restate the system.
 3. **Pre-flight.** Run the SKILL.md checklist in full: non-negotiables first, then hierarchy and grid, then color and contrast on real backgrounds, then motion, then the dealbreaker scan, then per-format reflow.
 4. **Anti-slop gate** (section 6): trace each hue, each icon, each claim, each image.

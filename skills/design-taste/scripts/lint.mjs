@@ -21,7 +21,7 @@ const RULES = {
   'focus-outline-removed': { severity: 'a11y-floor', source: 'SKILL.md interface floor and non-negotiable 1 (focus-ring contrast)', message: 'Focus outline removed with no replacement. Keyboard focus must stay visible.' },
   'img-missing-alt': { severity: 'a11y-floor', source: 'SKILL.md interface floor; ui-craft.md accessibility baseline', message: 'Image has no alt attribute. Use descriptive alt, or alt="" if decorative.' },
   'positive-tabindex': { severity: 'a11y-floor', source: 'SKILL.md interface floor (reading order equals DOM order)', message: 'Positive tabindex reorders keyboard focus. Match DOM order to reading order.' },
-  'placeholder-content': { severity: 'blocker', source: 'SKILL.md interface floor', message: 'Placeholder or invented content (lorem ipsum, a stock person name). Use real content or a labelled placeholder.' },
+  'placeholder-content': { severity: 'blocker', source: 'SKILL.md content looks real (R171)', message: 'Generic filler (lorem ipsum, a stock person name, Acme). Use specific, realistic content and list invented claims in the delivery note.' },
   'transition-all': { severity: 'warn', source: 'process-and-critique.md review passes', message: '`transition: all` animates properties nobody chose. Name the properties.' },
   'no-reduced-motion': { severity: 'warn', source: 'ui-craft.md accessibility baseline', message: 'Animation or transition with no prefers-reduced-motion variant.' },
   'glass-blur': { severity: 'warn', source: 'SKILL.md explicit-request list', message: 'backdrop-filter (glassmorphism) is explicit-request only. If requested, ship an opaque fallback and check contrast.' },

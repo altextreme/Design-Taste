@@ -87,8 +87,8 @@ _Why he decides what he decides. These are reasons, not styles; use them to reac
 - **Consider two distinct structures before building.** Write each in one sentence, then choose the one that serves this brief and state the reason. `L1` · R153
 - **Use examples to teach the decision, not to supply a recipe.** A worked example shows the reasoning and level of detail; its words, typeface, and layout do not become defaults for a new brief. `L1` · R153
 
-**Missing facts (R152)**
-- **Ask the user for missing factual content before filling a slot.** Names, figures, years, addresses, prices, and scarcity claims must come from the user or a verified source. If they remain unavailable, leave a clearly identified placeholder for the user to populate. Do not insert a believable invented value even when marked “sample.” `L1` · R152
+**Missing facts (R152, revised R171)**
+- **Ask for missing facts, then make the content look real.** When someone can answer, ask for names, figures, years, addresses, prices and claims first. Whatever is still missing is filled with specific, realistic content, because a bracketed slot makes the work read as a wireframe (eval run 1, where placeholder-heavy pieces lost). Every invented fact that would mislead if shipped is listed in the delivery note under "Invented, confirm before shipping", so a person confirms it before it goes live. *His words:* "I want the content to look as real as possible." *History:* R152 required an explicit placeholder; R171 replaced it after the blind evals. `L1` · R171 (R152)
 
 **Fairness and honesty in design (R149)**
 - **Do not mislead with design.** Marketing is open to the charge of being manipulative and people are cautious of it, so be transparent and communicate clearly to build trust; that includes emphasis in charts. `L1` · R149
@@ -150,5 +150,5 @@ When two rules clash, state the ranking in this form. Each was confirmed as writ
 
 **Hard lines (he would not trade these away on any project)**
 - Readable text (contrast and reading time). Accessibility for everyone. The brand's identity (logo, colors, fonts). The purpose of the piece. The key information is never buried. Familiar controls for interface tasks. Everything looks chosen on purpose. `L1` · R143
-- **Real photos remain a preference; factual content has a stricter rule.** In R143 he did not tick the combined "real content and real photos" hard line. R152 clarified that missing factual names, figures, years, addresses, prices and scarcity claims must not be filled with believable inventions; ask the user and use a placeholder until supplied. The choice of stock, placeholder or generated imagery remains separate. `L1` · R143, R152
+- **Real photos remain a preference; factual content has a stricter rule.** In R143 he did not tick the combined "real content and real photos" hard line. R171 (revising R152): ask for missing facts where someone can answer, then fill gaps with realistic content and list the invented claims under "Invented, confirm before shipping". The choice of stock, stand-in or generated imagery remains separate. `L1` · R143, R171
 

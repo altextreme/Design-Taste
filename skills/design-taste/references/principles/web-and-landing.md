@@ -21,7 +21,7 @@
 - **Combine them: emphasized plan cards on top, the comparison table below.** The two are often seen together; a visitor who needs detail scrolls down to the table. `L2 (web)` · R110
 - **Quotes, key numbers and "mentioned in" names are all valid proof; the creative brief and the page goal decide which sections to use.** Do not prioritize one kind over another by default. Testimonials matter when what peers say is the point; stats when the data is the point; named mentions when the brand needs clout. `L1` · R112
 - **A page often carries all three as separate sections.** Content strategy comes first: let the brief set the sections, then design each. `L1` · R112
-- **Proof is always real or clearly placeholder.** Names, quotes and numbers are supplied by the user, never invented. `L1` · R112, R100
+- **Proof is real, or realistic and flagged.** Use supplied names, quotes and numbers first. Where none exist, realistic proof is allowed so the page looks finished, but every invented quote, name and number is listed under "Invented, confirm before shipping", and no real company or person is borrowed as proof. `L1` · R112, R100, R171
 - **Sections don't always need a label; decide case by case.** Without labels is fine when the sections aren't closely related or wayfinding isn't critical. `L2 (web)` · R130
 - **Use a short navigational label when the page needs easy navigability.** It lets the viewer grasp the section's intent at once, without reading a sometimes ambiguous headline. `L2 (web)` · R097, R130
 - **Number the labels only when the content is sequential.** A numbered label implies an order of operations or sequence; without one, numbering is decoration. `L2 (web)` · R130
