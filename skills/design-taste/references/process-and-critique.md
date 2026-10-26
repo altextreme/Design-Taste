@@ -4,7 +4,7 @@
 
 ## 1. Ask or decide
 
-- Default to proceeding. Ask only when an unresolved answer would change the direction, the structure, or the delivery format; a question whose answer would only nudge a detail costs the user a turn for nothing. `L1` · default
+- When a person can answer, ask before assuming: one easy question at a time until the brief is complete, skipping questions whose answer would only nudge a detail (R149, R148). When no one can answer (an automated run, another agent's pipeline), proceed on defensible assumptions and state them at the top of the delivery note. `L1` · R149 (owner's ruling 2026-10-26; the no-one-to-ask branch is a default)
 - Never ask what the brief, attached assets, a supplied brand source, earlier turns, or this skill already answer. Asking again signals you did not read. `L1` · default
 - If you can ask the user: ask one question at a time, at most three in total, each carrying your recommended default so a bare "go ahead" is a valid reply. Never run a second round of questions. `L1` · default
 - If you cannot ask (no channel, unattended run, "just do it"): proceed on the most defensible reading and list each assumption in the delivery note, so a wrong guess is a cheap redirect. `L1` · default
