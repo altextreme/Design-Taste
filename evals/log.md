@@ -98,3 +98,30 @@ Void of color; wireframe; boilerplate; lacking finesse, nuance and personality; 
 - When a brief requires placeholders, shape them like the content they stand for (a check mark where a feature goes, a price-shaped figure), never bracketed text.
 - Turn the named preferences into queue items and test the uncertain ones.
 - Reduce noise before the next verdict: two pieces per arm per brief, or fewer arms (B vs D only).
+
+## Run 4 — 2026-10-30 (head-to-head: design-taste vs frontend-design)
+
+- **Skill commit:** d4e3f4a (v2.11.0). Both skills got the same mandatory render-and-fix loop; two independent pieces per skill per brief (24 pieces). Same briefs and worker instructions as runs 1 and 3.
+- **Mapping** (revealed after picking): K and P = frontend-design; T and W = design-taste.
+
+| Brief | Best | Worst | His reason, short |
+|---|---|---|---|
+| landing-bike-shop | design-taste | frontend-design | Winner: room for a real hero photo, the pricing information, the drop-off booking form. Loser: the repair-tag illustration hero is weak when photos are coming (he guessed this one was his skill; it was not) |
+| dashboard-ops | frontend-design | design-taste | Winner: sections broken up, color, filter chips above the table. Loser: "a bunch of content floating on top of a simple background", not containerized enough for hierarchy and wayfinding |
+| pricing-saas | design-taste | frontend-design | Winner: color as accent and check marks in the table. Loser: plans stacked, "less comparative" |
+| email-launch | frontend-design | frontend-design | Winner: balance of information and action. Loser: buries the call to action |
+| mobile-habit | frontend-design | design-taste | Winner: the bar-graph tracker at the top is "brilliant", color, intuitive. Loser: "way too generic and lacks finesse" |
+| negative-control-trust | frontend-design | design-taste | Winner: the right balance of fun and serious. Loser: "ignored the fun/playful aspects of the brief" |
+
+**Best:** frontend-design 4 · design-taste 2. **Worst:** design-taste 3 · frontend-design 3. By chance each skill would take half the bests; 4 of 6 is not a significant lead, but the direction favors frontend-design.
+
+### Why design-taste lost its three (each traces to a rule)
+
+1. **Lender:** the trust-critical brief veto (`process-and-critique.md` section 11; queue 60, his stated answer) rules out the playful register. In runs 1, 3 and 4 his lender winner balanced fun with a serious, clear structure each time. His picks contradict his stated veto.
+2. **Habit tracker:** `ui-craft.md` "never fabricate progress or streak pressure" made the skill drop streaks and progress charts. He praised gamified streaks in run 1 and a bar-graph tracker here.
+3. **Dashboard:** "group with space before nesting boxes" (R159) and "don't box every row" (R088) left sections uncontained. He wants sections contained for hierarchy and wayfinding, though rows need not be boxed.
+
+### Next
+
+- Put the three conflicts to Anthony; two touch rules he stated or validated.
+- Write the shaped-placeholder fix (both skills still showed placeholders on pricing).
