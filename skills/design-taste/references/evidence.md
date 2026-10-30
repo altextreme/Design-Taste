@@ -1,6 +1,6 @@
 # Design Taste: Evidence
 
-Each principle in principles/*.md cites rounds (R001–R173). This file holds the coverage tracker and the round log those citations point to. Read it only to resolve ambiguity or to quote his reasoning.
+Each principle in principles/*.md cites rounds (R001–R174). This file holds the coverage tracker and the round log those citations point to. Read it only to resolve ambiguity or to quote his reasoning.
 
 ## Coverage Tracker
 
@@ -241,6 +241,7 @@ Started 2026-10-07. Phase 1 (above) resolved the foundation across 108 dimension
 | UI-15 | Many options: keep them all, grouped and searchable, rather than delete | ✅ | R167 (queue 58, Hick) |
 | UI-16 | Unfinished setup: a quiet pointer, not a recurring progress nag | ✅ | R167 (queue 58, Zeigarnik) |
 | UI-17 | Waits: never pad; show real stages for a real wait; say what was checked on a fast result | ✅ | R167 (conflict), R168 (resolved: truth and frequency separate the cases) |
+| UI-18 | Dashboard containment: open sections vs sections in panels vs everything boxed | 🟨 | R173 (eval run 4), R174 (one round; row-card question open) |
 
 ### Mobile App (MOB)
 | ID | Dimension | Status | Rounds |
@@ -581,6 +582,7 @@ Started 2026-10-10. Phases 1 and 2 recorded what Anthony picks. Phase 3 records 
 | R171 | PROC-08; color by surface; interface convention | Eval run 2, whole pieces (`evals/log.md`): the skill as is vs the skill with five restraint rules suspended vs no guidance, on pricing, dashboard and habit-tracker briefs, all with real-looking content and the same review loop; plus a direct question after eval run 1 on how missing content should look. | **Content: "as real as possible". Pricing: loosened; dashboard: no guidance; habit: as is. Worst: as is, loosened, loosened.** | Pricing: loved the cost calculator and the color; the restrained version was "so simple" and did not impress. Dashboard: no-guidance used color very well with a left nav; the loosened one went "over the top with color", "a bit clowny". Habit: the restrained version was most intuitive; the loosened one was "a bit too non-traditional". Reading: color is a dial set by surface; interfaces stay conventional; real-looking content removed the wireframe read. |
 | R172 | COLR-11, WEB-09 | Queue 78 and 79 on whole pieces built from one template: a pricing page and an orders dashboard at three color levels (accent only; one hue with tints, a solid key card and hue-colored chart; many hues on cards and tiles), changing only color; and the pricing page's middle section as a team-size estimator, nothing, or a decorative product mock. | **Both color sets: one hue with tints best, many hues worst. Middle: estimator best, decorative mock worst, nothing a fallback.** | 2 strikes the right balance of color; 3 has too many conflicting colors (both pages). The estimator makes a lot of sense and adds value; the mock has nothing to do with pricing; nothing is a nice fallback. Note: the moderate version sat in position 2 both times. |
 | R173 | brief vetoes (trust-critical), goal gradient, placeholder shape | Eval run 4, head-to-head (`evals/log.md`): design-taste v2.11 vs frontend-design, two blind pieces each per brief. Read with runs 1 and 3 for the lender brief. | **frontend-design 4 bests, design-taste 2; worst 3 each. Lender: playful-and-clear beat the skill's sober page (third run running). Habit: a bar-graph tracker "brilliant". Pricing: check marks beat text placeholders.** | Lender: "the right balance between fun/colorful/playful and serious"; the skill's version "ignored the fun/playful aspects of the brief". Habit: "the bar-graph inspired tracker at the top… is brilliant"; the skill's "way too generic". Dashboard: the skill's sections were "just a bunch of content floating", "not containerized enough" (queued for a round, R174). |
+| R174 | UI-18 | One orders dashboard from one template at three containment levels, changing only boxing: open sections on white with hairline rows; sections in panels on a tinted page with hairline rows; everything boxed (each KPI, the chart, the filter bar and every table row as its own card) on a tinted page. | **Everything boxed best; open worst.** | "1 does a great job of grouping things. 3 has everything on a white background, and I struggle with that lack of hierarchy." Open question: whether the per-row cards (against R088) were part of the win. |
 
 ## Validation Log
 
